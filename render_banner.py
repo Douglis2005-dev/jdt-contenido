@@ -105,6 +105,10 @@ def main() -> None:
     ruta = Path(sys.argv[1]).resolve()
     b = json.loads(ruta.read_text(encoding="utf-8"))
     validar(b)
+    # cada banner cambia de fondo y color de apoyo, igual que los videos
+    n = b["estilo"] if isinstance(b.get("estilo"), int) else rv.puesto_del_guion(ruta, ruta.parent)
+    rv.fijar_estilo(n, esquinas=["ne-so", "barra"])
+    rv.ESTILO["entrada"] = "sube"
     salida = Path(b.get("salida") or f"banners/{ruta.stem}.png")
     if not salida.is_absolute():
         salida = rv.CARPETA / salida
