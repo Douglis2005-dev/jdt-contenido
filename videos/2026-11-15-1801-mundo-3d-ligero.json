@@ -1,0 +1,11 @@
+{
+  "salida": "videos/2026-11-15-1801-mundo-3d-ligero.mp4",
+  "audio": "videos/2026-11-15-1801-mundo-3d-ligero.mp3",
+  "escenas": [
+    {"tipo": "titular", "texto": "Un mundo 3D en *menos de 100 KB*", "voz": "¡Mira esto! Un mundo submarino 3D, navegable y en menos de 100 KB."},
+    {"tipo": "comparar", "texto": "¿Tu página carga *lo que no usas*?", "etiquetas": ["Plantillas genéricas", "Imágenes de sobra", "Solo lo que usas", "Hecha a tu medida"], "voz": "¿Y tu página cuánto pesa? Uy, a veces cargamos cosas que nunca usamos."},
+    {"tipo": "web", "texto": "Tu web, *a tu medida*", "url": "tunegocio.com", "etiquetas": ["Catálogo", "Contacto", "Tu marca"], "voz": "En JDT hacemos webs a tu medida, solo con lo que tu negocio necesita."},
+    {"tipo": "pasos", "texto": "Tres pasos, *sin cosas de más*", "etiquetas": ["Analizamos", "Desarrollamos", "Entregamos"], "voz": "Analizamos, desarrollamos y entregamos. Sin cosas de más."},
+    {"tipo": "cierre", "texto": "Hablemos de *tu proyecto*", "subtexto": "@technologicsjdt", "voz": "¡Hablemos de tu proyecto! Te respondemos en menos de 24 horas."}
+  ]
+}
