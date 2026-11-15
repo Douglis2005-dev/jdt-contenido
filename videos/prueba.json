@@ -1,0 +1,11 @@
+{
+  "salida": "videos/prueba.mp4",
+  "audio": "videos/prueba.mp3",
+  "escenas": [
+    {"tipo": "titular", "texto": "¿Otra vez *copiando y pegando*?", "voz": "¿Otra vez copiando datos de un sistema a otro?"},
+    {"tipo": "caos", "texto": "Así se va *la tarde entera*", "etiquetas": ["Excel", "Correo", "WhatsApp", "Facturas", "Inventario"], "voz": "Uy, no... así se va la tarde entera, y encima se cuelan los errores."},
+    {"tipo": "titular", "texto": "¿Y si todo eso pasara *SOLO*?", "voz": "¡Imagínate que todo eso pasara SOLO!"},
+    {"tipo": "flujo", "texto": "Llega, se registra y *sale volando*", "etiquetas": ["Llega el pedido", "Se registra solo", "Factura enviada"], "voz": "Llega el pedido, se registra y la factura sale volando."},
+    {"tipo": "cierre", "texto": "Hablemos de *tu proyecto*", "subtexto": "@technologicsjdt", "voz": "En JDT Technologics conectamos tus sistemas para que tu equipo respire. ¡Hablemos de tu proyecto!"}
+  ]
+}
