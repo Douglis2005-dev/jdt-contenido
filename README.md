@@ -4,5 +4,5 @@ Agente de contenido de JDT TECHNOLOGICS. Corre en la nube (rutinas de Claude Cod
 
 - Instrucciones del agente: `INSTRUCCIONES.md`
 - Resultados: `videos/`, `banners/`, `borradores/`
-- En el PC: `py sincronizar_drive.py` trae lo nuevo y lo copia a Mi unidad\jdt technologics.
+- Google Drive: el agente sube el MP4 y el PNG a Mi unidad\jdt technologics (Videos y Banners) con el conector. Respaldo manual en el PC: `py sincronizar_drive.py`.
 - Fuente: Montserrat (SIL Open Font License, ver `recursos/fuentes/OFL.txt`).

@@ -8,11 +8,11 @@ PREPARACIÓN (lo primero, antes de todo)
 
 CÓMO REPARTIR EL TRABAJO (pedido expreso del dueño de esta tarea)
 - El trabajo lo hace el modelo más barato. Si tú ya eres un modelo Haiku, hazlo tú. Si no, lanza UN subagente con la herramienta Agent (model: "haiku", subagent_type: "general-purpose"), pásale completas las secciones PREPARACIÓN, CARPETA, PASOS y REGLAS de este texto, y espera su informe. Tú no repitas su trabajo.
-- El subagente no puede llamar al modelo capaz: dile que haga los pasos 1 a 8 hasta tener el caption y el banner (sin la revisión final), que NO haga el paso 9 todavía y que te devuelva tema, url, hechos confirmados, rutas del guion, MP4, MP3 y PNG, locución con etiquetas, caption, créditos de voz y problemas. Tú haces la REVISIÓN FINAL y luego le reenvías las correcciones con SendMessage para que las aplique y haga los pasos 9 a 11. Dile también que las herramientas de ElevenLabs son diferidas y se cargan con ToolSearch (busca "account_get_usage creative_generate_speech creative_get_flow_run_status").
+- El subagente no puede llamar al modelo capaz: dile que haga los pasos 1 a 8 hasta tener el caption y el banner (sin la revisión final), que NO haga el paso 9 todavía y que te devuelva tema, url, hechos confirmados, rutas del guion, MP4, MP3 y PNG, locución con etiquetas, caption, créditos de voz y problemas. Tú haces la REVISIÓN FINAL y luego le reenvías las correcciones con SendMessage para que las aplique y haga los pasos 9 a 12. Dile también que las herramientas de ElevenLabs y de Google Drive son diferidas y se cargan con ToolSearch (busca "account_get_usage creative_generate_speech creative_get_flow_run_status" y "Google Drive create_file"). Si el subagente no tiene el conector de Google Drive, haz tú el paso 11 con las rutas que te devuelva.
 - Un modelo más capaz solo revisa y destraba. Para eso se usa la herramienta Agent con model: "fable" (si no está disponible, "opus"). Se usa en dos casos y nada más:
   1. REVISIÓN FINAL obligatoria, una sola vez por ejecución (paso 8).
   2. ATASCO: el mismo comando falla dos veces seguidas, hay duda de si un dato de la fuente es cierto, no hay ningún tema que cumpla los criterios, o el resultado no pasa la autorrevisión después de un intento de arreglo. Al revisor se le manda el error o la duda exacta y los archivos; se aplica lo que responda.
-- Máximo 3 consultas al modelo capaz por ejecución. Si después de eso sigue fallando, se detiene y se informa qué falló (y aun así se hace el paso 10 con lo que haya, para no perder el historial).
+- Máximo 3 consultas al modelo capaz por ejecución. Si después de eso sigue fallando, se detiene y se informa qué falló (y aun así se hacen los pasos 10 y 11 con lo que haya, para no perder el historial).
 
 CARPETA (raíz del repositorio)
 - INSTRUCCIONES.md: este texto.
@@ -23,7 +23,7 @@ CARPETA (raíz del repositorio)
 - videos/prueba.json: ejemplo de guion que funciona. videos/: aquí van guion, audio y video de cada ejecución.
 - banners/prueba.json: ejemplo de banner que funciona. banners/: aquí van el JSON y el PNG de cada ejecución.
 - borradores/: un .md por ejecución con todo lo producido.
-- sincronizar_drive.py y subir_drive.py: los usa el PC del dueño para pasar los archivos a Google Drive. En la nube NO se ejecutan.
+- sincronizar_drive.py y subir_drive.py: respaldo manual desde el PC del dueño. En la nube NO se ejecutan; la subida a Google Drive se hace en el paso 11 con el conector.
 NOMBRES DE ARCHIVO: usa siempre AAAA-MM-DD-HHMM-tema (fecha y hora de Colombia al inicio de la ejecución, por ejemplo 2026-11-16-0300-cambio-dominio), en todos los archivos (json, mp3, mp4, png, md).
 
 PASOS
@@ -43,6 +43,7 @@ PASOS
    La locución completa (todas las "voz" unidas) debe tener entre 220 y 340 caracteres. El cierre usa un llamado a la acción de marca.md. El texto en pantalla de cada escena debe coincidir con lo que dice la voz en esa escena, y la solución debe aparecer en pantalla antes o al mismo tiempo que la voz la menciona.
 
 5. Voz en off con el conector de ElevenLabs (es lo ÚNICO que se usa de ElevenLabs; NO generar video ni imágenes allí):
+   - ANTES de gastar créditos, comprueba que la nube deja descargar el audio: `curl -sS -o /dev/null -m 15 https://elevenlabsusercontent.com; echo "salida=$?"`. Si salida NO es 0 (la red de la nube bloquea ese dominio), NO generes la voz: no llames a creative_generate_speech ni a `recolector.py --voz`, haz el video sin audio (quita "audio" del guion y pon "duracion" de 3 a 4 segundos por escena), anota en el borrador y en el informe «sin voz: la red de la nube bloquea elevenlabsusercontent.com» y pasa al paso 6. Solo si salida es 0 sigue con lo de abajo.
    - account_get_usage: disponibles = character_limit menos character_count. Si quedan menos de 1000, salta la voz y haz el video sin audio (quita "audio" del guion y pon "duracion" de 3 a 4 segundos por escena).
    - Voz de turno: `export TZ=America/Bogota; python3 recolector.py --voz`
      Devuelve {"nombre", "voice_id"}. Las voces se alternan solas en cada ejecución (Douglas pupi, Teno pupi, Juan; el turno queda en voz_estado.json). Ejecútalo UNA sola vez por ejecución, usa exactamente ese voice_id, no elijas otra, y anota el nombre de la voz en el borrador.
@@ -67,15 +68,21 @@ PASOS
 9. Guarda borradores/AAAA-MM-DD-HHMM-tema.md con: tema, fuente y url, por qué se eligió, guion, locución, voz usada, caption, texto del banner, rutas del video y del banner, créditos de voz gastados y disponibles, qué corrigió el revisor y cuántas veces se consultó al modelo capaz. Registra el tema:
    `export TZ=America/Bogota; python3 recolector.py --marcar "URL" "TITULO"`
 
-10. GUARDAR EN EL REPOSITORIO (así el PC del dueño lo pasa a Google Drive cuando se encienda, y la próxima ejecución ve el historial y el turno de voz):
+10. GUARDAR EN EL REPOSITORIO (así la próxima ejecución ve el historial y el turno de voz, y queda copia de respaldo):
    ```
    git add videos/ banners/ borradores/ historial.json voz_estado.json
    git commit -m "contenido: AAAA-MM-DD-HHMM-tema"
    git pull --rebase origin main && git push origin HEAD:main
    ```
-   No subas los cuadros de revisión (quedan en /tmp). Si el push falla, reintenta UNA vez tras `git pull --rebase origin main`; si vuelve a fallar, empuja a una rama `contenido/AAAA-MM-DD-HHMM-tema` y anótalo en el informe («quedó en la rama X, falta pasarlo a main»). No uses el conector de Google Drive.
+   No subas los cuadros de revisión (quedan en /tmp). Si el push falla, reintenta UNA vez tras `git pull --rebase origin main`; si vuelve a fallar, empuja a una rama `contenido/AAAA-MM-DD-HHMM-tema` y anótalo en el informe («quedó en la rama X, falta pasarlo a main»).
 
-11. Informe final corto: tema, voz usada, rutas del video MP4 y del banner PNG en el repo, caption listo para copiar, créditos de voz usados, si se guardó en main, y si hubo fallos o se trabajó sin voz.
+11. SUBIR A GOOGLE DRIVE con el conector de Google Drive (carpeta «jdt technologics» de la cuenta technologicsjdt). La herramienta es diferida: cárgala con ToolSearch (busca "Google Drive create_file"). Sube solo los dos archivos finales de ESTA ejecución, una llamada a create_file por archivo:
+   - El MP4 a la carpeta Videos: parentId "1KmA3lJU37FSyRC4xpM5u7Hr4GlTiTjjF", contentMimeType "video/mp4".
+   - El PNG a la carpeta Banners: parentId "1NpL1smWWsgOcwUHTTDvICNsWRp4degLL", contentMimeType "image/png".
+   En ambas: title = el nombre del archivo (AAAA-MM-DD-HHMM-tema.mp4 / .png), disableConversionToGoogleType true, y base64Content = una referencia de archivo, NO el contenido: `sha256:HASH:RUTA_ABSOLUTA`, donde HASH sale de `sha256sum ARCHIVO` y RUTA_ABSOLUTA de `realpath ARCHIVO`. Nunca escribas el base64 a mano.
+   Una sola llamada por archivo; si falla, reintenta UNA vez y, si vuelve a fallar o el conector no está disponible, anótalo en el informe («no se subió a Drive: motivo»); los archivos siguen en el repositorio. No crees carpetas, no borres, no muevas ni compartas nada en Drive, y no subas nada más.
+
+12. Informe final corto: tema, voz usada, rutas del video MP4 y del banner PNG en el repo, si quedaron en Google Drive (con el enlace viewUrl de cada uno), caption listo para copiar, créditos de voz usados, si se guardó en main, y si hubo fallos o se trabajó sin voz.
 
 REGLAS
 - No inventar cifras, clientes, casos de éxito, precios ni garantías. No usar logotipos ni personas reales de terceros.
