@@ -1,0 +1,10 @@
+{
+  "salida": "videos/2026-11-15-1312-chat-agentes.mp4",
+  "escenas": [
+    {"tipo": "titular", "duracion": 4, "texto": "¿Tu equipo vive *saltando* entre apps?"},
+    {"tipo": "caos", "duracion": 4, "texto": "Decisiones *regadas* por todas partes", "etiquetas": ["Chat", "Correo", "Mensajes", "Hojas de cálculo", "Notas"]},
+    {"tipo": "titular", "duracion": 3, "texto": "¿Y si todo estuviera *en un solo lugar*?"},
+    {"tipo": "flujo", "duracion": 4, "texto": "Se conecta, se revisa y *avanza solo*", "etiquetas": ["Datos conectados", "Revisión del equipo", "Tarea completada"]},
+    {"tipo": "cierre", "duracion": 4, "texto": "Hablemos de *tu proyecto*", "subtexto": "@technologicsjdt"}
+  ]
+}
