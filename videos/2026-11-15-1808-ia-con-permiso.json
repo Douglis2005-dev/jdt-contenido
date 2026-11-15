@@ -1,0 +1,10 @@
+{
+  "salida": "videos/2026-11-15-1808-ia-con-permiso.mp4",
+  "escenas": [
+    {"tipo": "titular", "texto": "¿La IA cambia tus datos *sin avisarte*?", "duracion": 3.5, "voz": "¿Confías en que una IA toque tus datos sin avisarte?"},
+    {"tipo": "caos", "texto": "Facturas que no *cuadran*", "etiquetas": ["Facturas", "Inventario", "Pagos", "Pedidos", "Compras"], "duracion": 3.5, "voz": "Uy, facturas que no cuadran y pagos sueltos por todos lados."},
+    {"tipo": "conexion", "texto": "La IA revisa, *tú decides*", "centro": "Tu software", "etiquetas": ["Inventario", "Facturas", "Pagos", "Compras"], "duracion": 3.5, "voz": "¿Y si la IA revisa las diferencias y te avisa antes de tocar nada?"},
+    {"tipo": "flujo", "texto": "Detecta, propone y *tú apruebas*", "etiquetas": ["Detecta la diferencia", "Propone el ajuste", "Tú apruebas"], "duracion": 3.5, "voz": "Primero detecta, luego propone, y solo hace lo que tú apruebes."},
+    {"tipo": "cierre", "texto": "Hablemos de *tu proyecto*", "subtexto": "@technologicsjdt", "duracion": 3.5, "voz": "En JDT conectamos tus sistemas con revisión humana. ¡Hablemos de tu proyecto!"}
+  ]
+}
