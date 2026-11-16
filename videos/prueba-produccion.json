@@ -1,0 +1,18 @@
+{
+  "salida": "videos/prueba-produccion.mp4",
+  "formato": "muestra tecnica de las escenas de produccion (no es un video real ni una idea que se pueda copiar)",
+  "escenas": [
+    {"tipo": "palabras", "look": "amarillo", "fx": ["glitch", "vibra"], "transicion": "persiana", "frases": ["Tema.", "Otro tema.", "*Giro.*"], "voz": "a", "duracion": 3},
+    {"tipo": "terminal", "texto": "Todo por *comandos*", "titulo": "ejemplo@sistema", "lineas": ["> abrir pedido", "pedido abierto", "> enviar factura", "factura enviada"], "fx": ["escaneo", "vineta"], "transicion": "circulo", "voz": "b", "duracion": 4},
+    {"tipo": "notificaciones", "look": "azul", "etiquetas": ["Pedido nuevo", "Pago recibido", "Factura enviada"], "detalles": ["Mesa 4", "Transferencia", "Cliente notificado"], "camara": "empuja", "transicion": "destello", "voz": "c", "duracion": 4},
+    {"tipo": "contador", "look": "amarillo", "valor": "24/7", "unidad": "atencion", "etiqueta": "Sin que *nadie* se desvele", "fx": ["pulso"], "transicion": "glitch", "voz": "d", "duracion": 3.5},
+    {"tipo": "dividida", "etiquetas": ["Papeles por todos lados", "Todo en *un lugar*"], "iconos": ["papeles", "robot"], "camara": "paneo", "transicion": "giro", "voz": "e", "duracion": 4},
+    {"tipo": "marquesina", "look": "azul", "palabras": ["COPIAR", "PEGAR", "REPETIR"], "texto": "Hasta que *alguien* lo automatice", "fx": ["grano"], "transicion": "desliza-izq", "voz": "f", "duracion": 4},
+    {"tipo": "libre", "look": "amarillo", "texto": "Un *solo* cerebro", "camara": "giro-lento", "elementos": [
+      {"el": "icono", "nombre": "robot", "x": 50, "y": 62, "tam": 34, "mueve": "flota"},
+      {"el": "icono", "nombre": "correo", "x": 22, "y": 48, "tam": 14, "mueve": "orbita"},
+      {"el": "icono", "nombre": "calendario", "x": 78, "y": 48, "tam": 14, "mueve": "orbita"},
+      {"el": "linea", "x": 28, "y": 50, "a": [44, 58], "estilo": "flecha", "pulso": true}], "voz": "g", "duracion": 3.5},
+    {"tipo": "cierre", "texto": "Hablemos de tu proyecto", "subtexto": "@technologicsjdt", "voz": "h", "duracion": 3}
+  ]
+}
