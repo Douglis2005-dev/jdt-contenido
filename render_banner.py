@@ -11,8 +11,10 @@ banner.json:
   "titulo": "¿Tu negocio sigue *copiando y pegando*?",     (max. 10 palabras; *asteriscos* = amarillo)
   "subtitulo": "Una frase corta que explica el problema",    (opcional, max. 14 palabras)
   "puntos": ["Beneficio 1", "Beneficio 2", "Beneficio 3"],   (2 a 3, max. 32 caracteres cada uno)
-  "cta": "Hablemos de tu proyecto"                           (opcional)
+  "cta": "Hablemos de tu proyecto",                          (opcional)
+  "icono": "robot"                                           (opcional: icono grande de fondo; lista en iconos.NOMBRES)
 }
+Colores: solo la paleta de la marca (los pone el script).
 Si algo no cabe, el script termina con un error que dice que acortar.
 """
 from __future__ import annotations
@@ -56,6 +58,13 @@ def texto_ajustado(d, xy, texto, ancho_max, tam, minimo, negrita=True, **kw):
 def renderizar(b: dict) -> Image.Image:
     rv.W, rv.H = W, H  # el fondo y el titular del video leen estas medidas
     img = rv.crear_fondo().convert("RGBA")
+    if b.get("icono"):      # motivo grande y tenue detras del titular, distinto en cada banner
+        import iconos
+        if b["icono"] not in iconos.ICONOS:
+            raise SystemExit(f"El icono '{b['icono']}' no existe. Disponibles: {', '.join(iconos.NOMBRES)}.")
+        motivo = iconos.icono(b["icono"], 400, rv.AZUL).copy()
+        motivo.putalpha(motivo.getchannel("A").point(lambda v: int(v * 0.3)))
+        img.alpha_composite(motivo, (W - 400 - 70, 215))
     d = ImageDraw.Draw(img)
     rv.dibujar_marca(d)
 

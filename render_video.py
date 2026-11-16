@@ -7,6 +7,9 @@ en off y ajusta la duracion de las escenas a la del audio.
 Uso:
     py render_video.py guion.json
     py render_video.py guion.json --cuadro 3.5 salida.png   (un solo cuadro, para revisar)
+    py render_video.py guion.json --hoja /tmp/hoja.png      (hoja de revision: 2 cuadros por escena,
+                                                             a la mitad y al final; ademas guarda cada
+                                                             cuadro a tamano real: /tmp/hoja_escena1a.png ...)
 
 guion.json:
 {
@@ -26,12 +29,38 @@ guion.json:
     {"tipo": "web",       "texto": "...", "url": "tunegocio.com", "etiquetas": ["Catálogo", "Pedidos en línea", "Contacto"]},
     {"tipo": "documento", "texto": "...", "etiquetas": ["Cliente", "Fecha", "Total"]},
     {"tipo": "pasos",     "texto": "...", "etiquetas": ["Analizamos", "Desarrollamos", "Entregamos"]},
+    {"tipo": "palabras",  "frases": ["Copiar.", "Pegar.", "*Repetir.*", "¿Hasta cuándo?"]},
+    {"tipo": "libre",     "texto": "(opcional)", "elementos": [ ... ]},      (ver ESCENA LIBRE abajo)
     {"tipo": "cierre",   "texto": "Hablemos de tu proyecto", "subtexto": "@technologicsjdt"}
   ]
 }
+VOZ: todo video lleva locucion. Sin "audio" el script se detiene (para pruebas: --sin-audio).
+Si la voz se hizo con voz_local.py, el guion trae "sincronia": "exacta" y cada escena dura
+justo lo que dura su frase.
+
+PALETA: solo se usan los colores de la marca, por nombre: amarillo, dorado, blanco, gris,
+azul (azul marino claro), superficie, borde, fondo. Cualquier otro color da error.
+
+ESCENA LIBRE ("tipo": "libre"): el guionista arma su propia escena con "elementos" (1 a 14).
+Posiciones en porcentaje del lienzo: x de 4 a 96, y de 12 a 90 (con "texto" de titular, de 36 en
+adelante). Cada elemento:
+  {"el": "icono",   "nombre": "engranaje", "x": 50, "y": 55, "tam": 30, "color": "amarillo"}
+  {"el": "texto",   "texto": "Todo en *un solo lugar*", "x": 50, "y": 70, "tam": "l"}   (tam: xl, l, m, s)
+  {"el": "forma",   "forma": "circulo|anillo|rect|pildora|triangulo", "x": 50, "y": 50, "ancho": 30, "alto": 30}
+  {"el": "linea",   "x": 20, "y": 50, "a": [80, 50], "estilo": "solida|punteada|flecha", "pulso": true}
+  {"el": "tarjeta", "texto": "Pedido recibido", "icono": "check", "x": 50, "y": 60}
+  {"el": "burbuja", "texto": "¿Ya salió mi pedido?", "x": 40, "y": 45, "cola": "izq|der|ninguna"}
+  {"el": "barra",   "x": 50, "y": 60, "ancho": 60, "valor": 80}
+Opcionales en cualquier elemento: "color" (de la paleta), "entra" (aparece, sube, baja, izquierda,
+derecha, pop, gira, dibuja), "mueve" (flota, late, gira, tiembla, balancea, orbita), "t" y "sale"
+(momento de entrada y de salida, como fraccion de la escena: 0 a 1; sin "t" entran en orden),
+"a": [x, y] (viaja hasta ese punto), "giro" (grados), "opacidad" (0 a 1).
+Iconos: py iconos.py hoja.png los dibuja todos; la lista esta en iconos.NOMBRES.
+
 ESTILO: cada video sale con un estilo distinto al anterior (fondo, color de
-apoyo, entrada del texto, transicion entre escenas, ambiente y variante de
-cada escena). Se elige solo segun el puesto del guion entre los de videos/.
+apoyo, entrada del texto, transicion entre escenas, ambiente y variante de cada
+escena). Una escena puede pedir "camara": "acerca" o "aleja" (acercamiento lento; usalo en
+una o dos escenas como mucho, porque alarga el render). Se elige solo segun el puesto del guion entre los de videos/.
 Para forzarlo: "estilo": 7 en el guion (cualquier entero), y "variante": 0|1|2
 en una escena.
 Las palabras entre *asteriscos* salen en amarillo. "voz" es lo que dice la
@@ -52,32 +81,39 @@ from pathlib import Path
 import imageio_ffmpeg
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
+import iconos
+
 CARPETA = Path(__file__).resolve().parent
 W, H, FPS = 1080, 1920, 30
 FONDO, FONDO_ALT, SUPERFICIE = (10, 14, 39), (13, 18, 48), (19, 26, 58)
 AMARILLO, BLANCO, GRIS, GRIS_OSC = (250, 204, 21), (255, 255, 255), (148, 163, 184), (100, 116, 139)
-ROJO, BORDE = (248, 113, 113), (42, 52, 96)
+DORADO, AZUL, BORDE = (234, 179, 8), (84, 102, 180), (42, 52, 96)
+# Paleta de la marca (marca.md). Son los UNICOS colores de videos y banners: azul marino y sus
+# tonos, amarillo/dorado, blanco y gris azulado. Nada de rojo, verde ni otros.
+PALETA = {"amarillo": AMARILLO, "dorado": DORADO, "blanco": BLANCO, "gris": GRIS, "azul": AZUL,
+          "superficie": SUPERFICIE, "borde": BORDE, "fondo": FONDO}
 TIPOS = {"titular", "caos", "flujo", "panel", "lista", "telefono", "chat", "comparar", "conexion",
-         "reloj", "web", "documento", "pasos", "cierre"}
+         "reloj", "web", "documento", "pasos", "palabras", "libre", "cierre"}
 
 # ---------------------------------------------------------------- estilo
 FONDOS = ["rejilla", "puntos", "diagonales", "anillos", "circuito"]
-ACENTOS = [(59, 91, 219), (34, 211, 238), (139, 92, 246), (52, 211, 153)]
-ENTRADAS = ["sube", "cortina", "pop", "maquina", "izquierda"]
+ACENTOS = [AZUL, GRIS, DORADO, BLANCO]
+ENTRADAS = ["sube", "cortina", "pop", "maquina", "izquierda", "resaltador"]
+CAMARAS = ["quieta", "acerca", "aleja"]
 TRANSICIONES = ["fundido", "barrido", "desliza-izq", "zoom", "desliza-arriba"]
 ESQUINAS = ["ne-so", "barra", "no-se"]
 AMBIENTES = ["particulas", "lineas", "pulsos"]
 ESTILO = {"n": 0, "fondo": "rejilla", "acento": ACENTOS[0], "entrada": "sube", "transicion": "fundido",
-          "esquinas": "ne-so", "ambiente": "ninguno", "semilla": 0}
+          "esquinas": "ne-so", "ambiente": "ninguno", "camara": "quieta", "semilla": 0}
 
 
 def fijar_estilo(n: int, esquinas=None) -> dict:
     """Elige el estilo del video numero n: dos videos seguidos nunca comparten fondo,
     color de apoyo, entrada de texto, transicion ni ambiente."""
     esq = esquinas or ESQUINAS
-    ESTILO.update(n=n, fondo=FONDOS[n % 5], acento=ACENTOS[n % 4], entrada=ENTRADAS[(n * 2 + 1) % 5],
+    ESTILO.update(n=n, fondo=FONDOS[n % 5], acento=ACENTOS[n % 4], entrada=ENTRADAS[(n * 5 + 1) % 6],
                   transicion=TRANSICIONES[(n * 3 + 1) % 5], esquinas=esq[n % len(esq)],
-                  ambiente=AMBIENTES[n % 3], semilla=n * 7919 + 13)
+                  ambiente=AMBIENTES[n % 3], camara="quieta", semilla=n * 7919 + 13)
     return ESTILO
 
 
@@ -112,6 +148,20 @@ def rebote(x: float) -> float:
     x = max(0.0, min(1.0, x))
     c = 1.70158
     return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2
+
+
+def sobre(color):
+    """Color de texto que se lee encima de `color`: azul marino sobre claros, blanco sobre oscuros."""
+    r, g, b = color[:3]
+    return FONDO if 0.299 * r + 0.587 * g + 0.114 * b > 125 else BLANCO
+
+
+def color_de(nombre, por_defecto):
+    if nombre is None:
+        return por_defecto
+    if nombre not in PALETA:
+        raise SystemExit(f"El color '{nombre}' no es de la paleta de JDT. Usa uno de: {', '.join(PALETA)}.")
+    return PALETA[nombre]
 
 
 def con_alfa(color, a: float):
@@ -299,7 +349,14 @@ def dibujar_titular(d, texto: str, t: float, y: int, tam_max: int = 96, lineas_m
             if q <= 0:
                 continue
             k = suave(q)
-            if modo == "pop" and q < 1:
+            if modo == "resaltador":      # las palabras clave van sobre una franja amarilla
+                if ac:
+                    sigue = any(p2 is not p and x2 > x and ac2 for p2, ac2, x2, _ in linea)
+                    extra = f.getlength(" ") if sigue else 0
+                    d.rounded_rectangle([x0 + x - 12, yl + tam * 0.1, x0 + x - 12 + (w + 24 + extra) * k, yl + tam * 1.16],
+                                        radius=10, fill=AMARILLO)
+                d.text((x0 + x, yl), p, font=f, fill=con_alfa(FONDO if ac else BLANCO, k if not ac else min(1.0, k * 1.5)))
+            elif modo == "pop" and q < 1:
                 fp = fuente(max(8, int(tam * (0.45 + 0.55 * rebote(q)))))
                 d.text((x0 + x + w / 2, yl + (asc + desc) / 2), p, font=fp, fill=con_alfa(color, k * 1.5), anchor="mm")
             elif modo == "pop":
@@ -404,7 +461,7 @@ def _ventana(titulo: str) -> Image.Image:
     d.rounded_rectangle([0, 0, 429, 299], radius=24, fill=SUPERFICIE, outline=BORDE, width=3)
     d.rounded_rectangle([0, 0, 429, 66], radius=24, fill=(28, 37, 80))
     d.rectangle([0, 40, 429, 66], fill=(28, 37, 80))
-    for i, c in enumerate([(248, 113, 113), (250, 204, 21), (74, 222, 128)]):
+    for i, c in enumerate([GRIS_OSC, AMARILLO, BLANCO]):
         d.ellipse([22 + i * 30, 24, 40 + i * 30, 42], fill=c)
     d.text((130, 33), titulo[:16], font=fuente(30), fill=BLANCO, anchor="lm")
     for fila in range(4):
@@ -440,8 +497,8 @@ def esc_caos(capa, d, esc, t, dur):
         if t < 0.9 + 0.2 * i:
             continue
         r = 44 * k * (1 + 0.06 * math.sin(t * 8 + i))
-        d2.ellipse([cx - r, cy - r, cx + r, cy + r], fill=ROJO)
-        d2.text((cx, cy - 2), "!", font=fuente(int(56 * k) or 1), fill=BLANCO, anchor="mm")
+        d2.ellipse([cx - r, cy - r, cx + r, cy + r], fill=AMARILLO)
+        d2.text((cx, cy - 2), "!", font=fuente(int(56 * k) or 1), fill=FONDO, anchor="mm")
 
 
 def esc_flujo(capa, d, esc, t, dur):
@@ -459,7 +516,7 @@ def esc_flujo(capa, d, esc, t, dur):
         activo = t > 0.5 + paso * i
         lado = -1 if variante(esc, 2) == 1 and i % 2 else 1
         x = 120 + (1 - k) * 160 * lado
-        tarjeta(d, [x, y, W - 120 + (1 - k) * 160 * lado, y + alto], relleno=(34, 44, 30) if activo else SUPERFICIE,
+        tarjeta(d, [x, y, W - 120 + (1 - k) * 160 * lado, y + alto], relleno=(30, 40, 88) if activo else SUPERFICIE,
                 borde=AMARILLO if activo else BORDE, ancho=5 if activo else 3, a=k)
         d.ellipse([x + 36, y + 45, x + 116, y + 125], fill=con_alfa(AMARILLO if activo else (36, 46, 96), k))
         if activo:
@@ -649,7 +706,7 @@ def esc_chat(capa, d, esc, t, dur):
         yy = y + (1 - k) * 50
         d.rounded_rectangle([x, yy, x + ancho, yy + 130], radius=44, fill=con_alfa(relleno, a),
                             outline=con_alfa(BORDE if izq and not ultimo else relleno, a), width=3)
-        d.text((x + 45, yy + 63), m, font=f, fill=con_alfa(FONDO if ultimo else BLANCO, a), anchor="lm")
+        d.text((x + 45, yy + 63), m, font=f, fill=con_alfa(sobre(relleno), a), anchor="lm")
 
 
 def esc_comparar(capa, d, esc, t, dur):
@@ -669,12 +726,12 @@ def esc_comparar(capa, d, esc, t, dur):
         x = 80 + (1 - k) * (-140 if g == 0 else 140)
         despues = g == 1
         apagado = 0.55 if (not despues and t > t2) else 1.0
-        tarjeta(d, [x, y, x + W - 160, y + alto], radio=32, borde=AMARILLO if despues else ROJO, ancho=5 if despues else 3, a=k * apagado)
-        d.text((x + 40, y + 55), titulo.upper(), font=fuente(40), fill=con_alfa(AMARILLO if despues else ROJO, k * apagado), anchor="lm")
+        tarjeta(d, [x, y, x + W - 160, y + alto], radio=32, borde=AMARILLO if despues else GRIS_OSC, ancho=5 if despues else 3, a=k * apagado)
+        d.text((x + 40, y + 55), titulo.upper(), font=fuente(40), fill=con_alfa(AMARILLO if despues else GRIS, k * apagado), anchor="lm")
         for i, it in enumerate(lista):
             yy = y + 110 + i * 100
             q = (t - t0 - 0.3 - 0.25 * i) / 0.3
-            d.ellipse([x + 40, yy + 6, x + 104, yy + 70], fill=con_alfa(AMARILLO if despues else ROJO, k * apagado))
+            d.ellipse([x + 40, yy + 6, x + 104, yy + 70], fill=con_alfa(AMARILLO if despues else GRIS_OSC, k * apagado))
             (palomita if despues else equis)(d, x + 72, yy + 38, 32, q, FONDO if despues else BLANCO)
             d.text((x + 130, yy + 38), it, font=ajustar(it, W - 340, 44, 26), fill=con_alfa(BLANCO, k * apagado), anchor="lm")
 
@@ -725,7 +782,7 @@ def esc_reloj(capa, d, esc, t, dur):
     if r > 30:
         d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=SUPERFICIE, outline=BORDE, width=6)
         gasto = min(1.0, max(0.0, (t - 0.4) / max(1.0, dur - 1.0)))
-        d.pieslice([cx - r + 16, cy - r + 16, cx + r - 16, cy + r - 16], -90, -90 + 360 * gasto, fill=con_alfa(ROJO, 0.55))
+        d.pieslice([cx - r + 16, cy - r + 16, cx + r - 16, cy + r - 16], -90, -90 + 360 * gasto, fill=con_alfa(GRIS_OSC, 0.75))
         for i in range(12):
             a = i * math.pi / 6
             d.line([(cx + r * 0.84 * math.sin(a), cy - r * 0.84 * math.cos(a)), (cx + r * 0.93 * math.sin(a), cy - r * 0.93 * math.cos(a))], fill=GRIS, width=6)
@@ -742,8 +799,8 @@ def esc_reloj(capa, d, esc, t, dur):
         ancho = 450
         x = (W - ancho) / 2 if solo else 70 + col * (ancho + 40)
         y = 1460 + fila * 120 + (1 - a) * 60 + math.sin(t * 3 + i) * 5
-        tarjeta(d, [x, y, x + ancho, y + 96], radio=48, borde=ROJO)
-        d.ellipse([x + 26, y + 30, x + 62, y + 66], fill=ROJO)
+        tarjeta(d, [x, y, x + ancho, y + 96], radio=48, borde=GRIS_OSC)
+        d.ellipse([x + 26, y + 30, x + 62, y + 66], fill=GRIS)
         d.text((x + 84, y + 46), tarea, font=ajustar(tarea, ancho - 110, 36, 22), fill=BLANCO, anchor="lm")
 
 
@@ -755,7 +812,7 @@ def esc_web(capa, d, esc, t, dur):
     tarjeta(d, [80, y0, W - 80, y0 + 800], radio=30, a=k)
     d.rounded_rectangle([80, y0, W - 80, y0 + 84], radius=30, fill=con_alfa((28, 37, 80), k))
     d.rectangle([80, y0 + 50, W - 80, y0 + 84], fill=con_alfa((28, 37, 80), k))
-    for i, c in enumerate([(248, 113, 113), (250, 204, 21), (74, 222, 128)]):
+    for i, c in enumerate([GRIS_OSC, AMARILLO, BLANCO]):
         d.ellipse([112 + i * 36, y0 + 30, 136 + i * 36, y0 + 54], fill=con_alfa(c, k))
     d.rounded_rectangle([250, y0 + 20, W - 120, y0 + 64], radius=22, fill=con_alfa(FONDO, k))
     url = str(esc.get("url") or "tunegocio.com")
@@ -782,9 +839,9 @@ def esc_documento(capa, d, esc, t, dur):
     k = suave(t / 0.5)
     x0, x1, y0 = 250, W - 250, 830 + (1 - k) * 100
     alto = 440
-    d.rounded_rectangle([x0, y0, x1, y0 + alto], radius=20, fill=con_alfa((226, 232, 244), k))
+    d.rounded_rectangle([x0, y0, x1, y0 + alto], radius=20, fill=con_alfa((236, 239, 245), k))
     d.polygon([(x1 - 80, y0 - 2), (x1 + 2, y0 + 80), (x1 + 2, y0 - 2)], fill=con_alfa(FONDO, k))
-    d.polygon([(x1 - 80, y0), (x1 - 80, y0 + 80), (x1, y0 + 80)], fill=con_alfa((180, 190, 212), k))
+    d.polygon([(x1 - 80, y0), (x1 - 80, y0 + 80), (x1, y0 + 80)], fill=con_alfa(GRIS, k))
     largo = max(1.2, dur * 0.45)
     barrido = (t - 0.6) / largo
     ys = y0 + alto * max(0.0, min(1.0, barrido))
@@ -793,7 +850,7 @@ def esc_documento(capa, d, esc, t, dur):
         leida = ly < ys and barrido > 0
         ancho = [0.5, 0.8, 0.7, 0.85, 0.6, 0.78, 0.45][i] * (x1 - x0 - 150)
         d.rounded_rectangle([x0 + 40, ly, x0 + 40 + ancho, ly + 22], radius=10,
-                            fill=con_alfa((202, 138, 4) if leida and i in (0, 3, 5) else (148, 163, 184), k))
+                            fill=con_alfa(DORADO if leida and i in (0, 3, 5) else GRIS, k))
     if 0 < barrido < 1:
         d.rectangle([x0 - 30, ys - 40, x1 + 30, ys], fill=con_alfa(AMARILLO, 0.22))
         d.rounded_rectangle([x0 - 30, ys - 5, x1 + 30, ys + 5], radius=5, fill=AMARILLO)
@@ -845,10 +902,311 @@ def esc_pasos(capa, d, esc, t, dur):
     texto_en_caja(d, nombre, W / 2, y + 190, W - 300, 74, 36, con_alfa(BLANCO, a))
 
 
+# ---------------------------------------------------------------- palabras y escena libre
+TAM_TEXTO = {"xl": 132, "l": 96, "m": 64, "s": 44}
+ELEMENTOS = {"icono", "texto", "forma", "linea", "tarjeta", "burbuja", "barra"}
+FORMAS = {"circulo", "anillo", "rect", "pildora", "triangulo"}
+ENTRA = {"aparece", "sube", "baja", "izquierda", "derecha", "pop", "gira", "dibuja"}
+MUEVE = {"flota", "late", "gira", "tiembla", "balancea", "orbita"}
+
+
+def sprite_texto(texto: str, ancho: float, tam_max: int, lineas_max: int = 3, color=BLANCO, acento=None) -> Image.Image:
+    """Bloque de texto centrado como imagen suelta (para moverlo, escalarlo o girarlo)."""
+    f, tam, lineas = componer(texto, int(ancho), tam_max, lineas_max)
+    alto = int(tam * 1.18)
+    w = int(max(l[-1][2] + l[-1][3] for l in lineas)) + 8
+    img = Image.new("RGBA", (w, alto * len(lineas) + 12), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    acento = acento or (BLANCO if color == AMARILLO else AMARILLO)
+    for n, linea in enumerate(lineas):
+        x0 = (w - (linea[-1][2] + linea[-1][3])) / 2
+        for p, ac, x, _ in linea:
+            d.text((x0 + x, n * alto), p, font=f, fill=acento if ac else color)
+    return img
+
+
+def pegar(capa, sprite, cx, cy, escala=1.0, giro=0.0, alfa=1.0) -> None:
+    """Pega una imagen centrada en (cx, cy) con escala, giro y transparencia; recorta lo que se salga."""
+    if alfa <= 0.01 or escala <= 0.03:
+        return
+    if abs(escala - 1) > 0.01:
+        sprite = sprite.resize((max(1, int(sprite.width * escala)), max(1, int(sprite.height * escala))), Image.BILINEAR)
+    if abs(giro) > 0.3:
+        sprite = sprite.rotate(giro, resample=Image.BICUBIC, expand=True)
+    if alfa < 0.99:
+        sprite = sprite.copy()
+        sprite.putalpha(sprite.getchannel("A").point(lambda v: int(v * alfa)))
+    x, y = int(cx - sprite.width / 2), int(cy - sprite.height / 2)
+    x0, y0, x1, y1 = max(0, x), max(0, y), min(W, x + sprite.width), min(H, y + sprite.height)
+    if x1 > x0 and y1 > y0:
+        capa.alpha_composite(sprite.crop((x0 - x, y0 - y, x1 - x, y1 - y)), (x0, y0))
+
+
+def esc_palabras(capa, d, esc, t, dur):
+    """Tipografia cinetica: frases cortas que golpean la pantalla una por una."""
+    frases = [str(x) for x in esc.get("frases") or []] or [str(esc.get("texto", ""))]
+    pesos = [max(7, len(f)) for f in frases]
+    pesos[-1] = pesos[-1] * 1.5        # la ultima se queda un poco mas
+    total, ini, idx, lt = sum(pesos), 0.0, len(frases) - 1, 0.0
+    for j, peso in enumerate(pesos):
+        tramo = dur * peso / total
+        if t < ini + tramo or j == len(pesos) - 1:
+            idx, lt = j, t - ini
+            break
+        ini += tramo
+    cache = esc.setdefault("_f", {})
+    if idx not in cache:
+        cache[idx] = sprite_texto(frases[idx], W - 160, 190, 3)
+    modo = (ESTILO["n"] + esc.get("_i", 0) + idx) % 3
+    q = lt / 0.2
+    k = suave(q)
+    escala, dy = 1.0, 0.0
+    if modo == 0:
+        escala = 1 + 0.6 * (1 - k)                 # llega grande y se asienta
+    elif modo == 1:
+        escala = rebote(q) if q < 1 else 1.0       # salta desde el centro
+    else:
+        dy = (1 - k) * 170                         # sube desde abajo
+    cy = 930
+    ancho = cache[idx].width * k
+    d.rounded_rectangle([W / 2 - ancho / 2, cy + cache[idx].height / 2 + 34, W / 2 + ancho / 2, cy + cache[idx].height / 2 + 48],
+                        radius=7, fill=AMARILLO if idx == len(frases) - 1 else ESTILO["acento"])
+    pegar(capa, cache[idx], W / 2, cy + dy, escala, 0, min(1.0, q * 2.5))
+    n = len(frases)
+    for j in range(n):
+        r = 10 if j == idx else 6
+        px = W / 2 - (n - 1) * 24 + j * 48
+        d.ellipse([px - r, 1580 - r, px + r, 1580 + r], fill=AMARILLO if j <= idx else BORDE)
+
+
+def _sprite(el: dict) -> Image.Image:
+    if "_s" in el:
+        return el["_s"]
+    tipo = el["el"]
+    if tipo == "icono":
+        s = iconos.icono(el["nombre"], int(float(el.get("tam", 22)) / 100 * W), color_de(el.get("color"), AMARILLO))
+    elif tipo == "texto":
+        s = sprite_texto(str(el["texto"]), float(el.get("ancho", 84)) / 100 * W, TAM_TEXTO[el.get("tam", "m")], 3,
+                         color_de(el.get("color"), BLANCO))
+    elif tipo == "forma":
+        w = max(8, int(float(el.get("ancho", 20)) / 100 * W))
+        h = max(8, int(float(el.get("alto", el.get("ancho", 20))) / 100 * W))
+        forma, c, g = el.get("forma", "circulo"), (*color_de(el.get("color"), AMARILLO), 255), int(el.get("grosor", 8)) * 2
+        img = Image.new("RGBA", (w * 2, h * 2), (0, 0, 0, 0))
+        dd = ImageDraw.Draw(img)
+        kw = {"fill": c} if el.get("relleno", forma != "anillo") else {"outline": c, "width": g}
+        caja = [0, 0, w * 2 - 1, h * 2 - 1]
+        if forma in ("circulo", "anillo"):
+            dd.ellipse(caja, **kw)
+        elif forma == "triangulo":
+            dd.polygon([(w, 0), (w * 2 - 1, h * 2 - 1), (0, h * 2 - 1)], **kw)
+        else:
+            dd.rounded_rectangle(caja, radius=min(w, h) if forma == "pildora" else int(min(w, h) * 0.24), **kw)
+        s = img.resize((w, h), Image.LANCZOS)
+    elif tipo == "tarjeta":
+        texto, col = str(el.get("texto", "")), color_de(el.get("color"), SUPERFICIE)
+        tinta, ic, alto, pad = sobre(col), el.get("icono"), 124, 38
+        ancho_max = float(el.get("ancho", 84)) / 100 * W
+        f = ajustar(texto, ancho_max - pad * 2 - (88 if ic else 0), 46, 26)
+        w = int(min(ancho_max, f.getlength(texto) + pad * 2 + (88 if ic else 0)))
+        s = Image.new("RGBA", (w, alto), (0, 0, 0, 0))
+        dd = ImageDraw.Draw(s)
+        dd.rounded_rectangle([0, 0, w - 1, alto - 1], radius=32, fill=(*col, 255),
+                             outline=(*(BORDE if tinta == BLANCO else col), 255), width=3)
+        x = pad
+        if ic:
+            s.alpha_composite(iconos.icono(ic, 72, AMARILLO if tinta == BLANCO else FONDO), (pad - 8, (alto - 72) // 2))
+            x = pad + 80
+        ImageDraw.Draw(s).text((x, alto / 2 - 2), texto, font=f, fill=tinta, anchor="lm")
+    elif tipo == "burbuja":
+        col = color_de(el.get("color"), BLANCO)
+        tinta = sobre(col)
+        txt = sprite_texto(str(el["texto"]), float(el.get("ancho", 62)) / 100 * W - 84, 46, 3, tinta,
+                           acento=AMARILLO if tinta == BLANCO else tinta)
+        w, h, cola = txt.width + 84, txt.height + 52, el.get("cola", "izq")
+        s = Image.new("RGBA", (w, h + 44), (0, 0, 0, 0))
+        dd = ImageDraw.Draw(s)
+        if cola != "ninguna":
+            bx, sentido = (72, -1) if cola == "izq" else (w - 72, 1)
+            dd.polygon([(bx - 28, h - 8), (bx + 28, h - 8), (bx + sentido * 40, h + 40)], fill=(*col, 255))
+        dd.rounded_rectangle([0, 0, w - 1, h - 1], radius=44, fill=(*col, 255),
+                             outline=(*(BORDE if tinta == BLANCO else col), 255), width=3)
+        s.alpha_composite(txt, (42, 24))
+    else:
+        raise SystemExit(f"Elemento '{tipo}' no tiene imagen propia.")
+    el["_s"] = s
+    return s
+
+
+def _linea(d, el, k, alfa, t, i):
+    x0, y0, x1, y1 = el["x"] / 100 * W, el["y"] / 100 * H, el["a"][0] / 100 * W, el["a"][1] / 100 * H
+    c, g = con_alfa(color_de(el.get("color"), GRIS), alfa), int(el.get("grosor", 8))
+    estilo = el.get("estilo", "solida")
+    xe, ye = x0 + (x1 - x0) * k, y0 + (y1 - y0) * k
+    if estilo == "punteada":
+        n = max(1, int(math.hypot(x1 - x0, y1 - y0) / 36))
+        for j in range(n + 1):
+            if j / n > k:
+                break
+            px, py = x0 + (x1 - x0) * j / n, y0 + (y1 - y0) * j / n
+            d.ellipse([px - g * 0.7, py - g * 0.7, px + g * 0.7, py + g * 0.7], fill=c)
+    else:
+        d.line([(x0, y0), (xe, ye)], fill=c, width=g)
+        d.ellipse([x0 - g / 2, y0 - g / 2, x0 + g / 2, y0 + g / 2], fill=c)
+        if estilo != "flecha":
+            d.ellipse([xe - g / 2, ye - g / 2, xe + g / 2, ye + g / 2], fill=c)
+    if estilo == "flecha" and k > 0.12:
+        ang, lado = math.atan2(y1 - y0, x1 - x0), g * 3.4
+        ux, uy = math.cos(ang), math.sin(ang)
+        d.polygon([(xe + ux * lado * 0.7, ye + uy * lado * 0.7), (xe - ux * lado * 0.4 - uy * lado * 0.7, ye - uy * lado * 0.4 + ux * lado * 0.7),
+                   (xe - ux * lado * 0.4 + uy * lado * 0.7, ye - uy * lado * 0.4 - ux * lado * 0.7)], fill=c)
+    if el.get("pulso") and k >= 1:      # un punto viaja por la linea, como un dato que pasa
+        q = (t * 0.8 + i * 0.3) % 1
+        px, py, r = x0 + (x1 - x0) * q, y0 + (y1 - y0) * q, g * 1.5
+        d.ellipse([px - r, py - r, px + r, py + r], fill=con_alfa(AMARILLO, alfa))
+
+
+def _elemento(capa, d, el, i, n, t, dur):
+    paso = min(0.5, dur * 0.55 / max(1, n))
+    t0 = float(el["t"]) * dur if "t" in el else 0.15 + i * paso
+    if t < t0:
+        return
+    alfa = float(el.get("opacidad", 1))
+    if "sale" in el:
+        fin = float(el["sale"]) * dur
+        if t > fin + 0.3:
+            return
+        if t > fin:
+            alfa *= 1 - (t - fin) / 0.3
+    lt = t - t0
+    q = lt / 0.45
+    k = suave(q)
+    tipo = el["el"]
+    x, y = el["x"] / 100 * W, el["y"] / 100 * H
+    if tipo == "linea":
+        _linea(d, el, suave(lt / 0.6), alfa, t, i)
+        return
+    if tipo == "barra":
+        w, h = float(el.get("ancho", 60)) / 100 * W, max(10, int(float(el.get("alto", 3.4)) / 100 * W))
+        v = max(0.0, min(100.0, float(el.get("valor", 80)))) / 100
+        d.rounded_rectangle([x - w / 2, y - h / 2, x + w / 2, y + h / 2], radius=h // 2, fill=con_alfa((36, 46, 96), alfa * k))
+        lleno = w * v * suave((lt - 0.2) / 0.9)
+        if lleno > h:
+            d.rounded_rectangle([x - w / 2, y - h / 2, x - w / 2 + lleno, y + h / 2], radius=h // 2,
+                                fill=con_alfa(color_de(el.get("color"), AMARILLO), alfa))
+        return
+    entra = el.get("entra") or ("pop" if tipo == "icono" else "sube")
+    escala, giro = 1.0, float(el.get("giro", 0))
+    if entra == "sube":
+        y += (1 - k) * 90
+        alfa *= k
+    elif entra == "baja":
+        y -= (1 - k) * 90
+        alfa *= k
+    elif entra == "izquierda":
+        x -= (1 - k) * 170
+        alfa *= k
+    elif entra == "derecha":
+        x += (1 - k) * 170
+        alfa *= k
+    elif entra == "pop":
+        escala = rebote(q) if q < 1 else 1.0
+        alfa *= min(1.0, q * 3)
+    elif entra == "gira":
+        escala, giro = max(0.05, k), giro + (1 - k) * 140
+        alfa *= k
+    else:
+        alfa *= k
+    if "a" in el:       # viaja de (x, y) al punto "a" a mitad de la escena
+        v = suave((lt - 0.5) / max(0.4, dur * 0.3))
+        x += (el["a"][0] - el["x"]) / 100 * W * v
+        y += (el["a"][1] - el["y"]) / 100 * H * v
+    mueve, fase = el.get("mueve"), i * 1.3
+    if mueve == "flota":
+        y += math.sin(t * 2.2 + fase) * 14
+    elif mueve == "late":
+        escala *= 1 + 0.06 * math.sin(t * 5 + fase)
+    elif mueve == "gira":
+        giro -= t * 70
+    elif mueve == "tiembla":
+        giro += math.sin(t * 22 + fase) * 3
+        x += math.sin(t * 31 + fase) * 4
+    elif mueve == "balancea":
+        giro += math.sin(t * 2.4 + fase) * 9
+    elif mueve == "orbita":
+        x += math.cos(t * 1.8 + fase) * 26
+        y += math.sin(t * 1.8 + fase) * 26
+    pegar(capa, _sprite(el), x, y, escala, giro, alfa)
+
+
+def esc_libre(capa, d, esc, t, dur):
+    """Escena que arma el guionista con iconos, textos, formas, lineas, tarjetas y burbujas."""
+    if str(esc.get("texto", "")).strip():
+        dibujar_titular(d, esc["texto"], t, 300)
+    els = esc.get("elementos") or []
+    for i, el in enumerate(els):
+        _elemento(capa, d, el, i, len(els), t, dur)
+
+
+def _validar_libre(i: int, e: dict) -> None:
+    els = e.get("elementos") or []
+    if not 1 <= len(els) <= 14:
+        raise SystemExit(f"Escena {i} (libre): 'elementos' debe tener de 1 a 14 elementos.")
+    titulo = bool(str(e.get("texto", "")).strip())
+    for j, el in enumerate(els, 1):
+        donde = f"Escena {i}, elemento {j}"
+        tipo = el.get("el")
+        if tipo not in ELEMENTOS:
+            raise SystemExit(f"{donde}: 'el' debe ser uno de {sorted(ELEMENTOS)}.")
+        puntos = [(el.get("x"), el.get("y"))] + ([tuple(el["a"])] if isinstance(el.get("a"), (list, tuple)) and len(el["a"]) == 2 else [])
+        if "a" in el and len(puntos) < 2:
+            raise SystemExit(f"{donde}: 'a' debe ser [x, y].")
+        if tipo == "linea" and len(puntos) < 2:
+            raise SystemExit(f"{donde}: la linea necesita 'a': [x, y] (donde termina).")
+        for px, py in puntos:
+            if not isinstance(px, (int, float)) or not isinstance(py, (int, float)):
+                raise SystemExit(f"{donde}: faltan 'x' e 'y' (porcentaje del lienzo, de 0 a 100).")
+            if not 4 <= px <= 96 or not 12 <= py <= 90:
+                raise SystemExit(f"{donde}: fuera de la zona segura (x de 4 a 96, y de 12 a 90).")
+            if titulo and py < 36:
+                raise SystemExit(f"{donde}: con 'texto' de titular los elementos van de y=36 hacia abajo (o quita el 'texto').")
+        color_de(el.get("color"), BLANCO)
+        if tipo == "icono" and el.get("nombre") not in iconos.ICONOS:
+            raise SystemExit(f"{donde}: el icono '{el.get('nombre')}' no existe. Disponibles: {', '.join(iconos.NOMBRES)}.")
+        if tipo == "tarjeta" and el.get("icono") and el["icono"] not in iconos.ICONOS:
+            raise SystemExit(f"{donde}: el icono '{el['icono']}' no existe. Disponibles: {', '.join(iconos.NOMBRES)}.")
+        if tipo in ("texto", "burbuja", "tarjeta"):
+            largo, tope = len(str(el.get("texto", "")).strip()), {"texto": 60, "burbuja": 70, "tarjeta": 28}[tipo]
+            if not 1 <= largo <= tope:
+                raise SystemExit(f"{donde}: el 'texto' de {tipo} debe tener de 1 a {tope} caracteres.")
+        if tipo == "texto" and el.get("tam", "m") not in TAM_TEXTO:
+            raise SystemExit(f"{donde}: 'tam' del texto debe ser uno de {list(TAM_TEXTO)}.")
+        if tipo == "icono" and not 6 <= float(el.get("tam", 22)) <= 70:
+            raise SystemExit(f"{donde}: 'tam' del icono va de 6 a 70 (porcentaje del ancho).")
+        if tipo == "forma" and el.get("forma", "circulo") not in FORMAS:
+            raise SystemExit(f"{donde}: 'forma' debe ser una de {sorted(FORMAS)}.")
+        if el.get("entra") and el["entra"] not in ENTRA:
+            raise SystemExit(f"{donde}: 'entra' debe ser uno de {sorted(ENTRA)}.")
+        if el.get("mueve") and el["mueve"] not in MUEVE:
+            raise SystemExit(f"{donde}: 'mueve' debe ser uno de {sorted(MUEVE)}.")
+        for clave in ("t", "sale"):
+            if clave in el and not 0 <= float(el[clave]) <= 1:
+                raise SystemExit(f"{donde}: '{clave}' es una fraccion de la escena, entre 0 y 1.")
+        if tipo in ("linea", "barra"):
+            continue
+        sp = _sprite(el)
+        for px, py in puntos:
+            cx, cy = px / 100 * W, py / 100 * H
+            if cx - sp.width / 2 < 24 or cx + sp.width / 2 > W - 24:
+                raise SystemExit(f"{donde} ({tipo}): se sale por los lados; acercalo al centro (x=50) o hazlo mas pequeno.")
+            if cy - sp.height / 2 < 210 or cy + sp.height / 2 > H - 70:
+                raise SystemExit(f"{donde} ({tipo}): se sale por arriba o por abajo; muevelo (y) o hazlo mas pequeno.")
+
+
 ESCENAS = {"titular": esc_titular, "caos": esc_caos, "flujo": esc_flujo, "panel": esc_panel,
            "lista": esc_lista, "telefono": esc_telefono, "chat": esc_chat, "comparar": esc_comparar,
            "conexion": esc_conexion, "reloj": esc_reloj, "web": esc_web, "documento": esc_documento,
-           "pasos": esc_pasos, "cierre": esc_cierre}
+           "pasos": esc_pasos, "palabras": esc_palabras, "libre": esc_libre, "cierre": esc_cierre}
 
 
 # ---------------------------------------------------------------- render
@@ -865,12 +1223,25 @@ def validar(guion: dict) -> None:
     if not 2 <= len(escenas) <= 8:
         raise SystemExit("El guion debe tener entre 2 y 8 escenas.")
     for i, e in enumerate(escenas, 1):
-        if e.get("tipo") not in TIPOS:
-            raise SystemExit(f"Escena {i}: tipo '{e.get('tipo')}' no existe. Tipos: {sorted(TIPOS)}")
-        if not str(e.get("texto", "")).strip():
+        tipo = e.get("tipo")
+        if tipo not in TIPOS:
+            raise SystemExit(f"Escena {i}: tipo '{tipo}' no existe. Tipos: {sorted(TIPOS)}")
+        texto = str(e.get("texto", "")).strip()
+        if not texto and tipo not in ("libre", "palabras"):
             raise SystemExit(f"Escena {i}: falta 'texto'.")
-        if len(partir(e["texto"])) > 12:
+        if texto and len(partir(texto)) > 12:
             raise SystemExit(f"Escena {i}: el texto en pantalla tiene mas de 12 palabras; acortalo.")
+        if e.get("camara") and e["camara"] not in CAMARAS:
+            raise SystemExit(f"Escena {i}: 'camara' debe ser una de {CAMARAS}.")
+        if tipo == "palabras":
+            frases = e.get("frases") or []
+            if not 2 <= len(frases) <= 6:
+                raise SystemExit(f"Escena {i} (palabras): 'frases' debe tener de 2 a 6 frases cortas.")
+            for fr in frases:
+                if len(str(fr).split()) > 5 or len(str(fr)) > 30:
+                    raise SystemExit(f"Escena {i} (palabras): la frase '{fr}' es larga; maximo 5 palabras y 30 caracteres.")
+        if tipo == "libre":
+            _validar_libre(i, e)
     if escenas[-1]["tipo"] != "cierre":
         raise SystemExit("La ultima escena debe ser de tipo 'cierre'.")
 
@@ -878,6 +1249,8 @@ def validar(guion: dict) -> None:
 def repartir(guion: dict, audio: Path | None) -> list[float]:
     escenas = guion["escenas"]
     durs = [float(e.get("duracion") or 3) for e in escenas]
+    if audio and guion.get("sincronia") == "exacta" and all(e.get("duracion") for e in escenas):
+        return durs        # voz_local.py ya midio cuanto dura la frase de cada escena
     if audio:
         total = duracion_audio(audio) + 1.0
         pesos = [len(e["voz"]) for e in escenas] if all(e.get("voz") for e in escenas) else durs
@@ -904,6 +1277,11 @@ def cuadro(guion, durs, fondo, t: float) -> Image.Image:
     sale = 1.0 if ultima else suave((dur - local) / 0.25)      # 1 = escena completa, 0 = ya salio
     entra = 1.0 if idx == 0 else suave(local / 0.25)
     dx = dy = 0
+    camara, z = esc.get("camara") or ESTILO["camara"], 1.0
+    if camara == "acerca":          # la camara se acerca muy despacio durante la escena
+        z = 1 + 0.05 * min(1.0, local / dur)
+    elif camara == "aleja":
+        z = 1.05 - 0.05 * min(1.0, local / dur)
     if sale < 1 and trans != "barrido":
         capa.putalpha(capa.getchannel("A").point(lambda v: int(v * sale)))
         if trans == "desliza-izq":
@@ -911,13 +1289,14 @@ def cuadro(guion, durs, fondo, t: float) -> Image.Image:
         elif trans == "desliza-arriba":
             dy = -int((1 - sale) * 320)
         elif trans == "zoom":
-            z = 1 + 0.28 * (1 - sale)
-            capa = capa.resize((int(W * z), int(H * z)), Image.BILINEAR)
-            dx, dy = (W - capa.width) // 2, (H - capa.height) // 2
+            z *= 1 + 0.28 * (1 - sale)
     elif entra < 1 and trans == "desliza-izq":
         dx = int((1 - entra) * W * 0.3)
     elif entra < 1 and trans == "desliza-arriba":
         dy = int((1 - entra) * 220)
+    if abs(z - 1) > 0.001:          # zoom con precision de subpixel, para que no tiemble
+        capa = capa.transform((W, H), Image.AFFINE, (1 / z, 0, W / 2 * (1 - 1 / z), 0, 1 / z, H * 0.5 * (1 - 1 / z)),
+                              resample=Image.BILINEAR)
     img = fondo.copy()
     dibujar_ambiente(img, t)
     img.paste(capa, (dx, dy), capa)
@@ -947,9 +1326,14 @@ def main() -> None:
         p = Path(p)
         return p if p.is_absolute() else (CARPETA / p if (CARPETA / p).parent.exists() else base / p)
 
-    audio = resolver(guion["audio"]) if guion.get("audio") else None
+    sin_audio = "--sin-audio" in sys.argv
+    audio = resolver(guion["audio"]) if guion.get("audio") and not sin_audio else None
     if audio and not audio.exists():
         raise SystemExit(f"No existe el audio: {audio}")
+    if not audio and not sin_audio and "--cuadro" not in sys.argv and "--hoja" not in sys.argv:
+        raise SystemExit("Este guion no tiene voz en off (falta \"audio\"). TODO video lleva locucion. Genera la voz con:\n"
+                         f"    python3 voz_local.py \"{sys.argv[1]}\"\n"
+                         "y vuelve a ejecutar este comando. (Solo para pruebas internas existe --sin-audio.)")
     durs = repartir(guion, audio)
     total = sum(durs)
     n = guion["estilo"] if isinstance(guion.get("estilo"), int) else puesto_del_guion(ruta_guion, ruta_guion.parent)
@@ -961,13 +1345,30 @@ def main() -> None:
         cuadro(guion, durs, fondo, float(sys.argv[i + 1])).save(sys.argv[i + 2])
         print(f"Cuadro guardado: {sys.argv[i + 2]}")
         return
+    if "--hoja" in sys.argv:
+        destino = Path(sys.argv[sys.argv.index("--hoja") + 1])
+        mini_w, mini_h = 360, 640
+        hoja = Image.new("RGB", (mini_w * len(durs), mini_h * 2), FONDO)
+        inicio, sueltos = 0.0, []
+        for n, dur in enumerate(durs):
+            for fila, (letra, frac) in enumerate((("a", 0.5), ("b", 0.93))):
+                img = cuadro(guion, durs, fondo, inicio + dur * frac)
+                suelto = destino.with_name(f"{destino.stem}_escena{n + 1}{letra}.png")
+                img.save(suelto)
+                sueltos.append(str(suelto))
+                hoja.paste(img.resize((mini_w, mini_h), Image.LANCZOS), (mini_w * n, mini_h * fila))
+            inicio += dur
+        hoja.save(destino)
+        print(json.dumps({"hoja": str(destino), "cuadros": sueltos, "escenas_s": [round(x, 2) for x in durs]}, ensure_ascii=False))
+        return
 
     salida = resolver(guion.get("salida") or f"videos/{ruta_guion.stem}.mp4")
     salida.parent.mkdir(parents=True, exist_ok=True)
     cmd = [imageio_ffmpeg.get_ffmpeg_exe(), "-y", "-loglevel", "error",
            "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
     if audio:
-        cmd += ["-i", str(audio), "-af", "adelay=300|300,apad", "-c:a", "aac", "-b:a", "192k"]
+        retardo = 0 if guion.get("sincronia") == "exacta" else 300
+        cmd += ["-i", str(audio), "-af", f"adelay={retardo}|{retardo},apad", "-c:a", "aac", "-b:a", "192k"]
     cmd += ["-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
             "-movflags", "+faststart", "-t", f"{total:.3f}", str(salida)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
@@ -977,9 +1378,16 @@ def main() -> None:
     proc.stdin.close()
     if proc.wait() != 0:
         raise SystemExit("FFmpeg fallo al codificar el video.")
+    if audio:       # comprobar que la voz quedo de verdad dentro del MP4 y que no es silencio
+        r = subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-i", str(salida), "-af", "volumedetect", "-vn", "-f", "null", "-"],
+                           capture_output=True, text=True, errors="replace")
+        m = re.search(r"mean_volume: (-?[\d.]+) dB", r.stderr)
+        if "Audio:" not in r.stderr or not m or float(m[1]) < -50:
+            raise SystemExit("El video quedo SIN voz audible (pista de audio ausente o en silencio). Revisa el archivo de "
+                             "audio o vuelve a generar la voz con voz_local.py.")
     print(json.dumps({"video": str(salida), "duracion_s": round(total, 2), "cuadros": n,
                       "con_audio": bool(audio),
-                      "estilo": {k: ESTILO[k] for k in ("n", "fondo", "entrada", "transicion", "esquinas", "ambiente")},
+                      "estilo": {k: ESTILO[k] for k in ("n", "fondo", "entrada", "transicion", "esquinas", "ambiente", "camara")},
                       "escenas_s": [round(x, 2) for x in durs]}, ensure_ascii=False))
 
 
