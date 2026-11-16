@@ -1,0 +1,29 @@
+{
+ "salida": "videos/prueba-formato.mp4",
+ "formato": "(nombre del formato narrativo de este video)",
+ "concepto": "(la idea del video en una frase). OJO: este archivo NO es un video real ni una idea; solo muestra cómo se escribe cada tipo de elemento.",
+ "escenas": [
+  {"tipo": "palabras", "frases": ["Primera frase.", "Segunda.", "*La que remata.*"],
+   "voz": "Aquí va lo que dice la voz en esta escena."},
+  {"tipo": "libre", "texto": "Titular *opcional*", "voz": "Aquí va lo que dice la voz en esta escena.",
+   "elementos": [
+    {"el": "icono", "nombre": "engranaje", "x": 22, "y": 45, "tam": 18, "color": "amarillo", "entra": "pop", "mueve": "gira"},
+    {"el": "texto", "texto": "Un texto *suelto*", "x": 64, "y": 45, "tam": "m", "ancho": 52},
+    {"el": "linea", "x": 12, "y": 55, "a": [88, 55], "estilo": "punteada", "color": "azul", "pulso": true},
+    {"el": "tarjeta", "texto": "Una tarjeta", "icono": "check", "x": 29, "y": 63, "ancho": 44},
+    {"el": "burbuja", "texto": "Una burbuja", "x": 72, "y": 64, "cola": "der", "color": "amarillo", "ancho": 46},
+    {"el": "forma", "forma": "anillo", "x": 20, "y": 77, "ancho": 16, "color": "gris", "mueve": "late"},
+    {"el": "barra", "x": 62, "y": 77, "ancho": 52, "valor": 70},
+    {"el": "icono", "nombre": "caja", "x": 14, "y": 86, "tam": 9, "color": "blanco", "a": [86, 86]}
+   ]},
+  {"tipo": "libre", "voz": "Aquí va lo que dice la voz en esta escena.", "camara": "acerca",
+   "elementos": [
+    {"el": "forma", "forma": "circulo", "x": 50, "y": 42, "ancho": 50, "color": "superficie", "t": 0},
+    {"el": "icono", "nombre": "bombilla", "x": 50, "y": 42, "tam": 30, "t": 0.05, "mueve": "flota"},
+    {"el": "texto", "texto": "Texto grande *sin titular*", "x": 50, "y": 70, "tam": "l", "t": 0.3},
+    {"el": "linea", "x": 30, "y": 82, "a": [70, 82], "estilo": "flecha", "color": "dorado", "t": 0.5, "sale": 0.9}
+   ]},
+  {"tipo": "cierre", "texto": "Hablemos de *tu proyecto*", "subtexto": "@technologicsjdt",
+   "voz": "Aquí va el llamado a la acción."}
+ ]
+}

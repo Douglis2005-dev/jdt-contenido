@@ -41,6 +41,9 @@ justo lo que dura su frase.
 PALETA: solo se usan los colores de la marca, por nombre: amarillo, dorado, blanco, gris,
 azul (azul marino claro), superficie, borde, fondo. Cualquier otro color da error.
 
+VARIEDAD: el script se detiene si una escena libre repite casi los mismos elementos de otra del
+mismo guion o de los 4 guiones anteriores de la carpeta (hay que disenarla distinta).
+
 ESCENA LIBRE ("tipo": "libre"): el guionista arma su propia escena con "elementos" (1 a 14).
 Posiciones en porcentaje del lienzo: x de 4 a 96, y de 12 a 90 (con "texto" de titular, de 36 en
 adelante). Cada elemento:
@@ -71,6 +74,7 @@ from __future__ import annotations
 
 import functools
 import json
+from collections import Counter
 import math
 import random
 import re
@@ -1246,6 +1250,58 @@ def validar(guion: dict) -> None:
         raise SystemExit("La ultima escena debe ser de tipo 'cierre'.")
 
 
+def _firma(esc: dict) -> list[str]:
+    """Que elementos tiene una escena libre, sin posiciones ni textos: delata las composiciones copiadas."""
+    firma = []
+    for el in esc.get("elementos") or []:
+        tipo = el.get("el")
+        if tipo == "icono":
+            firma.append("icono:" + str(el.get("nombre", "")).split("-")[0])
+        elif tipo == "forma":
+            firma.append("forma:" + str(el.get("forma", "circulo")))
+        else:
+            firma.append(str(tipo))
+    return firma
+
+
+def _parecido(a: list[str], b: list[str]) -> float:
+    ca, cb = Counter(a), Counter(b)
+    union = sum((ca | cb).values())
+    return sum((ca & cb).values()) / union if union else 0.0
+
+
+def revisar_repeticion(guion: dict, ruta: Path) -> None:
+    """Pedido del dueno: los videos no pueden parecerse entre si. Compara el guion con los 4 anteriores
+    de la misma carpeta y consigo mismo, y se detiene si una escena libre repite la composicion de otra."""
+    if ruta.stem.startswith(("prueba", "_")) or isinstance(guion.get("estilo"), int):
+        return
+    escenas = guion["escenas"]
+    libres = [(i, _firma(e)) for i, e in enumerate(escenas, 1) if e.get("tipo") == "libre"]
+    for n, (i, fa) in enumerate(libres):
+        for k, fb in libres[n + 1:]:
+            if len(fa) >= 3 and _parecido(fa, fb) >= 0.7:
+                raise SystemExit(f"Las escenas {i} y {k} (libres) usan casi los mismos elementos. Dale a cada una su propia "
+                                 "composicion: otros iconos, otra disposicion.")
+    tipos = [e.get("tipo") for e in escenas]
+    previos = sorted(p for p in ruta.parent.glob("*.json") if p.stem < ruta.stem and not p.stem.startswith(("prueba", "_")))[-4:]
+    for p in previos:
+        try:
+            viejas = json.loads(p.read_text(encoding="utf-8")).get("escenas") or []
+        except (OSError, ValueError):
+            continue
+        if len(libres) < 2 and [e.get("tipo") for e in viejas] == tipos:
+            raise SystemExit(f"La secuencia de escenas {tipos} es la misma de {p.name}. Arma este video distinto: "
+                             "otros tipos de escena u otro orden.")
+        for i, fa in libres:
+            if len(fa) < 3:
+                continue
+            for j, v in enumerate(viejas, 1):
+                if v.get("tipo") == "libre" and _parecido(fa, _firma(v)) >= 0.55:
+                    raise SystemExit(f"Escena {i} (libre): repite casi la misma composicion de la escena {j} de {p.name} "
+                                     f"(elementos: {', '.join(sorted(set(fa)))}). Disenala de nuevo para ESTE tema: otra "
+                                     "metafora visual, otros iconos y otra disposicion.")
+
+
 def repartir(guion: dict, audio: Path | None) -> list[float]:
     escenas = guion["escenas"]
     durs = [float(e.get("duracion") or 3) for e in escenas]
@@ -1320,6 +1376,7 @@ def main() -> None:
     ruta_guion = Path(sys.argv[1]).resolve()
     guion = json.loads(ruta_guion.read_text(encoding="utf-8"))
     validar(guion)
+    revisar_repeticion(guion, ruta_guion)
     base = ruta_guion.parent
 
     def resolver(p):
