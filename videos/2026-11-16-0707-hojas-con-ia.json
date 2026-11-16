@@ -1,0 +1,10 @@
+{
+  "salida": "videos/2026-11-16-0707-hojas-con-ia.mp4",
+  "escenas": [
+    {"tipo": "titular", "texto": "¿Cada semana armas el *mismo reporte* a mano?", "duracion": 4, "voz": "¿Cada semana armas el mismo reporte a mano?"},
+    {"tipo": "comparar", "texto": "Antes *a mano*, ahora *con IA*", "etiquetas": ["Copiar dato por dato", "Pegar celda por celda", "Hoja con fórmulas", "Revisas y compartes"], "duracion": 4, "voz": "Antes copiabas dato por dato. Ahora la IA arma la hoja con fórmulas."},
+    {"tipo": "flujo", "texto": "Pides y la hoja se *arma sola*", "etiquetas": ["Pides lo que necesitas", "Se crean pestañas", "Tú revisas y compartes"], "duracion": 4, "voz": "Tú pides lo que necesitas y la hoja se va armando sola."},
+    {"tipo": "panel", "texto": "Pero esa hoja *no lee* tus sistemas en vivo", "etiquetas": ["Ventas", "Pedidos", "Clientes"], "duracion": 4, "voz": "Pero esa hoja no lee tus sistemas en vivo. Ahí entramos nosotros."},
+    {"tipo": "cierre", "texto": "Hablemos de *tu proyecto*", "subtexto": "@technologicsjdt", "duracion": 4, "voz": "En JDT Technologics conectamos tus datos. ¡Hablemos de tu proyecto!"}
+  ]
+}
