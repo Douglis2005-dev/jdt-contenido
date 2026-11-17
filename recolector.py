@@ -122,9 +122,9 @@ def voz_de_turno() -> dict:
     """La voz que toca en esta ejecucion.
 
     Guarda en voz_estado.json la ultima voz asignada y cuando. Cada ejecucion nueva
-    avanza a la siguiente voz; si se vuelve a pedir dentro de los 90 minutos
+    avanza a la siguiente voz; si se vuelve a pedir dentro de los 20 minutos
     siguientes, repite la misma (asi una ejecucion que pregunta dos veces no salta
-    una voz). Las ejecuciones estan separadas por al menos 3 horas.
+    una voz). Las ejecuciones estan separadas por al menos una hora, y cada una pide la voz una sola vez.
     """
     ahora = datetime.now()
     estado = {}
@@ -136,7 +136,7 @@ def voz_de_turno() -> dict:
         antes = datetime.fromisoformat(estado.get("asignada", ""))
     except ValueError:
         antes = None
-    if ultima in ids and antes and ahora - antes < timedelta(minutes=90):
+    if ultima in ids and antes and ahora - antes < timedelta(minutes=20):
         return VOCES[ids.index(ultima)]
     siguiente = (ids.index(ultima) + 1) % len(VOCES) if ultima in ids else 0
     voz = VOCES[siguiente]
