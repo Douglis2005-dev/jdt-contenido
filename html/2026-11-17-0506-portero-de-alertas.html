@@ -15,14 +15,14 @@
 <div id="e1" class="sc" style="background:#FACC15">
   <div id="h1a" class="txt navy" style="top:540px;font-size:126px;white-space:nowrap">¡Tú no entras!</div>
   <div id="h1b" class="txt navy" style="top:760px;font-size:120px;white-space:nowrap;opacity:0">¡Tú tampoco!</div>
-  <div id="portero1" class="card" style="left:830px;top:1010px;width:230px;height:200px;font-size:40px;border-color:#0A0E27;background:#0A0E27;opacity:0"><div>Portero<br><span style="color:#FACC15;font-size:34px">IA</span></div></div>
-  <div id="door" class="abs" style="left:880px;top:1000px;width:14px;height:520px;background:#0A0E27;opacity:0"></div>
-  <div id="fake" class="card" style="left:110px;top:1140px;width:700px;height:260px;font-size:72px;opacity:0"><span>Oferta falsa ✕</span></div>
+  <div id="portero1" class="card" style="left:740px;top:950px;width:270px;height:170px;font-size:44px;border-color:#0A0E27;background:#0A0E27;opacity:0"><div>Portero<br><span style="color:#FACC15;font-size:34px">IA</span></div></div>
+  <div id="door" class="abs" style="left:868px;top:1120px;width:14px;height:420px;background:#0A0E27;opacity:0"></div>
+  <div id="fake" class="card" style="left:110px;top:1180px;width:600px;height:240px;font-size:64px;opacity:0"><span>Oferta falsa ✕</span></div>
 </div>
 
 <!-- ESCENA 2 · la IA revisa y deja pasar solo lo real -->
 <div id="e2" class="sc">
-  <div id="t2" class="txt" style="top:300px;font-size:104px;color:#FFFFFF">Revisa cada oferta.</div>
+  <div id="t2" class="txt" style="top:300px;font-size:92px;color:#FFFFFF">Un radar de ofertas</div>
   <div id="p2a" class="pill" style="left:70px;top:560px;width:330px;opacity:0">Fuente 1</div>
   <div id="p2b" class="pill" style="left:70px;top:730px;width:330px;opacity:0">Fuente 2</div>
   <div id="p2c" class="pill" style="left:70px;top:900px;width:330px;opacity:0">Fuente 3</div>
@@ -101,14 +101,14 @@ window.render = (t) => {
   // E2 · la IA revisa: fuentes que llegan, portero que deja pasar solo lo real
   if (sc === 1) {
     fadeIn("t2", t, 2.99, 3.4); rise("t2", t, 2.99, 3.5, 40);
-    ["p2a", "p2b", "p2c"].forEach((id, i) => { const a = 3.1 + i * .18; fadeIn(id, t, a, a + .4); $(id).style.transform = `translateX(${lerp(-80, 0, seg(t, a, a + .5))}px)`; });
-    fadeIn("portero", t, 3.5, 4.1); $("portero").style.transform = `scale(${lerp(.9, 1, seg(t, 3.5, 4.1))})`;
+    ["p2a", "p2b", "p2c"].forEach((id, i) => { const a = 4.3 + i * .2; fadeIn(id, t, a, a + .4); $(id).style.transform = `translateX(${lerp(-80, 0, seg(t, a, a + .5))}px)`; });
+    fadeIn("portero", t, 5.8, 6.3); $("portero").style.transform = `scale(${lerp(.9, 1, seg(t, 5.8, 6.4))})`;
     const pulso = Math.sin(t * 6) * .5 + .5;
     $("portero").style.boxShadow = `0 0 ${lerp(20, 60, pulso)}px rgba(250,204,21,${lerp(.15, .45, pulso)})`;
-    const lineas = [["l2a", 3.5], ["l2b", 3.6], ["l2c", 3.7]]; const fluye = t * -40;
+    const lineas = [["l2a", 6.0], ["l2b", 6.1], ["l2c", 6.2]]; const fluye = t * -40;
     lineas.forEach(([id, a]) => { const el = $(id); const L = 260; el.style.strokeDasharray = `10 12`; el.style.strokeDashoffset = fluye; el.style.opacity = seg(t, a, a + .3, "lineal"); });
-    fadeIn("ok2", t, 6.0, 6.4); $("ok2").style.transform = `translateY(${lerp(-200, 0, seg(t, 6.0, 6.9, "outExpo"))}px)`;
-    fadeIn("s2", t, 8.2, 8.7); rise("s2", t, 8.2, 8.9, 30);
+    fadeIn("ok2", t, 7.5, 7.9); $("ok2").style.transform = `translateY(${lerp(-200, 0, seg(t, 7.5, 8.4, "outExpo"))}px)`;
+    fadeIn("s2", t, 8.7, 9.1); rise("s2", t, 8.7, 9.3, 30);
   }
 
   // E3 · giro: pantalla partida; la mitad amarilla sube con corte diagonal
@@ -116,11 +116,11 @@ window.render = (t) => {
     const k = seg(t, 10.0, 10.6, "outExpo");
     const y = lerp(100, 45, k);
     $("bot3").style.clipPath = `polygon(0 ${y + 6}%,100% ${y - 6}%,100% 100%,0 100%)`;
-    fadeIn("q3", t, 10.1, 10.4); const qo = seg(t, 11.2, 11.5, "lineal"); $("q3").style.opacity = Math.max($("q3").style.opacity*1, 0) * (1 - qo);
-    fadeIn("l3a", t, 11.6, 11.9); fadeIn("w3a", t, 11.65, 12.0); rise("w3a", t, 11.65, 12.1, 40);
-    fadeIn("l3b", t, 12.7, 13.0); fadeIn("w3b", t, 12.8, 13.1); rise("w3b", t, 12.8, 13.2, 40);
+    fadeIn("q3", t, 10.1, 10.4); const qo = seg(t, 11.6, 11.9, "lineal"); $("q3").style.opacity = Math.max($("q3").style.opacity*1, 0) * (1 - qo);
+    fadeIn("l3a", t, 11.9, 12.2); fadeIn("w3a", t, 12.0, 12.4); rise("w3a", t, 12.0, 12.5, 40);
+    fadeIn("l3b", t, 13.0, 13.3); fadeIn("w3b", t, 13.05, 13.4); rise("w3b", t, 13.05, 13.5, 40);
     // temblor breve de las alertas, solo en el momento del «pita»
-    const vib = dentro(t, 11.6, 12.3) ? Math.sin(t * 90) * 6 : 0;
+    const vib = dentro(t, 12.5, 13.2) ? Math.sin(t * 90) * 6 : 0;
     $("w3a").style.transform = `translateX(${vib}px)`;
     const f = dentro(t, 10.0, 10.12) ? 1 - (t - 10.0) / .12 : 0;
     JDT.flash($("fl"), f * .8);
@@ -128,11 +128,11 @@ window.render = (t) => {
 
   // E4 · remate de palabras, cada una en su sitio sincronizada con la voz
   if (sc === 3) {
-    fadeIn("w4a", t, 14.15, 14.4); fadeIn("w4b", t, 14.6, 14.9);
-    fadeIn("w4c", t, 15.1, 15.4); rise("w4c", t, 15.1, 15.5, 40);
-    fadeIn("w4d", t, 15.7, 16.0); rise("w4d", t, 15.7, 16.1, 40);
-    fadeIn("w4e", t, 17.7, 18.0); rise("w4e", t, 17.7, 18.1, 40);
-    fadeIn("w4f", t, 18.6, 18.9); rise("w4f", t, 18.6, 19.0, 50);
+    fadeIn("w4a", t, 14.15, 14.4); fadeIn("w4b", t, 14.85, 15.15);
+    fadeIn("w4c", t, 15.35, 15.65); rise("w4c", t, 15.35, 15.75, 40);
+    fadeIn("w4d", t, 15.9, 16.2); rise("w4d", t, 15.9, 16.3, 40);
+    fadeIn("w4e", t, 17.25, 17.55); rise("w4e", t, 17.25, 17.65, 40);
+    fadeIn("w4f", t, 18.7, 19.0); rise("w4f", t, 18.7, 19.1, 50);
   }
 
   // E5 · cierre de marca
@@ -142,8 +142,8 @@ window.render = (t) => {
     $("logo").style.opacity = seg(t, 19.9, 20.2, "lineal");
     $("logo").style.transform = `scale(${lerp(1.08, 1, seg(t, 19.9, 21, "outExpo"))})`;
     fadeIn("nom", t, 20.8, 21.3);
-    fadeIn("c5", t, 21.6, 22.2); rise("c5", t, 21.6, 22.3, 50);
-    fadeIn("arr", t, 23.5, 23.9);
+    fadeIn("c5", t, 22.7, 23.2); rise("c5", t, 22.7, 23.3, 50);
+    fadeIn("arr", t, 23.7, 24.1);
   }
 
   // barrido entre capitulos y grano

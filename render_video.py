@@ -171,9 +171,14 @@ def fijar_estilo(n: int, esquinas=None) -> dict:
     return ESTILO
 
 
+def es_guion(p: Path) -> bool:
+    """Solo guiones de video: deja fuera pruebas y archivos auxiliares como X.palabras.json (tiempos de la voz)."""
+    return not p.stem.startswith(("prueba", "_")) and "." not in p.stem
+
+
 def puesto_del_guion(ruta: Path, carpeta: Path) -> int:
     """Cuantos guiones de la carpeta van antes de este (por nombre, que empieza por la fecha)."""
-    nombres = sorted(p.stem for p in carpeta.glob("*.json") if not p.stem.startswith(("prueba", "_")))
+    nombres = sorted(p.stem for p in carpeta.glob("*.json") if es_guion(p))
     return sum(1 for x in nombres if x < ruta.stem)
 
 
@@ -1621,7 +1626,7 @@ def revisar_repeticion(guion: dict, ruta: Path) -> None:
         raise SystemExit("Ninguna escena cambia de fondo: pon 'look': 'amarillo' o 'azul' en al menos una (libre, palabras, "
                          "contador, marquesina, terminal o notificaciones).")
     tipos = [e.get("tipo") for e in escenas]
-    previos = sorted(p for p in ruta.parent.glob("*.json") if p.stem < ruta.stem and not p.stem.startswith(("prueba", "_")))[-4:]
+    previos = sorted(p for p in ruta.parent.glob("*.json") if p.stem < ruta.stem and es_guion(p))[-4:]
     for p in previos:
         try:
             viejas = json.loads(p.read_text(encoding="utf-8")).get("escenas") or []

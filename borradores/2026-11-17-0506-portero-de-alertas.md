@@ -22,7 +22,7 @@
 **Sincronía:** palabras (transcripción de ElevenLabs, confianza alta).
 
 ## Caption (listo para copiar)
-¿Tu celular pita por TODO? En GitHub es tendencia un radar de ofertas donde una IA hace de portero: revisa cada una y saca las falsas. Ese mismo portero se puede poner a tus correos y pedidos: te avisa solo lo que importa, y tú decides. ¿Quieres algo así para tu negocio? Cuéntanos tu caso en @technologicsjdt.
+¿Tu celular pita por TODO? Entre programadores es tendencia un radar de ofertas donde una IA hace de portero: revisa cada una y saca las falsas. Ese mismo portero se puede poner a tus correos y pedidos: te avisa solo lo que importa, y tú decides. ¿Quieres algo así para tu negocio? Cuéntanos tu caso en @technologicsjdt.
 
 #JDTTechnologics #SoftwareAMedida #DesarrolloDeSoftware #Automatizacion #TransformacionDigital #Bogota #Colombia #IA #InteligenciaArtificial #Productividad #Pymes #Tecnologia
 
@@ -39,3 +39,11 @@ banners/2026-11-17-0506-portero-de-alertas.png (JSON: banners/2026-11-17-0506-po
 - Validación 3b (Opus): NO APROBADO en la primera vuelta; correcciones aplicadas: portero visible en el gancho, líneas animadas, «Fuente 1/2/3» en lugar de nombres no verificados, pantalla dividida sincronizada con la voz, locución en tuteo, reducción del titular de la escena 4.
 - Revisión final (Opus): NO APROBADO con 3 puntos: el gancho sin portero visible (corregido), la afirmación de «falsas» (respaldada por el título del repositorio: filtro de ofertas falsas), y márgenes de la escena 4 (corregidos). No se hizo una tercera consulta.
 - Consultas al modelo capaz en esta ejecución: 3 de 4.
+
+## Correcciones (2026-11-17 06:20)
+- Escena 1: el letrero «Portero IA» salía cortado en el borde derecho; se movió dentro del margen sin tapar los textos.
+- Escena 2: título que tocaba los bordes; se cambió a «Un radar de ofertas» (lo que dice la voz) y se redujo.
+- Animaciones internas sincronizadas con la transcripción palabra por palabra: fuentes con «radar de ofertas», portero con «IA… portero», «Oferta verificada» con «revisa», «Solo entra lo real» con «saca las falsas», «Pita por TODO» con «tu celular pita», «Solo lo que importa» y «Tú decides» con su frase, «Hablemos de tu proyecto» con «¡Hablemos…!».
+- Caption sin la marca GitHub. La locución sí la menciona («En GitHub es tendencia…»); no se regeneró la voz para no gastar créditos.
+- Video nuevo en Drive (1PtG4OzgUCemjq-GBgtdrbItr84sPLXaf); el anterior quedó en la papelera.
+- render_video.py se caía con los archivos *.palabras.json de videos/; arreglado.
