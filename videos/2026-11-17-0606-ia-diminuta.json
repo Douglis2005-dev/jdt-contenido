@@ -1,0 +1,249 @@
+{
+  "salida": "videos/2026-11-17-0606-ia-diminuta.mp4",
+  "formato": "el contraste de escala: arranca con un dato pequeño y sorprendente (una pizza) que choca contra la idea de que la IA tiene que ser enorme, y de ahí sale la lección de tamaño justo",
+  "concepto": "Entrenar una voz de IA diminuta costó menos que una pizza, según su autor, y corre en el navegador; la lección para tu negocio es que no necesitas la IA más grande sino la justa, y JDT la pone a la medida en tu app o tu proceso.",
+  "produccion": "gancho en amarillo con un plato vacío y una moneda que late, cámara en latido y pulso; marquesina en azul con palabras gigantes (ENORME, CARÍSIMA, LEJANA) que remata en DIMINUTA, con grano y transición en zoom; escena oscura con alejamiento lento: una pantalla con un punto amarillo que emite ondas y dos tarjetas de hechos, viñeta y entrada en círculo; golpe en amarillo con destello y persiana para «La justa»; escena de JDT con un punto que baja por una línea punteada y va encendiendo tareas, cámara quieta para dar aire; cierre con fundido. Sin glitch, vibra, terminal, notificaciones, contador ni dividida, para alejarse de los cuatro anteriores.",
+  "fuente": "https://github.com/n4ze3m/tiny-voca",
+  "escenas": [
+    {
+      "tipo": "libre",
+      "look": "amarillo",
+      "texto": "Costó menos que una *pizza*",
+      "fx": [
+        "pulso"
+      ],
+      "camara": "latido",
+      "voz": "Esta IA costó menos que una pizza… ¡y habla!",
+      "duracion": 3.929,
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "anillo",
+          "x": 46,
+          "y": 62,
+          "ancho": 42,
+          "color": "azul",
+          "entra": "aparece",
+          "t": 0.0
+        },
+        {
+          "el": "icono",
+          "nombre": "moneda",
+          "x": 46,
+          "y": 62,
+          "tam": 14,
+          "color": "azul",
+          "entra": "pop",
+          "mueve": "late",
+          "t": 0.08
+        },
+        {
+          "el": "burbuja",
+          "texto": "¡Hola!",
+          "x": 74,
+          "y": 82,
+          "cola": "izq",
+          "color": "azul",
+          "entra": "pop",
+          "t": 0.35,
+          "ancho": 30
+        }
+      ]
+    },
+    {
+      "tipo": "marquesina",
+      "look": "azul",
+      "palabras": [
+        "ENORME",
+        "CARÍSIMA",
+        "LEJANA",
+        "DIMINUTA"
+      ],
+      "texto": "¿Así *tenía* que ser?",
+      "fx": [
+        "grano"
+      ],
+      "transicion": "zoom",
+      "voz": "¿No que la IA era enorme y carísima?",
+      "duracion": 3.479
+    },
+    {
+      "tipo": "libre",
+      "texto": "Una voz de IA *diminuta*",
+      "fx": [
+        "vineta"
+      ],
+      "camara": "aleja",
+      "transicion": "circulo",
+      "voz": "Un desarrollador hizo una voz de IA diminuta, desde cero, que corre en el navegador. Solo en inglés.",
+      "duracion": 6.896,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "pantalla",
+          "x": 50,
+          "y": 54,
+          "tam": 34,
+          "color": "blanco",
+          "entra": "aparece",
+          "t": 0.0
+        },
+        {
+          "el": "forma",
+          "forma": "anillo",
+          "x": 50,
+          "y": 52,
+          "ancho": 16,
+          "color": "dorado",
+          "opacidad": 0.5,
+          "mueve": "late",
+          "t": 0.12
+        },
+        {
+          "el": "forma",
+          "forma": "circulo",
+          "x": 50,
+          "y": 52,
+          "ancho": 4,
+          "color": "amarillo",
+          "entra": "pop",
+          "mueve": "late",
+          "t": 0.08
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Corre en el navegador",
+          "icono": "rayo",
+          "x": 50,
+          "y": 75,
+          "ancho": 70,
+          "entra": "izquierda",
+          "t": 0.3
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Hecha desde cero",
+          "icono": "chispa",
+          "x": 50,
+          "y": 86,
+          "ancho": 70,
+          "color": "amarillo",
+          "entra": "derecha",
+          "t": 0.45
+        }
+      ]
+    },
+    {
+      "tipo": "palabras",
+      "look": "amarillo",
+      "frases": [
+        "No la *más grande*.",
+        "*La justa.*"
+      ],
+      "fx": [
+        "destello"
+      ],
+      "transicion": "persiana",
+      "voz": "No necesitas la IA más grande. Necesitas la justa.",
+      "duracion": 4.7
+    },
+    {
+      "tipo": "libre",
+      "texto": "IA *a la medida*",
+      "transicion": "desliza-arriba",
+      "voz": "En JDT Technologics la ponemos en tu app o en tu proceso, a la medida.",
+      "duracion": 4.529,
+      "elementos": [
+        {
+          "el": "linea",
+          "x": 12,
+          "y": 46,
+          "a": [
+            12,
+            78
+          ],
+          "estilo": "punteada",
+          "color": "gris",
+          "entra": "dibuja",
+          "t": 0.0
+        },
+        {
+          "el": "forma",
+          "forma": "circulo",
+          "x": 12,
+          "y": 46,
+          "ancho": 4,
+          "color": "amarillo",
+          "a": [
+            12,
+            78
+          ],
+          "mueve": "late",
+          "t": 0.05
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Clasificar mensajes",
+          "icono": "chat",
+          "x": 56,
+          "y": 50,
+          "ancho": 70,
+          "entra": "derecha",
+          "t": 0.15
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Leer documentos",
+          "icono": "documento",
+          "x": 56,
+          "y": 63,
+          "ancho": 70,
+          "entra": "derecha",
+          "t": 0.3
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Borradores de respuesta",
+          "icono": "correo",
+          "x": 56,
+          "y": 76,
+          "ancho": 70,
+          "entra": "derecha",
+          "t": 0.45
+        },
+        {
+          "el": "texto",
+          "texto": "Con *revisión humana*",
+          "x": 50,
+          "y": 88,
+          "tam": "s",
+          "entra": "sube",
+          "t": 0.6
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*",
+      "subtexto": "@technologicsjdt",
+      "transicion": "fundido",
+      "voz": "¡Hablemos de tu proyecto!",
+      "duracion": 3.4
+    }
+  ],
+  "tiempos": {
+    "inicios": [
+      0.0,
+      4.12,
+      6.58,
+      14.5,
+      18.25,
+      23.72
+    ],
+    "retardo": 0.3,
+    "duracion": 26.36
+  },
+  "audio": "videos/2026-11-17-0606-ia-diminuta.mp3",
+  "sincronia": "exacta",
+  "voz_motor": "local"
+}

@@ -1,0 +1,160 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+  .full { position: absolute; inset: 0; }
+  .ctr { position: absolute; left: 0; right: 0; text-align: center; }
+  .card { position: absolute; left: 90px; width: 900px; height: 120px; padding: 0 44px; display: flex; align-items: center; gap: 28px;
+          font-size: 50px; font-weight: 800; color: #FFFFFF; }
+  .card .ck { width: 56px; height: 56px; border-radius: 50%; background: #FACC15; color: #0A0E27; display: flex; align-items: center; justify-content: center; font-size: 34px; font-weight: 900; flex: none; }
+  .navy { color: #0A0E27; }
+  .punto { position: absolute; width: 22px; height: 22px; border-radius: 50%; background: #FACC15; box-shadow: 0 0 40px rgba(250,204,21,.7); }
+</style></head><body>
+
+<!-- E1 (0 - 3.99 s): gancho en amarillo a pantalla completa -->
+<div id="e1" class="capa">
+  <div class="full" style="background:#FACC15"></div>
+  <div id="moneda" style="position:absolute;left:50%;top:560px;width:260px;height:260px;margin-left:-130px;border-radius:50%;background:conic-gradient(#0A0E27 0 58deg,#FACC15 58deg 62deg,#0A0E27 62deg 118deg,#FACC15 118deg 122deg,#0A0E27 122deg 178deg,#FACC15 178deg 182deg,#0A0E27 182deg 238deg,#FACC15 238deg 242deg,#0A0E27 242deg 298deg,#FACC15 298deg 302deg,#0A0E27 302deg)"></div>
+  <div id="t1" class="titulo navy ctr" style="top:1020px;font-size:120px;line-height:1.08;padding:0 70px"></div>
+</div>
+
+<!-- E2 (3.99 - 6.63 s): contraste, la idea de la IA enorme -->
+<div id="e2" class="capa">
+  <div id="w2" class="titulo ctr" style="top:720px;font-size:210px;color:#FFFFFF"></div>
+  <div id="s2" class="mono ctr" style="top:1080px;font-size:34px;color:#94A3B8">// la idea de siempre</div>
+</div>
+
+<!-- E3 (6.63 - 13.75 s): la voz diminuta, con alejamiento lento de camara -->
+<div id="e3" class="capa">
+  <div id="zoom" class="full">
+    <div id="anillo" style="position:absolute;left:50%;top:880px;width:900px;height:900px;margin-left:-450px;margin-top:-450px;border-radius:50%;border:3px solid rgba(255,255,255,.14)"></div>
+    <div id="anillo2" style="position:absolute;left:50%;top:880px;width:560px;height:560px;margin-left:-280px;margin-top:-280px;border-radius:50%;border:2px dashed rgba(250,204,21,.35)"></div>
+    <div id="punto" class="punto" style="left:50%;top:880px;margin-left:-11px;margin-top:-11px"></div>
+    <div id="ondas" style="position:absolute;left:0;right:0;top:1180px;height:120px"></div>
+  </div>
+  <div id="w3" class="titulo ctr" style="top:420px;font-size:112px;line-height:1.05;color:#FFFFFF;padding:0 60px">Una voz de IA <span class="clave">diminuta</span></div>
+  <div id="c3a" class="vidrio" style="left:90px;top:1400px;width:900px;height:120px;opacity:0;"><div class="titulo" style="font-size:50px;position:absolute;left:44px;top:34px;color:#FFFFFF">Corre en el navegador</div></div>
+  <div id="c3b" class="vidrio oro" style="left:90px;top:1550px;width:900px;height:120px;opacity:0;"><div class="titulo" style="font-size:50px;position:absolute;left:44px;top:34px;color:#FFFFFF">Hecha desde cero</div></div>
+  <div id="c3c" class="vidrio" style="left:90px;top:1700px;width:900px;height:120px;opacity:0;"><div class="titulo" style="font-size:50px;position:absolute;left:44px;top:34px;color:#FFFFFF">Pesa solo 18 MB</div></div>
+  <div id="n3" class="mono ctr" style="top:1860px;font-size:34px;color:#94A3B8">// solo en inglés</div>
+</div>
+
+<!-- E4 (13.75 - 17.67 s): la justa, no la mas grande -->
+<div id="e4" class="capa">
+  <div id="p4a" class="titulo ctr" style="top:700px;font-size:150px;line-height:1.05;color:#FFFFFF"></div>
+  <div id="ring4" style="position:absolute;left:50%;top:1160px;width:520px;height:520px;margin-left:-260px;margin-top:-260px;border-radius:50%;border:4px solid #FACC15;opacity:0"></div>
+  <div id="p4b" class="titulo ctr clave" style="top:1100px;font-size:210px;line-height:1"></div>
+</div>
+
+<!-- E5 (17.67 - 22.37 s): la IA a la medida, un punto que enciende tareas -->
+<div id="e5" class="capa">
+  <div id="t5" class="titulo ctr" style="top:330px;font-size:120px;line-height:1.05;color:#FFFFFF">IA <span class="clave">a la medida</span></div>
+  <div id="linea5" style="position:absolute;left:112px;top:640px;width:0;height:640px;border-left:3px dotted rgba(148,163,184,.7)"></div>
+  <div id="pt5" class="punto" style="left:101px;top:640px"></div>
+  <div id="k5a" class="card" style="top:640px;background:rgba(255,255,255,.07);border:2px solid rgba(255,255,255,.16);border-radius:30px"><span class="ck">✓</span>Clasificar mensajes</div>
+  <div id="k5b" class="card" style="top:800px;background:rgba(255,255,255,.07);border:2px solid rgba(255,255,255,.16);border-radius:30px"><span class="ck">✓</span>Leer documentos</div>
+  <div id="k5c" class="card" style="top:960px;background:rgba(255,255,255,.07);border:2px solid rgba(255,255,255,.16);border-radius:30px"><span class="ck">✓</span>Borradores de respuesta</div>
+  <div id="s5" class="mono ctr" style="top:1310px;font-size:38px;color:#FFFFFF">Con <span class="clave">revisión humana</span></div>
+</div>
+
+<!-- E6 (22.37 - 25.26 s): cierre de marca -->
+<div id="e6" class="capa">
+  <img id="logo" src="../recursos/logo.jpeg" style="position:absolute;left:290px;top:520px;width:500px;border-radius:90px;opacity:0">
+  <div id="c6" class="titulo ctr" style="top:1090px;font-size:110px;line-height:1.05;color:#FFFFFF;opacity:0">Hablemos de <span class="oro">tu proyecto</span></div>
+  <div id="p6" class="ctr" style="top:1400px;opacity:0"><span class="pildora">@technologicsjdt</span></div>
+</div>
+
+<div id="fl" class="capa" style="background:#fff;opacity:0;z-index:7"></div>
+
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+window.DURACION = 26.36;
+const dentro = (t, a, b) => t >= a && t < b;
+const L2 = JDT.letras($("w2"), "ENORME");
+const pal2 = ["ENORME", "CARÍSIMA"];
+const onda = [];
+for (let i = 0; i < 28; i++) { const d = document.createElement("div"); d.style.cssText = "position:absolute;top:50%;width:14px;height:20px;margin-left:-7px;border-radius:7px;background:#94A3B8;opacity:.6"; d.style.left = (i / 27 * 900 + 90) + "px"; $("ondas").appendChild(d); onda.push(d); }
+
+window.render = (t) => {
+  const escenas = [["e1", 0, 4.12], ["e2", 4.12, 6.58], ["e3", 6.58, 14.5], ["e4", 14.5, 18.25], ["e5", 18.25, 23.72], ["e6", 23.72, 99]];
+  escenas.forEach(([id, a, b]) => $(id).style.display = dentro(t, a, b) ? "block" : "none");
+
+  // fondo: amarillo en el gancho; oscuro azul marino en el resto
+  if (dentro(t, 0, 4.12)) { bg.fillStyle = "#FACC15"; bg.fillRect(0, 0, JDT.W, JDT.H); }
+  else JDT.fondo(bg, t, {claro: 0});
+
+  // E1: plato-pizza pequeno que late; titular revelado
+  if (dentro(t, 0, 4.12)) {
+    const k = seg(t, 0.05, 0.6, "outBack");
+    $("moneda").style.transform = `scale(${k * (1 + 0.035 * Math.sin(t * 2 * Math.PI * 1.1))})`;
+    $("t1").innerHTML = 'Costó menos que una <span style="background:#0A0E27;color:#FACC15;padding:0 .15em;border-radius:16px">pizza</span>';
+    JDT.revelar($("t1"), seg(t, 0.15, 0.7, "outExpo"));
+  }
+
+  // E2: ENORME -> CARÍSIMA con desenfoque, contraste de tamano
+  if (dentro(t, 4.12, 6.58)) {
+    const cambio = t < 5.3 ? 0 : 1;
+    if ($("w2").dataset.p !== String(cambio)) { $("w2").textContent = pal2[cambio]; $("w2").dataset.p = String(cambio); }
+    const k = seg(t, 4.12, 4.6, "outExpo");
+    $("w2").style.transform = `scale(${lerp(1.3, 1, k)})`;
+    JDT.desenfoque($("w2"), 0);
+    $("s2").style.opacity = seg(t, 4.6, 5.1, "lineal");
+  }
+
+  // E3: alejamiento lento de camara; anillo y punto (el modelo); tarjetas y ondas
+  if (dentro(t, 6.58, 14.5)) {
+    $("zoom").style.transform = `scale(${lerp(1.25, 1, seg(t, 6.6, 14.3, "inOutCubic"))})`;
+    $("zoom").style.transformOrigin = "50% 30%";
+    const pulso = 1 + 0.12 * Math.sin(t * 2 * Math.PI * 1.4);
+    $("punto").style.transform = `scale(${pulso * seg(t, 6.7, 7.2, "outBack")})`;
+    $("anillo").style.opacity = seg(t, 6.6, 7.2, "lineal");
+    $("anillo2").style.transform = `rotate(${(t - 6.6) * 18}deg)`;
+    onda.forEach((d, i) => { const a = 0.5 + 0.5 * Math.sin(t * 6 + i * 0.7); d.style.height = (14 + 60 * a * seg(t, 7.0, 7.8)) + "px"; d.style.top = "50%"; d.style.transform = "translateY(-50%)"; });
+    $("c3a").style.opacity = seg(t, 8.4, 8.9, "lineal"); $("c3a").style.transform = `translateX(${lerp(60, 0, seg(t, 8.4, 9.1))}px)`;
+    $("c3b").style.opacity = seg(t, 9.8, 10.3, "lineal"); $("c3b").style.transform = `translateX(${lerp(60, 0, seg(t, 9.8, 10.5))}px)`;
+    $("c3c").style.opacity = seg(t, 11.2, 11.7, "lineal"); $("c3c").style.transform = `translateX(${lerp(60, 0, seg(t, 11.2, 11.9))}px)`;
+    $("n3").style.opacity = seg(t, 12.6, 13.1, "lineal");
+  }
+
+  // E4: no la mas grande / la justa (aparece con rebote, anillo que se dibuja)
+  if (dentro(t, 14.5, 18.25)) {
+    $("p4a").textContent = "No la más grande.";
+    $("p4a").style.opacity = seg(t, 14.6, 15.0, "lineal");
+    $("p4b").textContent = "La justa.";
+    const k = seg(t, 16.3, 17.0, "outBack");
+    $("p4b").style.opacity = seg(t, 16.3, 16.6, "lineal");
+    $("p4b").style.transform = `scale(${lerp(0.8, 1, k)})`;
+    $("ring4").style.opacity = seg(t, 16.3, 16.7, "lineal") * 0.9;
+    $("ring4").style.transform = `scale(${lerp(0.4, 1, seg(t, 16.3, 17.2))})`;
+  }
+
+  // E5: a la medida; punto que baja por la linea y enciende tareas
+  if (dentro(t, 18.25, 23.72)) {
+    $("t5").style.opacity = seg(t, 18.4, 18.9, "lineal");
+    const p = seg(t, 18.5, 21.2, "inOutCubic");
+    $("linea5").style.transform = "none";
+    $("pt5").style.top = (640 + 640 * p) + "px";
+    ["k5a", "k5b", "k5c"].forEach((id, i) => {
+      const s = seg(t, 18.7 + i * 0.8, 19.2 + i * 0.8, "outExpo");
+      $(id).style.opacity = s;
+      $(id).style.transform = `translateX(${lerp(80, 0, s)}px)`;
+    });
+    $("s5").style.opacity = seg(t, 21.6, 22.1, "lineal");
+  }
+
+  // E6: cierre de marca
+  if (t >= 23.72) {
+    $("logo").style.opacity = seg(t, 23.72, 24.05, "lineal");
+    $("c6").style.opacity = seg(t, 24.0, 24.5, "outQuart");
+    $("c6").style.transform = `translateY(${lerp(50, 0, seg(t, 24.0, 24.7))}px)`;
+    $("p6").style.opacity = seg(t, 24.7, 25.1, "outQuart");
+  }
+
+  // barridos entre capitulos (dos en todo el video) y un destello en el giro
+  fg.clearRect(0, 0, JDT.W, JDT.H);
+  const cortes = [4.12, 14.5];
+  let kb = 0; cortes.forEach(x => { if (t > x - 0.4 && t < x + 0.5) kb = (t - (x - 0.4)) / 0.9; });
+  if (kb > 0) JDT.barrido(fg, kb);
+  JDT.flash($("fl"), t > 18.25 && t < 18.43 ? 1 - (t - 18.25) / 0.18 : 0);
+};
+</script></body></html>
