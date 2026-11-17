@@ -1,0 +1,135 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+  .card { position:absolute; width:820px; height:190px; border-radius:30px; padding:0 52px; display:flex; align-items:center;
+          font-weight:800; font-size:58px; color:#fff; }
+  .chip { position:absolute; width:560px; height:14px; }
+  .pantalla { position:absolute; width:260px; height:330px; border-radius:34px; }
+  .lbl { font-family:"DejaVu Sans Mono",monospace; font-size:26px; letter-spacing:.16em; color:#94A3B8; text-transform:uppercase; }
+</style></head>
+<body>
+<!-- Concepto: "el bucle" — publicar lo mismo en varias redes es copiar y pegar. Motor HTML, 1080x1920. -->
+<div id="e1" class="capa"></div>
+<div id="e2" class="capa"></div>
+<div id="e3" class="capa"></div>
+<div id="e4" class="capa"></div>
+<div id="e5" class="capa"></div>
+<div id="e6" class="capa"></div>
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+window.DURACION = 24.22;
+const INI = [0, 5.11, 11.11, 15.02, 17.26, 21.58];
+const dentro = (t, a, b) => t >= a && t < b;
+const AZUL = "linear-gradient(145deg,#5466B4,#2A3460)", ORO = "linear-gradient(145deg,rgba(250,204,21,.9),rgba(234,179,8,.7))";
+
+function mk(parent, cls, css, html = "") { const d = document.createElement("div"); d.className = cls; d.style.cssText = css; d.innerHTML = html; parent.appendChild(d); return d; }
+
+/* ESCENA 1 — gancho: la misma tarjeta se duplica en diagonal como video trabado */
+const E1 = $("e1"); const pila = [];
+for (let i = 0; i < 6; i++) pila.push(mk(E1, "card vidrio", `left:130px;top:${1040 - i * 0}px;width:820px;opacity:0`, "Promo del día"));
+mk(E1, "", "position:absolute;left:0;right:0;top:360px;text-align:center;font-size:150px;font-weight:900;line-height:1", "¿Otra vez <span class=clave>lo mismo</span>?");
+const T1 = E1.lastElementChild;
+
+/* ESCENA 2 — notificaciones: tareas que caen, la última dice «Desde cero» */
+const E2 = $("e2"); const tareas = ["Escribir el texto", "Subir el video", "Subir la portada", "Siguiente red…"];
+const tarj2 = tareas.map((txt, i) => mk(E2, "card vidrio", `left:130px;top:700px;width:820px`, `<span class=lbl style="font-size:24px;margin-right:24px">0${i + 1}</span>${txt}`));
+const desde = mk(E2, "titulo", "position:absolute;left:0;right:0;top:1700px;text-align:center;font-size:96px;opacity:0", "¡Desde <span class=clave>cero!</span>");
+mk(E2, "titulo", "position:absolute;left:0;right:0;top:360px;text-align:center;font-size:110px", "Red por red, <span class=clave>a mano</span>");
+
+/* ESCENA 3 — giro azul: calendario reparte con flechas a tres pantallas */
+const E3 = $("e3");
+const cal = mk(E3, "vidrio", "left:290px;top:720px;width:500px;height:260px;border-radius:40px;padding:40px;background:linear-gradient(145deg,rgba(250,204,21,.20),rgba(250,204,21,.04));border-color:rgba(250,204,21,.45)", `<div class=lbl>Calendario</div><div style="font-size:70px;font-weight:900;margin-top:20px">Plan único</div>`);
+const pant = [0, 1, 2].map(i => mk(E3, "pantalla vidrio", `left:${110 + i * 320}px;top:1210px`, `<div class=lbl style="padding:30px">Red ${i + 1}</div>`));
+const svg3 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+svg3.setAttribute("viewBox", "0 0 1080 1920"); svg3.setAttribute("style", "position:absolute;left:0;top:0;width:1080px;height:1920px");
+E3.appendChild(svg3);
+const flechas = [0, 1, 2].map(i => { const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  p.setAttribute("d", `M540 980 C 540 1100, ${240 + i * 320} 1100, ${240 + i * 320} 1200`); p.setAttribute("fill", "none");
+  p.setAttribute("stroke", "#FACC15"); p.setAttribute("stroke-width", "6"); p.setAttribute("stroke-linecap", "round");
+  svg3.appendChild(p); return p; });
+mk(E3, "titulo", "position:absolute;left:0;right:0;top:360px;text-align:center;font-size:130px", "Lo armas <span class=clave>una vez</span>");
+
+/* ESCENA 4 — contador: un solo botón final, es tuyo */
+const E4 = $("e4");
+const svg4 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+svg4.setAttribute("viewBox", "0 0 1080 1920"); svg4.setAttribute("style", "position:absolute;left:0;top:0;width:1080px;height:1920px"); E4.appendChild(svg4);
+const aro = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+aro.setAttribute("cx", "540"); aro.setAttribute("cy", "1000"); aro.setAttribute("r", "260"); aro.setAttribute("fill", "none");
+aro.setAttribute("stroke", "#FACC15"); aro.setAttribute("stroke-width", "22"); aro.setAttribute("stroke-linecap", "round");
+aro.setAttribute("transform", "rotate(-90 540 1000)"); svg4.appendChild(aro);
+const uno = mk(E4, "titulo clave", "position:absolute;left:0;right:0;top:880px;text-align:center;font-size:280px", "1");
+const botonLbl = mk(E4, "titulo", "position:absolute;left:0;right:0;top:1330px;text-align:center;font-size:64px", "botón final");
+mk(E4, "titulo", "position:absolute;left:0;right:0;top:360px;text-align:center;font-size:130px", "Y es <span class=clave>tuyo</span>");
+
+/* ESCENA 5 — remate: copias se funden en un solo visto bueno */
+const E5 = $("e5");
+const copias = [[-300, -260], [280, -180], [-260, 240], [300, 280]].map(([x, y]) => mk(E5, "card vidrio", "left:130px;top:900px;width:820px;height:190px", "Promo del día"));
+const visto = mk(E5, "vidrio", "left:290px;top:880px;width:500px;height:300px;border-radius:50px;text-align:center;font-size:170px;font-weight:900;line-height:300px;color:#FACC15;background:linear-gradient(145deg,rgba(250,204,21,.20),rgba(250,204,21,.04));border-color:rgba(250,204,21,.45)", "✓");
+mk(E5, "titulo", "position:absolute;left:0;right:0;top:360px;text-align:center;font-size:120px", "Adiós al <span class=clave>copiar y pegar</span>");
+
+/* ESCENA 6 — cierre de marca */
+const E6 = $("e6");
+const logo = document.createElement("img"); logo.src = "../recursos/logo.jpeg";
+logo.setAttribute("style", "position:absolute;left:290px;top:520px;width:500px;border-radius:90px"); E6.appendChild(logo);
+mk(E6, "titulo", "position:absolute;left:0;right:0;top:1130px;text-align:center;font-size:110px", "Hablemos de tu <span class=oro>proyecto</span>");
+mk(E6, "", "position:absolute;left:0;right:0;top:1420px;text-align:center", `<span class=pildora>@technologicsjdt</span>`);
+
+window.render = (t) => {
+  const idx = Math.max(0, INI.findLastIndex(x => t >= x));
+  [E1, E2, E3, E4, E5, E6].forEach((e, i) => e.style.display = i === idx ? "block" : "none");
+  JDT.fondo(bg, t);
+  fg.clearRect(0, 0, JDT.W, JDT.H);
+  // transiciones entre escenas (solo dos barridos en todo el video)
+  let kb = 0; [5.11, 17.26].forEach(x => { if (t > x && t < x + .8) kb = (t - x) / .4; });
+  JDT.barrido(fg, kb);
+  if (idx === 1) JDT.grano(fg, t, .035);
+
+  if (idx === 0) {
+    // gancho: la pila se duplica en diagonal; un solo golpe de vibracion al final
+    const n = 1 + Math.floor(seg(t, .1, 1.6, "outExpo") * 5);
+    pila.forEach((c, i) => { const k = i < n ? seg(t, .1 + i * .3, .5 + i * .3, "outBack") : 0;
+      c.style.opacity = clamp(k); c.style.transform = `translate(${i * 36}px,${-i * 44}px) scale(${lerp(.9, 1, k)})`; });
+    const hit = t > 1.7 && t < 2.0 ? (t - 1.7) * 3.3 : 0;
+    E1.style.transform = hit ? `translateX(${Math.sin(t * 90) * 9 * (1 - hit)}px)` : "";
+    T1.style.opacity = seg(t, .2, .8, "outExpo"); T1.style.transform = `translateY(${lerp(40, 0, seg(t, .2, .9))}px)`;
+  }
+  if (idx === 1) {
+    // notificaciones que caen con rebote; una tarea se cierra al final
+    tarj2.forEach((c, i) => { const a = .2 + i * .45;
+      c.style.transform = `translateY(${lerp(-260, 60 + i * 230, seg(t - 5.11, a, a + .6, "outBack"))}px) rotate(${lerp(-4, 0, seg(t - 5.11, a, a + .6))}deg)`;
+      c.style.opacity = clamp((t - 5.11 - a) * 4); });
+    desde.style.opacity = seg(t, 9.6, 10.4, "outExpo");
+    desde.style.transform = `scale(${lerp(.9, 1, seg(t, 9.6, 10.4, "outBack"))})`;
+  }
+  if (idx === 2) {
+    // calendario que reparte: flechas dibujadas y pantallas que se encienden en orden
+    cal.style.transform = `translateY(${lerp(-30, 0, seg(t - 11.11, 0, .7, "outExpo"))}px) scale(${lerp(.95, 1, seg(t - 11.11, 0, .7))})`;
+    flechas.forEach((p, i) => { const L = p.getTotalLength(); const k = seg(t - 11.11, .6 + i * .35, 1.5 + i * .35, "inOutCubic");
+      p.style.strokeDasharray = L; p.style.strokeDashoffset = L * (1 - k); });
+    pant.forEach((p, i) => p.style.opacity = clamp((t - 11.11 - (1.4 + i * .35)) * 3));
+    JDT.camara(E3, {s: lerp(1, 1.04, seg(t - 11.11, 0, 4, "lineal"))});
+  }
+  if (idx === 3) {
+    // contador: el anillo se llena, el «1» late, el texto final aparece
+    aro.setAttribute("stroke-dasharray", "1634"); aro.setAttribute("stroke-dashoffset", String(1634 * (1 - seg(t - 15.02, 0, 1.2, "outExpo"))));
+    const latido = 1 + .05 * Math.sin((t - 15.02) * 9) * seg(t - 15.02, .8, 1.2);
+    uno.style.transform = `scale(${latido})`;
+    botonLbl.style.opacity = seg(t - 15.02, 1.1, 1.7);
+  }
+  if (idx === 4) {
+    // remate: las copias viajan al centro y se funden en un visto bueno
+    const offs = [[-330, -200], [330, -160], [-300, 200], [320, 230]];
+    copias.forEach((c, i) => { const k = seg(t - 17.26, .4 + i * .08, 1.6 + i * .08, "inOutCubic");
+      c.style.transform = `translate(${lerp(offs[i][0], 0, k)}px,${lerp(offs[i][1], 0, k)}px) scale(${lerp(1, .6, k)})`;
+      c.style.opacity = 1 - seg(t - 17.26, 1.5, 1.9, "lineal"); });
+    visto.style.opacity = seg(t - 17.26, 1.6, 2, "outBack") ;
+    visto.style.transform = `scale(${lerp(.6, 1, seg(t - 17.26, 1.6, 2.1, "outBack"))})`;
+  }
+  if (idx === 5) {
+    logo.style.opacity = seg(t - 21.58, 0, .4, "lineal");
+    logo.style.transform = `scale(${lerp(.9, 1, seg(t - 21.58, 0, .8, "outExpo"))})`;
+  }
+  // escena de aparición del título de cada capítulo
+};
+</script></body></html>

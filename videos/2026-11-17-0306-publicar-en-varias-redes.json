@@ -1,0 +1,312 @@
+{
+  "salida": "videos/2026-11-17-0306-publicar-en-varias-redes.mp4",
+  "formato": "el bucle: el video mismo se «copia y pega» como el día del dueño que publica red por red, hasta que algo rompe la repetición",
+  "concepto": "La promo del día se duplica en pantalla una y otra vez como un video trabado, porque así se vive publicar lo mismo en cada red por separado; el bucle se rompe cuando lo armas una sola vez, un calendario lo carga en varias redes y tú solo revisas antes del botón final.",
+  "produccion": "arranca oscuro con una pila de la misma tarjeta que se duplica en diagonal y vibra solo en ese golpe; tareas que caen como notificaciones con grano y paneo lateral; giro en azul con destello: un calendario gigante reparte con flechas a tres pantallas, con acercamiento lento; contador amarillo «1» con pulso y latido para el botón final que es tuyo; remate con viñeta donde las copias viajan al centro y se funden en una sola tarjeta; cierre de marca. Sin glitch, sin terminal ni marquesina, para alejarse de los cuatro anteriores.",
+  "escenas": [
+    {
+      "tipo": "libre",
+      "look": "oscuro",
+      "texto": "¿Otra vez *lo mismo*?",
+      "fx": [
+        "vibra"
+      ],
+      "elementos": [
+        {
+          "el": "tarjeta",
+          "texto": "Promo del día",
+          "icono": "megafono",
+          "x": 38,
+          "y": 48,
+          "ancho": 54,
+          "color": "gris",
+          "entra": "pop",
+          "t": 0.02
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Promo del día",
+          "icono": "megafono",
+          "x": 46,
+          "y": 58,
+          "ancho": 54,
+          "color": "gris",
+          "entra": "pop",
+          "t": 0.22
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Promo del día",
+          "icono": "megafono",
+          "x": 54,
+          "y": 68,
+          "ancho": 54,
+          "color": "blanco",
+          "entra": "pop",
+          "t": 0.42
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Promo del día",
+          "icono": "megafono",
+          "x": 62,
+          "y": 78,
+          "ancho": 54,
+          "color": "amarillo",
+          "entra": "pop",
+          "mueve": "tiembla",
+          "t": 0.62
+        }
+      ],
+      "voz": "Subes la promo… y otra vez. ¡Y otra vez!",
+      "duracion": 2.6
+    },
+    {
+      "tipo": "notificaciones",
+      "texto": "Red por red, *a mano*",
+      "etiquetas": [
+        "Escribir el texto",
+        "Subir el video",
+        "Subir la portada",
+        "Siguiente red…"
+      ],
+      "detalles": [
+        "Red 1",
+        "Red 1",
+        "Red 1",
+        "Desde cero"
+      ],
+      "iconos": [
+        "documento",
+        "pantalla",
+        "carpeta",
+        "ciclo"
+      ],
+      "fx": [
+        "grano"
+      ],
+      "camara": "paneo-der",
+      "transicion": "barrido",
+      "voz": "Escribes el texto, subes el video, la portada… y en la siguiente red, ¡desde cero!",
+      "duracion": 4.6
+    },
+    {
+      "tipo": "libre",
+      "look": "azul",
+      "texto": "Lo armas *una vez*",
+      "fx": [
+        "destello"
+      ],
+      "camara": "acerca",
+      "transicion": "destello",
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "calendario",
+          "x": 50,
+          "y": 52,
+          "tam": 28,
+          "color": "amarillo",
+          "entra": "pop",
+          "mueve": "late"
+        },
+        {
+          "el": "linea",
+          "x": 44,
+          "y": 66,
+          "a": [
+            22,
+            78
+          ],
+          "estilo": "flecha",
+          "color": "dorado",
+          "pulso": true,
+          "entra": "dibuja",
+          "t": 0.35
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 67,
+          "a": [
+            50,
+            77
+          ],
+          "estilo": "flecha",
+          "color": "dorado",
+          "pulso": true,
+          "entra": "dibuja",
+          "t": 0.42
+        },
+        {
+          "el": "linea",
+          "x": 56,
+          "y": 66,
+          "a": [
+            78,
+            78
+          ],
+          "estilo": "flecha",
+          "color": "dorado",
+          "pulso": true,
+          "entra": "dibuja",
+          "t": 0.49
+        },
+        {
+          "el": "icono",
+          "nombre": "telefono",
+          "x": 18,
+          "y": 84,
+          "tam": 12,
+          "color": "blanco",
+          "entra": "sube",
+          "t": 0.55
+        },
+        {
+          "el": "icono",
+          "nombre": "pantalla",
+          "x": 50,
+          "y": 84,
+          "tam": 12,
+          "color": "blanco",
+          "entra": "sube",
+          "t": 0.62
+        },
+        {
+          "el": "icono",
+          "nombre": "red",
+          "x": 82,
+          "y": 84,
+          "tam": 12,
+          "color": "blanco",
+          "entra": "sube",
+          "t": 0.69
+        }
+      ],
+      "voz": "¿Y si lo armas UNA sola vez y un calendario lo carga en varias redes?",
+      "duracion": 4.4
+    },
+    {
+      "tipo": "contador",
+      "look": "amarillo",
+      "valor": "1",
+      "unidad": "botón final",
+      "etiqueta": "Y es *tuyo*",
+      "fx": [
+        "pulso"
+      ],
+      "camara": "latido",
+      "transicion": "giro",
+      "voz": "Tú solo revisas y le das al botón final.",
+      "duracion": 3
+    },
+    {
+      "tipo": "libre",
+      "texto": "Adiós al *copiar y pegar*",
+      "fx": [
+        "vineta"
+      ],
+      "transicion": "desliza-izq",
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "documento",
+          "x": 16,
+          "y": 52,
+          "tam": 12,
+          "color": "gris",
+          "a": [
+            50,
+            64
+          ],
+          "sale": 0.5,
+          "t": 0.0
+        },
+        {
+          "el": "icono",
+          "nombre": "documento",
+          "x": 84,
+          "y": 52,
+          "tam": 12,
+          "color": "gris",
+          "a": [
+            50,
+            64
+          ],
+          "sale": 0.5,
+          "t": 0.05
+        },
+        {
+          "el": "icono",
+          "nombre": "documento",
+          "x": 16,
+          "y": 80,
+          "tam": 12,
+          "color": "gris",
+          "a": [
+            50,
+            64
+          ],
+          "sale": 0.5,
+          "t": 0.1
+        },
+        {
+          "el": "icono",
+          "nombre": "documento",
+          "x": 84,
+          "y": 80,
+          "tam": 12,
+          "color": "gris",
+          "a": [
+            50,
+            64
+          ],
+          "sale": 0.5,
+          "t": 0.15
+        },
+        {
+          "el": "icono",
+          "nombre": "check",
+          "x": 50,
+          "y": 62,
+          "tam": 24,
+          "color": "amarillo",
+          "entra": "pop",
+          "mueve": "late",
+          "t": 0.5
+        },
+        {
+          "el": "texto",
+          "texto": "Tu proceso, *automatizado*",
+          "x": 50,
+          "y": 84,
+          "tam": "m",
+          "entra": "sube",
+          "t": 0.62
+        }
+      ],
+      "voz": "En JDT Technologics eliminamos esas tareas repetitivas de tu día a día.",
+      "duracion": 4.2
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*",
+      "subtexto": "@technologicsjdt",
+      "voz": "¡Hablemos de tu proyecto!",
+      "duracion": 3
+    }
+  ],
+  "audio": "videos/2026-11-17-0306-publicar-en-varias-redes.mp3",
+  "tiempos": {
+    "inicios": [
+      0.0,
+      5.11,
+      11.11,
+      15.02,
+      17.26,
+      21.58
+    ],
+    "retardo": 0.3,
+    "duracion": 24.22
+  }
+}
