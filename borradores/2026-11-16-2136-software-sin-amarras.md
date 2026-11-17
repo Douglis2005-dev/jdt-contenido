@@ -1,0 +1,14 @@
+# Software sin amarras (PRUEBA DEL DUEÑO, 2026-11-16 21:36 Colombia)
+
+- Tema: ¿Puedes mudar tu software o te tiene amarrado? (independencia de proveedor)
+- Fuente: https://github.com/rivet-dev/open-orange (README leído: ejecuta Workers de Cloudflare en AWS, Google Cloud, Azure o servidores propios sin cambiar el código). No se citan marcas ni cifras de costo en el video.
+- Por qué: tema de dependencia de un proveedor que le importa a un dueño de negocio; conecta con software a medida y control de datos.
+- Concepto: el software como casa con candado; la salida es poder desplegar donde elijas y tener los datos en tu control.
+- Formato: pregunta incómoda. Producción: motor HTML (6B), candado de vidrio 3D con glitch y metaballs, cadenas y sello «¡A PAGAR!» con destello, rejilla con camino dorado y tarjetas de destino, candado abierto con palabras DATOS/REGLAS/CONTROL, cierre con logo.
+- MOTOR USADO: HTML (6B). Chrome funcionó a la primera (cuadros de prueba y render completo sin errores; el aviso de la red sobre accounts.google.com/update.googleapis.com es solo de Chrome, no afectó). Con música (musica.py).
+- Voz: ElevenLabs, «Douglas pupi» (voice_id Qvk5mDvl4UUK5PrXXheQ). NOTA: la prueba pedía la voz «Teno pupi», pero recolector.py --voz (ejecutado una sola vez) entregó Douglas pupi; se usó lo que dice el script. 388 créditos gastados; antes había 14027 de 40000 usados (quedan unos 25.600).
+- Locución: ¿Puedes mudar tu software... o te tiene amarrado? Un solo proveedor, y cuando cambian las reglas… ¡a pagar! Ya hay proyectos abiertos que corren la misma app en la nube que elijas, o en tu servidor. Sin reescribir. Software a medida: tus datos, tus reglas, TU control. En JDT Technologics lo construimos contigo. Hablemos de tu proyecto.
+- Banner: «¿Puedes *mudar* tu software o te tiene *amarrado*?» · subtítulo «Software a medida: tú decides dónde vive y de quién son los datos.» · puntos: Sin atarte a un solo proveedor / Tus datos bajo tu control / Se adapta a tu proceso · CTA Hablemos de tu proyecto · icono candado.
+- Caption: ¿Puedes mudar tu software… o te tiene amarrado? 🔒 Hay proyectos abiertos que ya permiten correr la misma aplicación en la nube que elijas o en tu propio servidor. En JDT Technologics hacemos software a medida para que tus datos y tus reglas sean tuyos. Hablemos de tu proyecto. 📩 @technologicsjdt #JDTTechnologics #SoftwareAMedida #DesarrolloDeSoftware #DesarrolloWeb #Automatizacion #TransformacionDigital #Bogota #Colombia
+- Archivos: videos/2026-11-16-2136-software-sin-amarras.mp4 (alta calidad), videos/2026-11-16-2136-software-sin-amarras-liviano.mp4 (subido a Drive), banners/2026-11-16-2136-software-sin-amarras.png, html/2026-11-16-2136-software-sin-amarras.html
+- Revisión final con modelo capaz: NO se hizo en esta prueba (0 consultas); autorrevisión con cuadros de prueba: se corrigieron un título partido, texto invisible por clase .oro y el salto de línea del gancho.
