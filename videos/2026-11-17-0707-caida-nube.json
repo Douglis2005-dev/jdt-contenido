@@ -1,0 +1,269 @@
+{
+  "salida": "videos/2026-11-17-0707-caida-nube.mp4",
+  "formato": "el error en pantalla: el video arranca congelado en «Enviando…» como si se hubiera trabado, y de ahí la noticia de hoy, el refrán de la canasta y el plan B",
+  "concepto": "El día que la herramienta de todos se apagó, medio negocio quedó congelado en «Enviando…»: tenía todos los huevos en una sola canasta, y JDT te ayuda a armar tu plan B con más control sobre tus datos.",
+  "produccion": "arranca oscuro con un correo congelado en «Enviando…» y una barra que no avanza, con glitch y escaneo solo en ese golpe; terminal oscura con viñeta donde cada orden responde «servicio no disponible», entrada en zoom; escena del refrán con acercamiento lento y grano: tres iconos apilados sobre una nube que se desploman y quedan regados; giro en amarillo a pantalla completa con destello y entrada en círculo, cámara que empuja: «Es tener plan B»; escena en azul con un recorrido doble (el camino a la nube tachado y una flecha amarilla con pulso hacia tus datos), entrada en barrido; cierre de marca. Sin vibra, marquesina, contador, dividida ni notificaciones, para alejarse de los cuatro anteriores.",
+  "fuente": "https://www.bleepingcomputer.com/news/microsoft/massive-microsoft-365-outage-disrupts-outlook-teams-copilot-worldwide",
+  "escenas": [
+    {
+      "tipo": "libre",
+      "fx": [
+        "glitch",
+        "escaneo"
+      ],
+      "voz": "Enviando… enviando… ¿enviando?",
+      "duracion": 2.6,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "correo",
+          "x": 50,
+          "y": 40,
+          "tam": 32,
+          "color": "blanco",
+          "mueve": "tiembla",
+          "t": 0.02
+        },
+        {
+          "el": "texto",
+          "texto": "*Enviando…*",
+          "x": 50,
+          "y": 60,
+          "tam": "xl",
+          "t": 0.06
+        },
+        {
+          "el": "barra",
+          "x": 50,
+          "y": 69,
+          "ancho": 56,
+          "valor": 37,
+          "color": "amarillo",
+          "t": 0.1
+        }
+      ]
+    },
+    {
+      "tipo": "terminal",
+      "texto": "12 de noviembre: *todo* caído",
+      "titulo": "tu-negocio@nube",
+      "lineas": [
+        "> enviar correo",
+        "servicio no disponible",
+        "> abrir agenda",
+        "servicio no disponible",
+        "> buscar documento",
+        "servicio no disponible"
+      ],
+      "fx": [
+        "vineta"
+      ],
+      "transicion": "zoom",
+      "voz": "El doce de noviembre, la herramienta de todos se apagó: correo, agenda, documentos… durante horas.",
+      "duracion": 5.0
+    },
+    {
+      "tipo": "libre",
+      "texto": "Todo en *una sola* canasta",
+      "fx": [
+        "grano"
+      ],
+      "transicion": "persiana",
+      "camara": "acerca",
+      "voz": "¡Imagínate! Todo tu negocio en una canasta… y se cae.",
+      "duracion": 4.2,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "nube",
+          "x": 50,
+          "y": 79,
+          "tam": 30,
+          "color": "blanco",
+          "t": 0.02,
+          "sale": 0.6
+        },
+        {
+          "el": "icono",
+          "nombre": "correo",
+          "x": 50,
+          "y": 66,
+          "tam": 13,
+          "entra": "baja",
+          "t": 0.1,
+          "sale": 0.6
+        },
+        {
+          "el": "icono",
+          "nombre": "calendario",
+          "x": 50,
+          "y": 57.5,
+          "tam": 13,
+          "entra": "baja",
+          "t": 0.2,
+          "sale": 0.6
+        },
+        {
+          "el": "icono",
+          "nombre": "chat",
+          "x": 50,
+          "y": 49,
+          "tam": 13,
+          "entra": "baja",
+          "t": 0.3,
+          "sale": 0.6
+        },
+        {
+          "el": "icono",
+          "nombre": "equis",
+          "x": 50,
+          "y": 76,
+          "tam": 18,
+          "color": "gris",
+          "t": 0.64
+        },
+        {
+          "el": "icono",
+          "nombre": "correo",
+          "x": 20,
+          "y": 86,
+          "tam": 13,
+          "color": "gris",
+          "entra": "baja",
+          "giro": -60,
+          "t": 0.62
+        },
+        {
+          "el": "icono",
+          "nombre": "calendario",
+          "x": 78,
+          "y": 87,
+          "tam": 13,
+          "color": "gris",
+          "entra": "baja",
+          "giro": 45,
+          "t": 0.66
+        },
+        {
+          "el": "icono",
+          "nombre": "chat",
+          "x": 34,
+          "y": 66,
+          "tam": 13,
+          "color": "gris",
+          "entra": "baja",
+          "giro": 110,
+          "t": 0.7
+        }
+      ]
+    },
+    {
+      "tipo": "palabras",
+      "look": "amarillo",
+      "fx": [
+        "destello"
+      ],
+      "transicion": "circulo",
+      "camara": "empuja",
+      "frases": [
+        "No huyas de la nube.",
+        "Ten un *plan B*."
+      ],
+      "voz": "No es huir de la nube: es tener plan B.",
+      "duracion": 3.6
+    },
+    {
+      "tipo": "libre",
+      "look": "azul",
+      "texto": "Tu negocio, *con plan B*",
+      "transicion": "barrido",
+      "voz": "En JDT conectamos tus sistemas para que tus datos no dependan de UN solo proveedor.",
+      "duracion": 4.6,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "tienda",
+          "x": 22,
+          "y": 61,
+          "tam": 26,
+          "color": "blanco"
+        },
+        {
+          "el": "icono",
+          "nombre": "nube",
+          "x": 79,
+          "y": 47,
+          "tam": 16,
+          "color": "gris",
+          "opacidad": 0.6
+        },
+        {
+          "el": "linea",
+          "x": 33,
+          "y": 57,
+          "a": [
+            70,
+            49
+          ],
+          "estilo": "punteada",
+          "color": "gris"
+        },
+        {
+          "el": "icono",
+          "nombre": "equis",
+          "x": 52,
+          "y": 53,
+          "tam": 9,
+          "color": "gris"
+        },
+        {
+          "el": "icono",
+          "nombre": "datos",
+          "x": 79,
+          "y": 72,
+          "tam": 18,
+          "color": "amarillo"
+        },
+        {
+          "el": "linea",
+          "x": 33,
+          "y": 65,
+          "a": [
+            70,
+            71
+          ],
+          "estilo": "flecha",
+          "pulso": true,
+          "color": "amarillo"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Tus datos, contigo",
+          "icono": "check",
+          "x": 50,
+          "y": 85
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*",
+      "subtexto": "@technologicsjdt",
+      "voz": "¡Hablemos de tu proyecto!",
+      "duracion": 3
+    }
+  ],
+  "tiempos": {
+    "inicios": [
+      0.0,
+      3.99,
+      10.83,
+      15.11,
+      18.06,
+      22.86
+    ],
+    "retardo": 0.3,
+    "duracion": 25.42
+  },
+  "audio": "videos/2026-11-17-0707-caida-nube.mp3"
+}
