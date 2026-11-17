@@ -1,0 +1,198 @@
+{
+ "salida": "videos/2026-11-16-2008-pymes-ia-sin-rumbo.mp4",
+ "formato": "la pregunta incómoda: compraste IA, ¿y ahora qué?",
+ "concepto": "El dueño que 'compró IA' y se queda mirando al robot sin saber qué hacerle: sin un proceso concreto, un objetivo y alguien que mida, la IA es ruido; con UN proceso repetitivo, medido y supervisado por una persona, funciona.",
+ "produccion": "arranca amarillo a pantalla completa con marquesina y glitch; robot desorientado entre preguntas; terminal con escaneo que muestra el fracaso; giro en azul con destello y recorrido tarea-robot-resultado vigilado por un ojo; remate de palabras con viñeta; cierre con zoom",
+ "escenas": [
+  {
+   "tipo": "marquesina",
+   "look": "amarillo",
+   "palabras": [
+    "COMPRÉ IA",
+    "¿Y AHORA?",
+    "¿PARA QUÉ?"
+   ],
+   "fx": [
+    "glitch",
+    "vibra"
+   ],
+   "transicion": "persiana",
+   "voz": "¡Compré IA para mi negocio! ¿Y ahora qué?",
+   "duracion": 3
+  },
+  {
+   "tipo": "libre",
+   "texto": "Interés sin *rumbo*",
+   "camara": "acerca",
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "robot",
+     "x": 50,
+     "y": 62,
+     "tam": 32,
+     "mueve": "flota",
+     "entra": "pop"
+    },
+    {
+     "el": "icono",
+     "nombre": "pregunta",
+     "x": 20,
+     "y": 50,
+     "tam": 12,
+     "mueve": "orbita"
+    },
+    {
+     "el": "icono",
+     "nombre": "pregunta",
+     "x": 80,
+     "y": 50,
+     "tam": 12,
+     "mueve": "orbita"
+    },
+    {
+     "el": "icono",
+     "nombre": "pregunta",
+     "x": 24,
+     "y": 80,
+     "tam": 10,
+     "mueve": "balancea"
+    },
+    {
+     "el": "icono",
+     "nombre": "pregunta",
+     "x": 76,
+     "y": 80,
+     "tam": 10,
+     "mueve": "balancea"
+    },
+    {
+     "el": "burbuja",
+     "texto": "¿Y yo qué hago?",
+     "x": 50,
+     "y": 42,
+     "cola": "ninguna",
+     "entra": "sube"
+    }
+   ],
+   "transicion": "circulo",
+   "voz": "Uy, no. Muchas pymes no saben por dónde empezar.",
+   "duracion": 4
+  },
+  {
+   "tipo": "terminal",
+   "texto": "Sin *objetivo*, frustración",
+   "titulo": "pyme@sin-rumbo",
+   "lineas": [
+    "> automatizar todo",
+    "sin objetivo definido",
+    "> medir resultados",
+    "nada que medir"
+   ],
+   "fx": [
+    "escaneo",
+    "vineta"
+   ],
+   "transicion": "glitch",
+   "voz": "Sin objetivo, solo hay frustración. Y sin medir, no sabes si sirvió.",
+   "duracion": 4.5
+  },
+  {
+   "tipo": "libre",
+   "look": "azul",
+   "texto": "Un *proceso*, medido",
+   "fx": [
+    "destello"
+   ],
+   "transicion": "destello",
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "calendario",
+     "x": 18,
+     "y": 62,
+     "tam": 15,
+     "entra": "izquierda"
+    },
+    {
+     "el": "linea",
+     "x": 27,
+     "y": 62,
+     "a": [
+      41,
+      62
+     ],
+     "estilo": "flecha",
+     "pulso": true
+    },
+    {
+     "el": "icono",
+     "nombre": "robot",
+     "x": 50,
+     "y": 62,
+     "tam": 24,
+     "mueve": "late"
+    },
+    {
+     "el": "linea",
+     "x": 59,
+     "y": 62,
+     "a": [
+      73,
+      62
+     ],
+     "estilo": "flecha",
+     "pulso": true
+    },
+    {
+     "el": "icono",
+     "nombre": "check",
+     "x": 82,
+     "y": 62,
+     "tam": 15,
+     "entra": "pop"
+    },
+    {
+     "el": "icono",
+     "nombre": "ojo",
+     "x": 50,
+     "y": 80,
+     "tam": 13,
+     "mueve": "late"
+    },
+    {
+     "el": "texto",
+     "texto": "Una persona *revisa*",
+     "x": 50,
+     "y": 88,
+     "tam": "s"
+    }
+   ],
+   "voz": "Hasta que eliges UN proceso repetitivo, y alguien lo supervisa.",
+   "duracion": 4
+  },
+  {
+   "tipo": "palabras",
+   "frases": [
+    "Elige.",
+    "Mide.",
+    "*Ajusta.*"
+   ],
+   "fx": [
+    "vineta",
+    "grano"
+   ],
+   "transicion": "zoom",
+   "voz": "En JDT lo automatizamos con IA, con revisión humana.",
+   "duracion": 3.5
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de tu proyecto",
+   "subtexto": "@technologicsjdt",
+   "voz": "Hablemos de tu proyecto. Te respondemos en menos de 24 horas.",
+   "duracion": 3
+  }
+ ],
+ "audio": "videos/2026-11-16-2008-pymes-ia-sin-rumbo.mp3"
+}
