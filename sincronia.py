@@ -10,6 +10,10 @@ METODO PREFERIDO (exacto): pasar --palabras con la transcripcion palabra por pal
 creative_transcribe_audio conectado al nodo de la voz; guardar la lista "words" en videos/X.palabras.json). Entonces
 cada escena se ubica por sus propias palabras. Sin --palabras se usa el metodo por pausas (aproximado).
 
+Revision previa de la locucion (ANTES de gastar en voz):
+    python3 sincronia.py videos/X.json --revisar
+    Falla si la voz menciona marcas de terceros (marca.md lo prohibe) o si es muy larga para 15-24 s.
+
 Uso:
     python3 sincronia.py videos/X.json [--palabras videos/X.palabras.json] [--audio videos/X.mp3] [--retardo 0.3] [--guardar]
 Imprime JSON con:
@@ -89,6 +93,27 @@ def por_palabras(textos, ruta_palabras):
     return out
 
 
+MARCAS = ["github", "google", "microsoft", "openai", "chatgpt", "gemini", "claude", "anthropic", "meta", "facebook",
+          "instagram", "tiktok", "apple", "iphone", "amazon", "aws", "nvidia", "hugging", "youtube", "linkedin", "x.com",
+          "twitter", "tesla", "samsung", "netflix", "spotify", "shopify", "notion", "slack", "zoom", "canva", "figma"]
+PERMITIDAS = ["excel", "correo", "whatsapp"]
+
+
+def revisar(textos):
+    voz = " ".join(textos)
+    pal = set(norm(w) for w in voz.split())
+    malas = sorted(m for m in MARCAS if norm(m) in pal or (("." in m) and m in voz.lower()))
+    letras_total = len(re.sub(r"\s+", " ", voz))
+    errores = []
+    if malas:
+        errores.append(f"La voz nombra marcas de terceros: {', '.join(malas)}. Reescribe esas frases (ej.: 'un desarrollador', 'una herramienta abierta').")
+    if not 220 <= letras_total <= 340:
+        errores.append(f"La locucion tiene {letras_total} caracteres; debe tener entre 220 y 340 para durar 15-24 s.")
+    print(json.dumps({"ok": not errores, "caracteres": letras_total, "errores": errores}, ensure_ascii=False, indent=2))
+    if errores:
+        raise SystemExit(1)
+
+
 def main():
     if len(sys.argv) < 2 or sys.argv[1].startswith("--"):
         raise SystemExit(__doc__)
@@ -97,6 +122,8 @@ def main():
     audio = arg("--audio", g.get("audio"))
     retardo = float(arg("--retardo", 0.3))
     textos = [e.get("voz", "") for e in g["escenas"]]
+    if "--revisar" in sys.argv:
+        return revisar(textos)
     n = len(textos)
     if arg("--palabras"):
         tramos = por_palabras(textos, arg("--palabras"))

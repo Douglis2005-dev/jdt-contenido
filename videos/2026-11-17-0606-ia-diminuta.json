@@ -14,7 +14,6 @@
       ],
       "camara": "latido",
       "voz": "Esta IA costó menos que una pizza… ¡y habla!",
-      "duracion": 3.929,
       "elementos": [
         {
           "el": "forma",
@@ -64,8 +63,7 @@
         "grano"
       ],
       "transicion": "zoom",
-      "voz": "¿No que la IA era enorme y carísima?",
-      "duracion": 3.479
+      "voz": "¿No que la IA era enorme y carísima?"
     },
     {
       "tipo": "libre",
@@ -76,7 +74,6 @@
       "camara": "aleja",
       "transicion": "circulo",
       "voz": "Un desarrollador hizo una voz de IA diminuta, desde cero, que corre en el navegador. Solo en inglés.",
-      "duracion": 6.896,
       "elementos": [
         {
           "el": "icono",
@@ -144,15 +141,13 @@
         "destello"
       ],
       "transicion": "persiana",
-      "voz": "No necesitas la IA más grande. Necesitas la justa.",
-      "duracion": 4.7
+      "voz": "No necesitas la IA más grande. Necesitas la justa."
     },
     {
       "tipo": "libre",
       "texto": "IA *a la medida*",
       "transicion": "desliza-arriba",
       "voz": "En JDT Technologics la ponemos en tu app o en tu proceso, a la medida.",
-      "duracion": 4.529,
       "elementos": [
         {
           "el": "linea",
@@ -227,23 +222,24 @@
       "texto": "Hablemos de *tu proyecto*",
       "subtexto": "@technologicsjdt",
       "transicion": "fundido",
-      "voz": "¡Hablemos de tu proyecto!",
-      "duracion": 3.4
+      "voz": "¡Hablemos de tu proyecto!"
     }
   ],
   "tiempos": {
     "inicios": [
       0.0,
-      4.12,
-      6.58,
-      14.5,
-      18.25,
-      23.72
+      4.07,
+      6.79,
+      13.59,
+      17.51,
+      22.38
     ],
     "retardo": 0.3,
-    "duracion": 26.36
+    "duracion": 25.18
   },
   "audio": "videos/2026-11-17-0606-ia-diminuta.mp3",
-  "sincronia": "exacta",
-  "voz_motor": "local"
+  "sincronia": "palabras",
+  "voz_motor": "elevenlabs",
+  "voz": "Teno pupi",
+  "validacion": "corregido: resincronizado con la voz de ElevenLabs (Teno) y revisado por Opus en cuadros de prueba"
 }

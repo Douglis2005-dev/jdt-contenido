@@ -66,6 +66,14 @@ def main():
     sin_audio = "--sin-audio" in sys.argv
     if not fotos and not audio and not sin_audio:
         raise SystemExit("Falta --audio: TODO video lleva voz en off (genera la voz primero).")
+    if audio and not fotos and "--sin-validacion" not in sys.argv:
+        guion = Path("videos") / (html.stem + ".json")
+        if guion.exists():
+            import json as _json
+            val = str(_json.load(open(guion, encoding="utf-8")).get("validacion", ""))
+            if not val:
+                raise SystemExit("Falta la validacion 3b con el modelo capaz ANTES del render completo. Hazla con los cuadros de "
+                                 "prueba (--fotos) y escribe en el guion JSON \"validacion\": \"APROBADO\" o \"corregido: ...\".")
     ff = imageio_ffmpeg.get_ffmpeg_exe()
     retardo = float(arg("--retardo", 0.3))
     with sync_playwright() as p:
@@ -85,7 +93,7 @@ def main():
             r = subprocess.run([ff, "-i", str(audio)], capture_output=True, text=True, errors="replace")
             m = re.search(r"Duration: (\d+):(\d+):([\d.]+)", r.stderr)
             if m:
-                dur = max(dur, int(m[1]) * 3600 + int(m[2]) * 60 + float(m[3]) + retardo + 1.2)
+                dur = max(dur, int(m[1]) * 3600 + int(m[2]) * 60 + float(m[3]) + retardo + (1.2 if retardo > 0 else 0.1))  # una mezcla de musica.py (retardo 0) ya trae su cola
         if not dur:
             dur = float(arg("--duracion", 20))
         if arg("--duracion"):

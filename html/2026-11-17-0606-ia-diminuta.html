@@ -68,14 +68,14 @@
 <script>
 const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
 const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
-window.DURACION = 26.36;
+window.DURACION = 25.18;
 const dentro = (t, a, b) => t >= a && t < b;
 const L2 = JDT.letras($("w2"), "ENORME");
 const pal2 = ["ENORME", "CARÍSIMA"];
 const onda = [];
 for (let i = 0; i < 28; i++) { const d = document.createElement("div"); d.style.cssText = "position:absolute;top:50%;width:14px;height:20px;margin-left:-7px;border-radius:7px;background:#94A3B8;opacity:.6"; d.style.left = (i / 27 * 900 + 90) + "px"; $("ondas").appendChild(d); onda.push(d); }
 
-window.render = (t) => {
+const renderOriginal = (t) => {
   const escenas = [["e1", 0, 4.12], ["e2", 4.12, 6.58], ["e3", 6.58, 14.5], ["e4", 14.5, 18.25], ["e5", 18.25, 23.72], ["e6", 23.72, 99]];
   escenas.forEach(([id, a, b]) => $(id).style.display = dentro(t, a, b) ? "block" : "none");
 
@@ -156,5 +156,16 @@ window.render = (t) => {
   let kb = 0; cortes.forEach(x => { if (t > x - 0.4 && t < x + 0.5) kb = (t - (x - 0.4)) / 0.9; });
   if (kb > 0) JDT.barrido(fg, kb);
   JDT.flash($("fl"), t > 18.25 && t < 18.43 ? 1 - (t - 18.25) / 0.18 : 0);
+};
+
+// Resincronizado con la voz de ElevenLabs (Teno): cada escena se estira o encoge para caer con su frase
+// (inicios de sincronia.py --palabras). Tiempos viejos -> nuevos por tramos lineales.
+const T_VIEJO = [0, 4.12, 6.58, 14.5, 18.25, 23.72, 26.36];
+const T_NUEVO = [0, 4.07, 6.79, 13.59, 17.51, 22.38, 25.18];
+window.render = (t) => {
+  let i = T_NUEVO.length - 2;
+  for (let k = 0; k < T_NUEVO.length - 1; k++) if (t < T_NUEVO[k + 1]) { i = k; break; }
+  const f = (t - T_NUEVO[i]) / (T_NUEVO[i + 1] - T_NUEVO[i]);
+  return renderOriginal(T_VIEJO[i] + f * (T_VIEJO[i + 1] - T_VIEJO[i]));
 };
 </script></body></html>
