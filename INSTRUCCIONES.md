@@ -125,7 +125,7 @@ PASOS
 
 10. GUARDAR EN EL REPOSITORIO (así la próxima ejecución ve el historial y el turno de voz, y queda copia de respaldo):
    ```
-   git add videos/ banners/ borradores/ html/ historial.json voz_estado.json
+   git add videos/ banners/ borradores/ html/ historial.json voz_estado.json   (los -liviano.mp4 también se guardan; no pasa nada)
    git commit -m "contenido: AAAA-MM-DD-HHMM-tema"
    git pull --rebase origin main && git push origin HEAD:main
    ```
@@ -135,7 +135,7 @@ PASOS
    - El MP4 (con voz) a la carpeta Videos: parentId "1KmA3lJU37FSyRC4xpM5u7Hr4GlTiTjjF", contentMimeType "video/mp4".
    - El PNG a la carpeta Banners: parentId "1NpL1smWWsgOcwUHTTDvICNsWRp4degLL", contentMimeType "image/png".
    En ambas: title = el nombre del archivo (AAAA-MM-DD-HHMM-tema.mp4 / .png), disableConversionToGoogleType true, y base64Content = una referencia de archivo, NO el contenido: `sha256:HASH:RUTA_ABSOLUTA`, donde HASH sale de `sha256sum ARCHIVO` y RUTA_ABSOLUTA de `realpath ARCHIVO`. Nunca escribas el base64 a mano.
-   ANTES de subir mira el peso: `ls -l ARCHIVO.mp4`. Si el MP4 pesa más de 9 MB, recomprímelo (la subida grande falla): `python3 -c "import imageio_ffmpeg,subprocess;subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(),'-y','-i','X.mp4','-c:v','libx264','-crf','27','-maxrate','1800k','-bufsize','3600k','-c:a','copy','-movflags','+faststart','X-liviano.mp4'])"` y sube la versión liviana con el mismo título.
+   LÍMITE REAL DEL CONECTOR: cada llamada a create_file admite unos 3 MB de archivo (el MP4 de alta calidad pesa más y por eso NO se subía). Por eso, ANTES de subir el video, haz su versión liviana: `python3 liviano.py videos/AAAA-MM-DD-HHMM-tema.mp4` (genera videos/AAAA-MM-DD-HHMM-tema-liviano.mp4 de 720x1280 con la voz intacta y menos de 2,9 MB). Sube ESA versión a Drive, con title = AAAA-MM-DD-HHMM-tema.mp4 (sin «-liviano»), y calcula el sha256 y la ruta de ese archivo liviano. El MP4 de alta calidad se queda en el repositorio. Si el PNG pesa más de 3 MB, conviértelo a JPG o redúcelo igual. Si un error dice que superaste el límite, NO lo intentes por otros medios: baja el peso con `python3 liviano.py ... --max-mb 2.2`.
    Una sola llamada por archivo; si falla, reintenta UNA vez y, si vuelve a fallar o el conector no está disponible, anótalo en el informe («no se subió a Drive: motivo»); los archivos siguen en el repositorio.
    VERIFICA la subida: después de subir, busca el archivo con search_files (`parentId = 'ID_CARPETA' and title contains 'AAAA-MM-DD-HHMM-tema'`) y confirma que el MP4 y el PNG aparecen. Si el MP4 no aparece, es un fallo: recomprímelo y súbelo otra vez; si sigue sin aparecer, dilo claramente en el informe (el dueño necesita saberlo). Nunca digas que quedó en Drive sin haberlo verificado. No crees carpetas, no borres, no muevas ni compartas nada en Drive, y no subas nada más.
 
