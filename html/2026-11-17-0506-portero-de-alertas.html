@@ -1,0 +1,157 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+  body{margin:0;background:#0A0E27;overflow:hidden}
+  .sc{position:absolute;left:0;top:0;width:1080px;height:1920px;display:none;z-index:2;overflow:hidden}
+  .abs{position:absolute}
+  .txt{position:absolute;left:0;right:0;text-align:center;font-family:Montserrat,sans-serif;font-weight:700;line-height:1.02}
+  .card{position:absolute;background:#131A3A;border:2px solid #2A3460;border-radius:44px;color:#FFFFFF;font-family:Montserrat,sans-serif;font-weight:700;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+  .navy{color:#0A0E27}
+  .pill{position:absolute;height:110px;border-radius:60px;background:#131A3A;border:2px solid #94A3B8;color:#FFFFFF;font-family:Montserrat,sans-serif;font-weight:700;font-size:44px;display:flex;align-items:center;justify-content:center}
+  .lbl{font-family:Montserrat,sans-serif;font-weight:700;letter-spacing:.18em;color:#94A3B8;font-size:34px;text-transform:uppercase}
+</style></head>
+<body>
+<!-- ESCENA 1 · gancho: amarillo a pantalla completa, el portero ataja una oferta falsa -->
+<div id="e1" class="sc" style="background:#FACC15">
+  <div id="h1a" class="txt navy" style="top:540px;font-size:126px;white-space:nowrap">¡Tú no entras!</div>
+  <div id="h1b" class="txt navy" style="top:760px;font-size:120px;white-space:nowrap;opacity:0">¡Tú tampoco!</div>
+  <div id="portero1" class="card" style="left:830px;top:1010px;width:230px;height:200px;font-size:40px;border-color:#0A0E27;background:#0A0E27;opacity:0"><div>Portero<br><span style="color:#FACC15;font-size:34px">IA</span></div></div>
+  <div id="door" class="abs" style="left:880px;top:1000px;width:14px;height:520px;background:#0A0E27;opacity:0"></div>
+  <div id="fake" class="card" style="left:110px;top:1140px;width:700px;height:260px;font-size:72px;opacity:0"><span>Oferta falsa ✕</span></div>
+</div>
+
+<!-- ESCENA 2 · la IA revisa y deja pasar solo lo real -->
+<div id="e2" class="sc">
+  <div id="t2" class="txt" style="top:300px;font-size:104px;color:#FFFFFF">Revisa cada oferta.</div>
+  <div id="p2a" class="pill" style="left:70px;top:560px;width:330px;opacity:0">Fuente 1</div>
+  <div id="p2b" class="pill" style="left:70px;top:730px;width:330px;opacity:0">Fuente 2</div>
+  <div id="p2c" class="pill" style="left:70px;top:900px;width:330px;opacity:0">Fuente 3</div>
+  <svg id="svg2" class="abs" style="left:0;top:0" width="1080" height="1920" viewBox="0 0 1080 1920">
+    <path id="l2a" d="M400 615 L560 1040" stroke="#94A3B8" stroke-width="4" fill="none" stroke-dasharray="10 12"/>
+    <path id="l2b" d="M400 785 L560 1040" stroke="#94A3B8" stroke-width="4" fill="none" stroke-dasharray="10 12"/>
+    <path id="l2c" d="M400 955 L560 1040" stroke="#94A3B8" stroke-width="4" fill="none" stroke-dasharray="10 12"/>
+  </svg>
+  <div id="portero" class="card" style="left:560px;top:900px;width:440px;height:280px;border-color:#FACC15;font-size:50px;opacity:0"><div>Portero<br><span style="color:#FACC15;font-size:40px">IA</span></div></div>
+  <div id="ok2" class="card" style="left:300px;top:1390px;width:480px;height:170px;font-size:44px;background:#FACC15;color:#0A0E27;border:none;opacity:0">✓ Oferta verificada</div>
+  <div id="s2" class="txt" style="top:1640px;font-size:72px;color:#94A3B8;opacity:0">Solo entra lo real.</div>
+</div>
+
+<!-- ESCENA 3 · giro: pantalla partida, sin filtro contra con IA -->
+<div id="e3" class="sc" style="background:#0A0E27">
+  <div id="top3" class="abs" style="left:0;top:0;width:1080px;height:1920px;background:#0D1230"></div>
+  <div id="bot3" class="abs" style="left:0;top:0;width:1080px;height:1920px;background:#FACC15;clip-path:polygon(0 100%,100% 100%,100% 100%,0 100%)"></div>
+  <div id="l3a" class="txt" style="top:300px;font-size:40px;color:#94A3B8;opacity:0"><span class="lbl">Sin filtro</span></div>
+  <div id="w3a" class="txt" style="top:420px;font-size:112px;color:#FFFFFF;opacity:0">Pita por TODO</div>
+  <div id="l3b" class="txt" style="top:1080px;font-size:40px;color:#0A0E27;opacity:0"><span class="lbl" style="color:#0A0E27">Con IA</span></div>
+  <div id="w3b" class="txt" style="top:1170px;font-size:112px;color:#0A0E27;opacity:0">Solo lo real</div>
+  <div id="q3" class="txt" style="top:430px;font-size:120px;color:#FFFFFF;opacity:0">¿Y tu negocio?</div>
+</div>
+
+<!-- ESCENA 4 · remate de palabras sobre azul marino -->
+<div id="e4" class="sc" style="background:#131A3A">
+  <div id="w4a" class="txt" style="top:520px;font-size:140px;color:#FFFFFF;opacity:0">Ponle ese</div>
+  <div id="w4b" class="txt" style="top:690px;font-size:140px;color:#FFFFFF;opacity:0">portero.</div>
+  <div id="w4c" class="txt" style="top:920px;font-size:110px;color:#94A3B8;opacity:0">Correos.</div>
+  <div id="w4d" class="txt" style="top:1060px;font-size:110px;color:#94A3B8;opacity:0">Pedidos.</div>
+  <div id="w4e" class="txt" style="top:1290px;font-size:80px;white-space:nowrap;color:#FFFFFF;opacity:0">Solo lo que importa.</div>
+  <div id="w4f" class="txt" style="top:1470px;font-size:130px;color:#FACC15;opacity:0">Tú decides.</div>
+</div>
+
+<!-- ESCENA 5 · cierre de marca -->
+<div id="e5" class="sc" style="background:#0A0E27">
+  <img id="logo" src="../recursos/logo.jpeg" class="abs" style="left:290px;top:560px;width:500px;border-radius:90px;opacity:0">
+  <div id="nom" class="txt" style="top:1140px;font-size:58px;color:#FFFFFF;letter-spacing:.3em;opacity:0">JDT TECHNOLOGICS</div>
+  <div id="c5" class="txt" style="top:1280px;font-size:96px;color:#FFFFFF;opacity:0">Hablemos de tu <span style="color:#FACC15">proyecto</span></div>
+  <div id="arr" class="pill" style="left:330px;top:1560px;width:420px;height:100px;font-size:40px;opacity:0;border-color:#FACC15;color:#FACC15">@technologicsjdt</div>
+</div>
+
+<div id="hud" class="hud"></div><div id="fl" class="capa" style="background:#fff;opacity:0;z-index:7"></div>
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+window.DURACION = 25.5;
+const ESC = [["e1", 0, 2.84], ["e2", 2.84, 9.99], ["e3", 9.99, 14.15], ["e4", 14.15, 19.83], ["e5", 19.83, 25.5]];
+const dentro = (t, a, b) => t >= a && t < b;
+const fadeIn = (id, t, a, b = a + .5) => { $(id).style.opacity = seg(t, a, b, "outQuart"); };
+const rise = (id, t, a, b = a + .6, d = 60) => { $(id).style.transform = `translateY(${lerp(d, 0, seg(t, a, b, "outExpo"))}px)`; };
+
+window.render = (t) => {
+  ESC.forEach(([id, a, b]) => $(id).style.display = dentro(t, a, b) ? "block" : "none");
+  const sc = ESC.findIndex(([, a, b]) => dentro(t, a, b));
+  // fondo oscuro con reticula suave en las escenas oscuras (la amarilla va sin fondo)
+  bg.clearRect(0, 0, JDT.W, JDT.H);
+  if (sc === 1 || sc === 2 || sc === 4) JDT.fondo(bg, t, {claro: .6});
+
+  // E1 · gancho: amarillo, texto grande, portero que ataja la oferta falsa
+  if (sc === 0) {
+    const k = seg(t, .37, .9, "outExpo");
+    $("h1a").style.transform = `scale(${lerp(1.25, 1, k)})`; $("h1a").style.opacity = seg(t, .37, .7, "lineal");
+    fadeIn("h1b", t, 1.36, 1.7); rise("h1b", t, 1.36, 1.8, 40);
+    $("door").style.opacity = seg(t, .2, .5, "lineal");
+    $("portero1").style.opacity = seg(t, .1, .4, "lineal"); $("portero1").style.transform = `scale(${lerp(.9, 1, seg(t, .1, .5))})`;
+    const x = lerp(-820, 110, seg(t, .6, 1.25, "outExpo"));
+    $("fake").style.opacity = seg(t, .5, .8, "lineal");
+    $("fake").style.left = x + "px";
+    // golpe del portero: glitch y bloqueo, unico momento fuerte de efectos
+    const g = t > 1.25 && t < 1.7 ? 1 - (t - 1.25) / .45 : 0;
+    JDT.glitch($("fake"), g, Math.floor(t * 30));
+    if (t > 1.45) $("fake").style.transform = `translateX(${lerp(0, -40, seg(t, 1.45, 1.8, "outExpo"))}px) scale(${lerp(1, .92, seg(t, 1.45, 1.8))})`;
+  }
+
+  // E2 · la IA revisa: fuentes que llegan, portero que deja pasar solo lo real
+  if (sc === 1) {
+    fadeIn("t2", t, 2.99, 3.4); rise("t2", t, 2.99, 3.5, 40);
+    ["p2a", "p2b", "p2c"].forEach((id, i) => { const a = 3.1 + i * .18; fadeIn(id, t, a, a + .4); $(id).style.transform = `translateX(${lerp(-80, 0, seg(t, a, a + .5))}px)`; });
+    fadeIn("portero", t, 3.5, 4.1); $("portero").style.transform = `scale(${lerp(.9, 1, seg(t, 3.5, 4.1))})`;
+    const pulso = Math.sin(t * 6) * .5 + .5;
+    $("portero").style.boxShadow = `0 0 ${lerp(20, 60, pulso)}px rgba(250,204,21,${lerp(.15, .45, pulso)})`;
+    const lineas = [["l2a", 3.5], ["l2b", 3.6], ["l2c", 3.7]]; const fluye = t * -40;
+    lineas.forEach(([id, a]) => { const el = $(id); const L = 260; el.style.strokeDasharray = `10 12`; el.style.strokeDashoffset = fluye; el.style.opacity = seg(t, a, a + .3, "lineal"); });
+    fadeIn("ok2", t, 6.0, 6.4); $("ok2").style.transform = `translateY(${lerp(-200, 0, seg(t, 6.0, 6.9, "outExpo"))}px)`;
+    fadeIn("s2", t, 8.2, 8.7); rise("s2", t, 8.2, 8.9, 30);
+  }
+
+  // E3 · giro: pantalla partida; la mitad amarilla sube con corte diagonal
+  if (sc === 2) {
+    const k = seg(t, 10.0, 10.6, "outExpo");
+    const y = lerp(100, 45, k);
+    $("bot3").style.clipPath = `polygon(0 ${y + 6}%,100% ${y - 6}%,100% 100%,0 100%)`;
+    fadeIn("q3", t, 10.1, 10.4); const qo = seg(t, 11.2, 11.5, "lineal"); $("q3").style.opacity = Math.max($("q3").style.opacity*1, 0) * (1 - qo);
+    fadeIn("l3a", t, 11.6, 11.9); fadeIn("w3a", t, 11.65, 12.0); rise("w3a", t, 11.65, 12.1, 40);
+    fadeIn("l3b", t, 12.7, 13.0); fadeIn("w3b", t, 12.8, 13.1); rise("w3b", t, 12.8, 13.2, 40);
+    // temblor breve de las alertas, solo en el momento del «pita»
+    const vib = dentro(t, 11.6, 12.3) ? Math.sin(t * 90) * 6 : 0;
+    $("w3a").style.transform = `translateX(${vib}px)`;
+    const f = dentro(t, 10.0, 10.12) ? 1 - (t - 10.0) / .12 : 0;
+    JDT.flash($("fl"), f * .8);
+  }
+
+  // E4 · remate de palabras, cada una en su sitio sincronizada con la voz
+  if (sc === 3) {
+    fadeIn("w4a", t, 14.15, 14.4); fadeIn("w4b", t, 14.6, 14.9);
+    fadeIn("w4c", t, 15.1, 15.4); rise("w4c", t, 15.1, 15.5, 40);
+    fadeIn("w4d", t, 15.7, 16.0); rise("w4d", t, 15.7, 16.1, 40);
+    fadeIn("w4e", t, 17.7, 18.0); rise("w4e", t, 17.7, 18.1, 40);
+    fadeIn("w4f", t, 18.6, 18.9); rise("w4f", t, 18.6, 19.0, 50);
+  }
+
+  // E5 · cierre de marca
+  if (sc === 4) {
+    const ab = 1 - seg(t, 19.9, 20.8, "outExpo");
+    JDT.glitch($("logo"), ab, Math.floor(t * 30));
+    $("logo").style.opacity = seg(t, 19.9, 20.2, "lineal");
+    $("logo").style.transform = `scale(${lerp(1.08, 1, seg(t, 19.9, 21, "outExpo"))})`;
+    fadeIn("nom", t, 20.8, 21.3);
+    fadeIn("c5", t, 21.6, 22.2); rise("c5", t, 21.6, 22.3, 50);
+    fadeIn("arr", t, 23.5, 23.9);
+  }
+
+  // barrido entre capitulos y grano
+  const cortes = [2.84, 9.99, 14.15, 19.83]; let kb = 0;
+  cortes.forEach(x => { if (t >= x - .2 && t < x + .25) kb = (t - (x - .2)) / .45; });
+  fg.clearRect(0, 0, JDT.W, JDT.H);
+  if (kb > 0 && kb < 1) JDT.barrido(fg, kb);
+  JDT.grano(fg, t, .045);
+  JDT.hud($("hud"), t, 25.5, ["01 · GANCHO", "02 · EL PORTERO", "03 · EL GIRO", "04 · LA IDEA", "05 · MARCA"][Math.max(0, sc)]);
+};
+</script></body></html>

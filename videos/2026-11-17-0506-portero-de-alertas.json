@@ -1,0 +1,242 @@
+{
+  "salida": "videos/2026-11-17-0506-portero-de-alertas.mp4",
+  "formato": "el portero de discoteca: arranca a media acción con un portero que ataja en la puerta, y la noticia de GitHub explica quién es ese portero y por qué tu negocio necesita uno",
+  "concepto": "Una IA que trabaja de portero de discoteca: en GitHub es tendencia un radar que junta ofertas de muchas fuentes y una IA las revisa y saca las falsas antes de avisarte; ese mismo portero se le puede poner a los correos y pedidos de tu negocio para que el celular solo suene por lo que importa, y tú decides.",
+  "produccion": "arranca amarillo a pantalla completa con glitch y vibra en el golpe del portero que ataja la tarjeta falsa; pasa a fondo oscuro con grano y paneo donde las fuentes viajan hasta el portero y solo sale una campana; giro con destello a pantalla dividida sin portero / con portero y latido; remate de palabras en azul con pulso; cierre con persiana. Sin terminal, notificaciones, contador ni marquesina para alejarse de los cuatro anteriores.",
+  "escenas": [
+    {
+      "tipo": "libre",
+      "look": "amarillo",
+      "fx": [
+        "glitch",
+        "vibra"
+      ],
+      "texto": "¡Tú *no* entras!",
+      "voz": "¡Tú no entras! ¡Tú tampoco!",
+      "duracion": 2.6,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "robot",
+          "x": 50,
+          "y": 52,
+          "tam": 30,
+          "color": "azul",
+          "entra": "pop",
+          "mueve": "balancea",
+          "t": 0.0
+        },
+        {
+          "el": "forma",
+          "forma": "circulo",
+          "x": 14,
+          "y": 70,
+          "ancho": 5,
+          "alto": 5,
+          "color": "azul",
+          "entra": "aparece",
+          "t": 0.08
+        },
+        {
+          "el": "forma",
+          "forma": "circulo",
+          "x": 86,
+          "y": 70,
+          "ancho": 5,
+          "alto": 5,
+          "color": "azul",
+          "entra": "aparece",
+          "t": 0.08
+        },
+        {
+          "el": "linea",
+          "x": 16,
+          "y": 70,
+          "a": [
+            84,
+            70
+          ],
+          "estilo": "solida",
+          "color": "azul",
+          "entra": "dibuja",
+          "t": 0.1
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Oferta falsa",
+          "icono": "equis",
+          "x": 50,
+          "y": 82,
+          "color": "azul",
+          "entra": "derecha",
+          "mueve": "tiembla",
+          "t": 0.22
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "fx": [
+        "grano"
+      ],
+      "camara": "paneo",
+      "transicion": "persiana",
+      "texto": "Un radar con *portero*",
+      "voz": "En GitHub es tendencia un radar de ofertas donde una IA hace de portero: revisa cada una y saca las falsas.",
+      "duracion": 6.5,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "megafono",
+          "x": 18,
+          "y": 40,
+          "tam": 12,
+          "color": "gris",
+          "t": 0.0,
+          "entra": "baja",
+          "mueve": "flota"
+        },
+        {
+          "el": "icono",
+          "nombre": "correo",
+          "x": 50,
+          "y": 38,
+          "tam": 12,
+          "color": "gris",
+          "t": 0.06,
+          "entra": "baja",
+          "mueve": "flota"
+        },
+        {
+          "el": "icono",
+          "nombre": "red",
+          "x": 82,
+          "y": 40,
+          "tam": 12,
+          "color": "gris",
+          "t": 0.12,
+          "entra": "baja",
+          "mueve": "flota"
+        },
+        {
+          "el": "linea",
+          "x": 22,
+          "y": 46,
+          "a": [
+            42,
+            58
+          ],
+          "estilo": "punteada",
+          "color": "gris",
+          "t": 0.2,
+          "entra": "dibuja",
+          "pulso": true
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 45,
+          "a": [
+            50,
+            55
+          ],
+          "estilo": "punteada",
+          "color": "gris",
+          "t": 0.24,
+          "entra": "dibuja",
+          "pulso": true
+        },
+        {
+          "el": "linea",
+          "x": 78,
+          "y": 46,
+          "a": [
+            58,
+            58
+          ],
+          "estilo": "punteada",
+          "color": "gris",
+          "t": 0.28,
+          "entra": "dibuja",
+          "pulso": true
+        },
+        {
+          "el": "icono",
+          "nombre": "robot",
+          "x": 50,
+          "y": 64,
+          "tam": 24,
+          "color": "amarillo",
+          "t": 0.35,
+          "entra": "pop",
+          "mueve": "late"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Oferta verificada",
+          "icono": "campana",
+          "x": 50,
+          "y": 84,
+          "color": "amarillo",
+          "t": 0.65,
+          "entra": "sube"
+        }
+      ]
+    },
+    {
+      "tipo": "dividida",
+      "transicion": "destello",
+      "camara": "latido",
+      "etiquetas": [
+        "Pita por *todo*",
+        "Solo lo *real*"
+      ],
+      "iconos": [
+        "campana",
+        "check"
+      ],
+      "rotulos": [
+        "SIN FILTRO",
+        "CON IA"
+      ],
+      "voz": "¿Y tu negocio? Tu celular pita por TODO.",
+      "duracion": 3.5
+    },
+    {
+      "tipo": "palabras",
+      "look": "azul",
+      "fx": [
+        "pulso"
+      ],
+      "transicion": "circulo",
+      "frases": [
+        "Correos.",
+        "Pedidos.",
+        "*Solo* lo que importa.",
+        "Tú *decides*."
+      ],
+      "voz": "Ponle ese portero a tus correos y pedidos: te avisa solo lo que importa, y tú decides.",
+      "duracion": 5.5
+    },
+    {
+      "tipo": "cierre",
+      "transicion": "persiana",
+      "texto": "Hablemos de tu proyecto",
+      "subtexto": "@technologicsjdt",
+      "voz": "Lo automatizamos en JDT Technologics. ¡Hablemos de tu proyecto!",
+      "duracion": 3.5
+    }
+  ],
+  "audio": "videos/2026-11-17-0506-portero-de-alertas.mp3",
+  "tiempos": {
+    "inicios": [
+      0.0,
+      2.84,
+      9.99,
+      14.15,
+      19.83
+    ],
+    "retardo": 0.3,
+    "duracion": 25.5
+  }
+}
