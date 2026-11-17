@@ -26,9 +26,10 @@ def arg(n, d=None):
 
 def env(n, a=.01, r=.3):
     e = np.ones(n)
-    na, nr = int(a * SR), int(r * SR)
+    na, nr = min(int(a * SR), n), min(int(r * SR), n)
     e[:na] = np.linspace(0, 1, na)
-    e[-nr:] = np.linspace(1, 0, nr) if nr < n else e[-nr:]
+    if nr > 0:
+        e[-nr:] = np.minimum(e[-nr:], np.linspace(1, 0, nr))
     return e
 
 
