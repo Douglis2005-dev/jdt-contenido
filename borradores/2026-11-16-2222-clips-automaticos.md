@@ -47,5 +47,8 @@ Mapa de silencios de la voz (silencedetect): cortes en 3,0 / 5,4 / 8,5 / 12,3 / 
 - Render final: 24,63 s, 738 cuadros, con_audio true, 2,34 MB.
 
 ## Drive
-- MP4 liviano en carpeta Videos: https://drive.google.com/file/d/1uJNReJvnYmuv4cc16o3mZSxgEUS3-uCX/view?usp=drivesdk (verificado con search_files)
+- MP4 liviano en carpeta Videos: https://drive.google.com/file/d/1SGn4Bfk5WIKlsILpbg3m6ywwy5N-eyXT/view?usp=drivesdk (verificado con search_files)
 - PNG en carpeta Banners: https://drive.google.com/file/d/1tTwCnbreaRwR7_ejGo1RQnnvKE57Qgvy/view?usp=drivesdk (verificado con search_files)
+
+## Corrección de sincronía (2026-11-16 22:55)
+- El video salía una frase adelantado respecto a la voz (las escenas se cortaron en pausas internas de la locución). Se rehízo con los tiempos de la transcripción palabra por palabra (videos/2026-11-16-2222-clips-automaticos.palabras.json): escenas en 0 / 5,45 / 8,6 / 12,2 / 16,35 / 21,95 s. Video nuevo en Drive; el anterior quedó en la papelera.
