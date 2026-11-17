@@ -1,0 +1,30 @@
+/* Base visual de JDT para el motor HTML (render_html.py). Paleta: SOLO estos colores. */
+@font-face { font-family: "Montserrat"; src: url("../recursos/fuentes/Montserrat-Bold.ttf"); font-weight: 700 900; }
+@font-face { font-family: "Montserrat"; src: url("../recursos/fuentes/Montserrat-Regular.ttf"); font-weight: 400; }
+:root { --fondo:#0A0E27; --fondo2:#0D1230; --sup:#131A3A; --borde:#2A3460; --azul:#5466B4; --gris:#94A3B8;
+        --amarillo:#FACC15; --dorado:#EAB308; --blanco:#FFFFFF; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; background: var(--fondo); overflow: hidden; }
+body { font-family: "Montserrat", "Segoe UI", sans-serif; color: var(--blanco); position: relative; }
+.capa { position: absolute; inset: 0; z-index: 1; }
+.centro { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; }
+.titulo { font-weight: 900; letter-spacing: -0.03em; line-height: 1.02; }
+.mono { font-family: "DejaVu Sans Mono", "Consolas", monospace; letter-spacing: .18em; text-transform: uppercase; font-size: 26px; color: var(--gris); }
+.clave { color: var(--amarillo); }
+.oro { background: linear-gradient(90deg, var(--amarillo), var(--dorado)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+/* panel de vidrio, listo para girarlo en 3D con JDT.camara(el, {...}) */
+.vidrio { position: absolute; border-radius: 36px; background: linear-gradient(145deg, rgba(255,255,255,.16), rgba(255,255,255,.04));
+          border: 2px solid rgba(255,255,255,.22); box-shadow: 0 40px 120px rgba(0,0,0,.55), inset 0 2px 0 rgba(255,255,255,.25);
+          backdrop-filter: blur(22px); }
+.vidrio.oro { background: linear-gradient(145deg, rgba(250,204,21,.20), rgba(250,204,21,.04)); border-color: rgba(250,204,21,.45); }
+.pildora { display: inline-block; padding: 16px 38px; border-radius: 999px; background: var(--amarillo); color: var(--fondo); font-weight: 800; font-size: 40px; }
+.codigo { font-family: "DejaVu Sans Mono", "Consolas", monospace; font-size: 34px; line-height: 1.55; white-space: pre; color: var(--blanco); }
+.codigo .k { color: var(--amarillo); } .codigo .s { color: var(--gris); } .codigo .n { color: var(--azul); filter: brightness(1.5); }
+/* capa fija tipo visor: la dibuja JDT.hud() */
+.hud { position: absolute; inset: 0; pointer-events: none; z-index: 6; }
+.hud .esq { position: absolute; width: 54px; height: 54px; border: 0 solid rgba(255,255,255,.55); }
+.hud .marca { position: absolute; left: 70px; top: 120px; }
+.hud .tc { position: absolute; right: 70px; top: 120px; }
+.hud .esc { position: absolute; left: 70px; bottom: 90px; }
+.hud .barra { position: absolute; right: 70px; bottom: 98px; width: 300px; height: 6px; background: rgba(255,255,255,.18); border-radius: 3px; }
+.hud .barra i { display: block; height: 100%; background: var(--amarillo); border-radius: 3px; }

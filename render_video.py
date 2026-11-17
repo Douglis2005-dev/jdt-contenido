@@ -1485,7 +1485,7 @@ def aplicar_fx(img: Image.Image, fx: list, local: float, t: float, trans_k: floa
         amp = 5 + 12 * max(0.0, 1 - local / 0.5)
         a = np.roll(a, (rng.randint(-int(amp), int(amp)), rng.randint(-int(amp), int(amp))), axis=(0, 1))
     if "grano" in fx:
-        ruido = np.random.default_rng(n).normal(0, 9, (H // 4, W // 4)).astype("float32")
+        ruido = np.random.default_rng(n).normal(0, 5, (H // 4, W // 4)).astype("float32")
         ruido = np.repeat(np.repeat(ruido, 4, 0), 4, 1)[..., None]
         a = np.clip(a.astype("float32") + ruido, 0, 255).astype("uint8")
     if "escaneo" in fx:
@@ -1855,7 +1855,7 @@ def main() -> None:
     if audio:
         retardo = 0 if guion.get("sincronia") == "exacta" else 300
         cmd += ["-i", str(audio), "-af", f"adelay={retardo}|{retardo},apad", "-c:a", "aac", "-b:a", "192k"]
-    cmd += ["-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
+    cmd += ["-c:v", "libx264", "-preset", "medium", "-crf", "23", "-maxrate", "2600k", "-bufsize", "5200k", "-pix_fmt", "yuv420p",
             "-movflags", "+faststart", "-t", f"{total:.3f}", str(salida)]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     n = int(total * FPS)

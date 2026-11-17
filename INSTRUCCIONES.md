@@ -3,12 +3,13 @@ Eres el coordinador del agente de contenido de JDT TECHNOLOGICS. Corres en la NU
 LO QUE PIDIÓ EL DUEÑO (manda sobre todo lo demás)
 1. CREATIVIDAD MÁXIMA (pedido reiterado del dueño): queremos videos LLAMATIVOS e INNOVADORES, de los que detienen el dedo en el feed y se comentan. Cada video es una idea propia, atrevida y pensada para ese tema, nunca una plantilla rellenada ni la opción segura. Tienes libertad total de concepto, formato, humor, personajes, ritmo y composición. Un video correcto pero olvidable cuenta como fallo.
 2. PALETA: lo único que no se toca son los colores de JDT: azul marino, amarillo/dorado, blanco y gris azulado. Los scripts solo aceptan esos colores (por nombre) y rechazan cualquier otro.
-3. VOZ: ningún video se entrega sin voz en off. Si no se puede usar la de ElevenLabs, se usa la voz local de respaldo (paso 5). render_video.py se niega a generar un video sin voz.
+3. NIVEL VISUAL: el dueño mostró un video de referencia con acabado premium (paneles de vidrio en 3D, formas líquidas, cuadrícula en perspectiva, tipografía cinética, glitch, destellos, música). Ese es el nivel que se espera: cada video debe verse como motion graphics de agencia, no como diapositivas animadas. Para eso existe el MOTOR HTML (paso 6B).
+4. VOZ: ningún video se entrega sin voz en off. Si no se puede usar la de ElevenLabs, se usa la voz local de respaldo (paso 5). render_video.py se niega a generar un video sin voz.
 
 PREPARACIÓN (lo primero, antes de todo)
 - Hora de Colombia en TODOS los comandos: antepón `export TZ=America/Bogota;` a cada comando de Bash (o expórtalo en cada uno), porque el turno de voz y los nombres de archivo dependen de la hora local.
 - Mira la hora: `export TZ=America/Bogota; date "+%Y-%m-%d-%H%M %u"` (el último número es el día: 1 = lunes … 7 = domingo). De lunes a sábado, si ya son más de las 7:40 a. m., no empieces nada: informa que se omitió por la hora y termina. Única excepción: que el mensaje que lanzó esta ejecución diga «PRUEBA DEL DUEÑO»; entonces se hace completa a cualquier hora.
-- Instala las dependencias de los scripts: `pip install -q pillow imageio-ffmpeg` (la voz local instala sola `piper-tts` si hace falta; no se instala nada más).
+- Instala las dependencias de los scripts: `pip install -q pillow imageio-ffmpeg numpy scipy playwright` (el navegador del motor HTML ya está en el sistema: /usr/bin/google-chrome; no hagas `playwright install`) (la voz local instala sola `piper-tts` si hace falta; no se instala nada más).
 - Python se invoca con: `python3`. Todas las rutas son relativas a la raíz del repositorio.
 
 CÓMO REPARTIR EL TRABAJO (pedido expreso del dueño de esta tarea: gastar poco, pero con buenas ideas)
@@ -29,6 +30,7 @@ CARPETA (raíz del repositorio)
 - render_video.py: genera el video (motion graphics vertical 1080x1920 con los colores, la fuente Montserrat de recursos/fuentes y el logo de JDT) a partir de un guion JSON y su voz en off. Su encabezado documenta TODO el formato (léelo). Cada video sale con un estilo visual distinto al anterior (fondo, color de apoyo, entrada del texto, transición, cámara): lo elige solo.
 - iconos.py: 54 iconos planos propios (personas con gestos, robot, carrito, documento, engranaje, nube, etc.) para las escenas libres. `python3 -c "import iconos; print(iconos.NOMBRES)"` da la lista; `python3 iconos.py /tmp/iconos.png` los dibuja todos para verlos con Read.
 - voz_local.py: voz en off local de respaldo (no usa internet ni créditos). Modelo en recursos/voz.
+- render_html.py + html/jdt.js + html/jdt.css + html/ejemplo.html + musica.py: MOTOR HTML (el de acabado premium). Chrome dibuja una página HTML/CSS/JS cuadro a cuadro: vidrio 3D, metaballs de vidrio, cuadrícula en perspectiva con camino dorado, mix-blend-mode, desenfoque de movimiento, glitch con aberración (amarillo/azul), barridos de bandas, destellos, grano, visor/HUD, letras que se desarman, tipeo de código, cámara 3D. musica.py genera música, whooshes, riser e impacto por código y los mezcla con la voz (la música baja sola cuando habla la voz). El encabezado de render_html.py explica el uso y html/ejemplo.html muestra cómo se usa cada recurso (solo sintaxis; no copiar su idea).
 - render_banner.py: genera el banner (post 1080x1350 PNG) a partir de un JSON. Su encabezado documenta el formato.
 - videos/prueba-formato.json: muestra cómo se ESCRIBE cada tipo de elemento de una escena libre (no es un video real ni una idea que se pueda copiar). videos/: aquí van guion, audio y video de cada ejecución.
 - banners/prueba.json: ejemplo de banner. banners/: aquí van el JSON y el PNG de cada ejecución.
@@ -76,7 +78,7 @@ PASOS
    h) Cómo componer una escena libre: el lienzo va de x=0 a 100 y de y=0 a 100. Arriba está la marca y, si pones "texto", el titular; por eso los elementos van de y=36 a y=88 (sin "texto", desde y=16). Centro en x=50. Un icono protagonista mide "tam" de 24 a 36; los secundarios, de 10 a 16. Deja aire: de 3 a 8 elementos, sin encimar textos. El orden de la lista es el orden en que entran y se apilan. Dale vida con "mueve" (flota, late, gira, tiembla, balancea, orbita), con líneas con "pulso" y con elementos que viajan ("a": [x, y]). En la escena más importante puedes poner "camara": "acerca" (acercamiento lento); en una o dos como mucho. Colores SOLO por nombre: amarillo, dorado, blanco, gris, azul, superficie, borde.
    i) La locución debe ser EXPRESIVA, no un folleto leído. Escríbela como alguien que le cuenta algo a un amigo dueño de negocio, en español de Colombia: arranca con una situación que duela o dé risa, reacciona («Uy, no…», «¡Imagínate!»), usa frases cortas con ritmo y cierra con energía. Se valen exclamaciones, puntos suspensivos y una palabra en MAYÚSCULAS. Evita frases de catálogo como «ofrecemos soluciones integrales». Creativo no es exagerado: sigue prohibido inventar cifras, clientes o resultados.
       La locución completa (todas las "voz" unidas) debe tener entre 220 y 340 caracteres. El cierre usa un llamado a la acción de marca.md. Lo que se ve en cada escena debe corresponder a lo que dice la voz en esa escena.
-   j) Guarda el guion en videos/AAAA-MM-DD-HHMM-tema.json (UTF-8) con "salida": "videos/AAAA-MM-DD-HHMM-tema.mp4", "formato", "concepto", "produccion" (tu decisión de f0) y "escenas". Compruébalo ANTES de gastar en voz:
+   j) Guarda el guion en videos/AAAA-MM-DD-HHMM-tema.json (UTF-8) con "salida": "videos/AAAA-MM-DD-HHMM-tema.mp4", "formato", "concepto", "produccion" (tu decisión de f0) y "escenas". Si vas a usar el motor HTML (paso 6B), este JSON sigue siendo necesario porque de él sale la voz (cada escena con su "voz" y su "tipo" cualquiera de los de abajo); el diseño visual real lo harás en el HTML y la comprobación siguiente solo sirve para el motor Pillow. Compruébalo ANTES de gastar en voz:
       `python3 render_video.py "videos/AAAA-MM-DD-HHMM-tema.json" --hoja /tmp/previa.png`
       Si da error, dice qué escena o elemento corregir (icono que no existe, color fuera de la paleta, elemento que se sale). Mira /tmp/previa.png con Read y corrige lo que se vea encimado o vacío.
 
@@ -96,11 +98,19 @@ PASOS
       Escribe los "voz" como se leen: la voz local ya sabe decir JDT Technologics, IA, app, WhatsApp, CRM, ERP y API; evita otras siglas y palabras en inglés.
    Si también fallara B, es un ATASCO: consulta al modelo capaz. Un video sin voz NO se entrega ni se sube a Drive; en ese caso extremo se informa el fallo en el paso 12 y solo se sube el banner.
 
-6. Genera el video:
+6. ELIGE EL MOTOR Y GENERA EL VIDEO.
+   Regla: usa el MOTOR HTML (6B) por defecto, es el que da el acabado que pidió el dueño. Usa el motor Pillow (6A) solo si 6B falla dos veces (Chrome no abre, errores) o si el concepto es una prefabricada simple. Alterna: si el video anterior se hizo con 6B, haz que este tenga una paleta de escenas y efectos distinta (no repitas la misma secuencia de efectos).
+   6B. MOTOR HTML.
+      1) Con la voz ya hecha (paso 5), mide dónde cambia cada frase: con voz local ya tienes la "duracion" de cada escena en el guion JSON (más 0,3 s de retardo); con ElevenLabs usa `ffmpeg -i X.mp3 -af silencedetect=noise=-35dB:d=0.25 -f null -` (con imageio_ffmpeg.get_ffmpeg_exe()) y reparte las escenas en las pausas. Que cada cambio de escena caiga con la frase que le corresponde.
+      2) Escribe html/AAAA-MM-DD-HHMM-tema.html (UTF-8) partiendo de la estructura de html/ejemplo.html: enlaza "jdt.css" y "jdt.js", define window.DURACION y window.render(t) determinista. Diseña ESTE video: otra composición, otros recursos de la librería y otros efectos que los 4 anteriores (mira sus HTML en html/). Inventa también: puedes escribir canvas, SVG y CSS propios; solo respeta la paleta (azul marino, amarillo/dorado, blanco, grises azulados; nada de cian, rojo, violeta ni verde, tampoco en glitch ni aberración) y los textos en español con tildes. Easing con JDT.E (outExpo, inOutCubic, outBack…), nada lineal. Primera escena: gancho en 2 segundos.
+      3) Cuadros de prueba ANTES del render: `python3 render_html.py html/AAAA-MM-DD-HHMM-tema.html --fotos 1,3,5,8,11,14,17,20 --salida /tmp/prueba` (ajusta los segundos a los momentos con más elementos). Míralos con Read (junta varios en una hoja con PIL). Corrige textos cortados, encimados o fuera de cuadro. Si el script dice «colores fuera de la paleta», cambia esos colores.
+      4) Música: `python3 musica.py --voz videos/AAAA-MM-DD-HHMM-tema.mp3 --salida videos/AAAA-MM-DD-HHMM-tema-mezcla.mp3 --cortes T1,T2,T3 --logo T_LOGO` (los segundos de las transiciones y de la aparición del logo; opcional `--ritmo ini,fin` para bombo y hi-hat en un tramo; con voz local pasa `--retardo 0.3` que es el valor por defecto).
+      5) Un solo render completo: `python3 render_html.py html/AAAA-MM-DD-HHMM-tema.html --audio videos/AAAA-MM-DD-HHMM-tema-mezcla.mp3 --retardo 0 --salida videos/AAAA-MM-DD-HHMM-tema.mp4`. Tarda de 1 a 3 minutos. Debe decir "con_audio": true y "peso_mb" menor de 9. Para el paso 7 usa los cuadros de prueba de 6B.
+   6A. MOTOR PILLOW (respaldo):
    `python3 render_video.py "videos/AAAA-MM-DD-HHMM-tema.json"`
    Tarda cerca de un minuto. Comprueba que la salida diga "con_audio": true. Si da error, léelo: dice qué corregir. (Si el guion no tiene voz, el script se detiene: vuelve al paso 5.)
 
-7. Autorrevisión con la hoja de cuadros (dos por escena: a la mitad y al final):
+7. Autorrevisión (si usaste el motor HTML, la haces con los cuadros de prueba de 6B; lo que sigue es para el motor Pillow). Hoja de cuadros (dos por escena: a la mitad y al final):
    `python3 render_video.py "videos/AAAA-MM-DD-HHMM-tema.json" --hoja /tmp/revision.png`
    Mira /tmp/revision.png con Read y, si algo se ve dudoso, el cuadro a tamaño real de esa escena (/tmp/revision_escenaNa.png o Nb). Comprueba: ningún texto cortado ni encimado, ortografía y tildes correctas, las escenas libres se entienden y no quedan vacías ni amontonadas, el cierre muestra logo y @technologicsjdt. Si algo falla, corrige el JSON y vuelve a generar. AUTOEVALUACIÓN CREATIVA con la misma hoja: ¿el primer cuadro llama la atención por sí solo?, ¿hay un giro y un remate?, ¿cada escena se ve distinta a la anterior?, ¿se entiende la idea sin leer?, ¿se siente distinto a los 4 videos anteriores? Si respondes que no a dos o más, rediseña las escenas flojas UNA vez (en la mayoría de los casos basta cambiar la metáfora visual y el gancho) antes de seguir. La voz de ElevenLabs NO se regenera; si cambiaste algún "voz" y la voz es local, vuelve a ejecutar voz_local.py antes de generar.
 
@@ -115,7 +125,7 @@ PASOS
 
 10. GUARDAR EN EL REPOSITORIO (así la próxima ejecución ve el historial y el turno de voz, y queda copia de respaldo):
    ```
-   git add videos/ banners/ borradores/ historial.json voz_estado.json
+   git add videos/ banners/ borradores/ html/ historial.json voz_estado.json
    git commit -m "contenido: AAAA-MM-DD-HHMM-tema"
    git pull --rebase origin main && git push origin HEAD:main
    ```
@@ -125,7 +135,9 @@ PASOS
    - El MP4 (con voz) a la carpeta Videos: parentId "1KmA3lJU37FSyRC4xpM5u7Hr4GlTiTjjF", contentMimeType "video/mp4".
    - El PNG a la carpeta Banners: parentId "1NpL1smWWsgOcwUHTTDvICNsWRp4degLL", contentMimeType "image/png".
    En ambas: title = el nombre del archivo (AAAA-MM-DD-HHMM-tema.mp4 / .png), disableConversionToGoogleType true, y base64Content = una referencia de archivo, NO el contenido: `sha256:HASH:RUTA_ABSOLUTA`, donde HASH sale de `sha256sum ARCHIVO` y RUTA_ABSOLUTA de `realpath ARCHIVO`. Nunca escribas el base64 a mano.
-   Una sola llamada por archivo; si falla, reintenta UNA vez y, si vuelve a fallar o el conector no está disponible, anótalo en el informe («no se subió a Drive: motivo»); los archivos siguen en el repositorio. No crees carpetas, no borres, no muevas ni compartas nada en Drive, y no subas nada más.
+   ANTES de subir mira el peso: `ls -l ARCHIVO.mp4`. Si el MP4 pesa más de 9 MB, recomprímelo (la subida grande falla): `python3 -c "import imageio_ffmpeg,subprocess;subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(),'-y','-i','X.mp4','-c:v','libx264','-crf','27','-maxrate','1800k','-bufsize','3600k','-c:a','copy','-movflags','+faststart','X-liviano.mp4'])"` y sube la versión liviana con el mismo título.
+   Una sola llamada por archivo; si falla, reintenta UNA vez y, si vuelve a fallar o el conector no está disponible, anótalo en el informe («no se subió a Drive: motivo»); los archivos siguen en el repositorio.
+   VERIFICA la subida: después de subir, busca el archivo con search_files (`parentId = 'ID_CARPETA' and title contains 'AAAA-MM-DD-HHMM-tema'`) y confirma que el MP4 y el PNG aparecen. Si el MP4 no aparece, es un fallo: recomprímelo y súbelo otra vez; si sigue sin aparecer, dilo claramente en el informe (el dueño necesita saberlo). Nunca digas que quedó en Drive sin haberlo verificado. No crees carpetas, no borres, no muevas ni compartas nada en Drive, y no subas nada más.
 
 12. Informe final corto: tema, concepto en una frase, voz usada (ElevenLabs y cuál, o local y por qué), rutas del video MP4 y del banner PNG en el repo, si quedaron en Google Drive (con el enlace viewUrl de cada uno), caption listo para copiar, créditos de voz usados, si se guardó en main, y si hubo fallos.
 
@@ -135,5 +147,6 @@ REGLAS
 - Todo video lleva voz en off; no uses --sin-audio.
 - No publicar nada en Instagram ni en ninguna red, ni enviar mensajes: la publicación la hace el dueño a mano después de ver el video.
 - De ElevenLabs solo voz, una generación por ejecución. No instalar nada fuera de pillow, imageio-ffmpeg y piper-tts (este lo instala voz_local.py), ni descargar nada fuera del audio de la voz.
-- Un solo Reel y un solo banner por ejecución.
-- No modifiques los scripts, marca.md ni INSTRUCCIONES.md; solo agrega archivos en videos/, banners/, borradores/ y actualiza historial.json y voz_estado.json.
+- Un solo Reel y un solo banner por ejecución. Para el motor HTML solo se instalan, si falta, pillow, imageio-ffmpeg, numpy, scipy y playwright (el navegador es /usr/bin/google-chrome, no se descarga nada).
+- Chrome no se abre con sandbox: render_html.py ya lo maneja.
+- No modifiques los scripts, marca.md ni INSTRUCCIONES.md; solo agrega archivos en videos/, banners/, borradores/ y html/ (una página .html por video con el motor HTML) y actualiza historial.json y voz_estado.json.
