@@ -1,0 +1,224 @@
+{
+ "salida": "videos/2026-11-16-2222-clips-automaticos.mp4",
+ "formato": "monólogo en primera persona del objeto: la reunión grabada se confiesa",
+ "concepto": "La grabación de tu última reunión habla desde la carpeta donde nadie la abre: lo mejor que se dijo quedó enterrado en su mitad, hasta que una IA la escucha y la vuelve clips verticales con subtítulos palabra por palabra.",
+ "produccion": "motor HTML: fondo azul con glitch corto solo en el gancho; barra de reproducción con el momento valioso enterrado y un pin; terminal que escribe comandos; tres marcos verticales que se encienden con subtítulos palabra por palabra dentro del central; pantalla amarilla con destello único en el giro y la frase de marca; cierre con logo y @technologicsjdt. Las escenas del JSON describen la voz de cada tramo; el diseño real está en html/2026-11-16-2222-clips-automaticos.html.",
+ "fuente": "https://github.com/haziqahmedqasmi/PeakCut",
+ "escenas": [
+  {
+   "tipo": "libre",
+   "look": "azul",
+   "texto": "Soy tu *reunión grabada*",
+   "fx": [
+    "glitch",
+    "vibra"
+   ],
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "pantalla",
+     "x": 50,
+     "y": 62,
+     "tam": 36,
+     "color": "blanco",
+     "entra": "pop",
+     "mueve": "flota"
+    },
+    {
+     "el": "icono",
+     "nombre": "ojo",
+     "x": 42,
+     "y": 85,
+     "tam": 10,
+     "color": "gris",
+     "entra": "aparece",
+     "t": 0.35
+    },
+    {
+     "el": "icono",
+     "nombre": "equis",
+     "x": 58,
+     "y": 85,
+     "tam": 10,
+     "color": "amarillo",
+     "entra": "pop",
+     "t": 0.55
+    }
+   ],
+   "voz": "Hola. Soy tu reunión grabada… y nadie me ve.",
+   "duracion": 3
+  },
+  {
+   "tipo": "libre",
+   "texto": "Lo mejor, *enterrado*",
+   "fx": [
+    "vineta"
+   ],
+   "transicion": "desliza-arriba",
+   "elementos": [
+    {
+     "el": "barra",
+     "x": 50,
+     "y": 64,
+     "ancho": 80,
+     "valor": 4,
+     "color": "gris",
+     "entra": "aparece"
+    },
+    {
+     "el": "icono",
+     "nombre": "pin",
+     "x": 50,
+     "y": 55,
+     "tam": 12,
+     "color": "amarillo",
+     "entra": "baja",
+     "mueve": "late",
+     "t": 0.3
+    },
+    {
+     "el": "icono",
+     "nombre": "chispa",
+     "x": 59,
+     "y": 49,
+     "tam": 7,
+     "color": "dorado",
+     "entra": "pop",
+     "t": 0.5
+    },
+    {
+     "el": "texto",
+     "texto": "Aquí estaba *lo bueno*",
+     "x": 50,
+     "y": 78,
+     "tam": "m",
+     "entra": "sube",
+     "t": 0.45
+    }
+   ],
+   "voz": "Lo mejor que se dijo quedó perdido en mi mitad.",
+   "duracion": 3.5
+  },
+  {
+   "tipo": "terminal",
+   "texto": "Una IA me *escucha*",
+   "titulo": "ia@tu-servidor",
+   "lineas": [
+    "> transcribir audio",
+    "en tu propia máquina",
+    "> buscar momentos clave",
+    "momentos encontrados"
+   ],
+   "fx": [
+    "escaneo"
+   ],
+   "transicion": "circulo",
+   "voz": "Hasta que una IA me escucha y encuentra los momentos clave.",
+   "duracion": 4
+  },
+  {
+   "tipo": "palabras",
+   "look": "amarillo",
+   "frases": [
+    "Clips verticales.",
+    "Con subtítulos…",
+    "*palabra por palabra.*"
+   ],
+   "transicion": "destello",
+   "voz": "Me vuelve clips verticales, con subtítulos palabra por palabra. ¡Por fin me ven!",
+   "duracion": 4.5
+  },
+  {
+   "tipo": "libre",
+   "texto": "Hecho *a tu medida*",
+   "camara": "empuja",
+   "transicion": "zoom",
+   "elementos": [
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 24,
+     "y": 64,
+     "ancho": 20,
+     "alto": 30,
+     "color": "superficie",
+     "entra": "sube",
+     "t": 0.1
+    },
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 50,
+     "y": 64,
+     "ancho": 20,
+     "alto": 30,
+     "color": "superficie",
+     "entra": "sube",
+     "t": 0.22
+    },
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 76,
+     "y": 64,
+     "ancho": 20,
+     "alto": 30,
+     "color": "superficie",
+     "entra": "sube",
+     "t": 0.34
+    },
+    {
+     "el": "icono",
+     "nombre": "equipo",
+     "x": 24,
+     "y": 64,
+     "tam": 11,
+     "color": "amarillo",
+     "entra": "pop",
+     "t": 0.4
+    },
+    {
+     "el": "icono",
+     "nombre": "megafono",
+     "x": 50,
+     "y": 64,
+     "tam": 11,
+     "color": "amarillo",
+     "entra": "pop",
+     "t": 0.5
+    },
+    {
+     "el": "icono",
+     "nombre": "bombilla",
+     "x": 76,
+     "y": 64,
+     "tam": 11,
+     "color": "amarillo",
+     "entra": "pop",
+     "t": 0.6
+    },
+    {
+     "el": "texto",
+     "texto": "Tu proceso, *automatizado*",
+     "x": 50,
+     "y": 86,
+     "tam": "s",
+     "entra": "sube",
+     "t": 0.7
+    }
+   ],
+   "voz": "En JDT Technologics automatizamos eso a la medida de tu negocio.",
+   "duracion": 4
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de tu proyecto",
+   "subtexto": "@technologicsjdt",
+   "transicion": "fundido",
+   "voz": "Hablemos de tu proyecto.",
+   "duracion": 3
+  }
+ ],
+ "audio": "videos/2026-11-16-2222-clips-automaticos.mp3",
+ "motor": "html"
+}

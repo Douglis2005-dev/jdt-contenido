@@ -1,0 +1,116 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+.bloque{position:absolute;left:90px;width:900px}
+.frame{position:absolute;top:720px;width:250px;height:440px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;opacity:.45}
+.frame .mono{font-size:22px}
+.tri{width:0;height:0;border-left:58px solid #FACC15;border-top:38px solid transparent;border-bottom:38px solid transparent;margin:110px auto 0}
+.palabra{display:inline-block;opacity:0;margin:0 6px}
+.palabra.on{opacity:1}
+</style></head><body>
+<div id="e1" class="capa"><div id="g1" class="titulo bloque" style="top:520px;font-size:150px">Soy tu<br>reunión<br><span class="clave">grabada…</span></div>
+  <div id="n1" class="titulo" style="position:absolute;left:90px;top:1110px;font-size:96px;opacity:0">nadie me ve<span class="clave">.</span></div></div>
+
+<div id="e2" class="capa"><div id="cam2" style="position:absolute;inset:0"><div id="t2" class="titulo bloque" style="top:440px;font-size:130px">Lo mejor,<br><span class="clave">enterrado</span></div>
+  <div class="vidrio" style="left:90px;top:900px;width:900px;height:110px;border-radius:55px"><div style="position:absolute;left:12px;top:12px;bottom:12px;right:12px;border-radius:44px;background:rgba(148,163,184,.25)"></div>
+    <div id="seg2" style="position:absolute;left:40%;width:15%;top:12px;bottom:12px;border-radius:44px;background:linear-gradient(90deg,#EAB308,#FACC15);opacity:0"></div></div>
+  <div id="pin2" style="position:absolute;left:0;top:820px;width:44px;height:44px;border-radius:50%;background:#FFFFFF;box-shadow:0 0 0 10px rgba(250,204,21,.35);opacity:0"></div>
+  <div id="s2" class="titulo bloque" style="top:1060px;font-size:88px;opacity:0">quedó perdido <span class="clave">en mi mitad</span></div></div></div>
+
+<div id="e3" class="capa"><div id="t3" class="titulo bloque" style="top:430px;font-size:118px">Una IA me<br><span class="clave">escucha</span></div>
+  <div class="vidrio" style="left:110px;top:800px;width:860px;height:420px;padding:50px"><div id="c3" class="codigo" style="font-size:40px"></div></div></div>
+
+<div id="e4" class="capa"><div id="t4" class="titulo bloque" style="top:430px;font-size:104px">Me vuelve <span class="clave">clips verticales</span></div>
+  <div id="tira4" style="position:absolute;left:0;top:0;width:1080px;height:1920px">
+    <div class="vidrio frame" id="f1" style="left:150px"><div class="mono">clip 1</div><div class="tri"></div><div class="mono">00:12</div></div>
+    <div class="vidrio frame" id="f2" style="left:415px"><div class="mono">clip 2</div><div id="sub4" style="position:absolute;left:18px;right:18px;top:200px;text-align:center;font-size:40px;line-height:1.2;font-weight:900"></div><div class="mono">01:04</div></div>
+    <div class="vidrio frame" id="f3" style="left:680px"><div class="mono">clip 3</div><div class="tri"></div><div class="mono">02:37</div></div>
+  </div></div>
+
+<div id="e5" class="capa"><div id="am5" style="position:absolute;inset:0;background:#FACC15"></div>
+  <div id="t5" class="titulo bloque" style="top:560px;font-size:170px;color:#0A0E27">¡Por fin me <span id="ven5" style="color:#0A0E27;background:linear-gradient(transparent 78%,#0A0E27 78%,#0A0E27 92%,transparent 92%)">ven</span>!</div>
+  <div id="s5" class="titulo bloque" style="top:1060px;font-size:84px;color:#0A0E27;text-align:center;width:900px;opacity:0">En JDT Technologics<br>automatizamos eso</div>
+  <div id="s5b" class="bloque" style="top:1330px;text-align:center;width:900px;opacity:0"><span style="background:#0A0E27;color:#FACC15;padding:12px 34px;border-radius:999px;font-size:60px;font-weight:900">a la medida de tu negocio</span></div></div>
+
+<div id="e6" class="capa"><img id="logo" src="../recursos/logo.jpeg" style="position:absolute;left:290px;top:460px;width:500px;border-radius:90px">
+  <div id="t6" class="titulo" style="position:absolute;left:0;right:0;top:1040px;text-align:center;font-size:100px">Hablemos<br>de tu <span class="clave">proyecto.</span></div>
+  <div id="pl6" style="position:absolute;left:0;right:0;top:1310px;text-align:center;opacity:0"><span class="pildora">@technologicsjdt</span></div></div>
+
+<div id="fl" class="capa" style="background:#fff;opacity:0;z-index:7"></div>
+<div id="hud" class="hud"></div>
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+window.DURACION = 23.4;
+const PAL_SUB = ["con", "subtítulos", "palabra", "por", "palabra"];
+const CODIGO3 = '<b class="s">ia@tu-servidor $</b>\n<b class="k">&gt;</b> transcribir audio\n   <b class="n">en tu propia máquina</b>\n<b class="k">&gt;</b> buscar momentos clave\n   <b class="s">momentos encontrados ✓</b>';
+const dentro = (t, a, b) => t >= a && t < b;
+window.render = (t) => {
+  const escenas = [["e1", 0, 3.0], ["e2", 3.0, 5.4], ["e3", 5.4, 8.5], ["e4", 8.5, 12.3], ["e5", 12.3, 17.7], ["e6", 17.7, 24]];
+  escenas.forEach(([id, a, b]) => $(id).style.display = dentro(t, a, b) ? "block" : "none");
+  JDT.fondo(bg, t);
+  const idx = escenas.findIndex(([, a, b]) => dentro(t, a, b));
+  JDT.hud($("hud"), t, 23.4, ["● REC", "Sin ver", "Escuchando", "Recortando", "¡Visto!", "JDT"][idx < 0 ? 0 : idx]);
+
+  // E1 gancho: titulo con revelado y glitch corto (unico efecto fuerte del video)
+  if (dentro(t, 0, 3.0)) {
+    JDT.revelar($("g1"), seg(t, .1, .9, "outExpo"), "arriba");
+    const gl = (t > .3 && t < 1.0) ? seg(t, .3, .45, "lineal") * (1 - seg(t, .7, 1.0, "lineal")) : 0;
+    JDT.glitch($("g1"), gl, 3);
+    $("n1").style.opacity = seg(t, 1.0, 1.4, "outExpo");
+  }
+
+  // E2 barra de reproduccion: la parte valiosa queda enterrada hasta que el pin la marca
+  if (dentro(t, 3.0, 5.4)) {
+    JDT.revelar($("t2"), seg(t, 3.0, 3.7, "outExpo"), "arriba");
+    JDT.camara($("cam2"), {s: lerp(1, 1.06, seg(t, 3.0, 5.4, "inOutCubic"))});
+    $("seg2").style.opacity = seg(t, 3.4, 4.0, "lineal");
+    $("pin2").style.left = `${90 + 900 * .47 - 22}px`;
+    $("pin2").style.top = `${lerp(820, 880, seg(t, 3.6, 4.0, "outBack"))}px`;
+    $("pin2").style.opacity = seg(t, 3.6, 4.0, "lineal");
+    $("s2").style.opacity = seg(t, 3.6, 4.0, "lineal");
+  }
+
+  // E3 terminal: comandos que se escriben solos
+  if (dentro(t, 5.4, 8.5)) {
+    JDT.revelar($("t3"), seg(t, 5.4, 6.1, "outExpo"), "arriba");
+    JDT.tipear($("c3"), CODIGO3, seg(t, 5.7, 7.0, "lineal"));
+  }
+
+  // E4 clips: tres marcos verticales que se encienden; subtitulos palabra por palabra DENTRO del marco central
+  if (dentro(t, 8.5, 12.3)) {
+    JDT.revelar($("t4"), seg(t, 8.5, 9.2, "outExpo"), "arriba");
+    JDT.camara($("tira4"), {s: lerp(.96, 1, seg(t, 8.5, 12.3, "inOutCubic"))});
+    ["f1", "f2", "f3"].forEach((id, i) => {
+      const on = seg(t, 9.0 + i * .9, 9.5 + i * .9, "outExpo");
+      $(id).style.opacity = lerp(.45, 1, on);
+      $(id).style.borderColor = on > .01 ? `rgba(250,204,21,${(.25 + .6 * on).toFixed(2)})` : "";
+      $(id).style.boxShadow = on > .01 ? `0 40px 120px rgba(0,0,0,.55), 0 0 ${Math.round(40 * on)}px rgba(250,204,21,${(.35 * on).toFixed(2)})` : "";
+    });
+    const k = Math.min(PAL_SUB.length - 1, Math.floor(seg(t, 9.8, 11.6, "lineal") * PAL_SUB.length));
+    $("sub4").innerHTML = `<span class="palabra on clave" style="font-size:64px">${PAL_SUB[k]}</span>`;
+  }
+
+  // E5 giro: pantalla amarilla; «¡Por fin me ven!» y luego la frase de marca, sincronizada con la voz
+  if (dentro(t, 12.3, 17.7)) {
+    $("am5").style.opacity = seg(t, 12.3, 12.6, "lineal");
+    JDT.revelar($("t5"), seg(t, 12.5, 13.2, "outExpo"), "arriba");
+    $("t5").style.opacity = 1 - seg(t, 16.0, 16.3, "lineal");
+    $("s5").style.opacity = seg(t, 16.5, 16.9, "lineal");
+    $("s5b").style.opacity = seg(t, 16.9, 17.3, "lineal");
+  }
+  const fk = dentro(t, 12.3, 12.7) ? 1 - seg(t, 12.3, 12.7, "lineal") : 0;
+  JDT.flash($("fl"), fk * .85);
+
+  // barrido de cambio a cierre (unico barrido del video)
+  fg.clearRect(0, 0, JDT.W, JDT.H);
+
+  // E6 cierre: logo con latido suave, llamado a la accion
+  if (dentro(t, 17.7, 24)) {
+    $("logo").style.transform = `scale(${lerp(.94, 1, seg(t, 17.7, 18.7))})`;
+    $("logo").style.opacity = seg(t, 17.7, 18.2, "lineal");
+    JDT.revelar($("t6"), seg(t, 17.9, 18.7, "outExpo"), "arriba");
+    $("pl6").style.opacity = seg(t, 19.0, 19.5, "lineal");
+  }
+};
+</script></body></html>
