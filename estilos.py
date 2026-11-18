@@ -219,7 +219,7 @@ def descripcion(estado: dict) -> dict:
     }
 
 
-def elegir(preferencias: dict | None = None) -> dict:
+def elegir(preferencias=None) -> dict:
     e = _cargar()
     h = e["historial"]
     rng = random.Random(datetime.now().strftime("%Y%m%d%H%M%S%f"))
