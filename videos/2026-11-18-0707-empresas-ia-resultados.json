@@ -1,0 +1,344 @@
+{
+  "salida": "videos/2026-11-18-0707-empresas-ia-resultados.mp4",
+  "formato": "el bombillo desenchufado: arranca con un bombillo enorme marcado IA que no prende porque su cable cuelga suelto, siguen las notificaciones de lo que la IA produce y nadie usa, la pantalla partida pone el reto (de usarla a volverla resultados), el giro revela que el enchufe que falta es tu proceso, y el remate es el bombillo encendido alimentando tareas reales",
+  "concepto": "Las empresas colombianas ya compraron el bombillo de la IA, pero sigue desenchufado: el reto ahora es conectarla a sus procesos para que dé resultados, y ese enchufe es lo que JDT construye a la medida.",
+  "produccion": "gancho oscuro con cámara quieta y destello más vibra (único golpe fuerte): bombillo gris apagado con el cable y el enchufe balanceándose y una chispa que no alcanza; notificaciones en azul con desliza-arriba y sin efectos: resumen, borrador y respuesta listos que nadie usa; pantalla dividida con barrido y cámara paneo: usar la IA contra volverla resultados; giro en amarillo con entrada en círculo y cámara que acerca: la tarjeta «Tu proceso» sube y se enchufa, y el bombillo prende con un anillo; escena oscura con fundido y viñeta, cámara quieta para dar aire: el bombillo encendido alimenta tres tareas con revisión humana; cierre con zoom. Sin terminal, marquesina, contador, palabras, glitch ni escaneo, para alejarse de los cuatro anteriores.",
+  "escenas": [
+    {
+      "tipo": "libre",
+      "texto": "Ya tienes *IA*",
+      "fx": [
+        "destello",
+        "vibra"
+      ],
+      "camara": "quieta",
+      "voz": "¡Ya tienes IA en la empresa!… ¿y por qué no prende?",
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "circulo",
+          "x": 50,
+          "y": 52,
+          "ancho": 58,
+          "color": "superficie",
+          "t": 0
+        },
+        {
+          "el": "icono",
+          "nombre": "bombilla",
+          "x": 50,
+          "y": 50,
+          "tam": 34,
+          "color": "gris",
+          "t": 0.02,
+          "entra": "pop",
+          "mueve": "balancea"
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 64,
+          "a": [
+            50,
+            76
+          ],
+          "estilo": "solida",
+          "color": "gris",
+          "t": 0.15,
+          "entra": "dibuja"
+        },
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 50,
+          "y": 79,
+          "ancho": 12,
+          "alto": 5,
+          "color": "gris",
+          "t": 0.25,
+          "mueve": "balancea"
+        },
+        {
+          "el": "icono",
+          "nombre": "chispa",
+          "x": 62,
+          "y": 80,
+          "tam": 7,
+          "color": "amarillo",
+          "t": 0.5,
+          "sale": 0.75,
+          "entra": "pop",
+          "mueve": "tiembla"
+        },
+        {
+          "el": "texto",
+          "texto": "Desconectada",
+          "x": 50,
+          "y": 87,
+          "tam": "s",
+          "color": "gris",
+          "t": 0.6
+        }
+      ]
+    },
+    {
+      "tipo": "notificaciones",
+      "look": "azul",
+      "transicion": "desliza-arriba",
+      "fx": [],
+      "texto": "Mucha IA… *¿y el resultado?*",
+      "etiquetas": [
+        "Resumen listo",
+        "Borrador listo",
+        "Respuesta lista"
+      ],
+      "detalles": [
+        "Sin abrir",
+        "Sin enviar",
+        "¿Y ahora qué?"
+      ],
+      "iconos": [
+        "documento",
+        "correo",
+        "chat"
+      ],
+      "voz": "Cada vez más empresas colombianas la usan: resúmenes, borradores, respuestas…"
+    },
+    {
+      "tipo": "dividida",
+      "transicion": "barrido",
+      "camara": "paneo",
+      "fx": [],
+      "etiquetas": [
+        "Usar la IA",
+        "Volverla *resultados*"
+      ],
+      "iconos": [
+        "robot",
+        "objetivo"
+      ],
+      "rotulos": [
+        "YA",
+        "EL RETO"
+      ],
+      "voz": "Pero el reto ahora es otro: convertirla en resultados."
+    },
+    {
+      "tipo": "libre",
+      "look": "amarillo",
+      "texto": "El enchufe: *tu proceso*",
+      "transicion": "circulo",
+      "camara": "acerca",
+      "fx": [],
+      "voz": "¿El enchufe que falta? Tu proceso.",
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "bombilla",
+          "x": 50,
+          "y": 50,
+          "tam": 26,
+          "t": 0
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 60,
+          "a": [
+            50,
+            70
+          ],
+          "estilo": "solida",
+          "t": 0.05
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Tu proceso",
+          "icono": "engranaje",
+          "x": 50,
+          "y": 75,
+          "ancho": 50,
+          "t": 0.2,
+          "entra": "sube"
+        },
+        {
+          "el": "forma",
+          "forma": "anillo",
+          "x": 50,
+          "y": 50,
+          "ancho": 44,
+          "t": 0.55,
+          "entra": "pop",
+          "mueve": "late"
+        },
+        {
+          "el": "icono",
+          "nombre": "chispa",
+          "x": 26,
+          "y": 40,
+          "tam": 8,
+          "t": 0.62,
+          "entra": "pop"
+        },
+        {
+          "el": "icono",
+          "nombre": "chispa",
+          "x": 74,
+          "y": 40,
+          "tam": 8,
+          "t": 0.68,
+          "entra": "pop"
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "texto": "IA *con resultados*",
+      "transicion": "fundido",
+      "fx": [
+        "vineta"
+      ],
+      "camara": "quieta",
+      "voz": "En JDT conectamos la IA a tu operación, con revisión humana cuando haga falta.",
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "anillo",
+          "x": 50,
+          "y": 56,
+          "ancho": 30,
+          "color": "dorado",
+          "t": 0,
+          "mueve": "late"
+        },
+        {
+          "el": "icono",
+          "nombre": "bombilla",
+          "x": 50,
+          "y": 56,
+          "tam": 17,
+          "color": "amarillo",
+          "t": 0.02,
+          "entra": "pop"
+        },
+        {
+          "el": "linea",
+          "x": 39,
+          "y": 52,
+          "a": [
+            24,
+            49
+          ],
+          "estilo": "flecha",
+          "color": "amarillo",
+          "t": 0.18,
+          "entra": "dibuja"
+        },
+        {
+          "el": "linea",
+          "x": 61,
+          "y": 52,
+          "a": [
+            76,
+            49
+          ],
+          "estilo": "flecha",
+          "color": "amarillo",
+          "t": 0.3,
+          "entra": "dibuja"
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 65,
+          "a": [
+            50,
+            74
+          ],
+          "estilo": "flecha",
+          "color": "amarillo",
+          "t": 0.42,
+          "entra": "dibuja"
+        },
+        {
+          "el": "icono",
+          "nombre": "chat",
+          "x": 18,
+          "y": 44,
+          "tam": 11,
+          "color": "blanco",
+          "t": 0.24,
+          "entra": "pop"
+        },
+        {
+          "el": "icono",
+          "nombre": "documento",
+          "x": 82,
+          "y": 44,
+          "tam": 11,
+          "color": "blanco",
+          "t": 0.36,
+          "entra": "pop"
+        },
+        {
+          "el": "icono",
+          "nombre": "usuario",
+          "x": 50,
+          "y": 79,
+          "tam": 11,
+          "color": "amarillo",
+          "t": 0.48,
+          "entra": "pop"
+        },
+        {
+          "el": "texto",
+          "texto": "Clasifica mensajes",
+          "x": 20,
+          "y": 38,
+          "tam": "s",
+          "color": "gris",
+          "ancho": 34,
+          "t": 0.28
+        },
+        {
+          "el": "texto",
+          "texto": "Extrae datos",
+          "x": 80,
+          "y": 38,
+          "tam": "s",
+          "color": "gris",
+          "ancho": 34,
+          "t": 0.4
+        },
+        {
+          "el": "texto",
+          "texto": "Con *revisión humana*",
+          "x": 50,
+          "y": 87,
+          "tam": "m",
+          "t": 0.55
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*",
+      "subtexto": "@technologicsjdt",
+      "transicion": "zoom",
+      "voz": "¡Hablemos de tu proyecto!"
+    }
+  ],
+  "tiempos": {
+    "inicios": [
+      0.0,
+      3.99,
+      9.71,
+      13.35,
+      15.67,
+      20.7
+    ],
+    "retardo": 0.3,
+    "duracion": 23.26
+  },
+  "validacion": "corregido: revisor 3b (opus) aplicó: bombilla con IA, cable y enchufe, pildora a 0,9 s, tarjetas dentro del cuadro, pantalla dividida con divisor dorado y rótulos YA / EL RETO, sin color lavanda en el fondo, título de la escena 5 «IA conectada a tu proceso» (sin promesa de resultados), radio de pastillas 330."
+}

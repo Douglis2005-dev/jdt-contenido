@@ -1,0 +1,128 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script></head>
+<body>
+<div id="e1" class="capa">
+  <div id="t1" class="titulo" style="position:absolute;left:0;right:0;top:300px;text-align:center;font-size:128px"></div>
+  <div id="bomb" style="position:absolute;left:340px;top:640px;width:400px;height:520px">
+    <svg viewBox="0 0 400 520" width="400" height="520">
+      <path id="cable" d="M200 350 Q 270 430 200 500" stroke="#94A3B8" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <circle cx="200" cy="200" r="150" fill="none" stroke="#94A3B8" stroke-width="10" opacity=".8"/>
+      <text x="200" y="230" text-anchor="middle" font-size="110" font-family="Montserrat" font-weight="900" fill="#94A3B8">IA</text>
+      <path d="M140 350 L140 380 Q140 400 200 400 Q260 400 260 380 L260 350" fill="#94A3B8"/>
+      <rect x="175" y="495" width="50" height="22" rx="6" fill="#94A3B8"/>
+      <circle cx="250" cy="508" r="8" fill="#FACC15" id="chispa"/>
+    </svg>
+  </div>
+  <div id="pl" style="position:absolute;left:0;right:0;top:1360px;text-align:center"><span class="pildora" id="plt" style="background:#94A3B8">Desconectada</span></div>
+</div>
+<div id="e2" class="capa">
+  <div id="n2" class="titulo" style="position:absolute;left:0;right:0;top:240px;text-align:center;font-size:96px">Mucha IA… <span class="clave">¿y el resultado?</span></div>
+  <div id="cards" style="position:absolute;left:0;right:0;top:560px"></div>
+</div>
+<div id="e3" class="capa">
+  <div id="split" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;left:538px;top:600px;width:4px;height:720px;background:#FACC15"></div>
+  <div class="mono" style="position:absolute;left:60px;width:480px;top:820px;text-align:center;font-size:30px">YA</div>
+  <div class="mono" style="position:absolute;left:540px;width:480px;top:820px;text-align:center;font-size:30px;color:#FACC15">EL RETO</div>
+  <div id="w3a" class="titulo" style="position:absolute;left:60px;top:900px;width:480px;font-size:70px;text-align:center">Usar la IA</div>
+  <div id="w3b" class="titulo" style="position:absolute;left:540px;top:900px;width:480px;font-size:70px;text-align:center">Volverla <span class="clave">resultados</span></div>
+</div>
+<div id="e4" class="capa" style="background:#FACC15">
+  <div id="cy" style="position:absolute;inset:0"></div>
+  <div id="tarj" class="vidrio oro" style="left:240px;top:1080px;width:600px;height:220px;padding:40px"><div class="titulo" style="font-size:80px;color:#0A0E27;text-align:center">Tu proceso</div></div>
+  <div id="t4" class="titulo" style="position:absolute;left:0;right:0;top:360px;text-align:center;font-size:110px;color:#0A0E27">El enchufe</div>
+</div>
+<div id="e5" class="capa">
+  <div id="t5" class="titulo" style="position:absolute;left:0;right:0;top:250px;text-align:center;font-size:84px">IA <span class="clave">conectada a tu proceso</span></div>
+  <div id="rad" style="position:absolute;left:0;top:700px;width:1080px;height:800px"></div>
+  <div id="lab" style="position:absolute;left:0;right:0;top:1560px;text-align:center" class="titulo"></div>
+</div>
+<div id="e6" class="capa">
+  <div id="c6" class="titulo" style="position:absolute;left:0;right:0;top:640px;text-align:center;font-size:124px">Hablemos<br>de <span class="clave">tu proyecto</span></div>
+  <div style="position:absolute;left:0;right:0;top:1120px;text-align:center"><span class="pildora">@technologicsjdt</span></div>
+</div>
+<div id="hud" class="hud"></div>
+<div id="fl" class="capa" style="background:#fff;opacity:0;z-index:7"></div>
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+window.DURACION = 23.26;
+const dentro = (t, a, b) => t >= a && t < b;
+const CORTES = [0, 3.99, 9.71, 13.35, 15.67, 20.70, 99];
+const ESC = ["e1", "e2", "e3", "e4", "e5", "e6"];
+// tarjetas de la escena 2 (se crean una vez)
+const TARJ = [["Resumen listo", "Sin abrir"], ["Borrador listo", "Sin enviar"], ["Respuesta lista", "¿Y ahora qué?"]];
+$("cards").innerHTML = TARJ.map(([a, b], i) => `<div class="vidrio" id="k${i}" style="left:${70 + i * 30}px;top:${i * 230}px;width:860px;height:190px;padding:36px 46px"><div class="titulo" style="font-size:64px">${a}</div><div class="mono" style="margin-top:10px;font-size:24px">${b}</div></div>`).join("");
+window.render = (t) => {
+  ESC.forEach((id, i) => $(id).style.display = dentro(t, CORTES[i], CORTES[i + 1]) ? "block" : "none");
+  JDT.fondo(bg, t);
+  // ESCENA 1 · gancho: bombilla apagada con cable, destello y vibra (unico golpe fuerte)
+  if (dentro(t, 0, 3.99)) {
+    $("t1").innerHTML = '¡Ya tienes <span class="clave">IA</span>!';
+    JDT.revelar($("t1"), seg(t, .1, .8, "outExpo"));
+    const bal = Math.sin(t * 2.4) * 4;
+    $("bomb").style.transform = `rotate(${bal}deg)`;
+    $("bomb").style.transformOrigin = "200px 0px";
+    $("pl").style.opacity = seg(t, .9, 1.3, "lineal");
+    $("chispa").style.opacity = t > .5 && t < 1.2 ? 1 : 0;
+    JDT.flash($("fl"), t < .18 ? 1 - t / .18 : 0);
+    if (t < .4) $("fl").style.opacity = Math.max(0, .7 - t * 2);
+    $("fl").style.background = "#fff";
+    $("bomb").style.filter = t > .5 && t < 1.2 ? "drop-shadow(0 0 22px #FACC15)" : "none";
+  } else { $("fl").style.opacity = 0; }
+  // ESCENA 2 · notificaciones que nadie usa
+  if (dentro(t, 3.99, 9.71)) {
+    $("n2").style.opacity = seg(t, 4, 4.6, "outExpo");
+    TARJ.forEach((_, i) => {
+      const k = seg(t, 4.5 + i * .7, 5.2 + i * .7, "outExpo");
+      $("k" + i).style.opacity = k;
+      $("k" + i).style.transform = `translateY(${lerp(180, 0, k)}px)`;
+    });
+  }
+  // ESCENA 3 · pantalla dividida, barrido
+  if (dentro(t, 9.71, 13.35)) {
+    const k = seg(t, 9.71, 10.3, "outExpo");
+    $("split").style.background = "linear-gradient(90deg, #131A3A 50%, #0A0E27 50%)";
+    $("split").style.clipPath = `polygon(0 0, ${100 * k}% 0, ${100 * k}% 100%, 0 100%)`;
+    $("w3a").style.opacity = seg(t, 10, 10.6, "lineal");
+    $("w3b").style.opacity = seg(t, 10.6, 11.2, "lineal");
+    JDT.camara($("split"), {x: lerp(0, -30, seg(t, 9.7, 13.2))});
+  }
+  // ESCENA 4 · giro amarillo: tarjeta que se enchufa y la bombilla se enciende
+  if (dentro(t, 13.35, 15.67)) {
+    const k = seg(t, 13.35, 13.9, "outExpo");
+    $("cy").style.background = `radial-gradient(circle at 50% 50%, #FACC15 ${100 * k}%, transparent ${100 * k}%)`;
+    $("cy").style.background = "#FACC15";
+    $("t4").style.opacity = seg(t, 13.5, 14, "lineal");
+    const up = seg(t, 13.8, 14.4, "outExpo");
+    $("tarj").style.transform = `translateY(${lerp(200, 0, up)}px)`; $("tarj").style.opacity = up;
+    JDT.camara($("t4"), {s: lerp(1, 1.04, seg(t, 13.4, 15.6))});
+  }
+  // ESCENA 5 · esquema radial: la bombilla encendida alimenta 3 tareas
+  if (dentro(t, 15.67, 20.70)) {
+    $("t5").style.opacity = seg(t, 15.7, 16.2, "lineal");
+    const cx = 540, cy = 400, sats = [["chat", "Clasifica mensajes", -150], ["documento", "Extrae datos", -30], ["usuario", "Con revisión humana", 90]];
+    const k = seg(t, 16, 16.8, "outExpo");
+    const bulbK = seg(t, 16, 16.4, "outExpo");
+    let h = `<div style="position:absolute;left:${cx - 120}px;top:${cy - 120}px;width:240px;height:240px;border-radius:50%;border:4px solid #FACC15;box-shadow:0 0 ${60 * bulbK}px rgba(250,204,21,${.6 * bulbK})"></div>`;
+    h += `<div class="titulo clave" style="position:absolute;left:${cx - 120}px;top:${cy - 40}px;width:240px;text-align:center;font-size:44px">IA</div>`;
+    sats.forEach(([ic, txt, ang], i) => {
+      const a = ang * Math.PI / 180, r = 330 * k, x = cx + Math.cos(a) * r, y = cy + Math.sin(a) * r;
+      h += `<div class="vidrio" style="left:${x - 150}px;top:${y - 70}px;width:300px;height:140px;padding:20px;opacity:${k};text-align:center"><div class="titulo" style="font-size:38px">${txt}</div></div>`;
+    });
+    $("rad").innerHTML = h;
+    $("lab").textContent = "";
+    $("lab").style.opacity = 0;
+  }
+  // ESCENA 6 · cierre con zoom (logo texto, cta)
+  if (dentro(t, 20.70, 23.26)) {
+    const k = seg(t, 20.8, 21.6, "outExpo");
+    $("c6").style.opacity = k;
+    $("c6").style.transform = `scale(${lerp(1.15, 1, k)})`;
+  }
+  // barridos entre capitulos
+  const cuts = [3.99, 9.71, 13.35, 15.67, 20.70]; let kb = 0; cuts.forEach(x => { if (t > x - .2 && t < x + .6) kb = (t - x + .2) / .4; });
+  fg.clearRect(0, 0, JDT.W, JDT.H); JDT.barrido(fg, kb); JDT.grano(fg, t, .04);
+  JDT.hud($("hud"), t, 23.26, ["01 · GANCHO", "02 · NOTIFICACIONES", "03 · DIVIDIDA", "04 · EL ENCHUFE", "05 · RESULTADOS", "06 · CIERRE"][Math.max(0, CORTES.slice(0, 6).findLastIndex(c => t >= c))]);
+};
+</script></body></html>

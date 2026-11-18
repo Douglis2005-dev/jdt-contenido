@@ -1,0 +1,274 @@
+{
+ "words": [
+  {
+   "text": "¡Ya",
+   "start": 0.137,
+   "end": 0.16
+  },
+  {
+   "text": "tienes",
+   "start": 0.24,
+   "end": 0.56
+  },
+  {
+   "text": "IA",
+   "start": 0.64,
+   "end": 0.88
+  },
+  {
+   "text": "en",
+   "start": 0.92,
+   "end": 0.96
+  },
+  {
+   "text": "la",
+   "start": 1,
+   "end": 1.04
+  },
+  {
+   "text": "empresa!…",
+   "start": 1.32,
+   "end": 1.92
+  },
+  {
+   "text": "¿y",
+   "start": 2.224,
+   "end": 2.32
+  },
+  {
+   "text": "por",
+   "start": 2.48,
+   "end": 2.56
+  },
+  {
+   "text": "qué",
+   "start": 2.64,
+   "end": 2.72
+  },
+  {
+   "text": "no",
+   "start": 2.8,
+   "end": 2.88
+  },
+  {
+   "text": "prende?",
+   "start": 2.96,
+   "end": 3.36
+  },
+  {
+   "text": "Cada",
+   "start": 3.84,
+   "end": 4
+  },
+  {
+   "text": "vez",
+   "start": 4.08,
+   "end": 4.24
+  },
+  {
+   "text": "más",
+   "start": 4.32,
+   "end": 4.48
+  },
+  {
+   "text": "empresas",
+   "start": 4.56,
+   "end": 4.96
+  },
+  {
+   "text": "colombianas",
+   "start": 5.04,
+   "end": 5.52
+  },
+  {
+   "text": "la",
+   "start": 5.56,
+   "end": 5.6
+  },
+  {
+   "text": "usan:",
+   "start": 5.68,
+   "end": 6.32
+  },
+  {
+   "text": "resúmenes,",
+   "start": 6.44,
+   "end": 7.2
+  },
+  {
+   "text": "borradores,",
+   "start": 7.28,
+   "end": 8.08
+  },
+  {
+   "text": "respuestas…",
+   "start": 8.24,
+   "end": 8.96
+  },
+  {
+   "text": "Pero",
+   "start": 9.56,
+   "end": 9.6
+  },
+  {
+   "text": "el",
+   "start": 9.64,
+   "end": 9.68
+  },
+  {
+   "text": "reto",
+   "start": 9.76,
+   "end": 10.08
+  },
+  {
+   "text": "ahora",
+   "start": 10.16,
+   "end": 10.4
+  },
+  {
+   "text": "es",
+   "start": 10.48,
+   "end": 10.56
+  },
+  {
+   "text": "otro:",
+   "start": 10.64,
+   "end": 11.28
+  },
+  {
+   "text": "convertirla",
+   "start": 11.691,
+   "end": 12.027
+  },
+  {
+   "text": "en",
+   "start": 12.053,
+   "end": 12.08
+  },
+  {
+   "text": "resultados.",
+   "start": 12.16,
+   "end": 13.04
+  },
+  {
+   "text": "¿El",
+   "start": 13.2,
+   "end": 13.28
+  },
+  {
+   "text": "enchufe",
+   "start": 13.36,
+   "end": 13.6
+  },
+  {
+   "text": "que",
+   "start": 13.68,
+   "end": 13.76
+  },
+  {
+   "text": "falta?",
+   "start": 13.84,
+   "end": 14.32
+  },
+  {
+   "text": "Tu",
+   "start": 14.547,
+   "end": 14.56
+  },
+  {
+   "text": "proceso.",
+   "start": 14.64,
+   "end": 15.36
+  },
+  {
+   "text": "En",
+   "start": 15.52,
+   "end": 15.6
+  },
+  {
+   "text": "JDT",
+   "start": 15.68,
+   "end": 16.08
+  },
+  {
+   "text": "conectamos",
+   "start": 16.16,
+   "end": 16.72
+  },
+  {
+   "text": "la",
+   "start": 16.8,
+   "end": 16.88
+  },
+  {
+   "text": "IA",
+   "start": 17.04,
+   "end": 17.44
+  },
+  {
+   "text": "a",
+   "start": 17.48,
+   "end": 17.52
+  },
+  {
+   "text": "tu",
+   "start": 17.6,
+   "end": 17.68
+  },
+  {
+   "text": "operación,",
+   "start": 17.8,
+   "end": 18.48
+  },
+  {
+   "text": "con",
+   "start": 18.52,
+   "end": 18.56
+  },
+  {
+   "text": "revisión",
+   "start": 18.64,
+   "end": 18.96
+  },
+  {
+   "text": "humana",
+   "start": 19.04,
+   "end": 19.28
+  },
+  {
+   "text": "cuando",
+   "start": 19.36,
+   "end": 19.6
+  },
+  {
+   "text": "haga",
+   "start": 19.653,
+   "end": 19.76
+  },
+  {
+   "text": "falta.",
+   "start": 19.84,
+   "end": 20.4
+  },
+  {
+   "text": "¡Hablemos",
+   "start": 20.46,
+   "end": 20.72
+  },
+  {
+   "text": "de",
+   "start": 20.8,
+   "end": 20.84
+  },
+  {
+   "text": "tu",
+   "start": 20.88,
+   "end": 20.96
+  },
+  {
+   "text": "proyecto!",
+   "start": 21.04,
+   "end": 21.76
+  }
+ ]
+}
