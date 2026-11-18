@@ -2,7 +2,8 @@
 
 Cada ejecucion usa una combinacion distinta de: estilo visual del video (principal + de apoyo), gancho de los
 primeros 2 segundos, ritmo de montaje y estilo del banner. Todos salen de lo que hoy se usa y funciona en redes
-(ver tendencias.md) y se rotan para que NUNCA se repita lo de las ultimas ejecuciones.
+(ver tendencias.md) y se rotan para que NUNCA se repita lo de las ultimas ejecuciones. Si el revisor ya califico
+contenidos (calificaciones.md), los estilos con mejor nota salen mas seguido y los de peor nota menos (ver calidad.py).
 
 Uso (desde la raiz del repositorio):
     python3 estilos.py --elegir                 elige y REGISTRA la combinacion de esta ejecucion (una sola vez por ejecucion)
@@ -187,10 +188,34 @@ def _evitar(hist: list, campo: str, n: int) -> set:
     return {h.get(campo) for h in hist[-n:] if h.get(campo)}
 
 
-def _elegir_de(opciones, evitar: set, rng: random.Random, excluir=()):
+def _pesos(campo: str) -> dict:
+    """Pesos segun las notas del revisor (calidad.py). Sin notas o si falla, todo pesa igual."""
+    try:
+        sys.path.insert(0, str(CARPETA))
+        import calidad
+        return calidad.pesos(campo)
+    except Exception:
+        return {}
+
+
+def _ranking_notas() -> dict:
+    """Promedio de nota del revisor por estilo (vacio si aun no hay notas). Ver calidad.py."""
+    try:
+        sys.path.insert(0, str(CARPETA))
+        import calidad
+        notas, _ = calidad.leer_calificaciones(calidad.contenidos())
+        return calidad.ranking(notas)
+    except Exception:
+        return {}
+
+
+def _elegir_de(opciones, evitar: set, rng: random.Random, excluir=(), campo: str = ""):
     libres = [o for o in opciones if o not in evitar and o not in excluir]
     if not libres:   # si todo esta "reciente", toma el menos reciente que no sea el ultimo
         libres = [o for o in opciones if o not in excluir]
+    p = _pesos(campo) if campo else {}
+    if p:   # los estilos mejor calificados salen mas; los peor calificados, menos (nunca desaparecen)
+        return rng.choices(libres, weights=[p.get(o, 1.0) for o in libres])[0]
     return rng.choice(libres)
 
 
@@ -234,7 +259,7 @@ def elegir(preferencias=None) -> dict:
             if elegido in evitar or elegido in excluir:
                 raise SystemExit(f"'{campo}={elegido}' se uso recientemente o coincide con otro estilo. Consulta --ultimos y elige otra opcion.")
             return elegido
-        return _elegir_de(opciones[campo], evitar, rng, excluir=excluir)
+        return _elegir_de(opciones[campo], evitar, rng, excluir=excluir, campo="video" if campo == "apoyo" else campo)
 
     video = tomar("video", _evitar(h, "video", RECIENTES["video"]) | _evitar(h, "apoyo", 1))
     apoyo = tomar("apoyo", _evitar(h, "apoyo", RECIENTES["apoyo"]), excluir=(video,))
@@ -302,7 +327,8 @@ def main() -> None:
     elif a[0] == "--ultimos":
         out = _cargar()["historial"][-6:]
     elif a[0] == "--lista":
-        out = {"video": {k: v["nombre"] + ": " + v["por_que"] for k, v in VIDEO.items()}, "ganchos": GANCHOS, "ritmos": RITMOS, "banners": _banners()}
+        out = {"video": {k: v["nombre"] + ": " + v["por_que"] for k, v in VIDEO.items()}, "ganchos": GANCHOS, "ritmos": RITMOS, "banners": _banners(),
+               "notas_del_revisor_por_estilo": _ranking_notas()}
     else:
         raise SystemExit(__doc__)
     print(json.dumps(out, ensure_ascii=False, indent=2))
