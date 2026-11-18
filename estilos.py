@@ -111,6 +111,30 @@ VIDEO = {
                   "SOLO datos genericos (24/7, 3 pasos, 1 solo lugar); nunca cifras inventadas.",
         "pillow": "escenas 'contador', 'panel', 'pasos'",
     },
+    "creator-autentico": {
+        "nombre": "Creador autentico / POV",
+        "por_que": "Los Reels con tono cercano, POV y momentos humanos se sienten nativos del feed y ayudan a explicar temas B2B sin voz corporativa distante.",
+        "receta": "Abre con una pregunta o POV directo; usa encuadre gráfico cercano, notas adhesivas, subrayados a mano y pequeños movimientos de camara simulada. La locucion suena conversacional. No inventes clientes, empleados, testimonios ni experiencias en primera persona que JDT no haya vivido.",
+        "pillow": "escenas 'libre' con burbujas, notas y movimientos suaves",
+    },
+    "microdocumental-cinematico": {
+        "nombre": "Microdocumental cinematografico",
+        "por_que": "El storytelling documental y cinematografico sigue siendo una forma relevante de explicar temas B2B con contexto y confianza.",
+        "receta": "Cuenta una microhistoria en 4 o 5 planos: detalle, contexto, problema, giro y salida. Usa profundidad, luz lateral azul/dorada, camara lenta y cortes motivados. Un unico momento dramatico; evita trailer exagerado, humo visual y afirmaciones de casos reales.",
+        "pillow": "escenas 'libre' con camara empuja/paneo, vineta sutil y un solo destello",
+    },
+    "pantalla-dividida-dinamica": {
+        "nombre": "Pantalla dividida dinamica",
+        "por_que": "El contraste en paralelo permite comparar procesos, decisiones o antes/despues de forma inmediata en formato vertical.",
+        "receta": "Construye dos zonas asimetricas con divisor claro; cada lado tiene una accion y una etiqueta breve. Sincroniza el cambio de lado con la voz y resuelve la comparacion con un barrido o intercambio de posiciones. No uses comparaciones que impliquen cifras o resultados no demostrados.",
+        "pillow": "escenas 'dividida' y 'comparar' con transicion barrido",
+    },
+    "motion-modular": {
+        "nombre": "Motion modular",
+        "por_que": "Los sistemas modulares de rotulos, subtitulos, etiquetas y microanimaciones permiten videos social-first variados sin perder consistencia de marca.",
+        "receta": "Define un sistema visual para este video: subtitulo, etiqueta de seccion, tarjeta de dato y transicion breve. Recombina esos modulos con jerarquia y posiciones distintas; cada escena cambia de composicion. Animaciones cortas, precisas y sincronizadas con la voz, sin HUD permanente ni plantilla repetida.",
+        "pillow": "escenas 'libre', 'titular', 'pasos' y 'notificaciones' con rotulos coherentes",
+    },
 }
 
 # --------------------------------------------------------------------------- ganchos (primeros 2 segundos)
@@ -195,19 +219,31 @@ def descripcion(estado: dict) -> dict:
     }
 
 
-def elegir() -> dict:
+def elegir(preferencias: dict | None = None) -> dict:
     e = _cargar()
     h = e["historial"]
     rng = random.Random(datetime.now().strftime("%Y%m%d%H%M%S%f"))
-    video = _elegir_de(VIDEO, _evitar(h, "video", RECIENTES["video"]) | _evitar(h, "apoyo", 1), rng)
-    apoyo = _elegir_de(VIDEO, _evitar(h, "apoyo", RECIENTES["apoyo"]), rng, excluir=(video,))
-    banners = list(_banners())
+    preferencias = preferencias or {}
+    opciones = {"video": VIDEO, "apoyo": VIDEO, "gancho": GANCHOS, "ritmo": RITMOS, "banner": _banners()}
+
+    def tomar(campo: str, evitar: set, excluir=()):
+        elegido = preferencias.get(campo)
+        if elegido:
+            if elegido not in opciones[campo]:
+                raise SystemExit(f"'{campo}={elegido}' no existe. Opciones: {', '.join(opciones[campo])}")
+            if elegido in evitar or elegido in excluir:
+                raise SystemExit(f"'{campo}={elegido}' se uso recientemente o coincide con otro estilo. Consulta --ultimos y elige otra opcion.")
+            return elegido
+        return _elegir_de(opciones[campo], evitar, rng, excluir=excluir)
+
+    video = tomar("video", _evitar(h, "video", RECIENTES["video"]) | _evitar(h, "apoyo", 1))
+    apoyo = tomar("apoyo", _evitar(h, "apoyo", RECIENTES["apoyo"]), excluir=(video,))
     nuevo = {
         "fecha": datetime.now().strftime("%Y-%m-%dT%H:%M:%S"),
         "video": video, "apoyo": apoyo,
-        "gancho": _elegir_de(GANCHOS, _evitar(h, "gancho", RECIENTES["gancho"]), rng),
-        "ritmo": _elegir_de(RITMOS, _evitar(h, "ritmo", RECIENTES["ritmo"]), rng),
-        "banner": _elegir_de(banners, _evitar(h, "banner", RECIENTES["banner"]), rng),
+        "gancho": tomar("gancho", _evitar(h, "gancho", RECIENTES["gancho"])),
+        "ritmo": tomar("ritmo", _evitar(h, "ritmo", RECIENTES["ritmo"])),
+        "banner": tomar("banner", _evitar(h, "banner", RECIENTES["banner"])),
     }
     h.append(nuevo)
     _guardar(e)
@@ -250,7 +286,15 @@ def main() -> None:
     if not a or a[0] in ("-h", "--help"):
         raise SystemExit(__doc__)
     if a[0] == "--elegir":
-        out = elegir()
+        preferencias = {}
+        for par in a[1:]:
+            k, sep, v = par.partition("=")
+            if not sep or not k or not v or k in preferencias:
+                raise SystemExit(f"Parametro invalido: {par}. Usa campo=ID.")
+            if k not in {"video", "apoyo", "gancho", "ritmo", "banner"}:
+                raise SystemExit(f"Campo desconocido: {k}.")
+            preferencias[k] = v
+        out = elegir(preferencias)
     elif a[0] == "--marcar":
         out = marcar(a[1:])
     elif a[0] == "--nota":
