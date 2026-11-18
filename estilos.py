@@ -2,7 +2,8 @@
 
 Cada ejecucion usa una combinacion distinta de: estilo visual del video (principal + de apoyo), gancho de los
 primeros 2 segundos, ritmo de montaje y estilo del banner. Todos salen de lo que hoy se usa y funciona en redes
-(ver tendencias.md) y se rotan para que NUNCA se repita lo de las ultimas ejecuciones.
+(ver tendencias.md) y se rotan para que NUNCA se repita lo de las ultimas ejecuciones. Si el revisor ya califico
+contenidos (calificaciones.md), los estilos con mejor nota salen mas seguido y los de peor nota menos (ver calidad.py).
 
 Uso (desde la raiz del repositorio):
     python3 estilos.py --elegir                 elige y REGISTRA la combinacion de esta ejecucion (una sola vez por ejecucion)
@@ -163,10 +164,23 @@ def _evitar(hist: list, campo: str, n: int) -> set:
     return {h.get(campo) for h in hist[-n:] if h.get(campo)}
 
 
-def _elegir_de(opciones, evitar: set, rng: random.Random, excluir=()):
+def _pesos(campo: str) -> dict:
+    """Pesos segun las notas del revisor (calidad.py). Sin notas o si falla, todo pesa igual."""
+    try:
+        sys.path.insert(0, str(CARPETA))
+        import calidad
+        return calidad.pesos(campo)
+    except Exception:
+        return {}
+
+
+def _elegir_de(opciones, evitar: set, rng: random.Random, excluir=(), campo: str = ""):
     libres = [o for o in opciones if o not in evitar and o not in excluir]
     if not libres:   # si todo esta "reciente", toma el menos reciente que no sea el ultimo
         libres = [o for o in opciones if o not in excluir]
+    p = _pesos(campo) if campo else {}
+    if p:   # los estilos mejor calificados salen mas; los peor calificados, menos (nunca desaparecen)
+        return rng.choices(libres, weights=[p.get(o, 1.0) for o in libres])[0]
     return rng.choice(libres)
 
 
@@ -199,15 +213,15 @@ def elegir() -> dict:
     e = _cargar()
     h = e["historial"]
     rng = random.Random(datetime.now().strftime("%Y%m%d%H%M%S%f"))
-    video = _elegir_de(VIDEO, _evitar(h, "video", RECIENTES["video"]) | _evitar(h, "apoyo", 1), rng)
-    apoyo = _elegir_de(VIDEO, _evitar(h, "apoyo", RECIENTES["apoyo"]), rng, excluir=(video,))
+    video = _elegir_de(VIDEO, _evitar(h, "video", RECIENTES["video"]) | _evitar(h, "apoyo", 1), rng, campo="video")
+    apoyo = _elegir_de(VIDEO, _evitar(h, "apoyo", RECIENTES["apoyo"]), rng, excluir=(video,), campo="video")
     banners = list(_banners())
     nuevo = {
         "fecha": datetime.now().strftime("%Y-%m-%dT%H:%M:%S"),
         "video": video, "apoyo": apoyo,
-        "gancho": _elegir_de(GANCHOS, _evitar(h, "gancho", RECIENTES["gancho"]), rng),
-        "ritmo": _elegir_de(RITMOS, _evitar(h, "ritmo", RECIENTES["ritmo"]), rng),
-        "banner": _elegir_de(banners, _evitar(h, "banner", RECIENTES["banner"]), rng),
+        "gancho": _elegir_de(GANCHOS, _evitar(h, "gancho", RECIENTES["gancho"]), rng, campo="gancho"),
+        "ritmo": _elegir_de(RITMOS, _evitar(h, "ritmo", RECIENTES["ritmo"]), rng, campo="ritmo"),
+        "banner": _elegir_de(banners, _evitar(h, "banner", RECIENTES["banner"]), rng, campo="banner"),
     }
     h.append(nuevo)
     _guardar(e)

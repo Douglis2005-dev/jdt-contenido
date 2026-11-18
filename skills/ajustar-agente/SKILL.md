@@ -37,6 +37,7 @@ Esta skill la usan Claude y ChatGPT. Sirve para UNA cosa: cuando el dueño dice 
 | Caption y hashtags | paso 8 de `INSTRUCCIONES.md` |
 | Temas que elige | `recolector.py` y paso 3 de `INSTRUCCIONES.md` |
 | Tono, servicios, identidad | `marca.md` |
+| Sistema de notas (umbral, meta, cuántas versiones, qué aprende) | `calidad.py` (constantes `META`, `UMBRAL_BAJO`, `MAX_VERSION`) y el paso 1B de `INSTRUCCIONES.md`. `calificaciones.md` es del revisor: no se toca |
 
 3. **Revisa antes de editar.** Mira el último resultado del agente en `videos/`, `banners/` y `borradores/` para ver el problema real. Haz `git fetch` y compara con la rama de la otra IA (`git diff origin/main..origin/OTRA-RAMA --stat`): si va a tocar el mismo archivo, avisa al dueño antes de editarlo.
 4. **Cambio mínimo y a la causa.** Modifica lo menos posible y vuélvelo una REGLA de la configuración (no un parche para un solo caso). Si el dueño dijo «no me gusta X», deja escrito en la configuración que no se haga X, con el motivo.
