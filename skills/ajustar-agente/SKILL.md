@@ -7,6 +7,10 @@ description: Cambia la CONFIGURACIÓN del agente de contenido de JDT (jdt-conten
 
 Esta skill la usan Claude y ChatGPT. Sirve para UNA cosa: cuando el dueño dice «no me gustó…», «muy genérico», «cámbialo», «más…», se cambia **cómo está configurado el agente** para que las próximas ejecuciones salgan mejor. No es para producir contenido y no es para arreglar un archivo suelto.
 
+## Cómo la usa cada IA
+- Cada IA recibe este texto por su cuenta (Claude como skill; ChatGPT pegado en las instrucciones de su proyecto). Ninguna necesita leer la rama de la otra.
+- Este archivo vive en el repositorio en una sola copia, que la sube Claude desde `Claude-testing`. ChatGPT no lo commitea en `ChatGPT-testing`, para no generar conflictos al unir las ramas.
+
 ## Alcance
 - SÍ: editar la configuración del agente (instrucciones, catálogo de estilos, motores de render, reglas de marca).
 - NO: generar videos o banners «a mano» para entregarlos, editar los videos o banners ya hechos, publicar en redes, subir a Google Drive, ni correr el agente completo.
