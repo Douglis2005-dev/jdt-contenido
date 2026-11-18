@@ -1,0 +1,360 @@
+{
+ "salida": "videos/2026-11-18-0405-hype-desinflado.mp4",
+ "formato": "la mañana después de la fiesta: arranca con el globo del hype que se desinfla de un soplido, sigue con el guayabo del día siguiente entre carteles tirados, el giro es lo único que quedó en pie y el remate es un refrán propio («La moda pasa, lo que sirve se queda»)",
+ "concepto": "Las modas del software tuvieron su fiesta y hoy amanecieron con guayabo: de todo el ruido solo sigue en pie lo que sirve, y eso es lo que JDT construye a tu medida, sin pagar por relleno.",
+ "produccion": "arranca en amarillo a pantalla completa, sin cámara, con glitch y vibra (único golpe fuerte del video) mientras un globo azul marino se encoge en tres tiempos sobre la palabra HYPE; entra con giro una escena oscura de madrugada con grano y viñeta y paneo a la derecha sobre carteles tirados en el piso y un personaje con guayabo; giro en azul con destello y acercamiento lento: una fila de iconos caídos y un solo engranaje amarillo de pie; escena oscura con entrada en círculo y cámara quieta para dar aire: un carrito que recibe solo las piezas que se necesitan mientras las de moda quedan apagadas; remate de palabras en amarillo con persiana y pulso; cierre con barrido. Sin terminal, marquesina, notificaciones, contador, dividida ni escaneo, para alejarse de los cuatro anteriores.",
+ "escenas": [
+  {
+   "tipo": "libre",
+   "look": "amarillo",
+   "fx": [
+    "glitch",
+    "vibra"
+   ],
+   "texto": "Se *desinfló*.",
+   "voz": "¡Pfff! Se desinfló el hype.",
+   "elementos": [
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 50,
+     "y": 56,
+     "ancho": 56,
+     "alto": 56,
+     "color": "fondo",
+     "t": 0,
+     "sale": 0.4
+    },
+    {
+     "el": "linea",
+     "x": 50,
+     "y": 80,
+     "a": [
+      50,
+      88
+     ],
+     "estilo": "solida",
+     "color": "fondo",
+     "t": 0
+    },
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 50,
+     "y": 62,
+     "ancho": 32,
+     "alto": 32,
+     "color": "fondo",
+     "t": 0.4,
+     "sale": 0.7,
+     "entra": "aparece"
+    },
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 50,
+     "y": 70,
+     "ancho": 13,
+     "alto": 13,
+     "color": "fondo",
+     "t": 0.7,
+     "entra": "aparece",
+     "mueve": "tiembla"
+    },
+    {
+     "el": "icono",
+     "nombre": "chispa",
+     "x": 74,
+     "y": 44,
+     "tam": 11,
+     "color": "fondo",
+     "t": 0.42,
+     "entra": "pop",
+     "a": [
+      88,
+      38
+     ]
+    },
+    {
+     "el": "texto",
+     "texto": "HYPE",
+     "x": 50,
+     "y": 85,
+     "tam": "xl",
+     "color": "fondo",
+     "t": 0
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "fx": [
+    "grano",
+    "vineta"
+   ],
+   "transicion": "giro",
+   "camara": "paneo-der",
+   "texto": "Amaneció con *guayabo*",
+   "voz": "Uy… se acabó la fiesta de las modas del software. Hoy, guayabo.",
+   "elementos": [
+    {
+     "el": "linea",
+     "x": 8,
+     "y": 84,
+     "a": [
+      92,
+      84
+     ],
+     "estilo": "solida",
+     "color": "borde"
+    },
+    {
+     "el": "icono",
+     "nombre": "persona-triste",
+     "x": 50,
+     "y": 58,
+     "tam": 28,
+     "color": "blanco",
+     "entra": "sube",
+     "mueve": "balancea"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "¡Lo cambia todo!",
+     "x": 28,
+     "y": 78,
+     "ancho": 40,
+     "giro": -9,
+     "color": "gris",
+     "entra": "baja"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Revolucionario",
+     "x": 74,
+     "y": 77,
+     "ancho": 38,
+     "giro": 8,
+     "color": "gris",
+     "entra": "baja"
+    },
+    {
+     "el": "icono",
+     "nombre": "estrella",
+     "x": 20,
+     "y": 46,
+     "tam": 10,
+     "color": "dorado",
+     "opacidad": 0.45,
+     "giro": 25,
+     "entra": "aparece"
+    },
+    {
+     "el": "icono",
+     "nombre": "chispa",
+     "x": 82,
+     "y": 48,
+     "tam": 10,
+     "color": "dorado",
+     "opacidad": 0.45,
+     "giro": -20,
+     "entra": "aparece"
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "fx": [
+    "destello"
+   ],
+   "transicion": "destello",
+   "camara": "acerca",
+   "texto": "¿Qué sigue *en pie*?",
+   "voz": "¿Y qué sigue en pie? Hay un análisis de qué tendencias sobrevivieron al hype. Lo que SIRVE.",
+   "elementos": [
+    {
+     "el": "linea",
+     "x": 8,
+     "y": 80,
+     "a": [
+      92,
+      80
+     ],
+     "estilo": "solida",
+     "color": "borde"
+    },
+    {
+     "el": "icono",
+     "nombre": "cohete",
+     "x": 16,
+     "y": 76,
+     "tam": 11,
+     "color": "gris",
+     "opacidad": 0.45,
+     "giro": 90
+    },
+    {
+     "el": "icono",
+     "nombre": "megafono",
+     "x": 31,
+     "y": 76,
+     "tam": 11,
+     "color": "gris",
+     "opacidad": 0.45,
+     "giro": -80
+    },
+    {
+     "el": "icono",
+     "nombre": "estrella",
+     "x": 70,
+     "y": 76,
+     "tam": 11,
+     "color": "gris",
+     "opacidad": 0.45,
+     "giro": 70
+    },
+    {
+     "el": "icono",
+     "nombre": "chispa",
+     "x": 85,
+     "y": 76,
+     "tam": 11,
+     "color": "gris",
+     "opacidad": 0.45,
+     "giro": -60
+    },
+    {
+     "el": "icono",
+     "nombre": "engranaje",
+     "x": 50,
+     "y": 58,
+     "tam": 28,
+     "color": "amarillo",
+     "t": 0.35,
+     "entra": "pop",
+     "mueve": "gira"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Lo que sirve",
+     "icono": "check",
+     "x": 50,
+     "y": 89,
+     "ancho": 42,
+     "color": "amarillo",
+     "t": 0.6,
+     "entra": "sube"
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "transicion": "circulo",
+   "texto": "Hecho *a tu medida*",
+   "voz": "En JDT, software a medida: se adapta a tu proceso, no al revés. Pagas solo lo que necesitas.",
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "carrito",
+     "x": 50,
+     "y": 70,
+     "tam": 30,
+     "color": "blanco",
+     "entra": "aparece"
+    },
+    {
+     "el": "icono",
+     "nombre": "engranaje",
+     "x": 30,
+     "y": 40,
+     "tam": 13,
+     "color": "amarillo",
+     "t": 0.2,
+     "entra": "pop",
+     "a": [
+      44,
+      66
+     ]
+    },
+    {
+     "el": "icono",
+     "nombre": "documento",
+     "x": 70,
+     "y": 40,
+     "tam": 13,
+     "color": "amarillo",
+     "t": 0.35,
+     "entra": "pop",
+     "a": [
+      56,
+      66
+     ]
+    },
+    {
+     "el": "icono",
+     "nombre": "cohete",
+     "x": 13,
+     "y": 56,
+     "tam": 11,
+     "color": "gris",
+     "opacidad": 0.35,
+     "t": 0.15
+    },
+    {
+     "el": "icono",
+     "nombre": "estrella",
+     "x": 87,
+     "y": 56,
+     "tam": 11,
+     "color": "gris",
+     "opacidad": 0.35,
+     "t": 0.15
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Solo lo que necesitas",
+     "icono": "check",
+     "x": 50,
+     "y": 88,
+     "ancho": 56,
+     "t": 0.55,
+     "entra": "sube"
+    }
+   ]
+  },
+  {
+   "tipo": "palabras",
+   "look": "amarillo",
+   "fx": [
+    "pulso"
+   ],
+   "transicion": "persiana",
+   "frases": [
+    "La moda *pasa*.",
+    "Lo que sirve, *se queda*."
+   ],
+   "voz": "La moda pasa… lo que sirve, se queda."
+  },
+  {
+   "tipo": "cierre",
+   "transicion": "barrido",
+   "texto": "Hablemos de *tu proyecto*",
+   "subtexto": "@technologicsjdt",
+   "voz": "Hablemos de tu proyecto."
+  }
+ ],
+ "tiempos": {
+  "inicios": [
+   0.0,
+   3.51,
+   8.69,
+   14.44,
+   21.11,
+   24.06
+  ],
+  "retardo": 0.3,
+  "duracion": 26.7
+ },
+ "audio": "videos/2026-11-18-0405-hype-desinflado.mp3",
+ "sincronia": "palabras"
+}
