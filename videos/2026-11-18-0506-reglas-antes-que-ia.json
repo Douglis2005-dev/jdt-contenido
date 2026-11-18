@@ -1,0 +1,299 @@
+{
+  "salida": "videos/2026-11-18-0506-reglas-antes-que-ia.mp4",
+  "formato": "el truco revelado: arranca con un chatbot que saluda y una etiqueta que lo desenmascara («Solo reglas»), se abre su receta de si-entonces, se baja a una regla de negocio real y el remate es una balanza que se inclina hacia la regla",
+  "concepto": "Un chatbot que conversa sin inteligencia artificial, solo con reglas, es hoy tendencia entre programadores, y la lección para tu negocio es que muchas veces una regla bien escrita resuelve lo que querías resolver con IA: más barato, predecible y sin sorpresas.",
+  "produccion": "gancho oscuro sin cámara, con destello y vibra (único golpe fuerte): un robot que saluda y una etiqueta amarilla «Solo reglas» que le cae encima; escena azul sin efectos con desliza-arriba: la receta del bot en tres tarjetas encadenadas por flechas; notificaciones oscuras con desliza-izq y pulso suave: pedido grande, pide aprobación, aprobado; escena amarilla con fundido y cámara que acerca: balanza con el robot arriba y la regla abajo pesando más; escena oscura con persiana, cámara quieta para dar aire: tres tareas, dos con engranaje de regla y una con robot, y la línea de pagar solo lo necesario; cierre con zoom. Sin glitch, escaneo, terminal, marquesina, dividida ni palabras, para alejarse de los cuatro anteriores.",
+  "escenas": [
+    {
+      "tipo": "libre",
+      "texto": "Un chatbot *sin IA*",
+      "fx": [
+        "destello",
+        "vibra"
+      ],
+      "voz": "¡Uy! Un chatbot… sin inteligencia artificial.",
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "robot",
+          "x": 40,
+          "y": 64,
+          "tam": 30,
+          "color": "blanco",
+          "entra": "sube",
+          "mueve": "flota",
+          "t": 0.0
+        },
+        {
+          "el": "burbuja",
+          "texto": "¡Hola! ¿Qué necesitas?",
+          "x": 66,
+          "y": 44,
+          "cola": "izq",
+          "entra": "pop",
+          "t": 0.12
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Solo reglas",
+          "icono": "codigo",
+          "x": 56,
+          "y": 84,
+          "ancho": 50,
+          "color": "amarillo",
+          "giro": -7,
+          "entra": "baja",
+          "t": 0.5
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "look": "azul",
+      "texto": "Si *esto*, entonces *aquello*",
+      "transicion": "desliza-arriba",
+      "voz": "Una herramienta de código abierto, puras reglas. Entre programadores es tendencia.",
+      "elementos": [
+        {
+          "el": "tarjeta",
+          "texto": "Si preguntan el horario",
+          "icono": "pregunta",
+          "x": 50,
+          "y": 44,
+          "ancho": 74,
+          "entra": "izquierda",
+          "t": 0.05
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 50,
+          "a": [
+            50,
+            57
+          ],
+          "estilo": "flecha",
+          "color": "blanco",
+          "entra": "dibuja",
+          "t": 0.25
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Responde con el horario",
+          "icono": "chat",
+          "x": 50,
+          "y": 63,
+          "ancho": 74,
+          "color": "amarillo",
+          "entra": "derecha",
+          "t": 0.32
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 69,
+          "a": [
+            50,
+            76
+          ],
+          "estilo": "punteada",
+          "color": "blanco",
+          "entra": "dibuja",
+          "t": 0.55
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Si no, pasa a una persona",
+          "icono": "usuario",
+          "x": 50,
+          "y": 82,
+          "ancho": 74,
+          "color": "gris",
+          "entra": "izquierda",
+          "t": 0.62
+        }
+      ]
+    },
+    {
+      "tipo": "notificaciones",
+      "texto": "Una regla de *tu negocio*",
+      "etiquetas": [
+        "Pedido grande",
+        "Pide aprobación",
+        "Aprobado"
+      ],
+      "detalles": [
+        "Supera tu tope",
+        "Al gerente",
+        "Sigue el despacho"
+      ],
+      "iconos": [
+        "carrito",
+        "campana",
+        "check"
+      ],
+      "fx": [
+        "pulso"
+      ],
+      "transicion": "desliza-izq",
+      "voz": "En tu negocio, igual: si el pedido es muy grande, pide aprobación."
+    },
+    {
+      "tipo": "libre",
+      "look": "amarillo",
+      "texto": "Más *barato* y sin *sorpresas*",
+      "transicion": "fundido",
+      "camara": "acerca",
+      "voz": "Muchas veces basta: más barato y sin sorpresas.",
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "triangulo",
+          "x": 50,
+          "y": 74,
+          "ancho": 10,
+          "alto": 9,
+          "color": "fondo",
+          "entra": "aparece",
+          "t": 0.0
+        },
+        {
+          "el": "linea",
+          "x": 14,
+          "y": 62,
+          "a": [
+            86,
+            70
+          ],
+          "estilo": "solida",
+          "color": "fondo",
+          "entra": "dibuja",
+          "t": 0.08
+        },
+        {
+          "el": "icono",
+          "nombre": "robot",
+          "x": 20,
+          "y": 53,
+          "tam": 16,
+          "color": "azul",
+          "opacidad": 0.6,
+          "entra": "baja",
+          "t": 0.2
+        },
+        {
+          "el": "icono",
+          "nombre": "documento",
+          "x": 80,
+          "y": 61,
+          "tam": 16,
+          "color": "fondo",
+          "entra": "baja",
+          "t": 0.3
+        },
+        {
+          "el": "icono",
+          "nombre": "check",
+          "x": 88,
+          "y": 52,
+          "tam": 9,
+          "color": "fondo",
+          "entra": "pop",
+          "mueve": "late",
+          "t": 0.55
+        },
+        {
+          "el": "texto",
+          "texto": "Una regla *bien escrita*",
+          "x": 50,
+          "y": 87,
+          "tam": "s",
+          "color": "fondo",
+          "entra": "aparece",
+          "t": 0.6
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "texto": "Regla donde *basta*",
+      "transicion": "persiana",
+      "voz": "En JDT automatizamos tus procesos. Pagas solo lo que necesitas.",
+      "elementos": [
+        {
+          "el": "tarjeta",
+          "texto": "Aprobar pedidos",
+          "icono": "engranaje",
+          "x": 50,
+          "y": 46,
+          "ancho": 64,
+          "entra": "derecha",
+          "t": 0.05
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Avisar al cliente",
+          "icono": "engranaje",
+          "x": 50,
+          "y": 58,
+          "ancho": 64,
+          "entra": "derecha",
+          "t": 0.18
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Leer facturas",
+          "icono": "robot",
+          "x": 50,
+          "y": 70,
+          "ancho": 64,
+          "color": "amarillo",
+          "entra": "derecha",
+          "t": 0.31
+        },
+        {
+          "el": "linea",
+          "x": 14,
+          "y": 78,
+          "a": [
+            86,
+            78
+          ],
+          "estilo": "punteada",
+          "color": "borde",
+          "entra": "dibuja",
+          "t": 0.5
+        },
+        {
+          "el": "texto",
+          "texto": "Pagas *solo lo necesario*",
+          "x": 50,
+          "y": 86,
+          "tam": "m",
+          "entra": "sube",
+          "t": 0.6
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*",
+      "subtexto": "@technologicsjdt",
+      "transicion": "zoom",
+      "voz": "¡Hablemos de tu proyecto!"
+    }
+  ],
+  "tiempos": {
+    "inicios": [
+      0.0,
+      4.07,
+      9.02,
+      13.02,
+      16.22,
+      20.46
+    ],
+    "retardo": 0.3,
+    "duracion": 22.94
+  },
+  "validacion": "corregido: revisión previa (opus): texto dorado en azul marino cambiado a blanco por legibilidad; robot con ojos y antena; destello y vibra en el golpe del gancho; balanza con barra gris y bloques IA/Regla; escena 5 en pantalla «En JDT automatizamos» y pastilla «Código abierto · tendencia»; mensajes en el motor HTML sin look amarillo en la balanza. La duración de 4,07 s del gancho se mantiene porque la voz de ElevenLabs solo admite una generación por ejecución."
+}

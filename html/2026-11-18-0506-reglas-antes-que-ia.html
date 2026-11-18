@@ -1,0 +1,114 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script></head>
+<body>
+<div id="e1" class="capa">
+  <div id="t1" class="titulo" style="position:absolute;left:0;right:0;top:360px;text-align:center;font-size:104px"></div>
+  <div id="rob" style="position:absolute;left:390px;top:700px;width:300px;height:300px;border-radius:50%;border:6px solid #FFFFFF;box-sizing:border-box"><div style="position:absolute;left:80px;top:110px;width:40px;height:40px;border-radius:50%;background:#FACC15"></div><div style="position:absolute;left:180px;top:110px;width:40px;height:40px;border-radius:50%;background:#FACC15"></div><div style="position:absolute;left:144px;top:-60px;width:12px;height:60px;background:#FFFFFF"></div></div>
+  <div id="bur" class="vidrio" style="left:600px;top:560px;width:420px;height:120px;padding:28px 16px;box-sizing:border-box;text-align:center;font-size:34px;color:#FFFFFF;white-space:nowrap">¡Hola! ¿Qué necesitas?</div>
+  <div id="tar1" class="vidrio oro" style="left:250px;top:1180px;width:580px;height:130px;text-align:center;padding-top:40px;box-sizing:border-box"><span class="titulo" style="font-size:60px;color:#FFFFFF">Solo reglas</span></div>
+</div>
+<div id="e2" class="capa">
+  <div id="t2" class="titulo" style="position:absolute;left:0;right:0;top:330px;text-align:center;font-size:92px"></div>
+  <div id="c2a" class="vidrio" style="left:190px;top:700px;width:700px;height:130px;text-align:center;padding-top:38px;box-sizing:border-box;font-size:42px;color:#FFFFFF">Si preguntan el horario</div>
+  <div id="c2b" class="vidrio oro" style="left:190px;top:920px;width:700px;height:130px;text-align:center;padding-top:38px;box-sizing:border-box;font-size:42px;color:#FFFFFF">Responde con el horario</div>
+  <div id="c2c" class="vidrio" style="left:190px;top:1140px;width:700px;height:130px;text-align:center;padding-top:38px;box-sizing:border-box;font-size:42px;color:#94A3B8">Si no, pasa a una persona</div>
+</div>
+<div id="e3" class="capa">
+  <div id="t3" class="titulo" style="position:absolute;left:0;right:0;top:330px;text-align:center;font-size:92px"></div>
+  <div id="n3a" class="vidrio" style="left:150px;top:720px;width:780px;height:150px;padding:30px 40px;box-sizing:border-box;font-size:44px;color:#FFFFFF">Pedido grande <span class="mono" style="color:#94A3B8;font-size:26px;white-space:nowrap">· supera tu tope</span></div>
+  <div id="n3b" class="vidrio" style="left:150px;top:920px;width:780px;height:150px;padding:30px 40px;box-sizing:border-box;font-size:44px;color:#FFFFFF">Pide aprobación <span class="mono" style="color:#94A3B8;font-size:26px;white-space:nowrap">· al gerente</span></div>
+  <div id="n3c" class="vidrio oro" style="left:150px;top:1120px;width:780px;height:150px;padding:30px 40px;box-sizing:border-box;font-size:44px;color:#FFFFFF">Aprobado <span class="mono" style="color:#FFFFFF;font-size:26px;white-space:nowrap">· sigue el despacho</span></div>
+</div>
+<div id="e4" class="capa">
+  <div id="t4" class="titulo" style="position:absolute;left:0;right:0;top:360px;text-align:center;font-size:96px;color:#FFFFFF"></div>
+  <div id="bal" style="position:absolute;left:0;top:820px;width:1080px;height:420px"></div>
+  <div id="t4b" class="titulo" style="position:absolute;left:0;right:0;top:1330px;text-align:center;font-size:52px;color:#FFFFFF"></div>
+</div>
+<div id="e5" class="capa">
+  <div id="t5" class="titulo" style="position:absolute;left:0;right:0;top:330px;text-align:center;font-size:80px"></div>
+  <div id="pl2" class="pildora" style="position:absolute;left:0;right:0;margin:0 auto;width:max-content;top:560px;opacity:0">Código abierto · tendencia</div>
+  <div id="k5a" class="vidrio" style="left:200px;top:740px;width:680px;height:120px;text-align:center;padding-top:34px;box-sizing:border-box;font-size:42px;color:#FFFFFF">Aprobar pedidos</div>
+  <div id="k5b" class="vidrio" style="left:200px;top:900px;width:680px;height:120px;text-align:center;padding-top:34px;box-sizing:border-box;font-size:42px;color:#FFFFFF">Avisar al cliente</div>
+  <div id="k5c" class="vidrio oro" style="left:200px;top:1060px;width:680px;height:120px;text-align:center;padding-top:34px;box-sizing:border-box;font-size:42px;color:#FFFFFF">Leer facturas con IA</div>
+  <div id="p5" class="titulo" style="position:absolute;left:0;right:0;top:1290px;text-align:center;font-size:58px;opacity:0"></div>
+</div>
+<div id="e6" class="capa">
+  <div id="c6" class="titulo" style="position:absolute;left:0;right:0;top:640px;text-align:center;font-size:128px">Hablemos<br>de tu <span class="oro">proyecto</span></div>
+  <div style="position:absolute;left:0;right:0;top:1200px;text-align:center"><span class="pildora">@technologicsjdt</span></div>
+</div>
+<div id="hud" class="hud"></div><div id="fl" class="capa" style="background:#fff;opacity:0;z-index:7"></div>
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+window.DURACION = 22.94;
+const dentro = (t, a, b) => t >= a && t < b;
+const CAP = [0, 4.07, 9.02, 13.02, 16.22, 20.46, 22.94];
+const NOMBRES = ["01 · GANCHO", "02 · LA RECETA", "03 · TU REGLA", "04 · LA BALANZA", "05 · JDT", "06 · CIERRE"];
+window.render = (t) => {
+  const ids = ["e1", "e2", "e3", "e4", "e5", "e6"];
+  ids.forEach((id, i) => $(id).style.display = dentro(t, CAP[i], CAP[i + 1]) ? "block" : "none");
+  JDT.fondo(bg, t);
+  // E1: gancho. Robot (anillo) con burbuja y etiqueta «Solo reglas» que cae girada
+  if (dentro(t, 0, 4.07)) {
+    $("t1").innerHTML = 'Un chatbot <span class="clave">sin IA</span>';
+    JDT.revelar($("t1"), seg(t, .1, 1.0, "outExpo"));
+    $("rob").style.transform = `translateY(${Math.sin(t * 1.6) * 14}px) scale(${lerp(.6, 1, seg(t, 0, 1, "outBack"))})`;
+    $("bur").style.opacity = seg(t, .5, 1.0, "lineal");
+    $("tar1").style.opacity = seg(t, 1.2, 1.8, "lineal");
+    $("tar1").style.transform = `translateY(${lerp(-300, 0, seg(t, 1.2, 2.0, "outBack"))}px) translateX(${dentro(t, 1.9, 2.2) ? Math.sin(t * 90) * 8 : 0}px) rotate(-7deg)`;
+  }
+  // E2: la receta en cadena
+  if (dentro(t, 4.07, 9.02)) {
+    $("t2").innerHTML = 'Si <span class="clave">esto</span>, entonces <span class="clave">aquello</span>';
+    JDT.revelar($("t2"), seg(t, 4.1, 4.9, "outExpo"));
+    ["c2a", "c2b", "c2c"].forEach((id, i) => {
+      $(id).style.opacity = seg(t, 4.4 + i * .35, 5.0 + i * .35, "lineal");
+      $(id).style.transform = `translateX(${lerp(-80, 0, seg(t, 4.4 + i * .35, 5.1 + i * .35, "outExpo"))}px)`;
+    });
+  }
+  // E3: caen los avisos de una regla de negocio
+  if (dentro(t, 9.02, 13.02)) {
+    $("t3").innerHTML = 'Una regla de <span class="clave">tu negocio</span>';
+    JDT.revelar($("t3"), seg(t, 9.1, 9.9, "outExpo"));
+    ["n3a", "n3b", "n3c"].forEach((id, i) => {
+      $(id).style.opacity = seg(t, 9.4 + i * .5, 9.9 + i * .5, "lineal");
+      $(id).style.transform = `translateY(${lerp(-200, 0, seg(t, 9.4 + i * .5, 10.2 + i * .5, "outBack"))}px)`;
+    });
+  }
+  // E4: balanza. El documento de la regla pesa más y la barra se inclina
+  if (dentro(t, 13.02, 16.22)) {
+    $("t4").innerHTML = 'Más <span class="clave">barato</span> y sin <span class="clave">sorpresas</span>';
+    JDT.revelar($("t4"), seg(t, 13.1, 13.9, "outExpo"));
+    const incl = lerp(-10, 10, seg(t, 13.6, 14.9, "outBack"));
+    $("bal").innerHTML = `<div style="position:absolute;left:50%;top:190px;width:820px;height:16px;margin-left:-410px;background:#94A3B8;border-radius:8px;transform:rotate(${incl}deg)">
+      <div style="position:absolute;left:40px;top:-150px;width:180px;height:150px;border-radius:20px;background:#94A3B8;display:flex;align-items:center;justify-content:center;padding-top:40px;box-sizing:border-box"><span class="titulo" style="font-size:56px;color:#FFFFFF">IA</span></div>
+      <div style="position:absolute;right:40px;top:-150px;width:200px;height:150px;border-radius:20px;background:#FACC15;display:flex;align-items:center;justify-content:center;padding-top:40px;box-sizing:border-box"><span class="titulo" style="font-size:56px;color:#0A0E27">Regla</span></div></div>
+      <div style="position:absolute;left:50%;top:150px;width:12px;height:200px;margin-left:-6px;background:#FFFFFF;"></div>`;
+    $("t4b").innerHTML = 'Una regla <span class="clave">bien escrita</span>';
+    $("t4b").style.opacity = seg(t, 14.4, 15.0, "lineal");
+    JDT.camara($("bal"), {rx: 0, ry: 0, y: 0, s: lerp(1, 1.04, seg(t, 13.0, 16.2))});
+  }
+  // E5: JDT como quien lo resuelve: tareas simples y la IA solo donde suma
+  if (dentro(t, 16.22, 20.46)) {
+    $("t5").innerHTML = 'En JDT <span class="clave">automatizamos</span>';
+    $("pl2").style.opacity = seg(t, 16.8, 17.4, "lineal");
+    JDT.revelar($("t5"), seg(t, 16.3, 17.0, "outExpo"));
+    ["k5a", "k5b", "k5c"].forEach((id, i) => {
+      $(id).style.opacity = seg(t, 16.6 + i * .3, 17.2 + i * .3, "lineal");
+      $(id).style.transform = `translateX(${lerp(120, 0, seg(t, 16.6 + i * .3, 17.4 + i * .3, "outExpo"))}px)`;
+    });
+    $("p5").innerHTML = 'Pagas <span class="clave">solo lo necesario</span>';
+    $("p5").style.opacity = seg(t, 18.6, 19.4, "lineal");
+  }
+  // E6: cierre
+  if (dentro(t, 20.46, 22.94)) {
+    $("c6").style.opacity = seg(t, 20.5, 21.1, "outQuart");
+    $("c6").style.transform = `translateY(${lerp(60, 0, seg(t, 20.5, 21.3, "outExpo"))}px)`;
+  }
+  // barridos entre capitulos y destello (solo uno fuerte, en el giro de la balanza)
+  let kb = 0; [CAP[1], CAP[3]].forEach(x => { if (t > x - .4 && t < x + .4) kb = (t - (x - .4)) / .8; });
+  fg.clearRect(0, 0, JDT.W, JDT.H); JDT.barrido(fg, kb);
+  JDT.flash($("fl"), t > 1.9 && t < 2.1 ? (1 - (t - 1.9) / .2) * .6 : 0);
+  JDT.hud($("hud"), t, 22.94, NOMBRES[Math.max(0, CAP.slice(0, -1).findLastIndex(x => t >= x))]);
+};
+</script></body></html>
