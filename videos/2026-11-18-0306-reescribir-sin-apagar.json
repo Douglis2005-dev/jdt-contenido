@@ -1,0 +1,324 @@
+{
+ "salida": "videos/2026-11-18-0306-reescribir-sin-apagar.mp4",
+ "formato": "la pieza de museo: el sistema viejo aparece como reliquia intocable con un letrero de «NO TOCAR» pegado en la pantalla, se revela el truco para cambiarlo sin apagarlo y el remate es el letrero tirado en el piso",
+ "concepto": "Todo negocio tiene un sistema viejo con un letrero invisible de «NO TOCAR» porque «si lo apagamos, se para todo»; el truco que hoy es tendencia entre programadores es grabar lo que hace, cambiarlo pieza por pieza y comparar cada una con la grabación, y así JDT moderniza tu software a medida sin apagar nada.",
+ "produccion": "arranca en azul con escaneo de cámara de seguridad, cámara quieta, sobre una pantalla vieja sobre su mesa, con el letrero NO TOCAR pegado y balanceándose; entra con transición glitch una marquesina oscura con vibra (único golpe fuerte del video): NO TOCAR, NO APAGAR, NI RESPIRAR; giro en amarillo con entrada desliza-arriba, un ojo gigante que graba con punto REC que late, sin efectos; escena oscura con cámara giro-lento y entrada desliza-izq: fila de piezas grises donde una amarilla nueva baja a ocupar su puesto y se gana el check mientras una flecha con pulso muestra que todo sigue andando; remate oscuro con viñeta, cámara que se aleja y fundido: la pantalla ahora amarilla y el letrero en el piso; cierre con círculo. Sin destello, sin grano, sin terminal, notificaciones, contador ni dividida, para alejarse de los cuatro anteriores.",
+ "fuente": "https://github.com/erkamyaman/rust-anything",
+ "escenas": [
+  {
+   "tipo": "libre",
+   "look": "azul",
+   "texto": "Prohibido *tocar*",
+   "fx": [
+    "escaneo"
+   ],
+   "voz": "¡Quieto! Ese sistema viejo no se toca.",
+   "elementos": [
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 50,
+     "y": 76,
+     "ancho": 62,
+     "alto": 2.4,
+     "color": "gris",
+     "opacidad": 0.6,
+     "entra": "aparece",
+     "t": 0.0
+    },
+    {
+     "el": "icono",
+     "nombre": "pantalla",
+     "x": 50,
+     "y": 60,
+     "tam": 34,
+     "color": "gris",
+     "entra": "aparece",
+     "t": 0.02
+    },
+    {
+     "el": "tarjeta",
+     "texto": "NO TOCAR",
+     "icono": "candado",
+     "x": 50,
+     "y": 60,
+     "ancho": 46,
+     "color": "amarillo",
+     "giro": -6,
+     "entra": "pop",
+     "mueve": "balancea",
+     "t": 0.18
+    },
+    {
+     "el": "icono",
+     "nombre": "persona-sorpresa",
+     "x": 82,
+     "y": 86,
+     "tam": 13,
+     "color": "blanco",
+     "entra": "derecha",
+     "t": 0.45
+    }
+   ]
+  },
+  {
+   "tipo": "marquesina",
+   "palabras": [
+    "NO TOCAR",
+    "NO APAGAR",
+    "NI RESPIRAR"
+   ],
+   "texto": "«Si lo apagamos, *se para todo*»",
+   "fx": [
+    "vibra"
+   ],
+   "transicion": "glitch",
+   "voz": "«Si lo apagamos, se para todo»… ¿te suena?"
+  },
+  {
+   "tipo": "libre",
+   "look": "amarillo",
+   "texto": "Primero, *grábalo*",
+   "transicion": "desliza-arriba",
+   "voz": "¿El truco? Primero grabas todo lo que hace hoy.",
+   "elementos": [
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 14,
+     "y": 40,
+     "ancho": 4,
+     "alto": 4,
+     "color": "azul",
+     "entra": "aparece",
+     "mueve": "late",
+     "t": 0.0
+    },
+    {
+     "el": "texto",
+     "texto": "REC",
+     "x": 24,
+     "y": 40,
+     "tam": "s",
+     "color": "azul",
+     "entra": "aparece",
+     "t": 0.02
+    },
+    {
+     "el": "icono",
+     "nombre": "ojo",
+     "x": 50,
+     "y": 54,
+     "tam": 30,
+     "color": "azul",
+     "entra": "pop",
+     "t": 0.08
+    },
+    {
+     "el": "linea",
+     "x": 50,
+     "y": 65,
+     "a": [
+      50,
+      74
+     ],
+     "estilo": "punteada",
+     "color": "azul",
+     "entra": "dibuja",
+     "pulso": true,
+     "t": 0.3
+    },
+    {
+     "el": "icono",
+     "nombre": "pantalla",
+     "x": 50,
+     "y": 82,
+     "tam": 14,
+     "color": "azul",
+     "entra": "sube",
+     "t": 0.38
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "texto": "Pieza por *pieza*",
+   "camara": "giro-lento",
+   "transicion": "desliza-izq",
+   "voz": "Luego cambias UNA pieza, la comparas con la grabación… y solo ahí sigues. ¡Sin apagar nada!",
+   "elementos": [
+    {
+     "el": "linea",
+     "x": 8,
+     "y": 72,
+     "a": [
+      92,
+      72
+     ],
+     "estilo": "flecha",
+     "color": "gris",
+     "entra": "dibuja",
+     "pulso": true,
+     "t": 0.0
+    },
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 20,
+     "y": 58,
+     "ancho": 15,
+     "alto": 8,
+     "color": "amarillo",
+     "entra": "pop",
+     "t": 0.04
+    },
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 40,
+     "y": 58,
+     "ancho": 15,
+     "alto": 8,
+     "color": "gris",
+     "entra": "pop",
+     "t": 0.08,
+     "sale": 0.5
+    },
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 60,
+     "y": 58,
+     "ancho": 15,
+     "alto": 8,
+     "color": "gris",
+     "entra": "pop",
+     "t": 0.12
+    },
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 80,
+     "y": 58,
+     "ancho": 15,
+     "alto": 8,
+     "color": "gris",
+     "entra": "pop",
+     "t": 0.16
+    },
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 40,
+     "y": 38,
+     "ancho": 15,
+     "alto": 8,
+     "color": "amarillo",
+     "entra": "baja",
+     "a": [
+      40,
+      58
+     ],
+     "t": 0.3
+    },
+    {
+     "el": "icono",
+     "nombre": "check",
+     "x": 40,
+     "y": 45,
+     "tam": 11,
+     "color": "amarillo",
+     "entra": "pop",
+     "mueve": "late",
+     "t": 0.78
+    },
+    {
+     "el": "texto",
+     "texto": "Todo *sigue andando*",
+     "x": 50,
+     "y": 80,
+     "tam": "s",
+     "entra": "aparece",
+     "t": 0.2
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "texto": "Ahora *sí* se toca",
+   "fx": [
+    "vineta"
+   ],
+   "camara": "aleja",
+   "transicion": "fundido",
+   "voz": "Así modernizamos tu software en JDT Technologics: a medida y por partes.",
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "pantalla",
+     "x": 50,
+     "y": 54,
+     "tam": 28,
+     "color": "amarillo",
+     "entra": "pop",
+     "mueve": "flota",
+     "t": 0.0
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Software a medida",
+     "icono": "check",
+     "x": 50,
+     "y": 72,
+     "ancho": 62,
+     "entra": "sube",
+     "t": 0.2
+    },
+    {
+     "el": "icono",
+     "nombre": "persona-feliz",
+     "x": 20,
+     "y": 86,
+     "tam": 13,
+     "color": "blanco",
+     "entra": "izquierda",
+     "t": 0.35
+    },
+    {
+     "el": "tarjeta",
+     "texto": "NO TOCAR",
+     "icono": "candado",
+     "x": 70,
+     "y": 87,
+     "ancho": 40,
+     "color": "gris",
+     "giro": 12,
+     "opacidad": 0.6,
+     "entra": "baja",
+     "t": 0.5
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de *tu proyecto*",
+   "subtexto": "@technologicsjdt",
+   "transicion": "circulo",
+   "voz": "¡Hablemos de tu proyecto!"
+  }
+ ],
+ "audio": "videos/2026-11-18-0306-reescribir-sin-apagar.mp3",
+ "tiempos": {
+  "inicios": [
+   0.0,
+   3.51,
+   6.71,
+   10.78,
+   17.66,
+   22.99
+  ],
+  "retardo": 0.3,
+  "duracion": 25.42
+ },
+ "validacion": "corregido: validación 3b con modelo capaz (opus): se aclaró E1 (texto sin cortar, balanceo ±6°), E2 subtítulo 44px blanco, E3 con titular «Primero, grábalo» y REC fijo, E4 check/escala, E5 título en dos líneas y tarjeta gris NO TOCAR cayendo; se quitó el grano; se limitaron los barridos a dos."
+}
