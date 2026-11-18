@@ -1,42 +1,69 @@
-# Tendencias de contenido y estilos visuales (base, actualizada 2026-11-18)
+# Tendencias de contenido y estilos visuales (revisión 2026-11-18)
 
-El agente lee este archivo en cada ejecucion (paso 3B). `estilos.py` elige la combinacion del dia a partir de este
-catalogo y `tendencias_vivas.md` guarda lo que el agente va aprendiendo de la web. La paleta de JDT no se negocia:
-todo lo que sigue se adapta a azul marino, amarillo/dorado, blanco y gris azulado.
+Este catálogo guía la selección de estilos para Reels y banners de JDT. No es una lista de efectos para acumular: son lenguajes visuales que el agente debe investigar, escoger según señales actuales y adaptar al tema. La paleta JDT es innegociable: azul marino #0A0E27, amarillo #FACC15 / dorado #EAB308, blanco y gris azulado #94A3B8.
 
-## Lo que hoy atrae mas a los clientes (resumen de fuentes de 2026)
-1. **Video corto vertical, pensado sin sonido.** Domina el tiempo en redes y casi todo se ve en silencio: el texto en pantalla carga el mensaje desde el segundo 0, con subtitulos legibles y zonas seguras (nada importante en los bordes).
-2. **El gancho decide.** Los primeros 2 a 3 segundos ganan o pierden el video. Preguntas incomodas, confesiones, resultado primero, mito vs realidad, POV y listas numeradas son los formatos que mas se repiten.
-3. **Tipografia cinetica.** Es la tendencia de motion mas citada: la letra ya no acompana, es la imagen. Ritmo de palabras al compas de la voz.
-4. **Liquid glass y 3D estilizado.** Vidrio con refraccion, formas liquidas, letras infladas o cromadas. Se prefiere el 3D estilizado y suave al fotorrealismo.
-5. **Hecho a mano frente a la IA.** Collage, recortes, texturas, grano, imperfeccion: el contenido que se ve humano destaca entre tanto generado por IA.
-6. **Producto en accion.** En videos de software de 2026 ganaron las pantallas reales usandose (cursor, clics, numeros que cambian) sobre las animaciones abstractas.
-7. **Minimalismo audaz, neobrutalismo y editorial.** Color pleno, bordes gruesos con sombra dura, composiciones tipo revista con numeros enormes y anotaciones.
-8. **Bucles y marca en movimiento.** Animaciones que se repiten solas, logo animado y un sonido corto de marca al cierre.
-9. **Nostalgia (Y2K, 90s, 70s)** en dosis pequeñas: cromo, estrellas, rejilla retrofuturista.
+## Señales audiovisuales vigentes para Reels (noviembre de 2026)
 
-## Como se traduce a JDT (sin salirse de la marca)
-- «Color atrevido» = **amarillo pleno** como fondo o como bloque, con tinta azul marino; azul marino profundo con un solo acento amarillo.
-- «Cromo/inflado» = degradados **dorado-blanco** con extrusion; vidrio azul con destello dorado.
-- «Hecho a mano» = papel blanco o gris azulado, cinta amarilla, notas, puntos de trama.
-- Nada de cian, rojo, violeta ni verde: los scripts rechazan los cuadros con colores fuera de la paleta.
+1. **Social-first vertical y gancho inmediato.** El Reel se diseña en 9:16, 1080x1920. La idea debe entenderse desde el primer cuadro; evita intros de logo o tarjetas de título. El gancho entra en el primer segundo y medio o dos segundos.
+2. **Texto que sostiene la historia.** Subtítulos legibles y palabras clave en pantalla desde el inicio; la voz sigue siendo obligatoria, pero el video también debe entenderse sin sonido. La tipografía puede ser protagonista, no un bloque de texto permanente.
+3. **Demostración del producto/proceso en acción.** Interfaces, ventanas, tableros y flujos genéricos que se usan de verdad: cursor, clic, arrastre, campos que se completan y pasos que cambian. Para JDT es más convincente que una sucesión de iconos abstractos cuando el tema permite demostrar un proceso.
+4. **Autenticidad de creador.** Ritmo conversacional, POV, encuadre cercano simulado, notas y anotaciones espontáneas. Se adapta sin fingir testimonios, clientes, empleados ni experiencias reales: no inventar personas ni casos.
+5. **Mini documental / relato cinematográfico.** Una situación concreta, planos con intención, luz y profundidad, tensión y giro. Se usa en temas que requieren confianza o contexto, sin convertir cada Reel en un tráiler exagerado.
+6. **Pantalla dividida y contraste visual.** Comparar dos estados, decisiones o caminos en paralelo; el cambio entre lados debe explicar algo, no ser un efecto decorativo.
+7. **Collage táctil y lo-fi cuidado.** Recortes, papel, notas, grano suave y movimiento stop-motion para dar un toque humano frente a la estética excesivamente sintética. La imperfección es deliberada, no descuido.
+8. **Motion modular y microanimación.** Etiquetas, subtítulos, rótulos, lower thirds, transiciones y movimientos breves que mantienen coherencia visual y permiten variar escenas sin repetir una plantilla.
+9. **Tipografía cinética.** Palabras clave que aparecen al ritmo de la locución, escala expresiva y énfasis puntual. No animar cada palabra todo el tiempo ni sacrificar lectura.
+10. **Vidrio líquido y 3D estilizado.** Transparencias, refracción, objetos con volumen y reflejos dorados. Un elemento protagonista por escena; no usar 3D solo como fondo.
+11. **Editorial / zine.** Composición asimétrica, jerarquías tipográficas, anotaciones, flechas y espacios amplios; funciona para explicar conceptos o resumir una noticia.
+12. **Minimalismo audaz y neobrutalismo selectivo.** Un elemento grande, contraste fuerte, tarjetas de borde marcado y cortes limpios. Elegir uno de estos lenguajes según el tema; no mezclarlos todos.
+13. **Bucle visual con cierre conectado al inicio.** La última acción enlaza con el primer cuadro para invitar a una repetición natural, sin que el bucle vuelva confuso el CTA.
 
-## Videos: 12 estilos de moda (los elige `estilos.py`)
-tipografia-cinetica · vidrio-liquido · interfaz-en-movimiento · collage-recorte · minimalismo-audaz · dorado-3d ·
-neobrutalista · apertura-de-pelicula · bucle-hipnotico · editorial-zine · mascota-con-actitud · datos-que-se-arman.
-Cada ejecucion recibe un estilo PRINCIPAL y uno de APOYO (una o dos escenas de contraste), un GANCHO y un RITMO.
-`python3 estilos.py --lista` trae la receta de cada uno.
+Estas son señales de lenguaje y formato, no un ranking universal de rendimiento. La revisión web del 18-11-2026 encontró señales concretas que deben pesar en la selección:
+- Hootsuite (actualizado aproximadamente tres semanas antes de la consulta) destaca edición asistida por IA, Reels más largos para entrevistas y mini-documentales, y contenido colaborativo; para JDT interesa especialmente el formato explicativo y documental, no fingir colaboraciones.
+- Later (actualizado cinco días antes de la consulta; su resumen visible reúne tendencias de septiembre de 2026) registra formatos como «the process» (mostrar herramientas y pasos hasta el resultado), POV de creador, relatos breves y transiciones motivadas por la acción. Adaptar «the process» a procesos de negocio simulados, no a casos reales inventados.
+- ADVIDS (análisis publicado dos meses antes; muestra de 100 videos de interfaz de 92 empresas de software) observó que 63% de los videos de interfaz de su muestra de mitad de 2026 se centraban en pantallas del producto, frente a 37% al inicio; 3D bajó de 23% a 13%, y el texto en movimiento de 47% a 35%. Es una muestra de UI animation, no de todos los Reels: la señal útil es priorizar demostraciones de interfaz y 2D limpio cuando el tema sea software.
+- Motionlab (16-05-2026) destaca híbridos 2D/3D, minimalismo orgánico y vertical nativo 9:16 para B2B. Esto refuerza la idea de usar profundidad como apoyo, no convertir todo en 3D.
+- OpusClip (actualizado 03-04-2026; análisis de 13,5 millones de clips) señala predominio de captions y entrega conversacional. Es una muestra agregada de clips, no evidencia de que un único estilo visual sea el mejor.
 
-## Banners: 9 estilos de moda (motor `render_banner_html.py`)
-vidrio-liquido · tipografia-gigante · bento · amarillo-total · collage-recorte · neobrutal · cromo-dorado · editorial · terminal-ui.
-`python3 render_banner_html.py --lista` los describe. Cada banner usa uno distinto a los ultimos 4.
+Antes de cada ejecución el agente debe volver a contrastar estas señales con fuentes recientes y escoger lo que mejor encaje con el tema y el público empresarial de JDT.
+
+## Cómo se traduce a JDT
+
+- «Color atrevido» = amarillo #FACC15 como acento o bloque puntual con tinta azul marino; no convertir todos los videos en una pantalla amarilla.
+- «Cromo / inflado» = degradados dorado-blanco, volumen y reflejos; nunca introducir tonos ajenos a la paleta.
+- «Hecho a mano» = papel blanco o gris azulado, cinta amarilla, notas y textura sutil.
+- «Creador / POV» = locución cercana, pregunta directa, encuadre gráfico íntimo y anotaciones; nunca fingir que un cliente real dijo algo.
+- «Producto en acción» = interfaces ficticias y genéricas que ilustran el flujo; no mostrar datos, logotipos ni marcas de terceros.
+- «Cinematográfico» = contraste, profundidad y movimiento de cámara medido; no abusar de destellos ni de música épica.
+- Nada de cian, rojo, violeta ni verde: los scripts rechazan cuadros con colores fuera de la paleta.
+
+## Catálogo de estilos de video (selección rotativa y guiada por investigación)
+
+- **Existentes:** tipografia-cinetica · vidrio-liquido · interfaz-en-movimiento · collage-recorte · minimalismo-audaz · dorado-3d · neobrutalista · apertura-de-pelicula · bucle-hipnotico · editorial-zine · mascota-con-actitud · datos-que-se-arman.
+- **Nuevos:** creator-autentico · microdocumental-cinematico · pantalla-dividida-dinamica · motion-modular.
+
+Cada ejecución debe elegir un estilo principal y uno de apoyo, un gancho y un ritmo. La investigación actual debe influir en la elección; la rotación evita repetir estilos recientes, pero no debe forzar una opción que no encaje con el tema. El estilo principal tiene que notarse en la composición, tipografía, movimiento y recursos, no solamente en el color de fondo.
+
+## Banners
+
+El motor `render_banner_html.py` dispone de 9 estilos: vidrio-liquido · tipografia-gigante · bento · amarillo-total · collage-recorte · neobrutal · cromo-dorado · editorial · terminal-ui. La elección del banner se mantiene coordinada con el lenguaje visual del Reel, pero no tiene que copiar su composición.
 
 ## Reglas para aplicarlas bien
-- **Moda con criterio:** el estilo es el vestido de la idea, no la idea. Primero el concepto del tema; luego se viste con el estilo del dia.
-- **Sobrio y amable:** una idea por escena. Si hay que elegir entre un efecto mas y aire, gana el aire.
-- **Siempre vigente y siempre distinto:** nunca el mismo estilo principal en las ultimas 4 ejecuciones ni el mismo banner en las ultimas 4.
-- **Prueba de vigencia** (antes de renderizar): ¿se entiende sin sonido?, ¿el primer cuadro ya muestra la idea?, ¿se ve como algo de 2026 y no como una diapositiva?, ¿el estilo del dia se nota de verdad (no es solo el fondo)?
-- **Pulso de la semana:** cada ejecucion hace 2 busquedas web de tendencias y deja UNA nota en `tendencias_vivas.md`. Si una busqueda trae un estilo nuevo que encaja con la paleta, se prueba como apoyo y se anota.
 
-## Fuentes consultadas (2026-11-18)
-Resumenes y analisis publicados en 2026 por Adobe Express, Designity, G2, Penji, Renderforest, Garagefarm, Graphic Design Junction, Metricool, ShortGenius, Benchmark Email y ADVIDS (analisis de 100 videos de interfaz, sep 2026). Se usaron como señal de tendencia, no como datos exactos.
+- **Moda con criterio:** el tema decide la idea; la investigación decide qué lenguajes visuales están vigentes; la marca decide cómo adaptarlos.
+- **Sobrio y amable:** una idea por escena. Si hay que elegir entre un efecto más y aire, gana el aire.
+- **Estilo reconocible:** aplicar al menos tres rasgos concretos del estilo principal a lo largo del video; uno debe aparecer en el gancho inicial. El estilo de apoyo se limita a una o dos escenas.
+- **Variedad real:** no repetir el mismo estilo principal en las últimas 4 ejecuciones ni el mismo banner en las últimas 4. Evitar también repetir la misma secuencia de escenas, transiciones y efectos de los últimos Reels.
+- **Prueba sin sonido:** subtítulos legibles, texto dentro de zonas seguras y mensaje comprensible sin depender de la voz.
+- **No confundir tendencia con ruido:** no usar sonidos virales de terceros, marcas ajenas, filtros fuera de paleta, cortes frenéticos ni efectos por moda. La voz en off y la música de JDT se conservan.
+- **Pulso de cada ejecución:** investigar dos fuentes actuales, preferiblemente una de Instagram/video corto y otra de motion/design o video B2B. Registrar fecha, fuentes y una conclusión concreta en `tendencias_vivas.md`. Distinguir una tendencia observada de una afirmación de rendimiento; no inventar porcentajes ni decir «la más usada» sin datos.
+
+## Fuentes de referencia consultadas (2026-11-18)
+
+- Hootsuite, «Instagram Reels for business in 2026», actualización consultada el 18-11-2026: edición asistida por IA, mini-documentales y tutoriales más largos para audiencias interesadas. https://blog.hootsuite.com/instagram-reels/
+- Later, «Top Instagram Reels Trends to Try in 2026», actualización consultada el 18-11-2026: formato «the process», POV de creador, storytelling y transiciones por acción. https://later.com/blog/instagram-reels-trends/
+- ADVIDS, «We Analyzed 100 UI Animation Videos», publicado aproximadamente en septiembre de 2026: muestra de 100 videos de interfaz de 92 empresas; crecimiento relativo de demostraciones de pantalla real en su muestra. https://advids.co/blog/ui-animation-motion-design-trends
+- Motionlab, «Motion Design Trends in 2026», 16-05-2026: híbridos 2D/3D, minimalismo orgánico y formato vertical nativo para B2B. https://motion-lab.agency/en/blog/tendances-motion-design-2026
+- OpusClip, «How to Go Viral on Instagram Reels», actualización 03-04-2026: análisis de 13,5 millones de clips, captions y ganchos conversacionales. https://www.opus.pro/research/how-to-go-viral-instagram-reels
+
+Los porcentajes y conclusiones anteriores pertenecen a las muestras descritas por cada fuente; no deben presentarse como estadísticas de Instagram en general ni como garantías de rendimiento para JDT.
