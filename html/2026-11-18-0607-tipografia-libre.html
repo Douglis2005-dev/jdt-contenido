@@ -1,0 +1,172 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+  .panel{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden}
+  .aa{position:absolute;text-align:center;white-space:nowrap;font-family:"Space Grotesk",Inter,sans-serif;line-height:1}
+  .lbl{position:absolute;text-align:center;font-family:Inter,sans-serif;font-weight:600;font-size:40px;letter-spacing:2px;text-transform:uppercase}
+  .pista{position:absolute;height:14px;border-radius:7px;background:#2A3460}
+  .relleno{position:absolute;left:0;top:0;height:14px;border-radius:7px;background:#FACC15}
+  .perilla{position:absolute;width:52px;height:52px;margin-top:-19px;margin-left:-26px;border-radius:50%;background:#FFFFFF;box-shadow:0 0 0 6px rgba(10,14,39,.25)}
+  .term{position:absolute;left:90px;width:900px;background:#0A0E27;border:3px solid #2A3460;border-radius:24px;padding:48px 52px;box-sizing:border-box;font-family:"JetBrains Mono",Consolas,monospace;font-size:44px;color:#FFFFFF;line-height:1.5}
+  .term .p{color:#FACC15}
+  .term .g{color:#94A3B8}
+</style>
+</head>
+<body>
+
+<!-- E1 GANCHO (0 - 2.55): fondo amarillo a pantalla completa, una perilla entre Seria y Amable -->
+<div id="e1" class="capa" style="background:#FACC15">
+  <div id="t1" class="titulo" style="position:absolute;left:0;right:0;top:250px;text-align:center;font-size:84px;color:#0A0E27;opacity:0"></div>
+  <div id="aa1" class="aa" style="left:0;right:0;top:620px;font-size:380px;color:#0A0E27;font-weight:700"></div>
+  <div class="pista" style="left:170px;width:740px;top:1200px;background:#0A0E27;opacity:.85"></div>
+  <div id="perilla1" class="perilla" style="left:170px;top:1207px"></div>
+  <div class="lbl" style="left:90px;width:260px;top:1270px;color:#0A0E27">Seria</div>
+  <div class="lbl" style="left:730px;width:260px;top:1270px;color:#0A0E27">Amable</div>
+</div>
+
+<!-- E2 TERMINAL (2.55 - 8.15): la tipografía se controla desde la línea de comandos -->
+<div id="e2" class="capa" style="background:#0A0E27">
+  <div id="t2" class="titulo" style="position:absolute;left:0;right:0;top:300px;text-align:center;font-size:92px;opacity:0"></div>
+  <div class="term" style="top:720px;height:760px">
+    <div><span class="p">$</span> <span id="c2a"></span></div>
+    <div id="r2a" class="g" style="opacity:0">&gt; seria, afilada</div>
+    <div style="height:40px"></div>
+    <div><span class="p">$</span> <span id="c2b"></span></div>
+    <div id="r2b" class="g" style="opacity:0">&gt; redonda, amable</div>
+  </div>
+</div>
+
+<!-- E3 DIVIDIDA (8.15 - 12.95): la MISMA letra para dos negocios opuestos -->
+<div id="e3" class="capa" style="background:#0A0E27">
+  <div id="p3a" class="panel" style="background:#0A0E27"></div>
+  <div id="p3b" class="panel" style="background:#FACC15;clip-path:polygon(56% 0,100% 0,100% 100%,44% 100%)"></div>
+  <div id="a3a" class="aa" style="left:0;width:540px;top:700px;font-size:340px;color:#FFFFFF;font-weight:300">Aa</div>
+  <div id="a3b" class="aa" style="left:540px;width:540px;top:700px;font-size:340px;color:#0A0E27;font-weight:900">Aa</div>
+  <div class="lbl" style="left:0;width:540px;top:1140px;color:#94A3B8">Contadora</div>
+  <div class="lbl" style="left:540px;width:540px;top:1140px;color:#0A0E27">Panadería</div>
+  <div id="t3" class="titulo" style="position:absolute;left:0;right:0;top:250px;margin:0 auto;width:max-content;padding:18px 48px;border-radius:24px;background:#0A0E27;border:3px solid #2A3460;text-align:center;font-size:84px;color:#FFFFFF;opacity:0"></div>
+</div>
+
+<!-- E4 CONSOLA (12.95 - 17.91): tres perillas para ajustar la marca -->
+<div id="e4" class="capa" style="background:radial-gradient(circle at 50% 30%,#1F2A6B 0%,#0A0E27 70%)">
+  <div id="t4" class="titulo" style="position:absolute;left:0;right:0;top:300px;text-align:center;font-size:96px;color:#FFFFFF;opacity:0"></div>
+  <div class="lbl" style="left:90px;width:260px;top:720px;color:#94A3B8;text-align:left;font-size:36px">Peso</div>
+  <div class="pista" style="left:380px;width:600px;top:742px"><div id="f4a" class="relleno" style="width:0"></div></div>
+  <div class="lbl" style="left:90px;width:260px;top:920px;color:#94A3B8;text-align:left;font-size:36px">Redondez</div>
+  <div class="pista" style="left:380px;width:600px;top:942px"><div id="f4b" class="relleno" style="width:0"></div></div>
+  <div class="lbl" style="left:90px;width:260px;top:1120px;color:#94A3B8;text-align:left;font-size:36px">Tamaño</div>
+  <div class="pista" style="left:380px;width:600px;top:1142px"><div id="f4c" class="relleno" style="width:0;background:#EAB308"></div></div>
+  <div id="t4b" class="titulo" style="position:absolute;left:0;right:0;top:1400px;text-align:center;font-size:70px;color:#FFFFFF;opacity:0"></div>
+</div>
+
+<!-- E5 EN TODAS PARTES (17.91 - 22.14): la misma letra viaja a web, app y tarjeta -->
+<div id="e5" class="capa" style="background:#0A0E27">
+  <div id="t5" class="titulo" style="position:absolute;left:0;right:0;top:300px;text-align:center;font-size:92px;opacity:0"></div>
+  <div id="aa5" class="aa" style="left:0;right:0;top:560px;font-size:300px;color:#FACC15;font-weight:700"></div>
+  <div id="l5a" style="position:absolute;left:540px;top:1000px;width:4px;height:0;background:#94A3B8"></div>
+  <div id="l5b" style="position:absolute;left:250px;top:1180px;width:580px;height:4px;background:#94A3B8;opacity:0"></div>
+  <div id="k5a" class="vidrio" style="left:110px;top:1260px;width:280px;height:130px;text-align:center;padding-top:40px;box-sizing:border-box;font-size:44px;color:#FFFFFF;opacity:0">Web</div>
+  <div id="k5b" class="vidrio oro" style="left:400px;top:1260px;width:280px;height:130px;text-align:center;padding-top:40px;box-sizing:border-box;font-size:44px;color:#FFFFFF;opacity:0">App</div>
+  <div id="k5c" class="vidrio" style="left:690px;top:1260px;width:280px;height:130px;text-align:center;padding-top:40px;box-sizing:border-box;font-size:44px;color:#FFFFFF;opacity:0">Tarjeta</div>
+</div>
+
+<!-- E6 CIERRE (22.14 - 24.94): persiana y llamado a la acción -->
+<div id="e6" class="capa" style="background:#0A0E27">
+  <div id="c6" class="titulo" style="position:absolute;left:0;right:0;top:640px;text-align:center;font-size:124px;color:#FFFFFF;opacity:0">Hablemos<br>de <span class="oro">tu proyecto</span></div>
+  <div id="pill6" style="position:absolute;left:0;right:0;top:1180px;text-align:center;opacity:0"><span class="pildora">@technologicsjdt</span></div>
+  <div id="pers6" style="position:absolute;left:0;top:0;width:1080px;height:1920px;background:#FACC15;transform:translateY(-100%)"></div>
+</div>
+
+<div id="hud" class="hud"></div>
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+window.DURACION = 24.94;
+const dentro = (t, a, b) => t >= a && t < b;
+const CAP = [0, 2.55, 8.15, 12.95, 17.91, 22.14, 24.94];
+const NOMBRES = ["01 · GANCHO", "02 · TERMINAL", "03 · LA MISMA LETRA", "04 · CONSOLA", "05 · EN TODAS PARTES", "06 · CIERRE"];
+const tecleo = (s, k) => s.slice(0, Math.floor(s.length * clamp(k)));
+window.render = (t) => {
+  const ids = ["e1", "e2", "e3", "e4", "e5", "e6"];
+  ids.forEach((id, i) => $(id).style.display = dentro(t, CAP[i], CAP[i + 1]) ? "block" : "none");
+  JDT.fondo(bg, t);
+
+  // E1: fondo amarillo; la perilla se mueve y la letra vibra en el gancho
+  if (dentro(t, 0, 2.55)) {
+    const k = seg(t, 0.3, 1.2, "outBack");
+    $("t1").innerHTML = 'Tu letra tiene <span style="color:#0A0E27;background:#FFFFFF;padding:0 18px;border-radius:16px">perillas</span>';
+    JDT.revelar($("t1"), seg(t, 0.05, 0.8, "outExpo"));
+    $("aa1").innerHTML = 'Aa';
+    $("aa1").style.transform = `scale(${lerp(0.7, 1, seg(t, 0, 0.8, "outBack"))}) translate(${dentro(t, 0.9, 1.2) ? Math.sin(t * 90) * 10 : 0}px,0)`;
+    $("aa1").style.opacity = seg(t, 0, 0.5, "lineal");
+    const k2 = seg(t, 0.9, 1.9, "inOutCubic");
+    $("aa1").style.webkitTextStroke = (k2 * 16) + "px #0A0E27";
+    $("aa1").style.letterSpacing = lerp(0, 0.04, k2) + "em";
+    const x = lerp(170, 170 + 740 * 0.62, seg(t, 0.9, 1.9, "inOutCubic"));
+    $("perilla1").style.left = x + "px";
+    $("perilla1").style.opacity = seg(t, 0.8, 1.1, "lineal");
+    $("t1").style.opacity = seg(t, 0.05, 0.4, "lineal");
+  }
+
+  // E2: terminal; el mismo comando cambia la redondez
+  if (dentro(t, 2.55, 8.15)) {
+    $("t2").innerHTML = 'Una tipografía <span class="clave">libre</span>';
+    $("t2").style.opacity = seg(t, 2.6, 3.1, "lineal");
+    $("c2a").textContent = tecleo("tipografia --redondez min", seg(t, 2.9, 3.8, "lineal"));
+    $("r2a").style.opacity = seg(t, 4.0, 4.4, "lineal");
+    $("c2b").textContent = tecleo("tipografia --redondez max", seg(t, 4.8, 6.2, "lineal"));
+    $("r2b").style.opacity = seg(t, 6.4, 6.8, "lineal");
+  }
+
+  // E3: pantalla dividida, la misma letra en dos negocios opuestos
+  if (dentro(t, 8.15, 12.95)) {
+    $("t3").innerHTML = 'La <span class="clave">MISMA</span> letra';
+    $("t3").style.opacity = seg(t, 8.2, 8.7, "lineal");
+    const latido = 1 + 0.015 * Math.sin(t * 6);
+    $("a3a").style.transform = `scale(${latido})`;
+    $("a3b").style.transform = `scale(${latido})`;
+    $("a3a").style.opacity = seg(t, 8.5, 9.1, "lineal");
+    $("a3b").style.opacity = seg(t, 8.7, 9.3, "lineal");
+    $("p3b").style.clipPath = `polygon(${lerp(100, 56, seg(t, 8.15, 9.0, "outExpo"))}% 0,100% 0,100% 100%,${lerp(100, 44, seg(t, 8.15, 9.0, "outExpo"))}% 100%)`;
+  }
+
+  // E4: consola de tres perillas; las barras suben para ajustar la marca
+  if (dentro(t, 12.95, 17.91)) {
+    $("t4").innerHTML = 'Se <span class="clave">ajusta</span>, no se compra';
+    $("t4").style.opacity = seg(t, 13.0, 13.5, "lineal");
+    $("f4a").style.width = (600 * 0.75 * seg(t, 13.4, 14.4, "inOutCubic")) + "px";
+    $("f4b").style.width = (600 * 0.40 * seg(t, 13.8, 14.8, "inOutCubic")) + "px";
+    $("f4c").style.width = (600 * 0.60 * seg(t, 14.2, 15.2, "inOutCubic")) + "px";
+    $("t4b").innerHTML = 'Tu marca, <span class="clave">a tu medida</span>';
+    $("t4b").style.opacity = seg(t, 15.4, 16.0, "lineal");
+  }
+
+  // E5: la misma letra viaja a web, app y tarjeta
+  if (dentro(t, 17.91, 22.14)) {
+    $("t5").innerHTML = 'Tu letra, <span class="clave">en todas partes</span>';
+    $("t5").style.opacity = seg(t, 17.95, 18.5, "lineal");
+    $("aa5").innerHTML = 'Aa';
+    $("aa5").style.opacity = seg(t, 18.0, 18.6, "lineal");
+    $("aa5").style.transform = `scale(${lerp(0.8, 1, seg(t, 18.0, 18.9, "outBack"))})`;
+    $("l5a").style.height = (lerp(0, 1, seg(t, 18.6, 19.2, "inOutCubic")) * 180) + "px";
+    $("l5b").style.opacity = seg(t, 19.1, 19.5, "lineal");
+    ["k5a", "k5b", "k5c"].forEach((id, i) => {
+      $(id).style.opacity = seg(t, 19.3 + i * 0.3, 19.8 + i * 0.3, "lineal");
+      $(id).style.transform = `translateY(${lerp(60, 0, seg(t, 19.3 + i * 0.3, 20.0 + i * 0.3, "outExpo"))}px)`;
+    });
+  }
+
+  // E6: cierre con persiana amarilla que sube
+  if (dentro(t, 22.14, 24.94)) {
+    $("pers6").style.transform = `translateY(${lerp(-100, 0, 1 - seg(t, 22.14, 22.6, "outExpo"))}%)`;
+    $("c6").style.opacity = seg(t, 22.7, 23.2, "outQuart");
+    $("c6").style.transform = `translateY(${lerp(60, 0, seg(t, 22.7, 23.4, "outExpo"))}px)`;
+    $("pill6").style.opacity = seg(t, 23.4, 23.9, "lineal");
+  }
+
+  // barrido entre capítulos (pocos, sin saturar)
+  let kb = 0; [CAP[2], CAP[4]].forEach(x => { if (t > x - 0.3 && t < x + 0.3) kb = (t - (x - 0.3)) / 0.6; });
+  fg.clearRect(0, 0, JDT.W, JDT.H); JDT.barrido(fg, kb);
+  JDT.hud($("hud"), t, 24.94, NOMBRES[Math.max(0, CAP.slice(0, -1).findLastIndex(x => t >= x))]);
+};
+</script></body></html>

@@ -1,0 +1,297 @@
+{
+  "salida": "videos/2026-11-18-0607-tipografia-libre.mp4",
+  "formato": "la letra con perillas: arranca con una afirmación absurda («tu letra tiene perillas») sobre un «Aa» gigante con su perilla, se demuestra en una terminal que gira la redondez, el giro es la misma letra vestida para dos negocios opuestos, la consola de mezcla de tu marca y el remate es tu letra viajando a la web, la app y la tarjeta",
+  "concepto": "Tu marca no se compra hecha: se ajusta con perillas, como una consola de sonido; una tipografía libre de código abierto permite subirle o bajarle redondez y grosor para que tu letra suene seria o amable según tu negocio, y JDT lleva ese carácter a tu web con diseño propio.",
+  "produccion": "arranca en amarillo a pantalla completa con cámara quieta y vibra (único golpe fuerte) sobre un «Aa» azul marino y una perilla entre «Seria» y «Amable»; terminal oscura con zoom y paneo, sin efectos, que escribe los comandos de redondez; pantalla dividida con giro y cámara latido: contadora contra panadería; consola de mezcla en azul con destello de transición y grano suave: tres faders (peso, redondez, tamaño); escena oscura con desliza-izq y viñeta: el «Aa» se reparte por líneas a pantalla, teléfono y tarjeta; cierre con persiana. Sin marquesina, notificaciones ni palabras, para alejarse de los tres anteriores.",
+  "fuente": "https://github.com/joshpuckett/allo",
+  "escenas": [
+    {
+      "tipo": "libre",
+      "look": "amarillo",
+      "texto": "Tu letra tiene *perillas*",
+      "fx": [
+        "vibra"
+      ],
+      "voz": "¡Ojo! Tu letra tiene perillas.",
+      "elementos": [
+        {
+          "el": "texto",
+          "texto": "Aa",
+          "x": 50,
+          "y": 52,
+          "tam": "xl",
+          "color": "fondo",
+          "entra": "pop",
+          "t": 0.0
+        },
+        {
+          "el": "forma",
+          "forma": "anillo",
+          "x": 50,
+          "y": 76,
+          "ancho": 20,
+          "alto": 20,
+          "color": "fondo",
+          "entra": "aparece",
+          "t": 0.1
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 76,
+          "a": [
+            56,
+            70
+          ],
+          "estilo": "solida",
+          "color": "fondo",
+          "entra": "dibuja",
+          "t": 0.2
+        },
+        {
+          "el": "texto",
+          "texto": "Seria",
+          "x": 20,
+          "y": 76,
+          "tam": "s",
+          "color": "fondo",
+          "entra": "izquierda",
+          "t": 0.25
+        },
+        {
+          "el": "texto",
+          "texto": "Amable",
+          "x": 80,
+          "y": 76,
+          "tam": "s",
+          "color": "fondo",
+          "entra": "derecha",
+          "t": 0.3
+        }
+      ]
+    },
+    {
+      "tipo": "terminal",
+      "texto": "Una tipografía *libre*",
+      "titulo": "tu-marca@estudio",
+      "lineas": [
+        "> redondez 0",
+        "afilada y seria",
+        "> redondez 100",
+        "redonda y amable"
+      ],
+      "transicion": "zoom",
+      "camara": "paneo",
+      "voz": "Hay una tipografía libre, de código abierto: la redondeas… o la afilas."
+    },
+    {
+      "tipo": "dividida",
+      "etiquetas": [
+        "Afilada para la *contadora*",
+        "Redonda para la *panadería*"
+      ],
+      "iconos": [
+        "escudo",
+        "corazon"
+      ],
+      "rotulos": [
+        "SERIA",
+        "AMABLE"
+      ],
+      "transicion": "giro",
+      "camara": "latido",
+      "voz": "La MISMA letra: seria para la contadora, amable para la panadería."
+    },
+    {
+      "tipo": "libre",
+      "look": "azul",
+      "texto": "Se *ajusta*, no se compra",
+      "transicion": "destello",
+      "fx": [
+        "grano"
+      ],
+      "voz": "Tu marca no se compra hecha… se ajusta: más gruesa, más fina.",
+      "elementos": [
+        {
+          "el": "texto",
+          "texto": "Peso",
+          "x": 21,
+          "y": 48,
+          "tam": "m",
+          "entra": "aparece",
+          "t": 0.0
+        },
+        {
+          "el": "barra",
+          "x": 67,
+          "y": 48,
+          "ancho": 44,
+          "valor": 75,
+          "color": "amarillo",
+          "t": 0.08
+        },
+        {
+          "el": "texto",
+          "texto": "Redondez",
+          "x": 21,
+          "y": 62,
+          "tam": "m",
+          "entra": "aparece",
+          "t": 0.2
+        },
+        {
+          "el": "barra",
+          "x": 67,
+          "y": 62,
+          "ancho": 44,
+          "valor": 40,
+          "color": "amarillo",
+          "t": 0.28
+        },
+        {
+          "el": "texto",
+          "texto": "Tamaño",
+          "x": 21,
+          "y": 76,
+          "tam": "m",
+          "entra": "aparece",
+          "t": 0.4
+        },
+        {
+          "el": "barra",
+          "x": 67,
+          "y": 76,
+          "ancho": 44,
+          "valor": 60,
+          "color": "dorado",
+          "t": 0.48
+        },
+        {
+          "el": "texto",
+          "texto": "Tu marca, *a tu medida*",
+          "x": 50,
+          "y": 88,
+          "tam": "s",
+          "color": "blanco",
+          "entra": "sube",
+          "t": 0.62
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "texto": "Tu letra, *en todas partes*",
+      "transicion": "desliza-izq",
+      "fx": [
+        "vineta"
+      ],
+      "voz": "En JDT hacemos tu web con diseño propio, a tu medida.",
+      "elementos": [
+        {
+          "el": "texto",
+          "texto": "Aa",
+          "x": 50,
+          "y": 46,
+          "tam": "xl",
+          "color": "amarillo",
+          "entra": "pop",
+          "mueve": "late",
+          "t": 0.0
+        },
+        {
+          "el": "linea",
+          "x": 44,
+          "y": 56,
+          "a": [
+            22,
+            70
+          ],
+          "estilo": "punteada",
+          "color": "borde",
+          "entra": "dibuja",
+          "pulso": true,
+          "t": 0.15
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 57,
+          "a": [
+            50,
+            70
+          ],
+          "estilo": "punteada",
+          "color": "borde",
+          "entra": "dibuja",
+          "pulso": true,
+          "t": 0.2
+        },
+        {
+          "el": "linea",
+          "x": 56,
+          "y": 56,
+          "a": [
+            78,
+            70
+          ],
+          "estilo": "punteada",
+          "color": "borde",
+          "entra": "dibuja",
+          "pulso": true,
+          "t": 0.25
+        },
+        {
+          "el": "icono",
+          "nombre": "pantalla",
+          "x": 20,
+          "y": 78,
+          "tam": 14,
+          "color": "blanco",
+          "entra": "sube",
+          "t": 0.35
+        },
+        {
+          "el": "icono",
+          "nombre": "telefono",
+          "x": 50,
+          "y": 78,
+          "tam": 14,
+          "color": "blanco",
+          "entra": "sube",
+          "t": 0.42
+        },
+        {
+          "el": "icono",
+          "nombre": "tarjeta",
+          "x": 80,
+          "y": 78,
+          "tam": 14,
+          "color": "blanco",
+          "entra": "sube",
+          "t": 0.49
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*",
+      "subtexto": "@technologicsjdt",
+      "transicion": "persiana",
+      "voz": "¡Hablemos de tu proyecto!"
+    }
+  ],
+  "audio": "videos/2026-11-18-0607-tipografia-libre.mp3",
+  "tiempos": {
+    "inicios": [
+      0.0,
+      2.55,
+      8.15,
+      12.95,
+      17.91,
+      22.14
+    ],
+    "retardo": 0.3,
+    "duracion": 24.94
+  },
+  "validacion": "corregido: revisor (opus) no aprobó en primera revisión; aplicado: texto de terminal cambiado de cifras a «min»/«max», la letra engorda con la perilla (text-stroke y espaciado), «perillas» en placa blanca para contraste. Notas de sobriedad 4, claridad 3, impacto 3, originalidad 4, marca 4 antes de corregir."
+}
