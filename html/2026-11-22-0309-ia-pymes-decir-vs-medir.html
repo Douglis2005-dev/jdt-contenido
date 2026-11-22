@@ -1,0 +1,134 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+  .full { position:absolute; inset:0; }
+  .amarillo-full { background:#FACC15; }
+  .azul-full { background:#0A0E27; }
+  .azul-txt { color:#0A0E27; }
+  .lin { position:absolute; left:0; right:0; text-align:center; white-space:nowrap; }
+  .mitad { position:absolute; top:0; bottom:0; width:50%; overflow:hidden; }
+  .tarjeta { position:absolute; border-radius:36px; border:2px solid rgba(255,255,255,.22); background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.03)); }
+</style></head>
+<body>
+<!-- E1 gancho: fondo amarillo completo, pregunta que golpea palabra por palabra -->
+<div id="e1" class="capa"><div class="full amarillo-full" id="bgE1"></div>
+  <div id="q1" class="titulo azul-txt" style="position:absolute;left:70px;right:70px;top:700px;font-size:128px;text-align:left;line-height:1.02"></div>
+  <div id="m1" class="mono" style="position:absolute;left:70px;top:1560px;color:#0A0E27;opacity:0">pregunta de dueño</div></div>
+
+<!-- E2 cifra y fondo de vidrio -->
+<div id="e2" class="capa"><div class="full azul-full"></div>
+  <div id="n2" class="titulo clave" style="position:absolute;left:0;right:0;top:640px;text-align:center;font-size:330px">90 %</div>
+  <div id="t2" class="titulo" style="position:absolute;left:90px;right:90px;top:1080px;text-align:center;font-size:84px"></div>
+  <div id="s2" class="mono" style="position:absolute;left:0;right:0;top:1500px;text-align:center"></div></div>
+
+<!-- E3 pantalla dividida: DECIR contra MEDIR (estilo de apoyo) -->
+<div id="e3" class="capa"><div class="full azul-full"></div>
+  <div id="izq3" class="mitad" style="left:0;background:#131A3A"><div class="titulo" style="position:absolute;left:60px;right:60px;top:560px;font-size:104px;color:#FFFFFF">DICEN</div>
+    <div class="titulo" style="position:absolute;left:60px;right:60px;top:820px;font-size:120px;color:#FACC15">86,6 %</div>
+    <div class="mono" style="position:absolute;left:60px;top:1040px;">reconoce efectos</div></div>
+  <div id="der3" class="mitad" style="right:0;background:#FACC15"><div class="titulo" style="position:absolute;left:60px;right:60px;top:560px;font-size:104px;color:#0A0E27">MIDEN</div>
+    <div id="q3" class="titulo" style="position:absolute;left:60px;right:60px;top:820px;font-size:120px;color:#0A0E27;transform-origin:left center">¿?</div>
+    <div class="mono" style="position:absolute;left:60px;top:1040px;color:#0A0E27">aquí falta el dato</div></div>
+  <div id="div3" style="position:absolute;top:0;bottom:0;left:50%;width:6px;margin-left:-3px;background:#FFFFFF"></div>
+  <div id="t3" class="titulo" style="position:absolute;left:70px;right:70px;top:1380px;text-align:center;font-size:92px;color:#FFFFFF;background:#0A0E27;padding:30px 0;border-radius:30px;border:2px solid rgba(255,255,255,.22)"></div></div>
+
+<!-- E4 marquesina: DICEN, CREEN, SIENTEN en sentidos opuestos y ¿MIDEN? -->
+<div id="e4" class="capa"><div class="full azul-full"></div>
+  <div id="m4a" class="lin titulo" style="top:560px;font-size:200px;color:#FFFFFF;white-space:nowrap"></div>
+  <div id="m4b" class="lin titulo" style="top:900px;font-size:200px;color:#94A3B8;white-space:nowrap"></div>
+  <div id="m4c" class="lin titulo clave" style="top:1260px;font-size:230px;white-space:nowrap">¿MIDEN?</div></div>
+
+<!-- E5 cierre del problema y solución JDT: tarjetas quietas -->
+<div id="e5" class="capa"><div class="full azul-full"></div>
+  <div id="t5" class="titulo" style="position:absolute;left:80px;right:80px;top:300px;font-size:84px;line-height:1.1"></div>
+  <div class="tarjeta" id="k5a" style="left:90px;top:1000px;width:900px;height:170px"><div class="mono" style="position:absolute;left:60px;top:58px;color:#FACC15">01 · horas</div></div>
+  <div class="tarjeta" id="k5b" style="left:90px;top:1210px;width:900px;height:170px"><div class="mono" style="position:absolute;left:60px;top:58px;color:#FACC15">02 · errores</div></div>
+  <div class="tarjeta" id="k5c" style="left:90px;top:1420px;width:900px;height:170px"><div class="mono" style="position:absolute;left:60px;top:58px;color:#FACC15">03 · tareas</div></div></div>
+
+<!-- E6 cierre de marca -->
+<div id="e6" class="capa"><div class="full azul-full"></div>
+  <div id="c6" class="titulo" style="position:absolute;left:0;right:0;top:620px;text-align:center;font-size:118px">Hablemos<br>de tu <span class="oro">proyecto</span></div>
+  <div id="p6" style="position:absolute;left:0;right:0;top:1200px;text-align:center"><span class="pildora">@technologicsjdt</span></div>
+  <div class="mono" style="position:absolute;left:0;right:0;top:1400px;text-align:center">JDT TECHNOLOGICS · Bogotá</div></div>
+
+<div id="hud" class="hud"></div><div id="fx" class="capa" style="background:#fff;opacity:0;z-index:7"></div>
+<canvas id="cv" class="capa" style="z-index:5"></canvas>
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+const cv = $("cv"); cv.width = JDT.W; cv.height = JDT.H; const fg = cv.getContext("2d");
+window.DURACION = 24.0;
+const dentro = (t, a, b) => t >= a && t < b;
+const ESC = [["e1",0,2.28],["e2",2.28,7.11],["e3",7.11,13.11],["e4",13.11,15.77],["e5",15.77,22.28],["e6",22.28,24.0]];
+const Q1 = ["¿Cuánto", "te", "ahorró", "la", "IA", "este", "mes?"];
+const T3 = "Ojo: eso DICEN.";
+const M4a = "DICEN · CREEN · SIENTEN · ";
+const T5 = "En JDT conectamos la IA a tu software a medida y medimos qué hace de verdad en tu negocio.";
+
+window.render = (t) => {
+  fg.clearRect(0, 0, JDT.W, JDT.H);
+  ESC.forEach(([id, a, b]) => $(id).style.display = dentro(t, a, b) ? "block" : "none");
+
+  // E1 gancho (0–2.28): fondo amarillo, palabras que golpean; "IA" destacada
+  if (dentro(t, 0, 2.28)) {
+    const k = Math.min(Q1.length, Math.floor(t / 0.22));
+    $("q1").innerHTML = Q1.slice(0, k).map((w, i) => {
+      const s = seg(t, i * 0.22, i * 0.22 + 0.16, "outExpo");
+      const extra = w === "IA" ? "background:#0A0E27;color:#FACC15;padding:0 .12em;" : "";
+      return `<span style="display:inline-block;${extra}transform:translateY(${lerp(40, 0, s)}px);opacity:${s}">${w}</span>`;
+    }).join(" ");
+    JDT.glitch($("q1"), (1 - seg(t, 0, 0.6, "outExpo")) * 0.9, Math.floor(t * 30));
+    $("m1").style.opacity = seg(t, 1.5, 2.0, "lineal");
+    $("bgE1").style.transform = `translateX(${lerp(-8, 0, seg(t, 0, 0.2))}px)`;
+  }
+
+  // E2 (2.28–7.11): cifra gigante y texto
+  if (dentro(t, 2.28, 7.11)) {
+    const b = seg(t, 2.28, 3.0, "outBack");
+    $("n2").style.transform = `scale(${lerp(0.7, 1, b)})`; $("n2").style.opacity = seg(t, 2.28, 2.8, "lineal");
+    $("t2").innerHTML = `<span style="opacity:${seg(t, 3.0, 3.8, "outExpo")}">dice que la IA los</span><br><span class="clave" style="opacity:${seg(t, 3.8, 4.6, "outExpo")}">hace más competitivos.</span>`;
+    $("s2").textContent = "// 611 directivos de pymes · jun 2026";
+  }
+
+  // E3 pantalla dividida (7.11–13.11): DICEN contra MIDEN; luego "¿?" late
+  if (dentro(t, 7.11, 13.11)) {
+    const s = seg(t, 7.11, 7.9, "outExpo");
+    $("izq3").style.transform = `translateX(${lerp(-120, 0, s)}%)`;
+    $("der3").style.transform = `translateX(${lerp(120, 0, s)}%)`;
+    $("div3").style.transform = `scaleY(${seg(t, 7.11, 7.6, "outExpo")})`;
+    $("t3").style.opacity = seg(t, 8.6, 9.2, "lineal");
+    $("t3").innerHTML = T3.replace("DICEN.", '<span class="clave">DICEN.</span>');
+    $("q3").style.transform = `scale(${1 + 0.06 * Math.sin((t - 10.2) * 4.2) * seg(t, 10.2, 10.9, "lineal")})`;
+  }
+
+  // E4 marquesina (13.11–15.77): filas en sentidos opuestos y ¿MIDEN?
+  if (dentro(t, 13.11, 15.77)) {
+    const p = (t - 13.11) * 260;
+    $("m4a").textContent = M4a.repeat(2); $("m4a").style.transform = `translateX(${-p % 900}px)`;
+    $("m4b").textContent = "CREEN · SIENTEN · CREEN · SIENTEN · "; $("m4b").style.transform = `translateX(${(p % 900) - 900}px)`;
+    $("m4c").style.opacity = seg(t, 14.6, 15.1, "outExpo");
+    $("m4c").style.transform = `scale(${lerp(0.9, 1, seg(t, 14.6, 15.1))})`;
+  }
+
+  // E5 (15.77–22.28): calma; la solución se escribe y luego aparecen tarjetas sin cifras
+  if (dentro(t, 15.77, 22.28)) {
+    const k = Math.floor(seg(t, 15.77, 19.6, "lineal") * T5.length);
+    $("t5").innerHTML = T5.slice(0, Math.max(0, k)).replace("medimos", '<span class="clave">medimos</span>');
+    $("k5a").style.opacity = seg(t, 17.2, 17.7, "outQuart");
+    $("k5b").style.opacity = seg(t, 18.0, 18.5, "outQuart");
+    $("k5c").style.opacity = seg(t, 18.8, 19.3, "outQuart");
+  }
+
+  // E6 cierre (22.28–24.0)
+  if (dentro(t, 22.28, 24.0)) {
+    $("c6").style.opacity = seg(t, 22.28, 22.7, "outQuart");
+    $("c6").style.transform = `translateY(${lerp(60, 0, seg(t, 22.28, 23.0, "outExpo"))}px)`;
+    $("p6").style.opacity = seg(t, 22.9, 23.3, "outQuart");
+  }
+
+  // barrido en el giro (una vez) y destello en el gancho
+  JDT.barrido(fg, dentro(t, 7.0, 7.6) ? (t - 7.0) / 0.6 : 0);
+  JDT.flash($("fx"), t > 2.2 && t < 2.35 ? 1 - (t - 2.2) / 0.15 : 0);
+  JDT.grano(fg, t, .035);
+  JDT.hud($("hud"), t, 24.0, ["GANCHO","DATO","DECIR CONTRA MEDIR","MARQUESINA","SOLUCIÓN","CIERRE"][Math.max(0, ESC.findLastIndex(([, a]) => t >= a))]);
+};
+</script></body></html>

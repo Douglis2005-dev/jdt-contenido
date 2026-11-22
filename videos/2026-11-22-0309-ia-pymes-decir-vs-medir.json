@@ -1,0 +1,177 @@
+{
+  "salida": "videos/2026-11-22-0309-ia-pymes-decir-vs-medir.mp4",
+  "formato": "la pregunta que nadie responde en la junta: pregunta incómoda de frente, lo que dicen los directivos a todo volumen, decir contra medir en pantalla partida, el eco de palabras que nunca llega a una medición, y el remate quieto con la lupa que por fin pide el dato",
+  "concepto": "En las juntas todos DICEN que la IA les funciona, pero cuando alguien pregunta cuánto ahorró este mes la sala se queda en silencio: JDT es quien le pone regla y lupa a lo que la IA de verdad hace en tu negocio.",
+  "produccion": "Tipografía cinética como vestido de todo el video: arranca en amarillo a pantalla completa con la pregunta que golpea palabra por palabra al ritmo de la voz y «IA» que se estira, con glitch y vibra (único golpe fuerte); escena oscura con un megáfono gigante y la palabra DICEN en amarillo que entra con pop, cámara quieta; apoyo pantalla-dividida-dinamica en UNA sola escena con barrido: DECIR arriba en oscuro contra MEDIR abajo en amarillo, con la palabra MEDIR que cae a su sitio; marquesina en azul con persiana: DICEN, CREEN, SIENTEN corren y la última, ¿MIDEN?, queda en amarillo; escena quieta de 4 a 5 s, oscura con viñeta y sin cámara, para respirar: lupa grande y tres tarjetas de medición que entran en orden; cierre con zoom. Ritmo mixto (2-3 s, 2-3 s, 2-3 s, 2-3 s, quieta de 4-5 s, cierre). Sin terminal, notificaciones, contador ni escaneo, para alejarse de los cuatro anteriores.",
+  "tendencias": {
+    "video": "tipografia-cinetica",
+    "apoyo": "pantalla-dividida-dinamica",
+    "gancho": "pregunta-incomoda",
+    "ritmo": "mixto",
+    "banner": "editorial",
+    "pulso": "resumen fechado (22 nov 2026)",
+    "fuentes": [
+      "https://www.rrhhdigital.com/secciones/tecnologia-e-innovacion/796997/la-ia-impulsa-a-las-pymes-el-90-ya-registra-mejoras-en-productividad/"
+    ]
+  },
+  "escenas": [
+    {
+      "tipo": "palabras",
+      "look": "amarillo",
+      "fx": [
+        "glitch",
+        "vibra"
+      ],
+      "frases": [
+        "¿Cuánto te ahorró",
+        "*la IA*",
+        "este mes?"
+      ],
+      "voz": "¿Cuánto te ahorró la IA este mes?"
+    },
+    {
+      "tipo": "libre",
+      "texto": "",
+      "transicion": "desliza-arriba",
+      "voz": "El 90 % de los directivos de pymes dice que la IA los hace más competitivos.",
+      "elementos": []
+    },
+    {
+      "tipo": "dividida",
+      "transicion": "barrido",
+      "etiquetas": [
+        "Lo que se *dice*",
+        "Lo que se *mide*"
+      ],
+      "iconos": [
+        "chat",
+        "lupa"
+      ],
+      "rotulos": [
+        "DICEN",
+        "MIDEN"
+      ],
+      "voz": "Y el 86,6 % reconoce efectos en la productividad. Ojo: eso DICEN."
+    },
+    {
+      "tipo": "marquesina",
+      "look": "azul",
+      "transicion": "persiana",
+      "palabras": [
+        "DICEN",
+        "CREEN",
+        "SIENTEN",
+        "¿MIDEN?"
+      ],
+      "voz": "Dicen, creen, sienten… ¿y quién lo mide?"
+    },
+    {
+      "tipo": "libre",
+      "texto": "",
+      "fx": [
+        "vineta"
+      ],
+      "transicion": "fundido",
+      "voz": "En JDT conectamos la IA a tu software a medida y medimos qué hace de verdad en tu negocio.",
+      "elementos": []
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*",
+      "subtexto": "@technologicsjdt",
+      "transicion": "zoom",
+      "voz": "¡Hablemos de tu proyecto!"
+    }
+  ],
+  "tiempos": {
+    "duracion": 24.0
+  },
+  "validacion": "corregido: revisión del modelo capaz (opus): cadencia del gancho, IA destacada, texto de 'Ojo: eso DICEN.' con fondo, pulso en '¿?', HUD de 6 rótulos, fuente y fecha en pantalla, escenas del JSON alineadas con lo que se ve; locución sin cambios.",
+  "direccion": {
+    "hook": "Pregunta de palabras que golpean sobre fondo amarillo; «IA» en bloque azul marino.",
+    "payoff": "La pregunta del gancho se responde con la pantalla dividida DICEN contra MIDEN y se cierra con el CTA «Hablemos de tu proyecto».",
+    "familias": [
+      "motion-graphics",
+      "mixed-media"
+    ],
+    "beats": [
+      {
+        "inicio": 0,
+        "fin": 2.28,
+        "funcion": "hook",
+        "familia": "motion-graphics",
+        "visual": "Pregunta que aparece palabra por palabra sobre amarillo, con glitch breve."
+      },
+      {
+        "inicio": 2.28,
+        "fin": 5.0,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Cifra 90 % gigante que entra con rebote y frase de apoyo."
+      },
+      {
+        "inicio": 5.0,
+        "fin": 7.11,
+        "funcion": "recompensa",
+        "familia": "mixed-media",
+        "visual": "Tarjeta de vidrio con la nota de fuente y fecha, sobre el fondo azul."
+      },
+      {
+        "inicio": 7.11,
+        "fin": 9.6,
+        "funcion": "giro",
+        "familia": "mixed-media",
+        "visual": "Pantalla dividida: DICEN en azul marino contra MIDEN en amarillo; barrido de cambio."
+      },
+      {
+        "inicio": 9.6,
+        "fin": 12.3,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "Signo de interrogación que late en el lado amarillo mientras aparece el rótulo de dato pendiente."
+      },
+      {
+        "inicio": 12.3,
+        "fin": 13.11,
+        "funcion": "respiro",
+        "familia": "motion-graphics",
+        "visual": "Pausa quieta: solo el rótulo y el fondo azul."
+      },
+      {
+        "inicio": 13.11,
+        "fin": 15.77,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "Marquesina en sentidos opuestos: DICEN, CREEN, SIENTEN y luego ¿MIDEN? en amarillo."
+      },
+      {
+        "inicio": 15.77,
+        "fin": 18.9,
+        "funcion": "demostracion",
+        "familia": "mixed-media",
+        "visual": "Tres tarjetas de vidrio (horas, errores, tareas) sin cifras que aparecen una a una."
+      },
+      {
+        "inicio": 18.9,
+        "fin": 21.5,
+        "funcion": "recompensa",
+        "familia": "motion-graphics",
+        "visual": "Frase de solución que se escribe y resalta «medimos» en amarillo."
+      },
+      {
+        "inicio": 21.5,
+        "fin": 22.28,
+        "funcion": "respiro",
+        "familia": "motion-graphics",
+        "visual": "Pausa breve con las tarjetas ya visibles."
+      },
+      {
+        "inicio": 22.28,
+        "fin": 24.0,
+        "funcion": "cierre",
+        "familia": "motion-graphics",
+        "visual": "CTA «Hablemos de tu proyecto», píldora amarilla con @technologicsjdt."
+      }
+    ]
+  }
+}
