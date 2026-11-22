@@ -143,5 +143,10 @@
     "url": "jdt:reportes-a-mano-gerencia",
     "titulo": "El informe para gerencia que alguien arma a mano cada lunes",
     "fecha": "2026-11-22T17:16:18.887709+00:00"
+  },
+  {
+    "url": "jdt:web-que-no-aparece",
+    "titulo": "Tu página web existe, pero nadie la encuentra en Google",
+    "fecha": "2026-11-22T20:14:14.958361+00:00"
   }
 ]
