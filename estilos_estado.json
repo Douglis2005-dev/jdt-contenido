@@ -15,6 +15,14 @@
       "gancho": "nadie-te-cuenta",
       "ritmo": "contemplativo",
       "banner": "bento"
+    },
+    {
+      "fecha": "2026-11-22T12:10:02",
+      "video": "interfaz-en-movimiento",
+      "apoyo": "datos-que-se-arman",
+      "gancho": "cuenta-regresiva",
+      "ritmo": "rapido",
+      "banner": "terminal-ui"
     }
   ]
 }

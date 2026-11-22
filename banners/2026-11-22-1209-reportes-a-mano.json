@@ -1,0 +1,10 @@
+{
+  "salida": "banners/2026-11-22-1209-reportes-a-mano.png",
+  "estilo": "terminal-ui",
+  "titulo": "¿Cada lunes armas el *informe* a mano?",
+  "subtitulo": "Copiar y pegar entre hojas también es trabajo que se puede automatizar.",
+  "puntos": ["Conectamos tus hojas y sistemas", "El informe se arma solo", "Llega solo al correo de gerencia"],
+  "cta": "Hablemos de tu proyecto",
+  "icono": "documento",
+  "etiqueta": "AUTOMATIZACIÓN"
+}
