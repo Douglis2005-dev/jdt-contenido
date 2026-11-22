@@ -110,6 +110,10 @@ def validar(guion: dict) -> dict:
             continue
         if inicio < 0 or fin <= inicio:
             errores.append(f"Beat {indice}: intervalo inválido ({inicio}, {fin}).")
+        if fin - inicio > MAX_BEAT:
+            errores.append(f"Beat {indice} dura {fin - inicio:.2f} s; máximo {MAX_BEAT:g} s.")
+        if normalizados and inicio < normalizados[-1]["inicio"]:
+            errores.append(f"Beat {indice}: los beats deben estar ordenados cronológicamente.")
         funcion = beat.get("funcion")
         familia = beat.get("familia")
         visual = beat.get("visual")
@@ -138,9 +142,6 @@ def validar(guion: dict) -> dict:
             errores.append("Falta una demostración, giro o recompensa después del hook.")
 
         for actual, siguiente in zip(normalizados, normalizados[1:]):
-            longitud = actual["fin"] - actual["inicio"]
-            if longitud > MAX_BEAT:
-                errores.append(f"Beat {actual['indice']} dura {longitud:.2f} s; máximo {MAX_BEAT:g} s.")
             hueco = siguiente["inicio"] - actual["fin"]
             if hueco > MAX_HUECO:
                 errores.append(f"Hay {hueco:.2f} s sin beat entre {actual['indice']} y {siguiente['indice']}.")
