@@ -112,6 +112,48 @@ def github_nuevos(limite: int = 15) -> list[dict]:
     ]
 
 
+# Temas propios de JDT: dolores reales del cliente ideal (marca.md) que se conectan con un
+# servicio. No dependen de noticias ni de cifras externas, asi que SIEMPRE hay tema para
+# promocionar a JDT aunque las fuentes de la nube fallen o ninguna noticia se pueda verificar.
+# Al usarlos se marcan con su url "jdt:slug" como cualquier tema.
+TEMAS_JDT = [
+    ("hojas-de-calculo-dispersas", "Tu negocio vive en diez hojas de cálculo que nadie cuadra", "Software a medida"),
+    ("sistemas-que-no-se-hablan", "Contabilidad, ERP y CRM que no se hablan: copiar y pegar todo el día", "Software a medida (integraciones por API)"),
+    ("reportes-a-mano-gerencia", "El informe para gerencia que alguien arma a mano cada lunes", "Automatización de procesos (reportes automáticos)"),
+    ("equipo-en-campo-sin-app", "Tu equipo en campo reporta por WhatsApp y fotos sueltas", "Apps móviles (apps internas para equipos en campo)"),
+    ("web-que-no-aparece", "Tu página web existe, pero nadie la encuentra en Google", "Desarrollo web (SEO)"),
+    ("reservas-por-chat", "Citas y reservas que se pierden entre mensajes de chat", "Apps móviles (reservas y citas)"),
+    ("aprobaciones-por-correo", "Aprobaciones que se quedan atascadas en una cadena de correos", "Automatización de procesos (aprobaciones y notificaciones)"),
+    ("software-generico-se-queda-corto", "Cuando el software genérico te obliga a cambiar tu proceso", "Software a medida («se adapta a tu proceso, no al revés»)"),
+    ("portal-de-clientes", "Clientes que llaman diez veces para saber cómo va su pedido", "Software a medida (portales para clientes)"),
+    ("documentos-a-mano", "Facturas y documentos que alguien transcribe dato por dato", "Automatización con IA (extraer datos de documentos, con revisión humana)"),
+    ("catalogo-y-tienda-online", "Vender por catálogo en PDF cuando podrías tener tienda online", "Desarrollo web (catálogos y tiendas online)"),
+    ("mvp-para-validar", "Tienes la idea de una app: pruébala con un MVP antes de gastar de más", "Apps móviles (prototipos y MVP)"),
+    ("pagas-funciones-que-no-usas", "Pagas licencias llenas de funciones que nunca usas", "Software a medida (pagas solo lo que necesitas)"),
+    ("control-de-tus-datos", "¿Quién controla los datos de tu negocio?", "Software a medida (más control sobre tus datos)"),
+    ("como-trabaja-jdt", "Analizamos, desarrollamos, entregamos: así se construye tu sistema", "Proceso JDT en tres pasos"),
+]
+
+
+def temas_propios(limite: int = 5) -> list[dict]:
+    """Temas propios de JDT aun no usados; si ya se usaron todos, los usados hace mas tiempo."""
+    historial = cargar_historial()
+    ultima_vez = {h["url"]: h.get("fecha", "") for h in historial}
+    candidatos = [
+        {
+            "fuente": "JDT (marca.md)",
+            "titulo": titulo,
+            "url": f"jdt:{slug}",
+            "servicio": servicio,
+            "requiere_fuente_externa": False,
+        }
+        for slug, titulo, servicio in TEMAS_JDT
+    ]
+    # Primero los nunca usados (fecha vacia), luego los mas antiguos.
+    candidatos.sort(key=lambda t: ultima_vez.get(t["url"], ""))
+    return candidatos[:limite]
+
+
 def cargar_historial() -> list[dict]:
     if HISTORIAL.exists():
         return json.loads(HISTORIAL.read_text(encoding="utf-8"))
@@ -193,6 +235,9 @@ def recolectar(maximo: int) -> dict:
         "errores": errores,
         "titulos_usados_recientes": [h["titulo"] for h in cargar_historial()[-20:]],
         "temas": unicos[:maximo],
+        # Respaldo garantizado: si ningun tema de "temas" cumple los criterios o no se puede
+        # verificar, se usa uno de estos (no necesitan fuente externa). Ver INSTRUCCIONES.md paso 3.
+        "temas_propios_jdt": temas_propios(),
     }
 
 
