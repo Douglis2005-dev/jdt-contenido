@@ -1,0 +1,348 @@
+{
+  "salida": "videos/2026-11-22-0609-procesos-en-la-cabeza.mp4",
+  "formato": "reel-vertical",
+  "concepto": "El manual de tu negocio no está en ningún cajón: está en la cabeza de una sola persona, y el día que ella sale a vacaciones la empresa descubre que nadie sabe cotizar; JDT saca ese saber de la cabeza y lo deja escrito en un sistema a la medida.",
+  "produccion": "Microdocumental cinemático en cinco planos contemplativos con luz lateral azul y dorada: abre en look azul con un plano detalle de una cabeza pensando y un anillo dorado que se acerca con cámara acerca (gancho nadie-te-cuenta); plano de contexto oscuro con viñeta donde tres saberes cuelgan de esa cabeza por hilos punteados; apoyo motion-modular en UNA escena de problema con tarjetas de estado en gris que caen bajo un calendario de vacaciones, único momento fuerte con vibra; giro con transición círculo a look amarillo donde un documento central reparte el saber a tres áreas y un equipo; cierre con fundido. Sin glitch, marquesina, terminal ni pantalla dividida, para alejarse de tipografía cinética y de decir-vs-medir.",
+  "tendencias": {
+    "video": "microdocumental-cinematico",
+    "apoyo": "motion-modular",
+    "gancho": "nadie-te-cuenta",
+    "ritmo": "contemplativo",
+    "banner": "bento",
+    "pulso": "resumen fechado 2026-11-22",
+    "fuentes": [
+      "https://www.portafolio.co/negocios/empresas/cada-vez-mas-pymes-le-apuestan-a-la-ia-pero-la-mayoria-no-tiene-claro-como-deben-hacerlo-para-tener-exito-491046",
+      "https://sproutsocial.com/insights/instagram-reel-ideas/"
+    ]
+  },
+  "escenas": [
+    {
+      "tipo": "libre",
+      "look": "azul",
+      "camara": "acerca",
+      "transicion": "fundido",
+      "texto": "Lo que *nadie* te cuenta",
+      "duracion": 3,
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "anillo",
+          "x": 50,
+          "y": 60,
+          "ancho": 44,
+          "alto": 44,
+          "color": "dorado",
+          "entra": "dibuja",
+          "opacidad": 0.7
+        },
+        {
+          "el": "icono",
+          "nombre": "persona-pensando",
+          "x": 50,
+          "y": 60,
+          "tam": 30,
+          "color": "blanco",
+          "entra": "aparece",
+          "mueve": "flota"
+        },
+        {
+          "el": "icono",
+          "nombre": "chispa",
+          "x": 66,
+          "y": 47,
+          "tam": 10,
+          "color": "amarillo",
+          "entra": "pop",
+          "mueve": "late"
+        }
+      ],
+      "voz": "Lo que nadie te cuenta de tu negocio..."
+    },
+    {
+      "tipo": "libre",
+      "fx": [
+        "vineta"
+      ],
+      "transicion": "fundido",
+      "texto": "Todo vive en *una cabeza*",
+      "duracion": 5.5,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "usuario",
+          "x": 50,
+          "y": 46,
+          "tam": 18,
+          "color": "blanco",
+          "entra": "aparece"
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 53,
+          "a": [
+            20,
+            72
+          ],
+          "estilo": "punteada",
+          "color": "dorado",
+          "entra": "dibuja"
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 53,
+          "a": [
+            50,
+            72
+          ],
+          "estilo": "punteada",
+          "color": "dorado",
+          "entra": "dibuja"
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 53,
+          "a": [
+            80,
+            72
+          ],
+          "estilo": "punteada",
+          "color": "dorado",
+          "entra": "dibuja"
+        },
+        {
+          "el": "icono",
+          "nombre": "tabla",
+          "x": 20,
+          "y": 78,
+          "tam": 12,
+          "color": "amarillo",
+          "entra": "baja",
+          "mueve": "balancea"
+        },
+        {
+          "el": "icono",
+          "nombre": "moneda",
+          "x": 50,
+          "y": 78,
+          "tam": 12,
+          "color": "amarillo",
+          "entra": "baja",
+          "mueve": "balancea"
+        },
+        {
+          "el": "icono",
+          "nombre": "telefono",
+          "x": 80,
+          "y": 78,
+          "tam": 12,
+          "color": "amarillo",
+          "entra": "baja",
+          "mueve": "balancea"
+        }
+      ],
+      "voz": "Cómo se cotiza, cómo se factura, a quién llamar si algo falla... todo vive en la cabeza de UNA persona."
+    },
+    {
+      "tipo": "libre",
+      "fx": [
+        "vibra"
+      ],
+      "transicion": "persiana",
+      "texto": "Y se fue de *vacaciones*",
+      "duracion": 4.5,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "calendario",
+          "x": 50,
+          "y": 48,
+          "tam": 20,
+          "color": "dorado",
+          "entra": "pop"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Cotización en espera",
+          "icono": "reloj",
+          "x": 50,
+          "y": 66,
+          "color": "gris",
+          "entra": "baja"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Factura sin enviar",
+          "icono": "alerta",
+          "x": 50,
+          "y": 80,
+          "color": "gris",
+          "entra": "baja",
+          "mueve": "tiembla"
+        }
+      ],
+      "voz": "Uy... y el día que se va de vacaciones, todo se queda quieto."
+    },
+    {
+      "tipo": "libre",
+      "look": "amarillo",
+      "transicion": "circulo",
+      "texto": "*Escrito*, visible y recuperable",
+      "duracion": 5.5,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "documento",
+          "x": 50,
+          "y": 50,
+          "tam": 24,
+          "entra": "pop",
+          "mueve": "flota"
+        },
+        {
+          "el": "linea",
+          "x": 44,
+          "y": 58,
+          "a": [
+            22,
+            74
+          ],
+          "estilo": "flecha",
+          "pulso": true
+        },
+        {
+          "el": "linea",
+          "x": 56,
+          "y": 58,
+          "a": [
+            78,
+            74
+          ],
+          "estilo": "flecha",
+          "pulso": true
+        },
+        {
+          "el": "icono",
+          "nombre": "carpeta",
+          "x": 20,
+          "y": 80,
+          "tam": 13,
+          "entra": "sube"
+        },
+        {
+          "el": "icono",
+          "nombre": "equipo",
+          "x": 80,
+          "y": 80,
+          "tam": 13,
+          "entra": "sube",
+          "mueve": "late"
+        }
+      ],
+      "voz": "En JDT lo dejamos escrito en un sistema a tu medida: visible, ordenado y listo para cualquiera."
+    },
+    {
+      "tipo": "cierre",
+      "transicion": "fundido",
+      "texto": "Hablemos de tu proyecto",
+      "subtexto": "@technologicsjdt",
+      "duracion": 3,
+      "voz": "Hablemos de tu proyecto."
+    }
+  ],
+  "audio": "videos/2026-11-22-0609-procesos-en-la-cabeza.mp3",
+  "tiempos": {
+    "inicios": [
+      0.0,
+      2.94,
+      9.83,
+      14.23,
+      21.03
+    ],
+    "retardo": 0.3,
+    "duracion": 23.82
+  },
+  "direccion": {
+    "hook": "Titulo 'Lo que nadie te cuenta' con letras que entran sobre un anillo dorado que gira; sin glitch",
+    "payoff": "El saber del negocio queda escrito en un documento visible, que llega a una carpeta y al equipo; cierre con llamado a la accion",
+    "familias": [
+      "motion-graphics",
+      "mixed-media"
+    ],
+    "beats": [
+      {
+        "inicio": 0,
+        "fin": 2.4,
+        "funcion": "hook",
+        "familia": "motion-graphics",
+        "visual": "Titulo con letras que entran sobre anillo dorado girando"
+      },
+      {
+        "inicio": 2.4,
+        "fin": 5.0,
+        "funcion": "contexto",
+        "familia": "motion-graphics",
+        "visual": "Nodo 'Una persona' con tres hilos punteados hacia tarjetas Cotizar, Facturar, Responder"
+      },
+      {
+        "inicio": 5.0,
+        "fin": 7.6,
+        "funcion": "contexto",
+        "familia": "motion-graphics",
+        "visual": "Pregunta '¿Quién sabe cotizar?' se escribe; el nodo y las tarjetas quedan en pantalla"
+      },
+      {
+        "inicio": 7.6,
+        "fin": 9.8,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "La pregunta se desvanece y el nodo permanece; transicion hacia el problema"
+      },
+      {
+        "inicio": 9.8,
+        "fin": 12.2,
+        "funcion": "giro",
+        "familia": "mixed-media",
+        "visual": "Persiana navy; calendario de vacaciones con vibracion breve y dos tarjetas grises que entran"
+      },
+      {
+        "inicio": 12.2,
+        "fin": 14.2,
+        "funcion": "respiro",
+        "familia": "motion-graphics",
+        "visual": "Plano quieto: 'Todo se queda quieto.' sobre el calendario, sin movimiento salvo grano"
+      },
+      {
+        "inicio": 14.2,
+        "fin": 16.0,
+        "funcion": "giro",
+        "familia": "mixed-media",
+        "visual": "Fondo amarillo que se abre en circulo; documento navy al centro"
+      },
+      {
+        "inicio": 16.0,
+        "fin": 18.0,
+        "funcion": "demostracion",
+        "familia": "mixed-media",
+        "visual": "Hilos desde el documento hacia Carpeta y Equipo; texto 'El saber, escrito'"
+      },
+      {
+        "inicio": 18.0,
+        "fin": 21.0,
+        "funcion": "recompensa",
+        "familia": "motion-graphics",
+        "visual": "Fondo vuelve a navy; tarjetas de carpeta y equipo quedan visibles como payoff"
+      },
+      {
+        "inicio": 21.0,
+        "fin": 23.8,
+        "funcion": "cierre",
+        "familia": "motion-graphics",
+        "visual": "Logo, 'Hablemos de tu proyecto.' y pildora @technologicsjdt"
+      }
+    ]
+  },
+  "validacion": "corregido: se quitó el glitch del gancho; se agregó 'Y se va de vacaciones' antes de 10,3 s; etiquetas y texto amarillo alineados con la locución; tarjeta Factura centrada; rótulo documental y empuje lento de cámara en la escena de contexto"
+}
