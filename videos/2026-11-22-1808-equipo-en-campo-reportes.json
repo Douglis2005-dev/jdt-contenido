@@ -1,0 +1,425 @@
+{
+  "salida": "videos/2026-11-22-1808-equipo-en-campo-reportes.mp4",
+  "formato": "«3 señales de que…» en clave de fanzine de oficina: una página clara tras otra, cada señal con su número enorme y una anotación amarilla hecha a mano sobre el reporte suelto (la foto sin contexto, el «ya quedó», el chat copiado a Excel); en el giro la página se voltea y esas mismas tres marcas a mano aterrizan como los tres campos de la app de JDT en un teléfono dorado sobre azul marino; cierre limpio.",
+  "concepto": "Las rayas amarillas que la oficina le hace a mano a cada foto y cada «ya quedó» del WhatsApp del equipo en campo son, en realidad, los campos de una app que falta: JDT TECHNOLOGICS convierte esas tres anotaciones en la app móvil donde el reporte llega completo (foto, lugar y estado).",
+  "produccion": "Editorial-zine como vestido de todo el Reel: papel CLARO (blanco y gris azulado alternando por página) con tinta azul marino, composición asimétrica que cambia de lado en cada señal, números gigantes 3-1-2-3 como folio de revista, y anotaciones a mano en amarillo que se DIBUJAN (círculo, flecha, subrayado, círculo sobre la hoja de Excel); grano de papel suave en el gancho. Ritmo rápido: gancho de 2,8 s y señales de 2,4 a 3 s con cortes de pasar página. Giro: transición giro a look azul con apoyo dorado-3d en UNA sola escena: teléfono dorado con volumen que gira lento mientras las tres marcas amarillas viajan y se vuelven los campos Foto, Lugar y Estado; único destello del video. Cierre con fundido.",
+  "fuente": "marca.md",
+  "tendencias": {
+    "video": "editorial-zine",
+    "apoyo": "dorado-3d",
+    "gancho": "tres-senales",
+    "ritmo": "rapido",
+    "banner": "vidrio-liquido",
+    "pulso": "2026-11-22: búsquedas Reels/motion 2026 (Metricool, Opus Pro): formatos cortos verticales con texto que carga el mensaje, edición tipo revista y gancho que decide; sin cifras verificadas. Aplicación JDT: anotaciones a mano sobre un reporte real del equipo y la app como respuesta.",
+    "fuentes": [
+      "https://metricool.com/instagram-trends/",
+      "https://www.opus.pro/es-es/blog/editing-aesthetics-dominating-short-form-2026"
+    ]
+  },
+  "escenas": [
+    {
+      "tipo": "libre",
+      "fx": [
+        "grano"
+      ],
+      "camara": "empuja",
+      "duracion": 2.8,
+      "elementos": [
+        {
+          "el": "texto",
+          "texto": "3",
+          "x": 26,
+          "y": 30,
+          "tam": "xl",
+          "color": "blanco",
+          "entra": "pop",
+          "t": 0
+        },
+        {
+          "el": "forma",
+          "forma": "anillo",
+          "x": 26,
+          "y": 30,
+          "ancho": 30,
+          "alto": 30,
+          "color": "amarillo",
+          "entra": "dibuja",
+          "t": 0.12
+        },
+        {
+          "el": "texto",
+          "texto": "señales:",
+          "x": 66,
+          "y": 32,
+          "tam": "l",
+          "color": "gris",
+          "entra": "izquierda",
+          "t": 0.08
+        },
+        {
+          "el": "texto",
+          "texto": "Tu equipo reporta *por WhatsApp*",
+          "x": 50,
+          "y": 56,
+          "tam": "xl",
+          "ancho": 86,
+          "entra": "sube",
+          "t": 0.2
+        },
+        {
+          "el": "linea",
+          "x": 22,
+          "y": 66,
+          "a": [
+            80,
+            67
+          ],
+          "estilo": "solida",
+          "color": "amarillo",
+          "entra": "dibuja",
+          "t": 0.45
+        },
+        {
+          "el": "icono",
+          "nombre": "telefono",
+          "x": 78,
+          "y": 81,
+          "tam": 14,
+          "color": "blanco",
+          "entra": "pop",
+          "mueve": "tiembla",
+          "t": 0.3
+        }
+      ],
+      "voz": "Tres señales de que tu equipo en campo reporta por WhatsApp."
+    },
+    {
+      "tipo": "libre",
+      "transicion": "desliza-izq",
+      "camara": "paneo",
+      "texto": "Una foto *sin contexto*",
+      "duracion": 2.6,
+      "elementos": [
+        {
+          "el": "texto",
+          "texto": "1",
+          "x": 18,
+          "y": 46,
+          "tam": "xl",
+          "color": "blanco",
+          "entra": "pop",
+          "t": 0
+        },
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 62,
+          "y": 60,
+          "ancho": 46,
+          "alto": 30,
+          "color": "superficie",
+          "giro": -6,
+          "entra": "baja",
+          "t": 0.1
+        },
+        {
+          "el": "icono",
+          "nombre": "pregunta",
+          "x": 62,
+          "y": 60,
+          "tam": 16,
+          "color": "gris",
+          "giro": -6,
+          "entra": "aparece",
+          "t": 0.2
+        },
+        {
+          "el": "linea",
+          "x": 22,
+          "y": 80,
+          "a": [
+            44,
+            68
+          ],
+          "estilo": "flecha",
+          "color": "amarillo",
+          "entra": "dibuja",
+          "t": 0.4
+        },
+        {
+          "el": "texto",
+          "texto": "¿De dónde es?",
+          "x": 26,
+          "y": 85,
+          "tam": "s",
+          "color": "amarillo",
+          "giro": -4,
+          "entra": "aparece",
+          "t": 0.55
+        }
+      ],
+      "voz": "Uno: llega una foto suelta... ¿y eso de dónde es?"
+    },
+    {
+      "tipo": "libre",
+      "transicion": "desliza-arriba",
+      "camara": "latido",
+      "texto": "«Ya quedó». *¿Qué* quedó?",
+      "duracion": 2.4,
+      "elementos": [
+        {
+          "el": "texto",
+          "texto": "2",
+          "x": 82,
+          "y": 46,
+          "tam": "xl",
+          "color": "blanco",
+          "entra": "pop",
+          "t": 0
+        },
+        {
+          "el": "burbuja",
+          "texto": "Ya quedó",
+          "x": 38,
+          "y": 56,
+          "cola": "izq",
+          "color": "blanco",
+          "ancho": 44,
+          "entra": "izquierda",
+          "t": 0.1
+        },
+        {
+          "el": "linea",
+          "x": 20,
+          "y": 63,
+          "a": [
+            56,
+            63
+          ],
+          "estilo": "punteada",
+          "color": "amarillo",
+          "entra": "dibuja",
+          "t": 0.35
+        },
+        {
+          "el": "icono",
+          "nombre": "pregunta",
+          "x": 70,
+          "y": 74,
+          "tam": 14,
+          "color": "amarillo",
+          "entra": "pop",
+          "mueve": "balancea",
+          "t": 0.5
+        },
+        {
+          "el": "texto",
+          "texto": "¿Dónde? ¿Cuándo?",
+          "x": 36,
+          "y": 78,
+          "tam": "s",
+          "color": "gris",
+          "giro": 3,
+          "entra": "aparece",
+          "t": 0.6
+        }
+      ],
+      "voz": "Dos: «Ya quedó». ¿Qué quedó? ¡Nadie sabe!"
+    },
+    {
+      "tipo": "libre",
+      "transicion": "barrido",
+      "camara": "paneo-der",
+      "fx": [
+        "vineta"
+      ],
+      "texto": "La oficina lo pasa *a mano*",
+      "duracion": 3.0,
+      "elementos": [
+        {
+          "el": "texto",
+          "texto": "3",
+          "x": 18,
+          "y": 46,
+          "tam": "xl",
+          "color": "blanco",
+          "entra": "pop",
+          "t": 0
+        },
+        {
+          "el": "icono",
+          "nombre": "chat",
+          "x": 34,
+          "y": 66,
+          "tam": 14,
+          "color": "gris",
+          "entra": "aparece",
+          "t": 0.1
+        },
+        {
+          "el": "linea",
+          "x": 44,
+          "y": 66,
+          "a": [
+            62,
+            66
+          ],
+          "estilo": "flecha",
+          "color": "gris",
+          "entra": "dibuja",
+          "t": 0.25
+        },
+        {
+          "el": "icono",
+          "nombre": "tabla",
+          "x": 74,
+          "y": 64,
+          "tam": 18,
+          "color": "blanco",
+          "entra": "pop",
+          "t": 0.35
+        },
+        {
+          "el": "forma",
+          "forma": "anillo",
+          "x": 74,
+          "y": 64,
+          "ancho": 28,
+          "alto": 28,
+          "color": "amarillo",
+          "entra": "dibuja",
+          "t": 0.55
+        },
+        {
+          "el": "texto",
+          "texto": "Otra vez.",
+          "x": 72,
+          "y": 83,
+          "tam": "s",
+          "color": "amarillo",
+          "giro": -4,
+          "entra": "aparece",
+          "t": 0.7
+        }
+      ],
+      "voz": "Tres: alguien en la oficina pasa el chat a Excel... a MANO."
+    },
+    {
+      "tipo": "libre",
+      "look": "azul",
+      "transicion": "giro",
+      "camara": "giro-lento",
+      "fx": [
+        "destello"
+      ],
+      "texto": "*JDT*: la app de tu *equipo en campo*",
+      "duracion": 5.0,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "telefono",
+          "x": 62,
+          "y": 64,
+          "tam": 32,
+          "color": "dorado",
+          "entra": "pop",
+          "mueve": "flota",
+          "t": 0
+        },
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 24,
+          "y": 48,
+          "ancho": 34,
+          "alto": 7,
+          "color": "amarillo",
+          "entra": "izquierda",
+          "t": 0.25
+        },
+        {
+          "el": "texto",
+          "texto": "Foto",
+          "x": 24,
+          "y": 48,
+          "tam": "s",
+          "color": "fondo",
+          "t": 0.3
+        },
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 24,
+          "y": 62,
+          "ancho": 34,
+          "alto": 7,
+          "color": "amarillo",
+          "entra": "izquierda",
+          "t": 0.4
+        },
+        {
+          "el": "texto",
+          "texto": "Lugar",
+          "x": 24,
+          "y": 62,
+          "tam": "s",
+          "color": "fondo",
+          "t": 0.45
+        },
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 24,
+          "y": 76,
+          "ancho": 40,
+          "alto": 7,
+          "color": "amarillo",
+          "entra": "izquierda",
+          "t": 0.55
+        },
+        {
+          "el": "texto",
+          "texto": "Estado: hecho",
+          "x": 24,
+          "y": 76,
+          "tam": "s",
+          "color": "fondo",
+          "t": 0.6
+        },
+        {
+          "el": "icono",
+          "nombre": "check",
+          "x": 84,
+          "y": 44,
+          "tam": 10,
+          "color": "amarillo",
+          "entra": "pop",
+          "mueve": "late",
+          "t": 0.75
+        }
+      ],
+      "voz": "En JDT TECHNOLOGICS hacemos la app móvil de tu equipo: foto, lugar y estado en un solo reporte."
+    },
+    {
+      "tipo": "cierre",
+      "transicion": "fundido",
+      "texto": "Hablemos de *tu proyecto*",
+      "subtexto": "@technologicsjdt",
+      "duracion": 2.6,
+      "voz": "Hablemos de tu proyecto."
+    }
+  ],
+  "tiempos": {
+    "inicios": [
+      0.0,
+      3.91,
+      8.63,
+      12.87,
+      17.4,
+      24.23
+    ],
+    "retardo": 0.3,
+    "duracion": 26.94
+  },
+  "audio": "videos/2026-11-22-1808-equipo-en-campo-reportes.mp3"
+}

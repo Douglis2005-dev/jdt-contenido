@@ -148,5 +148,10 @@
     "url": "jdt:web-que-no-aparece",
     "titulo": "Tu página web existe, pero nadie la encuentra en Google",
     "fecha": "2026-11-22T20:14:14.958361+00:00"
+  },
+  {
+    "url": "jdt:equipo-en-campo-sin-app",
+    "titulo": "Tu equipo en campo reporta por WhatsApp y fotos sueltas",
+    "fecha": "2026-11-22T23:16:34.616377+00:00"
   }
 ]
