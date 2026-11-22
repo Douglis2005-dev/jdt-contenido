@@ -35,13 +35,13 @@ PREPARACIÓN (lo primero, antes de todo)
 CÓMO REPARTIR EL TRABAJO (pedido expreso del dueño de esta tarea: gastar poco, pero con buenas ideas)
 - DIRECCIÓN CREATIVA (pasos 1 a 4: tema, concepto y guion): la hace el coordinador, tú, si eres Sonnet, Opus o Fable. Es poco texto y es lo que decide si el video es bueno. Si eres un modelo Haiku, haz los pasos 1 a 3 y pídele el concepto y el guion del paso 4 al modelo capaz (cuenta como una de sus consultas).
 - PRODUCCIÓN (pasos 5 a 12: voz, video, revisión de cuadros, caption, banner, guardar y subir): la hace el modelo más barato. Si tú ya eres Haiku, hazla tú. Si no, lanza UN subagente con la herramienta Agent (model: "haiku", subagent_type: "general-purpose"), pásale el guion ya guardado (con su campo "tendencias"), el JSON que devolvió estilos.py (estilo del día), el texto de lecciones.md, el modo de la ejecución y, si es de mejora, el diagnóstico con el comentario del revisor, el tema, la url, los hechos confirmados y completas las secciones LO QUE PIDIÓ EL DUEÑO, PREPARACIÓN, CARPETA, los PASOS 5 a 12 y REGLAS, y espera su informe. Tú no repitas su trabajo.
-- El subagente no puede llamar al modelo capaz: dile que haga los pasos 5 a 8 hasta tener el caption y el banner (sin la revisión final), que NO haga el paso 9 todavía y que te devuelva rutas del guion, MP4, audio y PNG, qué voz usó (ElevenLabs o local), locución, caption, créditos de voz y problemas. Tú haces la REVISIÓN FINAL y luego le reenvías las correcciones con SendMessage para que las aplique y haga los pasos 9 a 12. Dile también que las herramientas de ElevenLabs y de Google Drive son diferidas y se cargan con ToolSearch (busca "account_get_usage creative_generate_speech creative_get_flow_run_status creative_transcribe_audio" y "Google Drive create_file"). Si el subagente no tiene el conector de Google Drive, haz tú el paso 11 con las rutas que te devuelva.
+- El subagente no puede llamar al modelo capaz: dile que haga los pasos 5 a 8 hasta tener el caption y el banner (sin la revisión final), que NO haga el paso 9 todavía y que te devuelva rutas del guion, MP4, audio y PNG, qué voz usó (ElevenLabs o local), locución, caption, créditos de voz y problemas. Tú haces la REVISIÓN FINAL y luego le reenvías las correcciones con SendMessage para que las aplique y haga los pasos 9 a 12. Dile también que las herramientas de ElevenLabs son diferidas y se cargan con ToolSearch (busca "account_get_usage creative_generate_speech creative_get_flow_run_status creative_transcribe_audio").
 - Si el subagente no logra que una escena libre se vea bien tras un intento de arreglo, que te devuelva los cuadros y la corriges tú (eres quien la diseñó).
 - El modelo más capaz (herramienta Agent con model: "fable"; si no está disponible, "opus") se usa solo para:
   1. REVISIÓN FINAL obligatoria, una sola vez por ejecución (paso 8).
   2. ATASCO: el mismo comando falla dos veces seguidas, hay duda de si un dato de la fuente es cierto, o el resultado no pasa la autorrevisión después de un intento de arreglo. Se le manda el error o la duda exacta y los archivos; se aplica lo que responda.
   3. El concepto y el guion, solo cuando el coordinador es Haiku.
-- Máximo 4 consultas al modelo capaz por ejecución (la validación 3b puede usar hasta 2). La validación con el modelo capaz NO es opcional: si la herramienta Agent con fable u opus no está disponible o falla, dilo en el informe como fallo y haz la revisión tú con la misma rúbrica, pero no la omitas. Si después de eso sigue fallando, se detiene y se informa qué falló (y aun así se hacen los pasos 10 y 11 con lo que haya, para no perder el historial).
+- Máximo 4 consultas al modelo capaz por ejecución (la validación 3b puede usar hasta 2). La validación con el modelo capaz NO es opcional: si la herramienta Agent con fable u opus no está disponible o falla, dilo en el informe como fallo y haz la revisión tú con la misma rúbrica, pero no la omitas. Si después de eso sigue fallando, se detiene y se informa qué falló (y aun así se hace el paso 10 con lo que haya, para no perder el historial).
 
 CARPETA (raíz del repositorio)
 - INSTRUCCIONES.md: este texto.
@@ -63,7 +63,7 @@ CARPETA (raíz del repositorio)
 - videos/prueba-formato.json: muestra cómo se ESCRIBE cada tipo de elemento de una escena libre (no es un video real ni una idea que se pueda copiar). videos/: aquí van guion, audio y video de cada ejecución.
 - banners/prueba.json: ejemplo de banner. banners/: aquí van el JSON y el PNG de cada ejecución.
 - borradores/: un .md por ejecución con todo lo producido.
-- sincronizar_drive.py y subir_drive.py: respaldo manual desde el PC del dueño. En la nube NO se ejecutan; la subida a Google Drive se hace en el paso 11 con el conector.
+- sincronizar_drive.py, subir_drive.py y liviano.py: herramientas manuales del dueño. El agente NO los ejecuta y NO sube nada a Google Drive (pedido del dueño, 2026-11-22).
 NOMBRES DE ARCHIVO: usa siempre AAAA-MM-DD-HHMM-tema (fecha y hora de Colombia al inicio de la ejecución, por ejemplo 2026-11-16-0300-cambio-dominio), en todos los archivos (json, mp3, mp4, png, md).
 
 
@@ -172,7 +172,7 @@ PASOS
       `python3 voz_local.py "videos/AAAA-MM-DD-HHMM-tema.json"`
       Dice cada "voz" con una voz en español, guarda el MP3, y deja en el guion "audio", la "duracion" exacta de cada escena y "sincronia": "exacta" (no toques esos campos). Anota en el borrador y en el informe «voz local de respaldo» y por qué no se usó ElevenLabs.
       Escribe los "voz" como se leen: la voz local ya sabe decir JDT Technologics, IA, app, WhatsApp, CRM, ERP y API; evita otras siglas y palabras en inglés.
-   Si también fallara B, es un ATASCO: consulta al modelo capaz. Un video sin voz NO se entrega ni se sube a Drive; en ese caso extremo se informa el fallo en el paso 12 y solo se sube el banner.
+   Si también fallara B, es un ATASCO: consulta al modelo capaz. Un video sin voz NO se entrega; en ese caso extremo se informa el fallo en el paso 12 y solo se guarda el banner.
 
 6. ELIGE EL MOTOR Y GENERA EL VIDEO.
    Regla: usa el MOTOR HTML (6B) por defecto, es el que da el acabado que pidió el dueño. Usa el motor Pillow (6A) solo si 6B falla dos veces (Chrome no abre, errores) o si el concepto es una prefabricada simple. Alterna: si el video anterior se hizo con 6B, haz que este tenga una paleta de escenas y efectos distinta (no repitas la misma secuencia de efectos).
@@ -205,21 +205,15 @@ PASOS
 
 10. GUARDAR EN EL REPOSITORIO (así la próxima ejecución ve el historial y el turno de voz, y queda copia de respaldo):
    ```
-   git add videos/ banners/ borradores/ html/ historial.json voz_estado.json estilos_estado.json tendencias_vivas.md calidad_estado.json lecciones.md   (los -liviano.mp4 también se guardan; no pasa nada)
+   git add videos/ banners/ borradores/ html/ historial.json voz_estado.json estilos_estado.json tendencias_vivas.md calidad_estado.json lecciones.md
    git commit -m "contenido: AAAA-MM-DD-HHMM-tema"
    git pull --rebase origin main && git push origin HEAD:main
    ```
    No subas los cuadros de revisión (quedan en /tmp). Si el push falla, reintenta UNA vez tras `git pull --rebase origin main`; si vuelve a fallar, empuja a una rama `contenido/AAAA-MM-DD-HHMM-tema` y anótalo en el informe («quedó en la rama X, falta pasarlo a main»).
 
-11. SUBIR A GOOGLE DRIVE con el conector de Google Drive (carpeta «jdt technologics» de la cuenta technologicsjdt). La herramienta es diferida: cárgala con ToolSearch (busca "Google Drive create_file"). Sube solo los dos archivos finales de ESTA ejecución, una llamada a create_file por archivo:
-   - El MP4 (con voz) a la carpeta Videos: parentId "1KmA3lJU37FSyRC4xpM5u7Hr4GlTiTjjF", contentMimeType "video/mp4".
-   - El PNG a la carpeta Banners: parentId "1NpL1smWWsgOcwUHTTDvICNsWRp4degLL", contentMimeType "image/png".
-   En ambas: title = el nombre del archivo (AAAA-MM-DD-HHMM-tema.mp4 / .png), disableConversionToGoogleType true, y base64Content = una referencia de archivo, NO el contenido: `sha256:HASH:RUTA_ABSOLUTA`, donde HASH sale de `sha256sum ARCHIVO` y RUTA_ABSOLUTA de `realpath ARCHIVO`. Nunca escribas el base64 a mano.
-   LÍMITE REAL DEL CONECTOR: cada llamada a create_file admite unos 3 MB de archivo (el MP4 de alta calidad pesa más y por eso NO se subía). Por eso, ANTES de subir el video, haz su versión liviana: `python3 liviano.py videos/AAAA-MM-DD-HHMM-tema.mp4` (genera videos/AAAA-MM-DD-HHMM-tema-liviano.mp4 de 720x1280 con la voz intacta y menos de 2,9 MB). Sube ESA versión a Drive, con title = AAAA-MM-DD-HHMM-tema.mp4 (sin «-liviano»), y calcula el sha256 y la ruta de ese archivo liviano. El MP4 de alta calidad se queda en el repositorio. Si el PNG pesa más de 3 MB, conviértelo a JPG o redúcelo igual. Si un error dice que superaste el límite, NO lo intentes por otros medios: baja el peso con `python3 liviano.py ... --max-mb 2.2`.
-   Una sola llamada por archivo; si falla, reintenta UNA vez y, si vuelve a fallar o el conector no está disponible, anótalo en el informe («no se subió a Drive: motivo»); los archivos siguen en el repositorio.
-   VERIFICA la subida: después de subir, busca el archivo con search_files (`parentId = 'ID_CARPETA' and title contains 'AAAA-MM-DD-HHMM-tema'`) y confirma que el MP4 y el PNG aparecen. Si el MP4 no aparece, es un fallo: recomprímelo y súbelo otra vez; si sigue sin aparecer, dilo claramente en el informe (el dueño necesita saberlo). Nunca digas que quedó en Drive sin haberlo verificado. No crees carpetas, no borres, no muevas ni compartas nada en Drive, y no subas nada más.
+11. GOOGLE DRIVE: ya no se usa (pedido del dueño, 2026-11-22). No cargues el conector de Google Drive, no generes versión liviana y no subas nada; los archivos finales quedan solo en el repositorio.
 
-12. Informe final corto: modo (nuevo, o mejora de qué ID y por qué nota), nota interna del contenido, promedio de las últimas 5 notas del revisor con su tendencia y cuántos contenidos siguen sin calificar, tema, concepto en una frase, voz usada (ElevenLabs y cuál, o local y por qué), rutas del video MP4 y del banner PNG en el repo, si quedaron en Google Drive (con el enlace viewUrl de cada uno), caption listo para copiar, créditos de voz usados, si se guardó en main, y si hubo fallos.
+12. Informe final corto: modo (nuevo, o mejora de qué ID y por qué nota), nota interna del contenido, promedio de las últimas 5 notas del revisor con su tendencia y cuántos contenidos siguen sin calificar, tema, concepto en una frase, voz usada (ElevenLabs y cuál, o local y por qué), rutas del video MP4 y del banner PNG en el repo, caption listo para copiar, créditos de voz usados, si se guardó en main, y si hubo fallos.
 
 REGLAS
 - Todo Reel y todo banner promocionan a JDT TECHNOLOGICS (punto 9 de LO QUE PIDIÓ EL DUEÑO) y ninguna ejecución termina sin contenido por falta de tema: se usa el plan B del paso 3.
