@@ -66,15 +66,16 @@ def main():
     sin_audio = "--sin-audio" in sys.argv
     if not fotos and not audio and not sin_audio:
         raise SystemExit("Falta --audio: TODO video lleva voz en off (genera la voz primero).")
-    if audio and not fotos and "--sin-validacion" not in sys.argv:
+    if audio and not fotos:
         guion = Path("videos") / (html.stem + ".json")
         if guion.exists():
             import json as _json
             datos_guion = _json.load(open(guion, encoding="utf-8"))
-            val = str(datos_guion.get("validacion", ""))
-            if not val:
-                raise SystemExit("Falta la validacion 3b con el modelo capaz ANTES del render completo. Hazla con los cuadros de "
-                                 "prueba (--fotos) y escribe en el guion JSON \"validacion\": \"APROBADO\" o \"corregido: ...\".")
+            if "--sin-validacion" not in sys.argv:
+                val = str(datos_guion.get("validacion", ""))
+                if not val:
+                    raise SystemExit("Falta la validacion 3b con el modelo capaz ANTES del render completo. Hazla con los cuadros de "
+                                     "prueba (--fotos) y escribe en el guion JSON \"validacion\": \"APROBADO\" o \"corregido: ...\".")
             try:
                 from retencion import validar as validar_retencion
             except ImportError as exc:
