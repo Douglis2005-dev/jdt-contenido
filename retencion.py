@@ -79,9 +79,12 @@ def validar(guion: dict) -> dict:
             errores.append(f'Falta una descripción concreta en direccion.{campo}.')
 
     declaradas = direccion.get("familias")
-    if not isinstance(declaradas, list) or not declaradas:
+    if not isinstance(declaradas, list):
         declaradas = []
         errores.append('direccion.familias debe ser una lista con 2 o 3 familias.')
+    if any(not isinstance(x, str) for x in declaradas):
+        errores.append("Cada familia declarada debe ser texto.")
+        declaradas = [x for x in declaradas if isinstance(x, str)]
     if len(declaradas) < 2 or len(declaradas) > 3:
         errores.append("Selecciona 2 o 3 familias de efectos; no es necesario forzar las cuatro.")
     desconocidas = sorted(set(declaradas) - FAMILIAS)
@@ -117,16 +120,17 @@ def validar(guion: dict) -> dict:
         funcion = beat.get("funcion")
         familia = beat.get("familia")
         visual = beat.get("visual")
-        if funcion not in FUNCIONES:
+        if not isinstance(funcion, str) or funcion not in FUNCIONES:
             errores.append(f"Beat {indice}: funcion debe ser uno de {', '.join(sorted(FUNCIONES))}.")
-        if familia not in FAMILIAS:
+        if not isinstance(familia, str) or familia not in FAMILIAS:
             errores.append(f"Beat {indice}: familia desconocida '{familia}'.")
         else:
             familias_usadas.add(familia)
         if not isinstance(visual, str) or len(visual.strip()) < 8:
             errores.append(f"Beat {indice}: describe la acción visual concreta (mínimo 8 caracteres).")
+            visual = ""
         normalizados.append({"indice": indice, "inicio": inicio, "fin": fin,
-                             "funcion": funcion, "familia": familia, "visual": visual or ""})
+                             "funcion": funcion, "familia": familia, "visual": visual})
 
     if normalizados:
         primero = normalizados[0]
