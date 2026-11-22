@@ -70,10 +70,20 @@ def main():
         guion = Path("videos") / (html.stem + ".json")
         if guion.exists():
             import json as _json
-            val = str(_json.load(open(guion, encoding="utf-8")).get("validacion", ""))
+            datos_guion = _json.load(open(guion, encoding="utf-8"))
+            val = str(datos_guion.get("validacion", ""))
             if not val:
                 raise SystemExit("Falta la validacion 3b con el modelo capaz ANTES del render completo. Hazla con los cuadros de "
                                  "prueba (--fotos) y escribe en el guion JSON \"validacion\": \"APROBADO\" o \"corregido: ...\".")
+            try:
+                from retencion import validar as validar_retencion
+            except ImportError as exc:
+                raise SystemExit(f"No se pudo cargar retencion.py; no se autoriza el render final sin validar el storyboard: {exc}")
+            revision_retencion = validar_retencion(datos_guion)
+            if not revision_retencion["ok"]:
+                detalle = "; ".join(revision_retencion["errores"])
+                raise SystemExit("Storyboard de retención no aprobado. Corrige videos/" + html.stem +
+                                 ".json antes del render final: " + detalle)
     ff = imageio_ffmpeg.get_ffmpeg_exe()
     retardo = float(arg("--retardo", 0.3))
     with sync_playwright() as p:
