@@ -1,0 +1,378 @@
+{
+ "salida": "videos/2026-11-23-0505-reservas-por-chat.mp4",
+ "formato": "pregunta incómoda y choque: dos clientes llegan al mismo cupo y chocan (único glitch), la cámara sube por el chat y muestra cómo la confirmación se hunde bajo los mensajes mientras el cursor la busca, el giro quieto en amarillo con tres golpes de letra, la app de JDT en vidrio donde el cursor toma una hora libre y la confirmación cae como notificación; cierre limpio",
+ "concepto": "La cita no se perdió: se ahogó en el chat; dos clientes chocan en el mismo cupo porque la confirmación quedó enterrada bajo audios y saludos, y JDT la rescata con una app móvil de reservas donde cada hora libre se toma con un toque y a nadie se le cruza.",
+ "produccion": "tipografia-cinetica como vestido de todo el Reel: la pregunta del gancho en letra enorme visible desde el primer cuadro y el choque de los dos clientes sobre la tarjeta del cupo con el ÚNICO glitch del video; las burbujas del chat suben como texto en movimiento y hunden la confirmación amarilla mientras un cursor recorre la barra de desplazamiento buscándola (proceso mostrado con cursor); giro quieto de 4 s en look amarillo con tres golpes de letra «Tu agenda / no es / un chat.» y transición fundido; apoyo vidrio-liquido solo en dos escenas de la solución: la app como teléfono de vidrio esmerilado sobre una mancha líquida dorada que flota, con la hora libre como campo y un cursor que la toca (anillo que late) y la vuelve Reservado (cámara acerca, transición zoom), y la notificación de cita confirmada en look azul con tarjetas de vidrio que caen; cierre con fundido. Sin destellos ni barridos; transiciones desliza-arriba, fundido, zoom y desliza-izq.",
+ "fuente": "marca.md",
+ "url": "jdt:reservas-por-chat",
+ "tendencias": {
+  "video": "tipografia-cinetica",
+  "apoyo": "vidrio-liquido",
+  "gancho": "pregunta-incomoda",
+  "ritmo": "mixto",
+  "banner": "cromo-dorado",
+  "pulso": "2026-11-23: búsquedas de Reels y de motion design 2026 (Metricool, Videobolt) coinciden en video vertical con texto grande que carga el mensaje y en motion que muestra un proceso real (campos, cursor), con glitch usado una sola vez; sin cifras verificadas. Aplicación JDT: tipografía cinética que cuenta cómo la cita se hunde en el chat y vidrio líquido solo para la app de reservas.",
+  "fuentes": [
+   "https://metricool.com/es/tendencias-instagram/",
+   "https://blog.videobolt.net/post/top-motion-graphics-trends-2026"
+  ]
+ },
+ "escenas": [
+  {
+   "tipo": "libre",
+   "texto": "¿Otra vez *dos clientes* a la misma hora?",
+   "fx": [
+    "glitch"
+   ],
+   "voz": "¿Otra vez dos clientes a la MISMA hora?",
+   "elementos": [
+    {
+     "el": "tarjeta",
+     "texto": "Martes · 3:00 p. m.",
+     "icono": "calendario",
+     "x": 50,
+     "y": 50,
+     "ancho": 60,
+     "t": 0
+    },
+    {
+     "el": "icono",
+     "nombre": "persona-sorpresa",
+     "x": 14,
+     "y": 72,
+     "tam": 22,
+     "color": "blanco",
+     "entra": "izquierda",
+     "a": [
+      36,
+      72
+     ],
+     "t": 0
+    },
+    {
+     "el": "icono",
+     "nombre": "persona-pensando",
+     "x": 86,
+     "y": 72,
+     "tam": 22,
+     "color": "blanco",
+     "entra": "derecha",
+     "a": [
+      64,
+      72
+     ],
+     "t": 0
+    },
+    {
+     "el": "icono",
+     "nombre": "alerta",
+     "x": 50,
+     "y": 86,
+     "tam": 10,
+     "color": "amarillo",
+     "entra": "pop",
+     "mueve": "tiembla",
+     "t": 0.55
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "texto": "La cita quedó *enterrada* en el chat",
+   "transicion": "desliza-arriba",
+   "voz": "Uy, no… La confirmaste por chat y quedó enterrada entre audios y saludos.",
+   "elementos": [
+    {
+     "el": "burbuja",
+     "texto": "Sí, el martes a las 3",
+     "x": 58,
+     "y": 46,
+     "cola": "der",
+     "color": "amarillo",
+     "ancho": 58,
+     "t": 0,
+     "a": [
+      58,
+      42
+     ],
+     "sale": 0.75
+    },
+    {
+     "el": "burbuja",
+     "texto": "Te mando un audio",
+     "x": 38,
+     "y": 56,
+     "cola": "izq",
+     "ancho": 50,
+     "entra": "sube",
+     "t": 0.2
+    },
+    {
+     "el": "burbuja",
+     "texto": "¿Abren el domingo?",
+     "x": 38,
+     "y": 67,
+     "cola": "izq",
+     "ancho": 50,
+     "entra": "sube",
+     "t": 0.38
+    },
+    {
+     "el": "burbuja",
+     "texto": "¡Buenos días!",
+     "x": 38,
+     "y": 78,
+     "cola": "izq",
+     "ancho": 44,
+     "entra": "sube",
+     "t": 0.55
+    },
+    {
+     "el": "linea",
+     "x": 93,
+     "y": 40,
+     "a": [
+      93,
+      86
+     ],
+     "estilo": "solida",
+     "color": "borde",
+     "t": 0
+    },
+    {
+     "el": "icono",
+     "nombre": "flecha",
+     "x": 88,
+     "y": 84,
+     "tam": 8,
+     "color": "amarillo",
+     "giro": 90,
+     "a": [
+      88,
+      42
+     ],
+     "t": 0.45
+    }
+   ]
+  },
+  {
+   "tipo": "palabras",
+   "look": "amarillo",
+   "transicion": "fundido",
+   "frases": [
+    "Tu agenda",
+    "no es",
+    "*un chat.*"
+   ],
+   "voz": "Tu agenda… no es un chat."
+  },
+  {
+   "tipo": "libre",
+   "texto": "*JDT*: tu app de *reservas*",
+   "transicion": "zoom",
+   "camara": "acerca",
+   "voz": "En JDT hacemos tu app móvil de reservas: el cliente ve las horas libres y toma la suya.",
+   "elementos": [
+    {
+     "el": "forma",
+     "forma": "pildora",
+     "x": 50,
+     "y": 62,
+     "ancho": 84,
+     "alto": 16,
+     "color": "dorado",
+     "opacidad": 0.25,
+     "mueve": "flota",
+     "t": 0
+    },
+    {
+     "el": "icono",
+     "nombre": "telefono",
+     "x": 22,
+     "y": 62,
+     "tam": 28,
+     "color": "blanco",
+     "entra": "izquierda",
+     "t": 0
+    },
+    {
+     "el": "tarjeta",
+     "texto": "4:00 p. m. · Libre",
+     "icono": "reloj",
+     "x": 60,
+     "y": 52,
+     "ancho": 46,
+     "t": 0.15
+    },
+    {
+     "el": "forma",
+     "forma": "anillo",
+     "x": 89,
+     "y": 52,
+     "ancho": 8,
+     "alto": 8,
+     "color": "amarillo",
+     "mueve": "late",
+     "t": 0.5
+    },
+    {
+     "el": "icono",
+     "nombre": "flecha",
+     "x": 93,
+     "y": 72,
+     "tam": 7,
+     "color": "amarillo",
+     "a": [
+      91,
+      57
+     ],
+     "t": 0.35
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Reservado",
+     "icono": "check",
+     "x": 60,
+     "y": 70,
+     "ancho": 46,
+     "color": "amarillo",
+     "entra": "pop",
+     "t": 0.65
+    }
+   ]
+  },
+  {
+   "tipo": "notificaciones",
+   "look": "azul",
+   "texto": "Te avisa *a ti* y *a él*",
+   "transicion": "desliza-izq",
+   "etiquetas": [
+    "Nueva cita",
+    "Recordatorio enviado"
+   ],
+   "detalles": [
+    "Martes · 4:00 p. m.",
+    "Al cliente, antes de su cita"
+   ],
+   "iconos": [
+    "calendario",
+    "campana"
+   ],
+   "voz": "Te llega el aviso, a él su recordatorio… y nadie se cruza."
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de *tu proyecto*",
+   "subtexto": "@technologicsjdt",
+   "transicion": "fundido",
+   "voz": "Saca tus citas del chat. Hablemos de tu proyecto."
+  }
+ ],
+ "tiempos": {
+  "inicios": [
+   0.0,
+   3.03,
+   8.27,
+   10.71,
+   16.38,
+   20.79
+  ],
+  "retardo": 0.3,
+  "duracion": 24.0
+ },
+ "validacion": "corregido: se hizo visible la pregunta desde t=0; la confirmación amarilla entra primero y el chat la entierra; cursor agrandado; el teléfono muestra horas (ocupado, libre) y la hora tomada pasa a Reservado; fondo de la escena de avisos en azul marino; sin destellos blancos; titulares con entrada por palabras; se quitó el texto duplicado.",
+ "direccion": {
+  "hook": "Titular de pregunta enorme visible desde t=0 y dos personas-icono que llegan desde los lados hacia una tarjeta de cupo martes 3:00",
+  "payoff": "La hora libre se toma con un toque en el teléfono de vidrio y la notificación llega al dueño y al cliente; cierre con Hablemos de tu proyecto y @technologicsjdt",
+  "familias": [
+   "motion-graphics",
+   "mixed-media"
+  ],
+  "beats": [
+   {
+    "inicio": 0,
+    "fin": 1.8,
+    "funcion": "hook",
+    "familia": "motion-graphics",
+    "visual": "Pregunta gigante con dos clientes-icono que llegan y chocan sobre la tarjeta del martes"
+   },
+   {
+    "inicio": 1.8,
+    "fin": 3.0,
+    "funcion": "tension",
+    "familia": "motion-graphics",
+    "visual": "Glitch único sobre la tarjeta y alerta que tiembla"
+   },
+   {
+    "inicio": 3.0,
+    "fin": 4.4,
+    "funcion": "demostracion",
+    "familia": "motion-graphics",
+    "visual": "Burbuja amarilla de confirmación entra primero en el chat"
+   },
+   {
+    "inicio": 4.4,
+    "fin": 6.2,
+    "funcion": "tension",
+    "familia": "mixed-media",
+    "visual": "Burbujas de audio, saludos y pregunta suben y entierran la confirmación; titular word by word"
+   },
+   {
+    "inicio": 6.2,
+    "fin": 8.2,
+    "funcion": "demostracion",
+    "familia": "motion-graphics",
+    "visual": "Cursor doble de tamaño sube por la barra de desplazamiento buscando la confirmación"
+   },
+   {
+    "inicio": 8.2,
+    "fin": 10.7,
+    "funcion": "giro",
+    "familia": "motion-graphics",
+    "visual": "Fondo amarillo quieto con tres golpes de letra: Tu agenda / no es / un chat"
+   },
+   {
+    "inicio": 10.7,
+    "fin": 13.3,
+    "funcion": "recompensa",
+    "familia": "mixed-media",
+    "visual": "Teléfono de vidrio sobre mancha dorada con horas ocupado y libre; el cursor toca 4:00"
+   },
+   {
+    "inicio": 13.3,
+    "fin": 16.4,
+    "funcion": "recompensa",
+    "familia": "mixed-media",
+    "visual": "Anillo que late en la hora tomada y la fila pasa a Reservado"
+   },
+   {
+    "inicio": 16.4,
+    "fin": 18.6,
+    "funcion": "demostracion",
+    "familia": "motion-graphics",
+    "visual": "Tarjeta Nueva cita con el aviso al dueño sobre fondo azul marino"
+   },
+   {
+    "inicio": 18.6,
+    "fin": 20.8,
+    "funcion": "recompensa",
+    "familia": "motion-graphics",
+    "visual": "Tarjeta de recordatorio al cliente un día antes; nadie se cruza"
+   },
+   {
+    "inicio": 20.8,
+    "fin": 23.2,
+    "funcion": "cierre",
+    "familia": "motion-graphics",
+    "visual": "Logo, Hablemos de tu proyecto y @technologicsjdt"
+   },
+   {
+    "inicio": 23.2,
+    "fin": 24.0,
+    "funcion": "payoff",
+    "familia": "motion-graphics",
+    "visual": "Quietud final con el CTA visible"
+   }
+  ]
+ }
+}

@@ -1,0 +1,22 @@
+# 2026-11-23-0505-reservas-por-chat
+
+- Tema: Citas y reservas que se pierden entre mensajes de chat.
+- Modo de tema: propio de JDT (plan B). Motivo: ninguna noticia de recolector.py cumplía los criterios o se podía verificar sin fuente externa; el primer tema propio no parecido a los títulos recientes fue «Citas y reservas que se pierden entre mensajes de chat» (servicio: apps móviles de reservas).
+- Fuente: marca.md (url jdt:reservas-por-chat). Sin cifras, estudios ni casos.
+- Modo de la ejecución: nuevo (sin contenido por rehacer en calidad.py).
+- Estilo del día (estilos.py --elegir): video tipografia-cinetica; apoyo vidrio-liquido; gancho pregunta-incomoda; ritmo mixto; banner cromo-dorado.
+- Investigación audiovisual (2026-11-23): búsquedas «Instagram Reels tendencias formatos 2026 video corto marcas B2B» y «motion design tendencias 2026 video software producto animación tipografía». Fuentes consultadas por título: https://metricool.com/es/tendencias-instagram/ , https://blog.videobolt.net/post/top-motion-graphics-trends-2026 . Sin cifras verificadas; la señal aplicada es video vertical con texto grande que carga el mensaje y motion que explica un proceso real.
+- Tres rasgos visibles del estilo principal: texto cinético que carga el mensaje (pregunta del gancho, «Tu agenda no es un chat»); el único golpe de glitch sobre la tarjeta del cupo; el proceso mostrado con cursor sobre la barra de desplazamiento.
+- Concepto: la cita no se perdió, se ahogó en el chat; dos clientes chocan en el mismo cupo y JDT la rescata con una app móvil de reservas.
+- Conceptos descartados: chat narrado por el cliente (muy cercano a 0307); marquesina de mensajes (ya usada en 0406); antes/después en pantalla dividida (ya usada); personaje ahogado (repetía la mascota de 0307).
+- Locución: ElevenLabs, voz «Douglas pupi» (turno de voz), modelo eleven_v4, una generación. Duración 23,44 s. Créditos gastados: 393 (uso previo 30 097 de 40 000; quedan aprox. 9 510 de este mes).
+- Transcripción: videos/2026-11-23-0505-reservas-por-chat.palabras.json (ElevenLabs Scribe, una llamada).
+- Motor de video: HTML (html/2026-11-23-0505-reservas-por-chat.html), musica.py, render_html.py. Duración final 24,13 s, con audio. Storyboard de 12 beats aprobado por retencion.py.
+- Validación 3b (opus): corregido; se aplicaron las correcciones de la pregunta visible desde t=0, orden de la confirmación en el chat, cursor más grande, horas en el teléfono, fondo azul marino en avisos y sin destellos blancos.
+- Revisión final (opus): corregido; se aplicaron el subtítulo del banner con el servicio (JDT crea tu app móvil de reservas) y acortar las filas del teléfono. No se regeneró la voz: la escena 5 mantiene «a él» porque la locución de ElevenLabs ya dice «a él» (regenerar gastaría créditos y la voz no se regenera).
+- Nota interna: 7/10 (rúbrica de la revisión final, pendiente de mejorar: la escena 2 quedó corta en claridad del entierro y la escena 5 usa «a él»).
+- Hipótesis creativa: si el gancho de pregunta visible desde t=0 y la tipografía cinética sostenida retienen más que los formatos anteriores, la finalización debería mejorar; contrastar con métricas reales.
+- Caption (Instagram): Tus clientes escriben, confirman y se cruzan en el mismo chat. Con una app móvil de reservas de JDT, cada hora libre se toma con un toque, el cliente recibe su recordatorio y tú recibes el aviso. ¿Quieres sacar tus citas del chat? Hablemos de tu proyecto en @technologicsjdt. #JDTTechnologics #AppsMoviles #SoftwareAMedida #Reservas #Automatizacion #DesarrolloDeSoftware #TransformacionDigital #Bogota #Colombia #Emprendedores
+- Video: videos/2026-11-23-0505-reservas-por-chat.mp4 (guion: videos/2026-11-23-0505-reservas-por-chat.json; locución: videos/2026-11-23-0505-reservas-por-chat.mp3; mezcla: videos/2026-11-23-0505-reservas-por-chat-mezcla.mp3).
+- Banner: banners/2026-11-23-0505-reservas-por-chat.png (JSON: banners/2026-11-23-0505-reservas-por-chat.json; estilo cromo-dorado).
+- Para calificar: agrega en calificaciones.md la fila | 2026-11-23-0505-reservas-por-chat | nota | comentario |

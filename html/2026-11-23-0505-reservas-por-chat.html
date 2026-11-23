@@ -1,0 +1,159 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+  #e5 .mono { color: var(--blanco); opacity: .85; }
+  .frase { position:absolute; left:0; right:0; text-align:center; font-weight:900; letter-spacing:-.03em; line-height:1.04; }
+  .burbuja { position:absolute; left:110px; max-width:760px; padding:26px 34px; border-radius:40px; font-size:46px; font-weight:700;
+             background:rgba(255,255,255,.10); border:2px solid rgba(255,255,255,.20); color:var(--blanco); }
+  .burbuja.am { background:var(--amarillo); color:var(--fondo); border-color:var(--amarillo); }
+  .tarjeta { position:absolute; left:110px; right:110px; border-radius:40px; padding:40px 48px; background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.04));
+             border:2px solid rgba(255,255,255,.22); box-shadow:0 30px 90px rgba(0,0,0,.45); backdrop-filter: blur(18px); }
+  .punto { position:absolute; width:120px; height:120px; border-radius:60px; background:var(--gris); opacity:.9; }
+  .cursor { position:absolute; width:0; height:0; border-left:52px solid var(--amarillo); border-top:32px solid transparent; border-bottom:32px solid transparent; transform:rotate(-35deg); }
+  .campo { font-size:44px; font-weight:800; }
+</style></head>
+<body>
+<!-- ESCENA 1 · gancho: pregunta de frente + choque de dos clientes en el mismo cupo -->
+<div id="e1" class="capa">
+  <div id="q1" class="frase" style="top:300px;font-size:104px"></div>
+  <div id="tj1" class="tarjeta" style="top:800px;height:420px"><div class="mono">Martes</div><div class="titulo" style="font-size:96px;margin-top:20px">3:00 <span class="clave">p. m.</span></div></div>
+  <div id="pa" class="punto" style="left:-140px;top:1100px"></div>
+  <div id="pb" class="punto" style="right:-140px;top:1220px"></div>
+  <div id="al1" class="burbuja am" style="left:150px;top:1330px;opacity:0">¡Yo también a las 3!</div>
+</div>
+
+<!-- ESCENA 2 · el chat entierra la confirmación; cursor busca en la barra -->
+<div id="e2" class="capa">
+  <div id="q2" class="frase" style="top:260px;font-size:88px"></div>
+  <div style="position:absolute;left:0;top:470px;width:1080px;height:1100px;overflow:hidden"><div id="ch" style="position:absolute;left:0;top:-470px;width:1080px;height:1920px"></div></div>
+  <div id="barra" style="position:absolute;right:58px;top:760px;width:10px;height:700px;border-radius:5px;background:rgba(255,255,255,.14)"><i id="bi" style="display:block;width:10px;height:120px;border-radius:5px;background:var(--amarillo);position:absolute;top:0"></i></div>
+  <div id="cu2" class="cursor" style="right:40px;top:760px"></div>
+</div>
+
+<!-- ESCENA 3 · giro quieto en amarillo -->
+<div id="e3" class="capa" style="background:var(--amarillo);">
+  <div id="g3a" class="frase" style="top:560px;font-size:150px;color:var(--fondo)"></div>
+  <div id="g3b" class="frase" style="top:760px;font-size:150px;color:var(--fondo)"></div>
+  <div id="g3c" class="frase" style="top:960px;font-size:190px;color:var(--fondo)"></div>
+</div>
+
+<!-- ESCENA 4 · la solución: teléfono de vidrio sobre mancha dorada, hora libre que se toma -->
+<div id="e4" class="capa">
+  <div id="q4" class="frase" style="top:240px;font-size:98px"><span class="clave">JDT</span>: tu app de <span class="clave">reservas</span></div>
+  <div id="blob" style="position:absolute;left:190px;top:700px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(250,204,21,.55),rgba(250,204,21,0) 70%)"></div>
+  <div id="tel" class="vidrio" style="left:290px;top:560px;width:500px;height:960px;border-radius:70px;padding:70px 44px"></div>
+  <div class="campo" style="position:absolute;left:340px;top:700px;width:400px;color:var(--gris);font-size:40px">3:00 · Ocupado</div><div id="hora" class="tarjeta campo" style="left:340px;top:790px;right:auto;width:400px;height:130px;padding:26px 24px;font-size:34px;white-space:nowrap">4:00 · <span class="clave" id="hl">Libre</span></div><div class="campo" style="position:absolute;left:340px;top:960px;width:400px;color:var(--gris);font-size:40px">5:00 · Libre</div>
+  <div id="anillo" style="position:absolute;left:700px;top:805px;width:90px;height:90px;margin:-45px 0 0 -45px;border-radius:60px;border:4px solid var(--amarillo)"></div>
+  
+</div>
+
+<!-- ESCENA 5 · notificaciones en azul -->
+<div id="e5" class="capa" style="background:#131A3A;">
+  <div id="q5" class="frase" style="top:260px;font-size:96px">Te avisa <span class="clave">a ti</span> y <span class="clave">a él</span></div>
+  <div id="n5a" class="tarjeta" data-x="" style="top:700px;height:260px;opacity:0"><div class="mono">Nueva cita</div><div class="titulo" style="font-size:64px;margin-top:14px">Martes · 4:00 p. m.</div></div>
+  <div id="n5b" class="tarjeta" style="top:1010px;height:260px;opacity:0"><div class="mono">Recordatorio enviado</div><div class="titulo" style="font-size:60px;margin-top:14px">Al cliente, un día antes</div></div>
+</div>
+
+<!-- ESCENA 6 · cierre -->
+<div id="e6" class="capa">
+  <img id="logo" src="../recursos/logo.jpeg" style="position:absolute;left:350px;top:560px;width:380px;border-radius:70px;opacity:0">
+  <div id="c6" class="frase" style="top:1010px;font-size:96px;opacity:0">Hablemos de <span class="clave">tu proyecto</span></div>
+  <div id="c6b" style="position:absolute;left:0;right:0;top:1370px;text-align:center;opacity:0"><span class="pildora">@technologicsjdt</span></div>
+</div>
+
+<div id="hud" class="hud"></div>
+<div id="fl" class="capa" style="background:#fff;opacity:0;z-index:7"></div>
+<script>
+const {seg, lerp, clamp} = JDT; const $ = id => document.getElementById(id);
+const bg = JDT.lienzo(0);
+window.DURACION = 24;
+const INI = [0, 3.03, 8.27, 10.71, 16.38, 20.79];
+const frases = {q1:"¿Otra vez <span class='clave'>dos clientes</span> a la MISMA hora?", q2:"La cita quedó <span class='clave'>enterrada</span> en el chat", c6b:null};
+const CHAT = [
+  {t:"Sí, el martes a las 3", x:300, y:520, a:3.2, am:true},
+  {t:"Te mando un audio", x:110, y:700, a:4.0},
+  {t:"¿Abren el domingo?", x:200, y:880, a:4.5},
+  {t:"¡Buenos días!", x:110, y:1060, a:5.0}
+];
+const bubbles = CHAT.map(c => { const d = document.createElement('div'); d.className = 'burbuja' + (c.am ? ' am' : ''); d.style.left = c.x+'px'; d.style.top = c.y+'px'; d.textContent = c.t; d.style.opacity = 0; $('ch').appendChild(d); return d; });
+$('q1').innerHTML = frases.q1; $('q2').innerHTML = frases.q2;
+$('g3a').textContent = "Tu agenda"; $('g3b').textContent = "no es"; $('g3c').innerHTML = "<span class='clave' style='color:var(--fondo)'>un chat.</span>";
+$('pa').style.opacity = 0; $('pb').style.opacity = 0;
+
+window.render = (t) => {
+  const esc = INI.map((a, i) => t >= a ? i : -1).filter(i => i >= 0).pop();
+  for (let i = 0; i < 6; i++) $('e' + (i + 1)).style.display = (i === esc) ? 'block' : 'none';
+  // fondo: el de la escena 3 es amarillo plano; el resto usa el fondo de marca
+  const eAm = esc === 2; bg.canvas ? null : null;
+  JDT.fondo(bg, t);
+  if (eAm) { bg.fillStyle = '#FACC15'; bg.fillRect(0, 0, JDT.W, JDT.H); }
+  if (esc === 4) { JDT.fondo(bg, t); }
+
+  // E1 · gancho: la pregunta visible desde t=0; choque de dos clientes; un solo glitch
+  if (esc === 0) {
+    const k = seg(t, 0, .35, 'outExpo');
+    $('q1').style.opacity = 1; $('q1').style.transform = `translateY(${lerp(30, 0, k)}px)`;
+    $('tj1').style.opacity = seg(t, .4, .9, 'outExpo');
+    $('pa').style.opacity = .9; $('pa').style.left = lerp(-140, 80, seg(t, .6, 1.4, 'outExpo')) + 'px';
+    $('pb').style.opacity = .9; $('pb').style.right = lerp(-140, 80, seg(t, .6, 1.4, 'outExpo')) + 'px';
+    JDT.glitch($('tj1'), t > 1.3 && t < 1.7 ? 1 - Math.abs(t - 1.5) / .2 : 0, Math.floor(t * 30));
+    $('al1').style.opacity = seg(t, 1.8, 2.3, 'outExpo');
+  }
+  // E2 · el chat sube y entierra la confirmación; cursor sube por la barra de desplazamiento
+  if (esc === 1) {
+    const tt = t - INI[1];
+    $('q2').style.opacity = 1; $('q2').innerHTML = ["La","cita","quedó","<span class='clave'>enterrada</span>","en","el","chat"].map((w,i)=>{const k=seg(t, INI[1]+i*.18, INI[1]+i*.18+.35,'outExpo'); return `<span style='display:inline-block;opacity:${k};transform:translateY(${lerp(40,0,k)}px)'>${w}</span>`;}).join(' ');
+    bubbles.forEach((b, i) => {
+      const c = CHAT[i], k = seg(t, c.a, c.a + .45, 'outExpo');
+      b.style.opacity = k; b.style.transform = `translateY(${lerp(60, 0, k)}px)`;
+    });
+    const up = seg(t, 5.4, 7.2, 'inOutCubic');
+    const scroll = lerp(0, -560, up);
+    $('ch').style.transform = `translateY(${scroll}px)`;
+    $('cu2').style.transform = `translateY(${lerp(0, -260, up)}px)`;
+    $('cu2').style.opacity = seg(t, 5.0, 5.3, 'lineal');
+    $('bi').style.top = lerp(0, 560, up) + 'px';
+  }
+  // E3 · giro quieto en amarillo, tres golpes de letra
+  if (esc === 2) {
+    const k1 = seg(t, INI[2] + .1, INI[2] + .5, 'outBack'), k2 = seg(t, INI[2] + .9, INI[2] + 1.3, 'outBack'), k3 = seg(t, INI[2] + 1.7, INI[2] + 2.2, 'outBack');
+    $('g3a').style.opacity = k1; $('g3a').style.transform = `translateY(${lerp(40, 0, k1)}px)`;
+    $('g3b').style.opacity = k2; $('g3b').style.transform = `translateY(${lerp(40, 0, k2)}px)`;
+    $('g3c').style.opacity = k3; $('g3c').style.transform = `scale(${lerp(.9, 1, k3)})`;
+  }
+  // E4 · solución: el cursor toca la hora libre, anillo que late y luego "Reservado"
+  if (esc === 3) {
+    const tt = t - INI[3];
+    $('q4').style.opacity = 1; $('q4').querySelectorAll('span').forEach((sp,i)=>{sp.style.opacity = seg(t, INI[3]+i*.2, INI[3]+i*.2+.35,'outExpo');});
+    $('blob').style.transform = `translate(${Math.sin(t * .6) * 18}px, ${Math.cos(t * .5) * 14}px) scale(${lerp(.9, 1, seg(t, INI[3], INI[3] + 1.5, 'outExpo'))})`;
+    $('tel').style.transform = `perspective(1400px) rotateY(${lerp(-18, -6, seg(t, INI[3], INI[3] + 2, 'inOutCubic'))}deg) translate3d(0,0,0)`;
+    const tomo = seg(t, 3.2, 3.9, 'outExpo');
+    $('hl').textContent = t > INI[3] + 3.2 ? 'Reservado' : 'Libre'; $('hl').className = t > INI[3] + 3.2 ? 'clave' : 'clave';
+    $('anillo').style.opacity = t > INI[3] + 2.6 && t < INI[3] + 4 ? (1 - seg(t, INI[3] + 2.6, INI[3] + 3.9, 'lineal')) : 0;
+    $('anillo').style.transform = `scale(${1 + 0.25 * Math.sin((t - INI[3]) * 9) * (t > INI[3] + 2.6 ? 1 : 0)})`;
+    
+    $('hora').style.opacity = seg(t, INI[3] + 1.2, INI[3] + 1.7, 'outExpo');
+  }
+  // E5 · notificaciones en azul
+  if (esc === 4) {
+    const tt = t - INI[4];
+    $('q5').style.opacity = 1; $('q5').querySelectorAll('span').forEach((sp,i)=>{sp.style.opacity = seg(t, INI[4]+i*.25, INI[4]+i*.25+.35,'outExpo');});
+    $('n5a').style.opacity = seg(t, INI[4] + .8, INI[4] + 1.3, 'outBack');
+    $('n5a').style.transform = `translateY(${lerp(60, 0, seg(t, INI[4] + .8, INI[4] + 1.3, 'outExpo'))}px)`;
+    $('n5b').style.opacity = seg(t, INI[4] + 1.8, INI[4] + 2.3, 'outBack');
+    $('n5b').style.transform = `translateY(${lerp(60, 0, seg(t, INI[4] + 1.8, INI[4] + 2.3, 'outExpo'))}px)`;
+  }
+  // E6 · cierre: logo, CTA y @technologicsjdt
+  if (esc === 5) {
+    const tt = t - INI[5];
+    $('logo').style.opacity = seg(t, INI[5], INI[5] + .6, 'lineal');
+    $('c6').style.opacity = seg(t, INI[5] + .5, INI[5] + 1.1, 'outExpo');
+    $('c6b').style.opacity = seg(t, INI[5] + 1.2, INI[5] + 1.7, 'outExpo');
+  }
+  // transición de cambio de escena: fundido blanco breve al entrar en las escenas 2 y 4
+  const cambios = [INI[1], INI[3], INI[4]];
+  let fundido = 0; cambios.forEach(c => { if (t > c && t < c + .25) fundido = Math.max(fundido, 1 - (t - c) / .25); });
+  $('fl').style.opacity = 0;
+  JDT.hud($('hud'), t, 24, ["01 · GANCHO", "02 · EL CHAT", "03 · GIRO", "04 · SOLUCIÓN", "05 · AVISOS", "06 · CIERRE"][esc]);
+};
+</script></body></html>
