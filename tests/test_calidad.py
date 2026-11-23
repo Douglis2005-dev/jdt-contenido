@@ -69,6 +69,19 @@ class CalidadTests(unittest.TestCase):
         (self.root / "videos" / f"{ident}-liviano.mp4").write_bytes(b"mp4")
         self.assertNotIn(f"{ident}-liviano", calidad.contenidos())
 
+    def test_original_sin_guion_se_puede_marcar_como_rehecho(self):
+        ident = "2026-11-21-2358-brazo-robotico-logo"
+        self.escribir_nota(ident, "2.7", "No hay locución ni beneficio comercial.")
+        resultado = calidad.revisado(ident, f"{ident}-v2", "Reconstruido desde el comentario.")
+        self.assertEqual(resultado["revisado"], ident)
+        self.assertEqual(calidad.cargar_estado()["revisados"][ident]["nueva_version"], f"{ident}-v2")
+
+    def test_nota_exactamente_siete_no_entra_a_mejora(self):
+        ident = "2026-11-21-2358-logo-particulas-cian"
+        (self.root / "videos" / f"{ident}.mp4").write_bytes(b"mp4")
+        self.escribir_nota(ident, "7", "Aceptable.")
+        self.assertEqual(calidad.estado()["modo"], "nuevo")
+
     def test_prefijo_ambiguo_no_se_asigna_a_varias_versiones(self):
         base = "2026-11-21-2358-pieza"
         ids = [base, f"{base}-v2"]
