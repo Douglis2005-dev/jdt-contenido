@@ -47,6 +47,14 @@
       "gancho": "confesion",
       "ritmo": "mixto",
       "banner": "amarillo-total"
+    },
+    {
+      "fecha": "2026-11-23T04:06:51",
+      "video": "vidrio-liquido",
+      "apoyo": "datos-que-se-arman",
+      "gancho": "resultado-primero",
+      "ritmo": "rapido",
+      "banner": "tipografia-gigante"
     }
   ]
 }

@@ -1,0 +1,527 @@
+{
+  "salida": "videos/2026-11-23-0406-sistemas-que-no-se-hablan.mp4",
+  "formato": "resultado primero y rebobinado: el Reel abre con la empresa ya ordenada (CRM, ERP y contabilidad al día en paneles de vidrio), un glitch rebobina a la realidad del copiar y pegar, revela que el cable entre sistemas es el propio dueño, una pantalla dividida arma la idea de la API y JDT aparece conectando todo",
+  "concepto": "El cable que une tu CRM, tu ERP y tu contabilidad eres tú: primero mostramos cómo se ve todo cuando los sistemas se hablan, rebobinamos al copiar y pegar, y JDT lo resuelve con software a medida integrado por API.",
+  "produccion": "vidrio-liquido en todo el Reel: paneles de vidrio esmerilado (rect superficie o blanco translúcido) flotando sobre manchas doradas y azules que se mueven lento; gancho resultado-primero de 2,8 s con el final ordenado visible desde t=0, fx destello y cámara empuja; rebobinado con transición glitch y fx glitch+vibra en la marquesina; escena del cable con anillo dorado translúcido que late y grano; apoyo datos-que-se-arman en la dividida HOY / CON API con transición barrido; demostración en look amarillo con hub de código y líneas que se dibujan hacia los tres sistemas, transición círculo y cámara acerca; cierre con persiana y banner de tipografía gigante. Cortes cada 2,8 a 4 s con cambios internos cada 1 a 2 s.",
+  "fuente": "marca.md",
+  "tendencias": {
+    "video": "vidrio-liquido",
+    "apoyo": "datos-que-se-arman",
+    "gancho": "resultado-primero",
+    "ritmo": "rapido",
+    "banner": "tipografia-gigante",
+    "pulso": "resumen fechado de la búsqueda del 2026-11-23 (ver tendencias_vivas.md)",
+    "fuentes": [
+      "https://metricool.com/es/tendencias-instagram/"
+    ]
+  },
+  "escenas": [
+    {
+      "tipo": "libre",
+      "fx": [
+        "destello"
+      ],
+      "camara": "empuja",
+      "duracion": 2.8,
+      "voz": "Así se ve tu empresa cuando sus sistemas se hablan.",
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "circulo",
+          "x": 32,
+          "y": 34,
+          "ancho": 44,
+          "alto": 44,
+          "color": "dorado",
+          "opacidad": 0.85,
+          "mueve": "flota",
+          "t": 0
+        },
+        {
+          "el": "forma",
+          "forma": "circulo",
+          "x": 66,
+          "y": 58,
+          "ancho": 44,
+          "alto": 44,
+          "color": "azul",
+          "opacidad": 0.9,
+          "mueve": "flota",
+          "t": 0
+        },
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 50,
+          "y": 46,
+          "ancho": 82,
+          "alto": 36,
+          "color": "superficie",
+          "opacidad": 0.7,
+          "t": 0
+        },
+        {
+          "el": "tarjeta",
+          "texto": "CRM al día",
+          "icono": "check",
+          "x": 50,
+          "y": 36,
+          "ancho": 66,
+          "entra": "aparece",
+          "t": 0
+        },
+        {
+          "el": "tarjeta",
+          "texto": "ERP al día",
+          "icono": "check",
+          "x": 50,
+          "y": 46,
+          "ancho": 66,
+          "entra": "aparece",
+          "t": 0.04
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Contabilidad cuadrada",
+          "icono": "check",
+          "x": 50,
+          "y": 56,
+          "ancho": 66,
+          "entra": "aparece",
+          "t": 0.08
+        },
+        {
+          "el": "texto",
+          "texto": "Así se ve *cuando se hablan*",
+          "x": 50,
+          "y": 76,
+          "tam": "xl",
+          "ancho": 88,
+          "t": 0
+        },
+        {
+          "el": "icono",
+          "nombre": "chispa",
+          "x": 86,
+          "y": 24,
+          "tam": 8,
+          "color": "amarillo",
+          "mueve": "late",
+          "t": 0.1
+        }
+      ]
+    },
+    {
+      "tipo": "marquesina",
+      "transicion": "glitch",
+      "fx": [
+        "glitch",
+        "vibra"
+      ],
+      "duracion": 3.0,
+      "palabras": [
+        "COPIAR",
+        "PEGAR",
+        "REVISAR",
+        "OTRA VEZ"
+      ],
+      "voz": "Pero hoy: copias del CRM, pegas en el ERP… y otra vez."
+    },
+    {
+      "tipo": "libre",
+      "texto": "Tú eres *el cable*",
+      "transicion": "desliza-arriba",
+      "fx": [
+        "grano"
+      ],
+      "duracion": 3.2,
+      "voz": "¿Y el cable entre sistemas? Eres tú. Todo el día.",
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "anillo",
+          "x": 50,
+          "y": 60,
+          "ancho": 32,
+          "alto": 32,
+          "color": "dorado",
+          "opacidad": 0.5,
+          "mueve": "late",
+          "t": 0
+        },
+        {
+          "el": "icono",
+          "nombre": "persona-triste",
+          "x": 50,
+          "y": 60,
+          "tam": 17,
+          "color": "blanco",
+          "mueve": "tiembla",
+          "t": 0
+        },
+        {
+          "el": "tarjeta",
+          "texto": "CRM",
+          "icono": "usuario",
+          "x": 22,
+          "y": 42,
+          "ancho": 34,
+          "entra": "izquierda",
+          "t": 0
+        },
+        {
+          "el": "tarjeta",
+          "texto": "ERP",
+          "icono": "caja",
+          "x": 78,
+          "y": 42,
+          "ancho": 34,
+          "entra": "derecha",
+          "t": 0.05
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Contabilidad",
+          "icono": "moneda",
+          "x": 50,
+          "y": 84,
+          "ancho": 52,
+          "entra": "sube",
+          "t": 0.1
+        },
+        {
+          "el": "linea",
+          "x": 30,
+          "y": 47,
+          "a": [
+            42,
+            55
+          ],
+          "estilo": "punteada",
+          "color": "amarillo",
+          "pulso": true,
+          "t": 0.2
+        },
+        {
+          "el": "linea",
+          "x": 70,
+          "y": 47,
+          "a": [
+            58,
+            55
+          ],
+          "estilo": "punteada",
+          "color": "amarillo",
+          "pulso": true,
+          "t": 0.25
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 69,
+          "a": [
+            50,
+            78
+          ],
+          "estilo": "punteada",
+          "color": "amarillo",
+          "pulso": true,
+          "t": 0.3
+        },
+        {
+          "el": "icono",
+          "nombre": "reloj",
+          "x": 86,
+          "y": 66,
+          "tam": 9,
+          "color": "gris",
+          "mueve": "balancea",
+          "t": 0.35
+        }
+      ]
+    },
+    {
+      "tipo": "dividida",
+      "transicion": "barrido",
+      "duracion": 3.6,
+      "etiquetas": [
+        "Tú copias *a mano*",
+        "La API *los conecta*"
+      ],
+      "iconos": [
+        "papeles",
+        "enlace"
+      ],
+      "rotulos": [
+        "HOY",
+        "CON API"
+      ],
+      "voz": "La salida: que los datos viajen solos, por API."
+    },
+    {
+      "tipo": "libre",
+      "look": "amarillo",
+      "texto": "*JDT* conecta tus sistemas",
+      "transicion": "circulo",
+      "camara": "acerca",
+      "duracion": 4.2,
+      "voz": "JDT Technologics hace software a medida que conecta tu CRM, tu ERP y tu contabilidad.",
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 50,
+          "y": 62,
+          "ancho": 88,
+          "alto": 50,
+          "color": "blanco",
+          "opacidad": 0.3,
+          "t": 0
+        },
+        {
+          "el": "forma",
+          "forma": "anillo",
+          "x": 50,
+          "y": 46,
+          "ancho": 22,
+          "alto": 22,
+          "color": "superficie",
+          "mueve": "gira",
+          "t": 0
+        },
+        {
+          "el": "icono",
+          "nombre": "codigo",
+          "x": 50,
+          "y": 46,
+          "tam": 12,
+          "color": "superficie",
+          "entra": "pop",
+          "mueve": "late",
+          "t": 0
+        },
+        {
+          "el": "linea",
+          "x": 41,
+          "y": 51,
+          "a": [
+            22,
+            61
+          ],
+          "estilo": "flecha",
+          "color": "superficie",
+          "entra": "dibuja",
+          "pulso": true,
+          "t": 0.15
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 54,
+          "a": [
+            50,
+            65
+          ],
+          "estilo": "flecha",
+          "color": "superficie",
+          "entra": "dibuja",
+          "pulso": true,
+          "t": 0.2
+        },
+        {
+          "el": "linea",
+          "x": 59,
+          "y": 51,
+          "a": [
+            74,
+            61
+          ],
+          "estilo": "flecha",
+          "color": "superficie",
+          "entra": "dibuja",
+          "pulso": true,
+          "t": 0.25
+        },
+        {
+          "el": "icono",
+          "nombre": "usuario",
+          "x": 18,
+          "y": 66,
+          "tam": 9,
+          "color": "superficie",
+          "entra": "pop",
+          "t": 0.2
+        },
+        {
+          "el": "icono",
+          "nombre": "caja",
+          "x": 50,
+          "y": 70,
+          "tam": 9,
+          "color": "superficie",
+          "entra": "pop",
+          "t": 0.25
+        },
+        {
+          "el": "icono",
+          "nombre": "moneda",
+          "x": 76,
+          "y": 66,
+          "tam": 9,
+          "color": "superficie",
+          "entra": "pop",
+          "t": 0.3
+        },
+        {
+          "el": "texto",
+          "texto": "CRM",
+          "x": 18,
+          "y": 73,
+          "tam": "s",
+          "t": 0.2
+        },
+        {
+          "el": "texto",
+          "texto": "ERP",
+          "x": 50,
+          "y": 77,
+          "tam": "s",
+          "t": 0.25
+        },
+        {
+          "el": "texto",
+          "texto": "Contabilidad",
+          "x": 76,
+          "y": 73,
+          "tam": "s",
+          "t": 0.3
+        },
+        {
+          "el": "texto",
+          "texto": "Software *a medida* por API",
+          "x": 50,
+          "y": 86,
+          "tam": "l",
+          "ancho": 86,
+          "t": 0.35
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*",
+      "subtexto": "@technologicsjdt",
+      "transicion": "persiana",
+      "duracion": 3.2,
+      "voz": "Deja de ser el cable. Hablemos de tu proyecto."
+    }
+  ],
+  "tiempos": {
+    "inicios": [
+      0.0,
+      3.4,
+      8.43,
+      11.65,
+      14.94,
+      19.94
+    ],
+    "retardo": 0.3,
+    "duracion": 23.57
+  },
+  "direccion": {
+    "hook": "En el primer cuadro ya se ve el final: tres paneles de vidrio con CRM, ERP y contabilidad al día y el titular Así se ve cuando se hablan.",
+    "payoff": "El dueño descubre que el cable entre sus sistemas es él, y JDT lo reemplaza con software a medida que los conecta por API; cierre con Hablemos de tu proyecto.",
+    "familias": [
+      "motion-graphics",
+      "vfx-tracking",
+      "mixed-media"
+    ],
+    "beats": [
+      {
+        "inicio": 0.0,
+        "fin": 1.89,
+        "funcion": "hook",
+        "familia": "motion-graphics",
+        "visual": "Paneles de vidrio esmerilado con tres tarjetas en check sobre manchas dorada y azul, titular gigante visible desde t=0"
+      },
+      {
+        "inicio": 1.89,
+        "fin": 3.3,
+        "funcion": "contexto",
+        "familia": "mixed-media",
+        "visual": "Cámara empuja hacia el panel ordenado mientras la chispa amarilla late y destella"
+      },
+      {
+        "inicio": 3.3,
+        "fin": 5.07,
+        "funcion": "giro",
+        "familia": "vfx-tracking",
+        "visual": "Glitch de rebobinado rompe el vidrio y entran filas gigantes COPIAR y PEGAR corriendo"
+      },
+      {
+        "inicio": 5.07,
+        "fin": 6.84,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "La fila OTRA VEZ cruza en amarillo con vibración de pantalla"
+      },
+      {
+        "inicio": 6.84,
+        "fin": 8.72,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "Titular Tú eres el cable y persona triste temblando dentro de un anillo dorado translúcido"
+      },
+      {
+        "inicio": 8.72,
+        "fin": 10.61,
+        "funcion": "tension",
+        "familia": "mixed-media",
+        "visual": "Líneas punteadas amarillas laten entre CRM, ERP, Contabilidad y la persona; reloj que se balancea"
+      },
+      {
+        "inicio": 10.61,
+        "fin": 12.73,
+        "funcion": "giro",
+        "familia": "vfx-tracking",
+        "visual": "Barrido abre la pantalla dividida: arriba HOY con papeles, abajo entra la mitad amarilla CON API"
+      },
+      {
+        "inicio": 12.73,
+        "fin": 14.85,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "El icono de enlace se arma en la mitad amarilla con La API los conecta"
+      },
+      {
+        "inicio": 14.85,
+        "fin": 17.21,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Círculo revela look amarillo con hub de código en anillo que gira y titular JDT conecta tus sistemas"
+      },
+      {
+        "inicio": 17.21,
+        "fin": 19.8,
+        "funcion": "recompensa",
+        "familia": "mixed-media",
+        "visual": "Tres flechas se dibujan del hub a CRM, ERP y Contabilidad sobre panel de vidrio blanco translúcido"
+      },
+      {
+        "inicio": 19.8,
+        "fin": 21.68,
+        "funcion": "payoff",
+        "familia": "motion-graphics",
+        "visual": "Persiana al cierre con Hablemos de tu proyecto en tipografía gigante"
+      },
+      {
+        "inicio": 21.68,
+        "fin": 23.57,
+        "funcion": "cierre",
+        "familia": "motion-graphics",
+        "visual": "Pastilla con @technologicsjdt bajo el titular gigante sobre vidrio dorado"
+      }
+    ]
+  },
+  "validacion": "corregido: dos validaciones del modelo capaz (opus): la primera pidió gancho completo en t=0, vidrio con manchas de luz, pantalla dividida con solución visible desde 11.65, etiqueta CON API automático, hojas y enlace de tres puntos, tarjetas de la escena 3 antes, y subtexto de respuesta en el cierre; la segunda pidió separar el enlace del titular, resaltar «los conecta», adelantar las tarjetas y acortar la persiana. Todo aplicado y revisado en cuadros de prueba."
+}
