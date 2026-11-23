@@ -168,5 +168,10 @@
     "url": "jdt:reservas-por-chat",
     "titulo": "Citas y reservas que se pierden entre mensajes de chat",
     "fecha": "2026-11-23T10:17:03.073040+00:00"
+  },
+  {
+    "url": "jdt:portal-de-clientes",
+    "titulo": "Clientes que llaman diez veces para saber cómo va su pedido",
+    "fecha": "2026-11-23T11:09:01.822585+00:00"
   }
 ]

@@ -1,0 +1,10 @@
+{
+  "salida": "banners/2026-11-23-0607-llamadas-por-su-pedido.png",
+  "estilo": "bento",
+  "etiqueta": "PORTAL DE CLIENTES",
+  "titulo": "¿Ya salió *mi pedido?*",
+  "subtitulo": "Tus clientes lo ven solos, sin llamarte.",
+  "puntos": ["Estado del pedido en línea", "Menos llamadas al día", "A la medida de tu proceso"],
+  "cta": "Hablemos de tu proyecto.",
+  "icono": "telefono"
+}

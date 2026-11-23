@@ -1,0 +1,135 @@
+{
+ "salida": "videos/2026-11-23-0607-llamadas-por-su-pedido.mp4",
+ "formato": "gancho de llamada repetida: diez preguntas iguales en pantalla, el cliente que ve su pedido en un portal y el cierre con el servicio de JDT",
+ "concepto": "Cada llamada «¿ya salió mi pedido?» es trabajo que nadie hace; un portal a medida le da al cliente la respuesta antes de que pregunte.",
+ "produccion": "tipografia-cinetica como vestido: palabras que golpean la pantalla con la pregunta repetida, el chat con burbujas que se apilan en collage, la solución en escena libre con tarjetas de pedido, pasos prefabricados y cierre limpio. Apoyo motion-modular solo en la escena de pasos.",
+ "fuente": "marca.md",
+ "url": "jdt:portal-de-clientes",
+ "tendencias": {
+  "video": "collage-recorte",
+  "apoyo": "motion-modular",
+  "gancho": "antes-despues",
+  "ritmo": "rapido",
+  "banner": "bento",
+  "pulso": "2026-11-23: búsquedas Reels y motion B2B 2026 (metricool, advids): texto vertical grande que carga el mensaje y motion que muestra un proceso real; sin cifras verificadas.",
+  "fuentes": [
+   "https://metricool.com/es/tendencias-instagram/",
+   "https://advids.co/blog/ui-animation-motion-design-trends"
+  ]
+ },
+ "escenas": [
+  {
+   "tipo": "palabras",
+   "frases": [
+    "¿Ya salió mi pedido?",
+    "*Otra vez.*"
+   ],
+   "voz": "¿Ya salió mi pedido? Otra vez la misma llamada. Van diez hoy.",
+   "look": "amarillo",
+   "fx": [
+    "glitch"
+   ],
+   "duracion": 6.15
+  },
+  {
+   "tipo": "chat",
+   "texto": "La misma pregunta, todo el día",
+   "etiquetas": [
+    "¿Ya salió mi pedido?",
+    "¿Y el de ayer?",
+    "¿Me avisan?"
+   ],
+   "voz": "Tu equipo responde lo mismo una y otra vez.",
+   "transicion": "desliza-arriba",
+   "camara": "empuja",
+   "duracion": 3.15
+  },
+  {
+   "tipo": "libre",
+   "texto": "Que el cliente *lo vea solo*",
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "telefono",
+     "x": 24,
+     "y": 58,
+     "tam": 26,
+     "color": "blanco",
+     "entra": "izquierda",
+     "t": 0
+    },
+    {
+     "el": "linea",
+     "x": 38,
+     "y": 58,
+     "a": [
+      52,
+      58
+     ],
+     "estilo": "flecha",
+     "pulso": true,
+     "t": 0.25
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Pedido en camino",
+     "icono": "camion",
+     "x": 62,
+     "y": 58,
+     "t": 0.45
+    },
+    {
+     "el": "icono",
+     "nombre": "check",
+     "x": 50,
+     "y": 78,
+     "tam": 12,
+     "color": "amarillo",
+     "entra": "pop",
+     "mueve": "late",
+     "t": 0.7
+    }
+   ],
+   "voz": "¡Imagínate! El cliente ve su pedido solo, sin llamar.",
+   "look": "azul",
+   "transicion": "persiana",
+   "duracion": 3.89
+  },
+  {
+   "tipo": "pasos",
+   "texto": "Así lo armamos a tu medida",
+   "etiquetas": [
+    "Analizamos",
+    "Desarrollamos",
+    "Entregamos"
+   ],
+   "voz": "En JDT construimos ese portal a tu medida.",
+   "fx": [
+    "destello"
+   ],
+   "camara": "latido",
+   "duracion": 3.04
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de tu proyecto",
+   "subtexto": "@technologicsjdt",
+   "voz": "Hablemos de tu proyecto. Escríbenos desde nuestro perfil de JDT Technologics.",
+   "transicion": "fundido",
+   "duracion": 6.07
+  }
+ ],
+ "audio": "videos/2026-11-23-0607-llamadas-por-su-pedido-mezcla.mp3",
+ "tiempos": {
+  "inicios": [
+   0.0,
+   6.15,
+   9.3,
+   13.19,
+   16.23
+  ],
+  "retardo": 0.3,
+  "duracion": 22.3
+ },
+ "duracion": 22.3
+}
