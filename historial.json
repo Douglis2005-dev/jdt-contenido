@@ -153,5 +153,10 @@
     "url": "jdt:equipo-en-campo-sin-app",
     "titulo": "Tu equipo en campo reporta por WhatsApp y fotos sueltas",
     "fecha": "2026-11-22T23:16:34.616377+00:00"
+  },
+  {
+    "url": "jdt:aprobaciones-por-correo",
+    "titulo": "Aprobaciones que se quedan atascadas en una cadena de correos",
+    "fecha": "2026-11-23T08:07:26.724914+00:00"
   }
 ]

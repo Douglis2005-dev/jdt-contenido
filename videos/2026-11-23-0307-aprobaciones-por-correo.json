@@ -1,0 +1,357 @@
+{
+  "salida": "videos/2026-11-23-0307-aprobaciones-por-correo.mp4",
+  "formato": "confesión del personaje atrapado: la propia solicitud (un sobre de correo con actitud) cuenta en primera persona cómo la reenvían sin que nadie la apruebe, la pantalla se parte en dos entre la cadena de correos y el flujo, y el mismo sobre ve en vivo cómo un cursor toca Aprobar y sale libre; cierre con su grito de auxilio convertido en llamado a la acción",
+  "concepto": "La que confiesa es la solicitud misma: un sobre de correo con actitud que lleva desde el lunes atrapado en una cadena de RE: esperando un visto bueno, hasta que JDT le arma un flujo de aprobación donde un clic en Aprobar lo libera y le avisa a todos.",
+  "produccion": "mascota-con-actitud como vestido de todo el Reel: el sobre de correo es el personaje (gigante y temblando en el gancho sobre look amarillo a pantalla completa con fx pulso y cámara aleja; diminuto y aplastado bajo la pila de RE: en la escena oscura con escaneo y transición glitch; celebrando con latido cuando sale aprobado); apoyo pantalla-dividida-dinamica en UNA sola escena quieta de giro (escena dividida correo vs flujo con transición destello); demostración del proceso real en look azul (ventana con campo de solicitud, cursor que viaja al botón Aprobar, tarjeta de aprobado y campana) con transición círculo y cámara fija para que el cursor se lea; cierre con persiana. Ritmo mixto: escenas activas de 2 a 3 s y la dividida quieta de 4 s.",
+  "fuente": "marca.md",
+  "tendencias": {
+    "video": "mascota-con-actitud",
+    "apoyo": "pantalla-dividida-dinamica",
+    "gancho": "confesion",
+    "ritmo": "mixto",
+    "banner": "amarillo-total",
+    "pulso": "resumen fechado de la búsqueda del 2026-11-23 (ver tendencias_vivas.md)",
+    "fuentes": [
+      "https://metricool.com/es/tendencias-instagram/"
+    ]
+  },
+  "escenas": [
+    {
+      "tipo": "libre",
+      "look": "amarillo",
+      "fx": [
+        "pulso"
+      ],
+      "camara": "aleja",
+      "voz": "Confieso: soy tu solicitud… y llevo desde el lunes atrapada en tu correo.",
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "circulo",
+          "x": 50,
+          "y": 44,
+          "ancho": 58,
+          "alto": 58,
+          "color": "dorado",
+          "t": 0
+        },
+        {
+          "el": "icono",
+          "nombre": "correo",
+          "x": 50,
+          "y": 44,
+          "tam": 34,
+          "t": 0,
+          "entra": "pop",
+          "mueve": "tiembla"
+        },
+        {
+          "el": "burbuja",
+          "texto": "¿Me das el visto bueno?",
+          "x": 64,
+          "y": 20,
+          "cola": "izq",
+          "color": "blanco",
+          "ancho": 56,
+          "t": 0.1
+        },
+        {
+          "el": "texto",
+          "texto": "Confieso: llevo *desde el lunes* aquí",
+          "x": 50,
+          "y": 74,
+          "tam": "l",
+          "ancho": 86,
+          "t": 0.05
+        },
+        {
+          "el": "icono",
+          "nombre": "reloj",
+          "x": 18,
+          "y": 30,
+          "tam": 12,
+          "entra": "pop",
+          "mueve": "balancea",
+          "t": 0.45
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "texto": "Me *reenvían*… y nadie *aprueba*",
+      "fx": [
+        "escaneo"
+      ],
+      "transicion": "glitch",
+      "voz": "Me reenvían, me copian a todos… y el visto bueno, ¡NADA!",
+      "elementos": [
+        {
+          "el": "tarjeta",
+          "texto": "RE: ¿Me das el visto bueno?",
+          "icono": "correo",
+          "x": 50,
+          "y": 42,
+          "ancho": 76,
+          "entra": "baja",
+          "t": 0.05
+        },
+        {
+          "el": "tarjeta",
+          "texto": "RE: RE: ¿Lo viste?",
+          "icono": "correo",
+          "x": 55,
+          "y": 53,
+          "ancho": 70,
+          "giro": -4,
+          "entra": "baja",
+          "t": 0.25
+        },
+        {
+          "el": "tarjeta",
+          "texto": "RV: con copia a todos",
+          "icono": "correo",
+          "x": 46,
+          "y": 64,
+          "ancho": 70,
+          "giro": 3,
+          "entra": "baja",
+          "t": 0.45
+        },
+        {
+          "el": "icono",
+          "nombre": "correo",
+          "x": 38,
+          "y": 81,
+          "tam": 12,
+          "color": "amarillo",
+          "mueve": "tiembla",
+          "entra": "pop",
+          "t": 0.6
+        },
+        {
+          "el": "burbuja",
+          "texto": "¿Y el sí?",
+          "x": 64,
+          "y": 80,
+          "cola": "izq",
+          "color": "amarillo",
+          "ancho": 30,
+          "t": 0.7
+        }
+      ]
+    },
+    {
+      "tipo": "dividida",
+      "transicion": "destello",
+      "etiquetas": [
+        "Por correo: *RE: RE:*",
+        "Con flujo: *aprobado* en un clic"
+      ],
+      "iconos": [
+        "correo",
+        "check"
+      ],
+      "rotulos": [
+        "CORREO",
+        "FLUJO"
+      ],
+      "voz": "Por correo me pierdo. En un flujo, nadie persigue a nadie."
+    },
+    {
+      "tipo": "libre",
+      "look": "azul",
+      "texto": "*JDT* automatiza tus *aprobaciones*",
+      "transicion": "circulo",
+      "voz": "JDT automatiza tus aprobaciones: llega la solicitud, tocan Aprobar y todos reciben el aviso.",
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 50,
+          "y": 50,
+          "ancho": 84,
+          "alto": 26,
+          "color": "superficie",
+          "t": 0
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Solicitud: compra de insumos",
+          "icono": "documento",
+          "x": 50,
+          "y": 43,
+          "ancho": 74,
+          "entra": "aparece",
+          "t": 0.05
+        },
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 50,
+          "y": 56,
+          "ancho": 38,
+          "alto": 6,
+          "color": "amarillo",
+          "entra": "pop",
+          "t": 0.2
+        },
+        {
+          "el": "texto",
+          "texto": "Aprobar",
+          "x": 50,
+          "y": 56,
+          "tam": "m",
+          "color": "superficie",
+          "t": 0.2
+        },
+        {
+          "el": "forma",
+          "forma": "triangulo",
+          "x": 84,
+          "y": 84,
+          "ancho": 5,
+          "alto": 5,
+          "color": "blanco",
+          "giro": 0,
+          "a": [
+            57,
+            58
+          ],
+          "t": 0.3
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Aprobado · aviso a todos",
+          "icono": "check",
+          "x": 50,
+          "y": 72,
+          "ancho": 74,
+          "entra": "pop",
+          "t": 0.62
+        },
+        {
+          "el": "icono",
+          "nombre": "correo",
+          "x": 30,
+          "y": 85,
+          "tam": 13,
+          "color": "amarillo",
+          "entra": "sube",
+          "mueve": "late",
+          "t": 0.72
+        },
+        {
+          "el": "icono",
+          "nombre": "campana",
+          "x": 70,
+          "y": 85,
+          "tam": 11,
+          "color": "blanco",
+          "entra": "pop",
+          "mueve": "late",
+          "t": 0.78
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*",
+      "subtexto": "@technologicsjdt",
+      "transicion": "persiana",
+      "voz": "¡Sáquenme de aquí! Hablemos de tu proyecto."
+    }
+  ],
+  "tiempos": {
+    "duracion": 24.0,
+    "nota": "La voz real dura 24.3 s; el render sale por el audio (~25.8 s con la cola). El storyboard se planea en 24 s por el limite de retencion."
+  },
+  "direccion": {
+    "hook": "Un sobre con actitud confiesa en el primer segundo que lleva desde el lunes atrapado en un correo.",
+    "payoff": "El sobre sale aprobado con un clic y JDT aparece como quien automatiza ese flujo, con llamado a hablar del proyecto.",
+    "familias": [
+      "motion-graphics",
+      "mixed-media",
+      "vfx-tracking"
+    ],
+    "beats": [
+      {
+        "inicio": 0,
+        "fin": 1.8,
+        "funcion": "hook",
+        "familia": "motion-graphics",
+        "visual": "Sobre dorado con actitud rebota al entrar, tiembla y el titular irrumpe con Confieso"
+      },
+      {
+        "inicio": 1.8,
+        "fin": 3.4,
+        "funcion": "contexto",
+        "familia": "motion-graphics",
+        "visual": "Titular llevo desde el lunes aqui se revela con la palabra clave en amarillo"
+      },
+      {
+        "inicio": 3.4,
+        "fin": 5.8,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "Burbuja blanca con la pregunta me das el visto bueno aparece junto al sobre"
+      },
+      {
+        "inicio": 5.8,
+        "fin": 8.6,
+        "funcion": "tension",
+        "familia": "mixed-media",
+        "visual": "Tres tarjetas de cadena de RE: caen torcidas sobre el fondo oscuro"
+      },
+      {
+        "inicio": 8.6,
+        "fin": 10.7,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "Palabra gigante NADA aparece mientras el sobre se aplasta a la esquina"
+      },
+      {
+        "inicio": 10.7,
+        "fin": 12.9,
+        "funcion": "giro",
+        "familia": "vfx-tracking",
+        "visual": "Destello blanco y corte diagonal que abre la pantalla dividida (estilo de apoyo)"
+      },
+      {
+        "inicio": 12.9,
+        "fin": 15.5,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Lado derecho muestra tres pasos ordenados Pedido Aprobar Aviso sobre amarillo"
+      },
+      {
+        "inicio": 15.5,
+        "fin": 18.4,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Ventana de solicitud escribe el campo y el cursor viaja hacia el boton Aprobar"
+      },
+      {
+        "inicio": 18.4,
+        "fin": 20.4,
+        "funcion": "recompensa",
+        "familia": "motion-graphics",
+        "visual": "Clic en Aprobar: el boton cambia a blanco y el campo se confirma"
+      },
+      {
+        "inicio": 20.4,
+        "fin": 21.8,
+        "funcion": "recompensa",
+        "familia": "mixed-media",
+        "visual": "Campana que suena y sobre que late al recibir el aviso de todos"
+      },
+      {
+        "inicio": 21.8,
+        "fin": 24.0,
+        "funcion": "cierre",
+        "familia": "motion-graphics",
+        "visual": "Logo JDT con Hablemos de tu proyecto y @technologicsjdt como pildora de contacto"
+      }
+    ]
+  },
+  "validacion": "corregido: tres rondas de revisión con modelo capaz (opus). Aplicado: JDT automatiza tus aprobaciones en la escena 4; gancho amarillo con titular visible desde t=0; sobre con cara que sonríe al aprobar y gesto triste al inicio; cursor más grande que llega a Aprobar sin tapar texto; pantalla dividida llena desde el inicio; campana AVISO. Nota de la última revisión antes de estas correcciones: 7,0."
+}

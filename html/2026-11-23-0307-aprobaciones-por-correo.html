@@ -1,0 +1,188 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+  .sobre { position:absolute; width:460px; height:300px; left:50%; top:0; margin-left:-230px; }
+  .sobre svg { width:100%; height:100%; overflow:visible; }
+  .carta { position:absolute; background:var(--sup); border:2px solid var(--borde); border-radius:22px; padding:26px 30px;
+           font-size:40px; font-weight:800; color:var(--blanco); width:640px; box-shadow:0 24px 60px rgba(0,0,0,.45); }
+  .carta b { color:var(--amarillo); }
+  .burbuja { position:absolute; background:var(--blanco); color:var(--fondo); font-weight:800; font-size:44px; padding:18px 34px;
+             border-radius:44px; white-space:nowrap; }
+  .panel { position:absolute; top:0; height:100%; width:50%; }
+  .izq { left:0; background:var(--fondo2); }
+  .der { right:0; background:var(--amarillo); color:var(--fondo); clip-path:polygon(38% 0,100% 0,100% 100%,62% 100%); }
+  .paso { position:absolute; width:250px; height:250px; border-radius:40px; display:flex; align-items:center; justify-content:center;
+          font-weight:900; font-size:62px; background:var(--fondo); color:var(--amarillo); border:4px solid var(--fondo); }
+  .ui { position:absolute; left:100px; top:520px; width:880px; height:600px; padding:50px; }
+  .campo { font-size:44px; font-weight:700; margin-top:30px; color:var(--blanco); }
+  .campo span { color:var(--amarillo); }
+  .btn { position:absolute; left:560px; top:430px; padding:20px 46px; border-radius:999px; background:var(--amarillo);
+         color:var(--fondo); font-weight:900; font-size:46px; }
+  .cursor { position:absolute; width:0; height:0; border-left:54px solid var(--blanco); border-top:32px solid transparent;
+            border-bottom:32px solid transparent; transform:rotate(-30deg); filter:drop-shadow(0 4px 10px rgba(0,0,0,.5)); }
+  .ok { position:absolute; left:100px; top:1190px; width:880px; padding:34px 44px; border-radius:30px; font-weight:800;
+        font-size:46px; background:var(--amarillo); color:var(--fondo); }
+  .campana { position:absolute; left:860px; top:300px; width:110px; height:110px; border-radius:50%; background:var(--amarillo);
+             color:var(--fondo); font-weight:900; font-size:70px; display:flex; align-items:center; justify-content:center; }
+</style></head>
+<body>
+<!-- E1 gancho: sobre con actitud que confiesa -->
+<div id="e1" class="capa" style="background:var(--amarillo)">
+  <div id="h1a" class="mono" style="position:absolute;left:0;right:0;top:250px;text-align:center;font-size:40px;color:var(--fondo);font-weight:800">Confieso:</div>
+  <div id="h1b" class="titulo" style="position:absolute;left:60px;right:60px;top:300px;text-align:center;font-size:104px;line-height:1.02;color:var(--fondo)">llevo <span style="color:var(--blanco)">desde el lunes</span> en tu correo</div>
+  <div id="sob1" class="sobre" style="top:880px">
+    <svg viewBox="0 0 460 300">
+      <rect x="6" y="6" width="448" height="288" rx="26" fill="#FFFFFF" stroke="#0A0E27" stroke-width="8"/>
+      <path d="M6 40 L230 190 L454 40" fill="none" stroke="#0A0E27" stroke-width="10" stroke-linejoin="round"/>
+      <circle cx="170" cy="150" r="20" fill="#0A0E27"/><circle cx="290" cy="150" r="20" fill="#0A0E27"/>
+      <path id="boca1" d="M190 220 Q230 250 270 220" fill="none" stroke="#0A0E27" stroke-width="10" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div id="bub1" class="burbuja" style="left:70px;top:760px">¿Me das el visto bueno?</div>
+</div>
+
+<!-- E2 cadena de RE: -->
+<div id="e2" class="capa">
+  <div id="c2a" class="carta" style="left:70px;top:330px">RE: <b>¿Me das el visto bueno?</b></div>
+  <div id="c2b" class="carta" style="left:250px;top:560px">RE: RE: <b>¿Lo viste?</b></div>
+  <div id="c2c" class="carta" style="left:90px;top:800px">RV: <b>con copia a todos</b></div>
+  <div id="w2" class="titulo" style="position:absolute;left:0;right:0;top:1260px;text-align:center;font-size:170px;color:var(--amarillo)">¡NADA!</div>
+  <div id="sob2" class="sobre" style="top:1480px;width:200px;margin-left:-100px;height:130px;left:50%">
+    <svg viewBox="0 0 460 300" preserveAspectRatio="xMidYMid meet"><rect x="6" y="6" width="448" height="288" rx="26" fill="#FACC15"/>
+      <path d="M6 40 L230 190 L454 40" fill="none" stroke="#0A0E27" stroke-width="14"/><circle cx="170" cy="150" r="20" fill="#0A0E27"/><circle cx="290" cy="150" r="20" fill="#0A0E27"/><path d="M190 240 Q230 210 270 240" fill="none" stroke="#0A0E27" stroke-width="10" stroke-linecap="round"/></svg>
+  </div>
+</div>
+
+<!-- E3 pantalla dividida (estilo de apoyo) -->
+<div id="e3" class="capa">
+  <div class="panel izq"><div class="mono" style="position:absolute;left:70px;top:330px;color:var(--gris)">Correo</div>
+    <div id="k3a" class="carta" style="left:70px;top:460px;width:520px;font-size:34px">RE: ¿me das el visto bueno?</div>
+    <div id="k3b" class="carta" style="left:150px;top:640px;width:520px;font-size:34px">RE: RE: ¿lo viste?</div>
+    <div id="k3c" class="carta" style="left:40px;top:820px;width:520px;font-size:34px">RV: copia a todos</div></div>
+  <div class="panel der"><div class="mono" style="position:absolute;right:70px;top:330px;color:var(--fondo);font-weight:800">Flujo</div>
+    <div class="paso" id="p3a" style="left:300px;top:520px;width:220px;height:200px;font-size:44px">Pedido</div>
+    <div class="paso" id="p3b" style="left:300px;top:840px;width:220px;height:200px;font-size:44px">Aprobar</div>
+    <div class="paso" id="p3c" style="left:300px;top:1160px;width:220px;height:200px;font-size:44px">Aviso</div></div>
+  <div id="tit3" class="titulo" style="position:absolute;left:0;right:0;top:1430px;text-align:center;font-size:96px"><span class="clave">Nadie</span> persigue a nadie</div>
+</div>
+
+<!-- E4 proceso en acción -->
+<div id="e4" class="capa">
+  <div id="tit4" class="titulo" style="position:absolute;left:40px;right:40px;top:300px;text-align:center;font-size:84px;line-height:1.05"><span class="clave">JDT</span> automatiza tus <span class="clave">aprobaciones</span></div>
+  <div class="vidrio ui" id="ui4">
+    <div class="mono">Solicitud nueva</div>
+    <div class="campo">Solicitud: <span id="campo4"></span></div>
+    <div class="campo" style="font-size:36px;color:var(--gris)">Monto y proveedor verificados</div>
+    <div class="btn" id="btn4">Aprobar</div>
+  </div>
+  <div id="cur4" class="cursor" style="left:880px;top:1300px"></div>
+  <div id="campana4" class="campana" style="opacity:0;left:700px;top:1530px;width:150px;height:150px;font-size:30px">AVISO</div>
+  <div id="ok4" class="ok" style="opacity:0">Aprobado · aviso a todos</div>
+  <div id="sob4" class="sobre" style="top:1500px;width:260px;height:170px;margin-left:-130px">
+    <svg viewBox="0 0 460 300"><rect x="6" y="6" width="448" height="288" rx="26" fill="#FACC15"/>
+      <path d="M6 40 L230 190 L454 40" fill="none" stroke="#0A0E27" stroke-width="14"/><circle cx="170" cy="150" r="20" fill="#0A0E27"/><circle cx="290" cy="150" r="20" fill="#0A0E27"/><path id="boca4" d="M190 232 Q230 210 270 232" fill="none" stroke="#0A0E27" stroke-width="10" stroke-linecap="round"/></svg>
+  </div>
+</div>
+
+<!-- E5 cierre -->
+<div id="e5" class="capa">
+  <div id="rot5" class="titulo" style="position:absolute;left:0;right:0;top:380px;text-align:center;font-size:72px;letter-spacing:.2em;color:var(--amarillo)">¡SÁQUENME DE AQUÍ!</div>
+  <img id="logo5" src="../recursos/logo.jpeg" style="position:absolute;left:290px;top:560px;width:500px;border-radius:90px">
+  <div id="c5" class="titulo" style="position:absolute;left:0;right:0;top:1120px;text-align:center;font-size:118px;line-height:1.05">Hablemos de <span class="oro">tu proyecto</span></div>
+  <div id="p5" style="position:absolute;left:0;right:0;top:1420px;text-align:center"><span class="pildora">@technologicsjdt</span></div>
+</div>
+
+<div id="hud" class="hud"></div>
+<div id="fl" class="capa" style="background:#fff;opacity:0;z-index:7"></div>
+<script>
+const {seg, lerp, clamp} = JDT; const $ = id => document.getElementById(id);
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+window.DURACION = 25.82;
+const dentro = (t, a, b) => t >= a && t < b;
+const ESC = [["e1", 0, 5.83], ["e2", 5.83, 10.71], ["e3", 10.71, 15.51], ["e4", 15.51, 21.78], ["e5", 21.78, 25.82]];
+const NOMBRE = ["01 · GANCHO", "02 · CADENA", "03 · CORREO VS FLUJO", "04 · APROBAR", "05 · CIERRE"];
+const CAMPO = "compra de insumos";
+window.render = (t) => {
+  ESC.forEach(([id, a, b]) => $(id).style.display = dentro(t, a, b) ? "block" : "none");
+  JDT.fondo(bg, t);
+
+  // E1: sobre con actitud, rebota al entrar, tiembla y pulsa al confesar
+  if (dentro(t, 0, 5.83)) {
+    const e = seg(t, 0, .7, "outBack");
+    const tiembla = Math.sin(t * 38) * 4 * seg(t, .8, 1.4, "lineal");
+    $("sob1").style.transform = `translate(${tiembla}px, ${lerp(300, 0, e)}px) scale(${lerp(.4, 1, e)})`;
+    $("boca1").setAttribute("d", t < 2 ? "M190 232 Q230 210 270 232" : "M190 220 Q230 250 270 220");
+    $("h1a").style.opacity = seg(t, 0, .3, "lineal");
+    JDT.revelar($("h1b"), seg(t, 0, .2, "outExpo"));
+    $("bub1").style.opacity = seg(t, .8, 1.2, "lineal");
+    $("bub1").style.transform = `scale(${lerp(.6, 1, seg(t, .8, 1.4, "outBack"))})`;
+  }
+
+  // E2: la cadena de RE: cae, el sobre se encoge aplastado
+  if (dentro(t, 5.83, 10.71)) {
+    const k = t - 5.83;
+    [["c2a", .0, 90], ["c2b", .35, -70], ["c2c", .7, 60]].forEach(([id, d, rot]) => {
+      const p = seg(k, d, d + .6, "outBack");
+      $(id).style.transform = `translateY(${lerp(-500, 0, p)}px) rotate(${lerp(-30, rot / 10, p)}deg)`;
+      $(id).style.opacity = seg(k, d, d + .25, "lineal");
+    });
+    $("sob2").style.transform = `scale(${lerp(1, .55, seg(k, 1.4, 2.2, "inOutCubic"))}, ${lerp(1, .6, seg(k, 1.4, 2.2, "inOutCubic"))})`;
+    $("sob2").style.top = lerp(1480, 1440, seg(k, 1.4, 2.2)) + "px";
+    $("w2").style.opacity = seg(k, 2.4, 2.9, "lineal");
+    $("w2").style.transform = `scale(${lerp(1.4, 1, seg(k, 2.4, 3, "outExpo"))})`;
+  }
+
+  // E3: pantalla dividida: a la izquierda el caos del correo, a la derecha el flujo ordenado (estilo de apoyo)
+  if (dentro(t, 10.71, 15.51)) {
+    const k = t - 10.71;
+    ["k3a", "k3b", "k3c"].forEach((id, i) => {
+      const p = seg(k, i * .2, i * .2 + .5, "outExpo");
+      $(id).style.opacity = p;
+      $(id).style.transform = `rotate(${(i - 1) * 6 * p}deg) translateX(${Math.sin(k * 2 + i) * 12}px)`;
+    });
+    ["p3a", "p3b", "p3c"].forEach((id, i) => {
+      const p = seg(k, .05 + i * .1, .35 + i * .1, "outBack");
+      $(id).style.transform = `scale(${p})`;
+      $(id).style.opacity = p;
+    });
+    $("tit3").style.opacity = seg(k, 3, 3.5, "lineal");
+    if (dentro(t, 10.71, 10.95)) JDT.flash($("fl"), 1 - (t - 10.71) / .24); else JDT.flash($("fl"), 0);
+  }
+
+  // E4: la interfaz en acción: el campo se escribe, el cursor llega a Aprobar y el sobre celebra
+  if (dentro(t, 15.51, 21.78)) {
+    const k = t - 15.51;
+    JDT.revelar($("tit4"), seg(k, 0, .6, "outExpo"));
+    const n = Math.round(CAMPO.length * seg(k, .6, 1.8, "lineal"));
+    $("campo4").textContent = CAMPO.slice(0, n);
+    const cx = lerp(880, 700, seg(k, 2.6, 4.2, "inOutCubic")), cy = lerp(1300, 990, seg(k, 2.6, 4.2, "inOutCubic"));
+    $("cur4").style.left = cx + "px"; $("cur4").style.top = cy + "px";
+    const pulsa = dentro(k, 4.2, 4.5) ? .92 : 1;
+    $("btn4").style.transform = `scale(${pulsa})`;
+    $("btn4").style.background = k > 4.5 ? "var(--blanco)" : "var(--amarillo)";
+    $("ok4").style.opacity = seg(k, 4.6, 5.0, "lineal");
+    $("ok4").style.transform = `translateY(${lerp(60, 0, seg(k, 4.6, 5.2, "outExpo"))}px)`;
+    $("campana4").style.opacity = seg(k, 4.9, 5.1, "lineal");
+    $("campana4").style.transform = `rotate(${dentro(k, 4.9, 5.6) ? Math.sin((k - 4.9) * 40) * 14 : 0}deg)`;
+    const late = 1 + .05 * Math.sin(k * 6) * (k > 4.5 ? 1 : 0);
+    const salta = k > 5 ? lerp(0, -80, seg(k, 5, 5.6, "outBack")) : 0;
+    $("sob4").style.transform = `translateY(${salta}px) scale(${late})`;
+    $("boca4").setAttribute("d", k > 4.5 ? "M190 220 Q230 250 270 220" : "M190 232 Q230 210 270 232");
+  }
+
+  // E5: cierre con la marca y el llamado a la acción
+  if (dentro(t, 21.78, 25.82)) {
+    const k = t - 21.78;
+    $("rot5").style.opacity = seg(k, 0, .4, "lineal");
+    $("logo5").style.opacity = seg(k, .4, 1.1, "lineal");
+    JDT.revelar($("c5"), seg(k, 1.2, 2.2, "outExpo"));
+    $("p5").style.opacity = seg(k, 2.4, 2.9, "lineal");
+    $("p5").style.transform = `translateY(${lerp(40, 0, seg(k, 2.4, 3, "outExpo"))}px)`;
+  }
+
+  // barridos entre capitulos (dos en todo el video, como mucho)
+  let kb = 0; [10.5, 15.3].forEach(x => { if (t > x && t < x + .6) kb = (t - x) / .6; });
+  fg.clearRect(0, 0, JDT.W, JDT.H); JDT.barrido(fg, kb); JDT.grano(fg, t, .035);
+  JDT.hud($("hud"), t, 25.82, NOMBRE[Math.max(0, ESC.findLastIndex(([, a]) => t >= a))]);
+};
+</script></body></html>
