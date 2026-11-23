@@ -1,0 +1,386 @@
+{
+  "salida": "videos/2026-11-23-0707-hojas-de-calculo-dispersas.mp4",
+  "formato": "afirmación absurda con investigación de oficina: abre con el mismo producto viviendo en tres universos paralelos (tres hojas que dicen cosas distintas y un cursor que hace clic justo en la contradicción), baja a un microdocumental quieto del viernes por la tarde copiando y pegando, la búsqueda del «archivo bueno» se escribe sola en una terminal y remata en ninguno, y el giro junta las tres hojas en una sola herramienta de JDT donde el cursor marca «Todo cuadra»; cierre limpio",
+  "concepto": "Tu inventario vive en tres universos paralelos: en una hoja hay, en otra se agotó y en la tercera nadie sabe; la búsqueda del archivo bueno termina en «ninguno», y JDT acaba el multiverso con software a medida que junta todo en una sola herramienta que se adapta a tu proceso.",
+  "produccion": "interfaz-en-movimiento como vestido de todo el Reel: el gancho son tres ventanas de hoja de cálculo en cascada legibles desde el cuadro 0 con un cursor que viaja y hace clic (anillo que late) junto a la celda que contradice a las otras, con el ÚNICO glitch del video y cámara empuja hacia ese detalle; apoyo microdocumental-cinematico en UNA sola escena quieta con grano y viñeta, rótulo de hora tipo documental, personaje pensativo y hojas que viajan de un lado a otro, cámara paneo lento y transición fundido; terminal oscura que teclea la búsqueda del archivo bueno (producción nueva, enlaza con el banner terminal-ui) con transición barrido; giro en look amarillo con transición destello y cámara acerca: las tres hojas vuelan y se funden en una sola pantalla y el cursor marca la tarjeta «Todo cuadra»; cierre con transición círculo. Ritmo mixto: gancho activo de 3 s, pausa documental, terminal activa, solución que respira.",
+  "fuente": "marca.md",
+  "tendencias": {
+    "video": "interfaz-en-movimiento",
+    "apoyo": "microdocumental-cinematico",
+    "gancho": "afirmacion-absurda",
+    "ritmo": "mixto",
+    "banner": "terminal-ui",
+    "pulso": "Búsquedas Reels 2026 y pymes Colombia Excel 2026: formato vertical con texto grande; motion que muestra producto o proceso real; sin cifras verificadas.",
+    "fuentes": [
+      "https://metricool.com/es/tendencias-instagram/",
+      "https://encolombia.com/economia/empresas/pymes-colombianas-dejan-atras-excel/"
+    ]
+  },
+  "escenas": [
+    {
+      "tipo": "libre",
+      "texto": "Tu inventario vive en *tres universos*",
+      "voz": "Tu inventario vive en tres universos paralelos.",
+      "fx": [
+        "glitch"
+      ],
+      "camara": "empuja",
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 38,
+          "y": 46,
+          "ancho": 60,
+          "alto": 8,
+          "color": "superficie",
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "texto",
+          "texto": "Bodega: sí hay",
+          "x": 38,
+          "y": 46,
+          "tam": "s",
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 52,
+          "y": 58,
+          "ancho": 60,
+          "alto": 8,
+          "color": "borde",
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "texto",
+          "texto": "Ventas: *agotado*",
+          "x": 52,
+          "y": 58,
+          "tam": "s",
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 42,
+          "y": 70,
+          "ancho": 60,
+          "alto": 8,
+          "color": "superficie",
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "texto",
+          "texto": "Pedidos: ¿?",
+          "x": 42,
+          "y": 70,
+          "tam": "s",
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "icono",
+          "nombre": "flecha",
+          "x": 88,
+          "y": 86,
+          "tam": 9,
+          "color": "blanco",
+          "t": 0.15,
+          "a": [
+            88,
+            64
+          ],
+          "giro": 135
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "texto": "Viernes, *6 p. m.*",
+      "voz": "Viernes, seis de la tarde. Alguien sigue copiando y pegando… y nada cuadra.",
+      "fx": [
+        "grano",
+        "vineta"
+      ],
+      "transicion": "fundido",
+      "camara": "paneo",
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "persona-pensando",
+          "x": 50,
+          "y": 62,
+          "tam": 28,
+          "color": "blanco",
+          "entra": "aparece",
+          "mueve": "balancea"
+        },
+        {
+          "el": "icono",
+          "nombre": "tabla",
+          "x": 14,
+          "y": 44,
+          "tam": 11,
+          "color": "gris",
+          "t": 0.15,
+          "a": [
+            86,
+            44
+          ],
+          "sale": 0.6
+        },
+        {
+          "el": "icono",
+          "nombre": "tabla",
+          "x": 86,
+          "y": 50,
+          "tam": 11,
+          "color": "dorado",
+          "t": 0.45,
+          "a": [
+            14,
+            50
+          ],
+          "sale": 0.9
+        },
+        {
+          "el": "linea",
+          "x": 24,
+          "y": 79,
+          "a": [
+            76,
+            79
+          ],
+          "estilo": "punteada",
+          "color": "gris",
+          "pulso": true,
+          "t": 0.3
+        },
+        {
+          "el": "texto",
+          "texto": "Y *nada* cuadra",
+          "x": 50,
+          "y": 86,
+          "tam": "m",
+          "t": 0.6
+        }
+      ]
+    },
+    {
+      "tipo": "terminal",
+      "texto": "¿Cuál es *el bueno*?",
+      "titulo": "archivos@negocio",
+      "lineas": [
+        "> buscar ventas_final",
+        "3 archivos encontrados",
+        "> abrir el bueno",
+        "ninguno coincide"
+      ],
+      "voz": "¿Y cuál es el archivo bueno? ¡NINGUNO!",
+      "transicion": "barrido"
+    },
+    {
+      "tipo": "libre",
+      "texto": "*JDT*: todo en *una sola* herramienta",
+      "voz": "Por eso, en JDT hacemos software a medida: una sola herramienta que se adapta a tu proceso, no al revés.",
+      "look": "amarillo",
+      "transicion": "destello",
+      "camara": "acerca",
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "tabla",
+          "x": 20,
+          "y": 42,
+          "tam": 12,
+          "t": 0,
+          "a": [
+            50,
+            60
+          ],
+          "sale": 0.4
+        },
+        {
+          "el": "icono",
+          "nombre": "tabla",
+          "x": 50,
+          "y": 40,
+          "tam": 12,
+          "t": 0.04,
+          "a": [
+            50,
+            60
+          ],
+          "sale": 0.4
+        },
+        {
+          "el": "icono",
+          "nombre": "tabla",
+          "x": 80,
+          "y": 42,
+          "tam": 12,
+          "t": 0.08,
+          "a": [
+            50,
+            60
+          ],
+          "sale": 0.4
+        },
+        {
+          "el": "icono",
+          "nombre": "pantalla",
+          "x": 50,
+          "y": 60,
+          "tam": 32,
+          "t": 0.38,
+          "entra": "pop",
+          "mueve": "flota"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Todo cuadra",
+          "icono": "check",
+          "x": 44,
+          "y": 82,
+          "ancho": 50,
+          "t": 0.6,
+          "entra": "sube"
+        },
+        {
+          "el": "icono",
+          "nombre": "flecha",
+          "x": 90,
+          "y": 90,
+          "tam": 8,
+          "t": 0.7,
+          "a": [
+            76,
+            84
+          ],
+          "giro": 135
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*",
+      "subtexto": "@technologicsjdt",
+      "voz": "¿Tu negocio vive en hojas? Hablemos de tu proyecto.",
+      "transicion": "circulo"
+    }
+  ],
+  "tiempos": {
+    "inicios": [
+      0.0,
+      3.43,
+      9.83,
+      12.39,
+      18.85
+    ],
+    "retardo": 0.3,
+    "duracion": 22.86
+  },
+  "validacion": "corregido: validación 3b (opus) 7.6 y luego 7.6; se corrigieron cursor sobre «agotado», tarjetas dentro del margen, fichas que se funden en el giro amarillo y tiempo de tecleo del cierre. Pendiente de nota ≥8: se entrega con nota interna 7.6 por debajo del mínimo.",
+  "direccion": {
+    "hook": "Título «Tu inventario vive en tres universos» legible desde t=0 sobre tres fichas de hoja de cálculo apiladas; el cursor hace clic en «Ventas: agotado».",
+    "payoff": "La tarjeta «Todo cuadra» aparece en una sola pantalla, con JDT y el servicio de software a medida, y cierra con el CTA «Hablemos de tu proyecto» y @technologicsjdt.",
+    "familias": [
+      "motion-graphics",
+      "mixed-media"
+    ],
+    "beats": [
+      {
+        "inicio": 0,
+        "fin": 1.2,
+        "funcion": "hook",
+        "familia": "motion-graphics",
+        "visual": "Titular que se revela y tres fichas de hoja que entran en cascada"
+      },
+      {
+        "inicio": 1.2,
+        "fin": 2.6,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Cursor que aparece y hace clic en la celda agotado, que se marca en dorado"
+      },
+      {
+        "inicio": 2.6,
+        "fin": 3.43,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "Cámara que empuja sobre las fichas y la tercera hoja queda en penumbra"
+      },
+      {
+        "inicio": 3.43,
+        "fin": 6.0,
+        "funcion": "contexto",
+        "familia": "mixed-media",
+        "visual": "Reloj de viernes y frase que aparece; hojas recortadas viajan de un lado a otro con grano y viñeta"
+      },
+      {
+        "inicio": 6.0,
+        "fin": 7.9,
+        "funcion": "tension",
+        "familia": "mixed-media",
+        "visual": "Frase “nada cuadra” con cuatro hojas que se desplazan y se superponen"
+      },
+      {
+        "inicio": 7.9,
+        "fin": 9.83,
+        "funcion": "respiro",
+        "familia": "mixed-media",
+        "visual": "Hojas que se asientan y quedan en penumbra antes de la terminal"
+      },
+      {
+        "inicio": 9.83,
+        "fin": 12.39,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Terminal que teclea la búsqueda del archivo bueno y responde ninguno coincide"
+      },
+      {
+        "inicio": 12.39,
+        "fin": 15.2,
+        "funcion": "giro",
+        "familia": "motion-graphics",
+        "visual": "Look amarillo con destello; tres fichas azul marino vuelan al centro y se funden"
+      },
+      {
+        "inicio": 15.2,
+        "fin": 17.0,
+        "funcion": "recompensa",
+        "familia": "motion-graphics",
+        "visual": "Tarjeta «Todo cuadra» con «software a medida» en la pantalla amarilla"
+      },
+      {
+        "inicio": 17.0,
+        "fin": 18.85,
+        "funcion": "recompensa",
+        "familia": "motion-graphics",
+        "visual": "Tarjeta estable con la frase JDT: todo en una sola herramienta"
+      },
+      {
+        "inicio": 18.85,
+        "fin": 21.0,
+        "funcion": "cierre",
+        "familia": "motion-graphics",
+        "visual": "Logo JDT con aberración que se estabiliza y nombre que se escribe"
+      },
+      {
+        "inicio": 21.0,
+        "fin": 22.86,
+        "funcion": "payoff",
+        "familia": "motion-graphics",
+        "visual": "«Hablemos de tu proyecto» y @technologicsjdt como CTA final"
+      }
+    ]
+  }
+}

@@ -1,0 +1,158 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<!-- Reel: Tu negocio vive en diez hojas de cálculo que nadie cuadra. Interfaz en movimiento + microdocumental + terminal + giro amarillo. -->
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script></head>
+<body>
+<div id="vol" class="capa"></div>
+
+<!-- E1 gancho (0-3.43): tres hojas apiladas sin encimarse, cursor que hace clic en la celda que contradice -->
+<div id="e1" class="capa">
+  <div id="t1" class="titulo" style="position:absolute;left:70px;top:330px;width:940px;font-size:112px"></div>
+  <div id="h1" style="position:absolute;left:0;top:0;width:1080px;height:1920px">
+    <div id="h1a" class="vidrio" style="left:110px;top:800px;width:800px;height:230px;padding:34px 44px">
+      <div class="mono" style="font-size:22px">Bodega.xlsx</div>
+      <div class="titulo" style="font-size:50px;margin-top:18px;line-height:1.4">Bodega: <span class="clave">sí hay</span></div>
+    </div>
+    <div id="h1b" class="vidrio" style="left:170px;top:1060px;width:800px;height:230px;padding:34px 44px">
+      <div class="mono" style="font-size:22px">Ventas_v2.xlsx</div>
+      <div class="titulo" style="font-size:50px;margin-top:18px;line-height:1.4">Ventas: <span id="celda" class="clave">agotado</span></div>
+    </div>
+    <div id="h1c" class="vidrio" style="left:230px;top:1320px;width:800px;height:230px;padding:34px 44px">
+      <div class="mono" style="font-size:22px">Final_FINAL.xlsx</div>
+      <div class="titulo" style="font-size:50px;margin-top:18px;line-height:1.4">Cartera: <span class="clave">ni idea</span></div>
+    </div>
+    <div id="cursor" style="position:absolute;left:0;top:0;width:56px;height:56px;border-radius:50%;border:4px solid #FACC15;box-sizing:border-box;margin:-28px 0 0 -28px;opacity:0"></div>
+  </div>
+</div>
+
+<!-- E2 microdocumental (3.43-9.83): reloj de viernes, hojas que viajan, grano y viñeta -->
+<div id="e2" class="capa">
+  <div id="m2" class="mono" style="position:absolute;left:0;right:0;top:420px;text-align:center;font-size:40px;color:#FACC15">Viernes · 6 p. m.</div>
+  <div id="t2" class="titulo" style="position:absolute;left:70px;right:70px;top:1000px;text-align:center;font-size:86px"></div>
+  <div id="hj2" style="position:absolute;left:0;top:0;width:1080px;height:1920px"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 40%, rgba(5,8,22,.85) 100%)"></div>
+</div>
+
+<!-- E3 terminal (9.83-12.39): búsqueda del archivo bueno -->
+<div id="e3" class="capa">
+  <div id="t3" class="titulo" style="position:absolute;left:70px;top:330px;width:940px;font-size:96px"></div>
+  <div id="term" class="vidrio" style="left:70px;top:720px;width:940px;height:700px;padding:44px">
+    <div class="mono" style="font-size:22px">archivos@negocio</div>
+    <div id="c3" class="codigo" style="font-size:44px;margin-top:30px"></div>
+  </div>
+</div>
+
+<!-- E4 giro amarillo (12.39-18.85): las hojas se funden en un solo panel -->
+<div id="e4" class="capa">
+  <div id="t4" class="titulo" style="position:absolute;z-index:3;left:70px;right:70px;top:300px;text-align:center;font-size:100px;color:#0A0E27"></div>
+  <div id="p4" style="position:absolute;left:0;top:0;width:1080px;height:1920px"></div>
+  <div id="s4a" class="vidrio" style="left:0;top:0;width:300px;height:380px;background:#0A0E27;border:none;opacity:0"><div class="mono" style="font-size:18px;color:#94A3B8">hoja 1</div><div style="height:12px;background:#FACC15;border-radius:6px;margin-top:24px;width:80%"></div></div>
+  <div id="s4b" class="vidrio" style="left:0;top:0;width:300px;height:380px;background:#0A0E27;border:none;opacity:0"><div class="mono" style="font-size:18px;color:#94A3B8">hoja 2</div><div style="height:12px;background:#FACC15;border-radius:6px;margin-top:24px;width:60%"></div></div>
+  <div id="s4c" class="vidrio" style="left:0;top:0;width:300px;height:380px;background:#0A0E27;border:none;opacity:0"><div class="mono" style="font-size:18px;color:#94A3B8">hoja 3</div><div style="height:12px;background:#FACC15;border-radius:6px;margin-top:24px;width:90%"></div></div>
+  <div id="u4" class="vidrio" style="left:150px;top:900px;width:780px;height:560px;padding:50px;background:#0A0E27;border:none;opacity:0">
+    <div class="mono" style="color:#FACC15">Una sola herramienta</div>
+    <div class="titulo" style="font-size:84px;margin-top:40px;color:#fff">Todo <span class="clave">cuadra</span></div>
+    <div style="font-size:44px;margin-top:40px;color:#94A3B8;font-family:Inter,sans-serif">software a medida</div>
+  </div>
+</div>
+
+<!-- E5 cierre (18.85-22.86) -->
+<div id="e5" class="capa">
+  <img id="logo" src="../recursos/logo.jpeg" style="position:absolute;left:290px;top:520px;width:500px;border-radius:90px;opacity:0">
+  <div id="n5" class="titulo" style="position:absolute;left:0;right:0;top:1120px;text-align:center;font-size:64px;letter-spacing:.2em"></div>
+  <div id="c5" style="position:absolute;left:0;right:0;top:1280px;text-align:center;font-size:100px;font-weight:900;color:#fff;line-height:1.05;opacity:0">Hablemos de<br><span class="oro">tu proyecto</span></div>
+  <div id="p5" style="position:absolute;left:0;right:0;top:1520px;text-align:center;opacity:0"><span class="pildora">@technologicsjdt</span></div>
+</div>
+
+<div id="fl" class="capa" style="background:#fff;opacity:0;z-index:7"></div>
+
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+window.DURACION = 22.86;
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+document.getElementById("vol").remove();
+const dentro = (t, a, b) => t >= a && t < b;
+const ESCENAS = [["e1", 0, 3.43], ["e2", 3.43, 9.83], ["e3", 9.83, 12.39], ["e4", 12.39, 18.85], ["e5", 18.85, 22.86]];
+const CODIGO = '<b class="k">&gt;</b> buscar ventas_final\n<span class="s">3 archivos encontrados</span>\n<b class="k">&gt;</b> abrir el bueno\n<b class="n">ninguno coincide</b>';
+// hojas que viajan en escena 2
+const HOJAS = Array.from({length: 4}, (_, i) => {const d = document.createElement("div"); d.className = "vidrio"; d.style.cssText = "width:260px;height:340px;padding:24px;border-radius:24px"; d.innerHTML = '<div class="mono" style="font-size:18px">hoja ' + (i + 1) + '</div><div style="height:12px;background:rgba(255,255,255,.2);border-radius:6px;margin-top:22px"></div><div style="height:12px;width:70%;background:rgba(255,255,255,.14);border-radius:6px;margin-top:14px"></div>'; $("hj2").appendChild(d); return d;});
+
+window.render = (t) => {
+  ESCENAS.forEach(([id, a, b]) => $(id).style.display = dentro(t, a, b) ? "block" : "none");
+  JDT.fondo(bg, t);
+  fg.clearRect(0, 0, JDT.W, JDT.H);
+
+  // E1 gancho: título legible desde t=0; hojas en cascada; el clic marca la celda
+  if (dentro(t, 0, 3.43)) {
+    $("t1").innerHTML = 'Tu inventario vive en <span class="clave">tres universos</span>';
+    JDT.revelar($("t1"), seg(t, 0, .6, "outExpo"));
+    const cam = lerp(1, 1.06, seg(t, 0, 3.4, "inOutCubic"));
+    $("h1").style.transform = `scale(${cam})`;
+    ["h1a","h1b","h1c"].forEach((k, i) => { const s = seg(t, .1 + i * .18, .6 + i * .18, "outExpo"); $(k).style.opacity = s; $(k).style.transform = `translateY(${lerp(120, 0, s)}px)`; });
+    const pulso = dentro(t, 1.4, 2.4) ? 1 + .25 * Math.sin((t - 1.4) * 9) : 1;
+    const c = $("cursor"); c.style.left = "905px"; c.style.top = "1200px"; c.style.opacity = seg(t, 1.2, 1.4, "lineal");
+    c.style.transform = `scale(${pulso}) translate(${lerp(-200, 0, seg(t, 1.0, 1.4, "outExpo"))}px, ${lerp(-160, 0, seg(t, 1.0, 1.4, "outExpo"))}px)`;
+    $("celda").style.color = t > 1.6 ? "#FACC15" : "#fff";
+    // único glitch del video: al inicio, muy breve
+    const g = dentro(t, 0, .25) ? 1 - t / .25 : 0;
+    $("t1").style.transform = `translateX(${g * 14 * Math.sin(t * 120)}px)`;
+    $("t1").style.textShadow = g ? "6px 0 0 rgba(250,204,21,.55), -6px 0 0 rgba(120,160,255,.35)" : "none";
+  }
+
+  // E2 microdocumental: hojas que viajan, reloj, frase
+  if (dentro(t, 3.43, 9.83)) {
+    const k = t - 3.43;
+    $("m2").style.opacity = seg(t, 3.5, 4, "lineal");
+    $("t2").innerHTML = t < 6.3 ? 'Alguien sigue <span class="clave">copiando</span> y pegando…' : 'y <span class="clave">nada</span> cuadra.';
+    $("t2").style.opacity = seg(t, 3.9, 4.5, "lineal");
+    HOJAS.forEach((d, i) => {
+      const ph = i * 1.6, u = seg(t, 4 + ph * .2, 5.6 + ph * .2, "inOutCubic");
+      const x = lerp(i % 2 ? 1150 : -300, 80 + i * 240, u), y = 1330 + 60 * (i % 2) + Math.sin(k * .9 + i) * 26;
+      d.style.transform = `translate(${x}px,${y}px) rotate(${(i - 1.5) * 6 * u}deg)`;
+      d.style.opacity = dentro(t, 4, 9.2) ? .3 + .3 * u : 0;
+    });
+    JDT.grano(fg, t, .09);
+  }
+
+  // E3 terminal: barrido de entrada y tipeo
+  if (dentro(t, 9.83, 12.39)) {
+    $("t3").innerHTML = '¿Cuál es <span class="clave">el bueno</span>?';
+    JDT.revelar($("t3"), seg(t, 9.9, 10.6, "outExpo"));
+    JDT.tipear($("c3"), CODIGO, seg(t, 10.2, 11.8, "lineal"));
+  }
+
+  // E4 giro amarillo: fondo amarillo; las hojas se funden y aparece "Todo cuadra"
+  if (dentro(t, 12.39, 18.85)) {
+    const p4 = $("p4");
+    p4.style.background = "#FACC15";
+    $("t4").innerHTML = '<span style="color:#0A0E27">JDT:</span> todo en <span style="color:#fff">una sola</span> herramienta';
+    $("t4").style.opacity = seg(t, 12.6, 13.1, "lineal");
+    $("t4").style.transform = `translateY(${lerp(-60, 0, seg(t, 12.5, 13.2))}px)`;
+    const u = seg(t, 13.2, 14.4, "inOutCubic");
+    [["s4a", 90, 300], ["s4b", 390, 520], ["s4c", 690, 300]].forEach(([id, x0, y0], i) => {
+      const v = seg(t, 12.7 + i * .15, 13.6 + i * .15, "outExpo"), m = seg(t, 13.6, 14.4, "inOutCubic");
+      const x = lerp(x0, 390, v), y = lerp(y0 + 200, 660 + i * 6, v);
+      const sc = lerp(1, .5, m) * (1 - seg(t, 14.4, 14.9, "lineal"));
+      $(id).style.opacity = seg(t, 12.7 + i * .15, 12.95 + i * .15, "lineal") * (1 - seg(t, 14.4, 14.9, "lineal"));
+      $(id).style.transform = `translate(${x}px,${y}px) rotate(${(i - 1) * 8 * (1 - m)}deg) scale(${sc})`;
+    });
+    p4.style.backgroundImage = "linear-gradient(transparent, transparent)";
+    $("u4").style.opacity = seg(t, 14.4, 15, "outExpo");
+    $("u4").style.transform = `translateY(${lerp(80, 0, seg(t, 14.4, 15))}px) scale(${lerp(.92, 1, u)})`;
+    JDT.camara($("u4"), {s: lerp(1, 1.04, seg(t, 14.4, 18.5, "inOutCubic"))});
+    JDT.flash($("fl"), dentro(t, 12.39, 12.6) ? 1 - (t - 12.39) / .21 : 0);
+  } else { $("p4").style.background = "none"; }
+
+  // E5 cierre
+  if (dentro(t, 18.85, 22.86)) {
+    $("logo").style.opacity = seg(t, 18.85, 19.1, "lineal");
+    $("n5").textContent = "JDT TECHNOLOGICS".slice(0, Math.round(16 * seg(t, 19.2, 20.2, "lineal")));
+    $("c5").style.opacity = seg(t, 20.2, 20.7, "outQuart");
+    $("c5").style.transform = `translateY(${lerp(50, 0, seg(t, 20.2, 21, "outExpo"))}px)`;
+    $("p5").style.opacity = seg(t, 21.2, 21.6, "lineal");
+  }
+
+  // transiciones: un barrido entre escenas clave
+  const b = [9.83]; let kb = 0; b.forEach(x => { if (t > x && t < x + .5) kb = (t - x) / .5; });
+  if (kb) JDT.barrido(fg, kb);
+};
+</script></body></html>

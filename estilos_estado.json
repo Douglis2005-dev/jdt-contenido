@@ -71,6 +71,14 @@
       "gancho": "antes-despues",
       "ritmo": "rapido",
       "banner": "bento"
+    },
+    {
+      "fecha": "2026-11-23T07:07:14",
+      "video": "interfaz-en-movimiento",
+      "apoyo": "microdocumental-cinematico",
+      "gancho": "afirmacion-absurda",
+      "ritmo": "mixto",
+      "banner": "terminal-ui"
     }
   ]
 }
