@@ -54,8 +54,26 @@ CABECERA_TABLA = (
 
 # --------------------------------------------------------------------------- lectura
 def contenidos() -> list[str]:
-    """IDs de todos los contenidos reales (uno por borrador), del mas viejo al mas nuevo."""
-    return sorted(p.stem for p in (CARPETA / "borradores").glob("20*.md") if not p.stem.startswith("prueba"))
+    """IDs de contenidos publicados/producidos, aunque falte el borrador."""
+    encontrados = set()
+
+    patrones = (
+        (CARPETA / "borradores", "20*.md"),
+        (CARPETA / "videos", "20*.json"),
+        (CARPETA / "videos", "20*.mp4"),
+        (CARPETA / "banners", "20*.json"),
+        (CARPETA / "banners", "20*.png"),
+    )
+    derivados = ("-liviano", "-prueba", "-test", "-preview")
+    for carpeta, patron in patrones:
+        for p in carpeta.glob(patron):
+            if p.name.endswith(".palabras.json"):
+                continue
+            ident = p.stem
+            if not ident.startswith("20") or ident.startswith("prueba") or ident.endswith(derivados):
+                continue
+            encontrados.add(ident)
+    return sorted(encontrados)
 
 
 def paquete(i: str) -> dict:
@@ -96,11 +114,17 @@ def leer_calificaciones(ids: list[str]) -> tuple[dict, list[str]]:
             continue
         exactos = [i for i in ids if i == clave]
         parecidos = exactos or [i for i in ids if i.startswith(clave) or clave in i]
-        if len(parecidos) != 1:
-            avisos.append(f"linea {n}: el ID '{clave}' " + ("no coincide con ningun contenido" if not parecidos else
+        if len(parecidos) == 1:
+            destino = parecidos[0]
+        elif not parecidos and re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}-\\d{4}-.+", clave):
+            # La nota es válida aunque los archivos originales ya no estén en el repositorio.
+            # El agente debe reconstruir la pieza desde el comentario, no ignorar la evaluación.
+            destino = clave
+        else:
+            avisos.append(f"linea {n}: el ID '{clave}' " + ("no coincide con ningun contenido ni tiene formato valido" if not parecidos else
                           f"coincide con varios ({', '.join(parecidos)}); escribe el ID completo"))
             continue
-        notas[parecidos[0]] = {"nota": float(m.group()), "comentario": celdas[2] if len(celdas) > 2 else ""}
+        notas[destino] = {"nota": float(m.group()), "comentario": celdas[2] if len(celdas) > 2 else ""}
     return notas, avisos
 
 
@@ -174,7 +198,8 @@ def estado() -> dict:
     e = cargar_estado()
     if not ESTADO.exists():
         guardar_estado(e)   # asi el `git add` de la ejecucion nunca falla por archivo inexistente
-    calificados = [i for i in ids if i in notas]
+    # Mantiene el orden del archivo del revisor e incluye IDs válidos aunque falten sus archivos.
+    calificados = list(notas)
     ultimas = [notas[i]["nota"] for i in calificados[-5:]]
     previas = [notas[i]["nota"] for i in calificados[-10:-5]]
     prom = lambda l: round(sum(l) / len(l), 1) if l else None
@@ -187,8 +212,11 @@ def estado() -> dict:
     for i in calificados:
         base, v = version_de(i)
         if notas[i]["nota"] < UMBRAL_BAJO and i not in e["revisados"]:
+            archivos = paquete(i)
+            requiere_reconstruccion = not ("guion" in archivos or "borrador" in archivos)
             bajas.append({"id": i, "nota": notas[i]["nota"], "comentario": notas[i]["comentario"], "version": v,
-                          "se_puede_rehacer": v < MAX_VERSION, "archivos": paquete(i)})
+                          "se_puede_rehacer": v < MAX_VERSION, "archivos": archivos,
+                          "requiere_reconstruccion": requiere_reconstruccion})
     rehacer = sorted([b for b in bajas if b["se_puede_rehacer"]], key=lambda b: (b["nota"], b["id"]))
     sin_leccion = [b["id"] for b in bajas if not b["se_puede_rehacer"]]
 
@@ -208,6 +236,7 @@ def estado() -> dict:
         "contenido_a_mejorar": rehacer[0] if rehacer else None,
         "otros_por_mejorar": [b["id"] for b in rehacer[1:]],
         "bajas_sin_mas_versiones": sin_leccion,
+        "mejoras_sin_guion_original": [b["id"] for b in rehacer if b["requiere_reconstruccion"]],
         "sesgo_autoevaluacion": sesgo,
         "nota_interna_minima": exigencia,
         "estilos": ranking(notas),
