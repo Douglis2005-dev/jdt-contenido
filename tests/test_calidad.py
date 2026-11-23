@@ -75,6 +75,7 @@ class CalidadTests(unittest.TestCase):
         resultado = calidad.revisado(ident, f"{ident}-v2", "Reconstruido desde el comentario.")
         self.assertEqual(resultado["revisado"], ident)
         self.assertEqual(calidad.cargar_estado()["revisados"][ident]["nueva_version"], f"{ident}-v2")
+        self.assertEqual(calidad.estado()["modo"], "nuevo")
 
     def test_nota_exactamente_siete_no_entra_a_mejora(self):
         ident = "2026-11-21-2358-logo-particulas-cian"
