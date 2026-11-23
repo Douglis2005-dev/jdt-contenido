@@ -116,7 +116,7 @@ def leer_calificaciones(ids: list[str]) -> tuple[dict, list[str]]:
         parecidos = exactos or [i for i in ids if i.startswith(clave) or clave in i]
         if len(parecidos) == 1:
             destino = parecidos[0]
-        elif not parecidos and re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}-\\d{4}-.+", clave):
+        elif not parecidos and re.fullmatch(r"\d{4}-\d{2}-\d{2}-\d{4}-.+", clave):
             # La nota es válida aunque los archivos originales ya no estén en el repositorio.
             # El agente debe reconstruir la pieza desde el comentario, no ignorar la evaluación.
             destino = clave
