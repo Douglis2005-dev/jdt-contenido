@@ -1,0 +1,233 @@
+{
+  "salida": "videos/2026-11-24-0506-catalogo-y-tienda-online.mp4",
+  "formato": "gancho de cuenta regresiva con el PDF que nunca termina, pregunta incomoda, promesa de tienda online y cierre con CTA",
+  "concepto": "Cada cambio de precio obliga a reenviar otro PDF; una tienda online cambia una vez y el cliente compra solo.",
+  "produccion": "Tipografia cinetica (principal) con apoyo de bucle hipnotico: arranca con alerta amarilla de precio nuevo y cuenta de versiones, luego pregunta incomoda, giro quieto con nube y cierre en azul con CTA.",
+  "fuente": "marca.md",
+  "tendencias": {
+    "video": "tipografia-cinetica",
+    "apoyo": "bucle-hipnotico",
+    "gancho": "cuenta-regresiva",
+    "ritmo": "rapido",
+    "banner": "amarillo-total",
+    "pulso": "motion 2026: texto que carga el mensaje sin sonido y video B2B basado en claridad y confianza (shortgenius.com/es/blog/tendencias-video-formato-corto-2026; graphicdesignjunction.com/2026/01/video-and-motion-creative-trends-2026/)",
+    "fuentes": [
+      "https://shortgenius.com/es/blog/tendencias-video-formato-corto-2026",
+      "https://graphicdesignjunction.com/2026/01/video-and-motion-creative-trends-2026/"
+    ]
+  },
+  "escenas": [
+    {
+      "tipo": "libre",
+      "texto": "¡Otra vez el PDF!",
+      "voz": "¡Otra vez el PDF! Cambió un precio y toca mandar el catálogo de nuevo.",
+      "fx": [
+        "glitch"
+      ],
+      "camara": "latido",
+      "transicion": "fundido",
+      "duracion": 4.2,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "reloj",
+          "x": 50,
+          "y": 44,
+          "tam": 32,
+          "color": "blanco",
+          "t": 0,
+          "entra": "pop",
+          "mueve": "gira"
+        },
+        {
+          "el": "texto",
+          "texto": "v1 · v2 · v3 · v4",
+          "x": 50,
+          "y": 66,
+          "tam": "m",
+          "color": "azul",
+          "t": 0.2,
+          "entra": "aparece"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Precio nuevo",
+          "icono": "alerta",
+          "x": 50,
+          "y": 82,
+          "ancho": 70,
+          "color": "amarillo",
+          "t": 0.4,
+          "entra": "aparece",
+          "mueve": "tiembla"
+        }
+      ],
+      "look": "amarillo"
+    },
+    {
+      "tipo": "libre",
+      "texto": "¿Cuál es el *bueno*?",
+      "voz": "¿Y si el cliente ya tiene uno viejo? Nadie sabe cuál es el bueno.",
+      "fx": [
+        "grano"
+      ],
+      "camara": "paneo-der",
+      "transicion": "persiana",
+      "duracion": 4.4,
+      "elementos": [
+        {
+          "el": "tarjeta",
+          "texto": "catalogo_final.pdf",
+          "x": 36,
+          "y": 46,
+          "ancho": 52,
+          "color": "gris",
+          "t": 0,
+          "entra": "sube"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "catalogo_nuevo.pdf",
+          "x": 60,
+          "y": 56,
+          "ancho": 52,
+          "color": "gris",
+          "t": 0.5,
+          "entra": "sube"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "catalogo_v2_OK.pdf",
+          "x": 44,
+          "y": 66,
+          "ancho": 52,
+          "color": "azul",
+          "t": 0.227,
+          "entra": "sube"
+        },
+        {
+          "el": "icono",
+          "nombre": "alerta",
+          "x": 50,
+          "y": 84,
+          "tam": 12,
+          "color": "amarillo",
+          "t": 0.364,
+          "entra": "pop",
+          "mueve": "late"
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "texto": "Con tienda online, cambias *una vez*.",
+      "voz": "Con una tienda online, cambias el precio una vez y se ve al instante.",
+      "fx": [
+        "destello"
+      ],
+      "camara": "acerca",
+      "transicion": "circulo",
+      "duracion": 4.4,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "nube",
+          "x": 50,
+          "y": 46,
+          "tam": 28,
+          "color": "dorado",
+          "t": 0,
+          "entra": "pop",
+          "mueve": "flota"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Precio actualizado",
+          "x": 50,
+          "y": 70,
+          "ancho": 74,
+          "color": "amarillo",
+          "t": 0.6,
+          "entra": "aparece"
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 58,
+          "a": [
+            50,
+            66
+          ],
+          "estilo": "flecha",
+          "pulso": true,
+          "t": 0.3,
+          "entra": "aparece"
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "texto": "Tu cliente compra *solo*, a cualquier hora",
+      "voz": "El cliente mira, elige y compra solito, a cualquier hora.",
+      "fx": [
+        "vibra"
+      ],
+      "camara": "giro-lento",
+      "transicion": "barrido",
+      "duracion": 4.4,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "carrito",
+          "x": 50,
+          "y": 50,
+          "tam": 26,
+          "color": "blanco",
+          "t": 0,
+          "entra": "pop",
+          "mueve": "balancea"
+        },
+        {
+          "el": "icono",
+          "nombre": "persona-feliz",
+          "x": 26,
+          "y": 72,
+          "tam": 12,
+          "color": "gris",
+          "t": 0.8,
+          "entra": "pop"
+        },
+        {
+          "el": "icono",
+          "nombre": "persona-feliz",
+          "x": 74,
+          "y": 72,
+          "tam": 12,
+          "color": "dorado",
+          "t": 0.25,
+          "entra": "pop"
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de tu proyecto.",
+      "voz": "En JDT hacemos tu tienda online a medida. Hablemos de tu proyecto.",
+      "duracion": 5.0,
+      "subtitulo": "Tienda online a medida · JDT TECHNOLOGICS"
+    }
+  ],
+  "audio": "videos/2026-11-24-0506-catalogo-y-tienda-online.mp3",
+  "voz_usada": "ElevenLabs Teno pupi (eleven_v4), 1 toma",
+  "tiempos": {
+    "inicios": [
+      0.0,
+      6.68,
+      10.64,
+      14.73,
+      18.99
+    ],
+    "retardo": 0.3,
+    "duracion": 24.67
+  }
+}
