@@ -1,0 +1,187 @@
+{
+ "salida": "videos/2026-11-24-0306-software-que-te-obliga.mp4",
+ "formato": "POV del dueño con datos que se arman",
+ "concepto": "POV del dueño que compró un software genérico y ahora obedece sus casillas; JDT le devuelve el control con software a medida que se adapta a su proceso.",
+ "produccion": "Creador auténtico/POV: notas adhesivas amarillas, subrayados dorados a mano, barridos entre escenas. Datos que se arman en las escenas 3 y 5. Paleta azul marino, dorado, blanco y gris azulado.",
+ "tendencias": {
+  "video": "creator-autentico",
+  "apoyo": "datos-que-se-arman",
+  "gancho": "pov",
+  "ritmo": "rapido",
+  "banner": "neobrutal",
+  "pulso": "2026-11-24: Reels 2026 vertical con texto grande y contenido humano; motion B2B que muestra proceso real (titulares, sin cifras verificadas)",
+  "fuentes": [
+   "https://metricool.com/es/tendencias-instagram/",
+   "https://marketing4ecommerce.net/guia-para-hacer-reels-con-exito-en-instagram-segun-instagram/"
+  ]
+ },
+ "fuente": "marca.md",
+ "escenas": [
+  {
+   "tipo": "palabras",
+   "frases": [
+    "POV: eres el dueño",
+    "que *obedece* al software."
+   ],
+   "voz": "POV: compraste un programa y ahora tú trabajas para él.",
+   "look": "amarillo",
+   "fx": [
+    "glitch"
+   ],
+   "transicion": "barrido",
+   "duracion": 5.065
+  },
+  {
+   "tipo": "libre",
+   "texto": "Tu proceso no *cabe* ahí",
+   "voz": "Tu forma de trabajar no cabe en sus casillas.",
+   "elementos": [
+    {
+     "el": "tarjeta",
+     "texto": "Casilla 1",
+     "x": 30,
+     "y": 50,
+     "ancho": 36
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Casilla 2",
+     "x": 70,
+     "y": 50,
+     "ancho": 36
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Casilla 3",
+     "x": 30,
+     "y": 68,
+     "ancho": 36
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Casilla 4",
+     "x": 70,
+     "y": 68,
+     "ancho": 36
+    },
+    {
+     "el": "burbuja",
+     "texto": "¿Y mi proceso?",
+     "x": 50,
+     "y": 84,
+     "cola": "der",
+     "color": "amarillo",
+     "ancho": 46
+    }
+   ],
+   "camara": "empuja",
+   "fx": [
+    "vibra"
+   ],
+   "duracion": 2.929
+  },
+  {
+   "tipo": "palabras",
+   "frases": [
+    "¿Y si fuera",
+    "*al revés*?"
+   ],
+   "voz": "¿Y si fuera al revés? Todo tu proceso, en un solo lugar.",
+   "transicion": "destello",
+   "look": "azul",
+   "duracion": 3.893
+  },
+  {
+   "tipo": "libre",
+   "texto": "Todo tu proceso en *un solo lugar*",
+   "voz": "Todo tu proceso, en un solo lugar.",
+   "elementos": [
+    {
+     "el": "forma",
+     "forma": "anillo",
+     "x": 50,
+     "y": 55,
+     "ancho": 40,
+     "color": "dorado",
+     "mueve": "late"
+    },
+    {
+     "el": "icono",
+     "nombre": "engranaje",
+     "x": 50,
+     "y": 55,
+     "tam": 24,
+     "color": "amarillo",
+     "mueve": "gira"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Ventas, bodega y clientes",
+     "icono": "check",
+     "x": 50,
+     "y": 80,
+     "ancho": 60
+    }
+   ],
+   "camara": "paneo",
+   "transicion": "persiana",
+   "duracion": 2.6
+  },
+  {
+   "tipo": "libre",
+   "texto": "JDT lo hace *a tu medida*",
+   "voz": "En JDT hacemos el software a tu medida: tú mandas, él se acomoda.",
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "robot",
+     "x": 50,
+     "y": 52,
+     "tam": 30,
+     "color": "amarillo",
+     "mueve": "flota"
+    },
+    {
+     "el": "linea",
+     "x": 20,
+     "y": 74,
+     "a": [
+      80,
+      74
+     ],
+     "estilo": "punteada",
+     "color": "dorado",
+     "pulso": true
+    }
+   ],
+   "look": "azul",
+   "fx": [
+    "grano"
+   ],
+   "duracion": 4.806
+  },
+  {
+   "tipo": "pasos",
+   "texto": "*Tres pasos* claros",
+   "etiquetas": [
+    "Analizamos",
+    "Desarrollamos",
+    "Entregamos"
+   ],
+   "voz": "Analizamos, desarrollamos, entregamos.",
+   "camara": "acerca",
+   "transicion": "circulo",
+   "duracion": 3.125
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de *tu proyecto*",
+   "subtexto": "@technologicsjdt",
+   "voz": "Hablemos de tu proyecto.",
+   "duracion": 3.4
+  }
+ ],
+ "audio": "videos/2026-11-24-0306-software-que-te-obliga.mp3",
+ "sincronia": "exacta",
+ "voz_motor": "local"
+}
