@@ -1,0 +1,190 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+  .tarjeta{position:absolute;border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,.05));
+    border:2px solid rgba(255,255,255,.26);backdrop-filter:blur(18px);box-shadow:0 30px 90px rgba(0,0,0,.5),inset 0 2px 0 rgba(255,255,255,.3);
+    display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:46px;color:#fff;padding:20px}
+  .tarjeta.dorada{background:linear-gradient(145deg,rgba(250,204,21,.32),rgba(234,179,8,.08));border-color:rgba(250,204,21,.6)}
+  .tarjeta.oscura{background:rgba(10,14,39,.72);border-color:rgba(148,163,184,.35)}
+  .tarjeta.alerta{background:#FACC15;color:#0A0E27;border-color:#FFFFFF}
+  .papel{position:absolute;background:#FFFFFF;border-radius:10px;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+  .linea{position:absolute;height:14px;border-radius:7px;background:#94A3B8;opacity:.55}
+  .oro{color:#FACC15}
+  .esc-fondo{position:absolute;inset:0}
+  .sobre-amarillo{color:#0A0E27 !important}
+  .sobre-amarillo .oro{color:#0A0E27 !important}
+</style></head><body>
+
+<!-- E1 gancho (0 - 2.55): alerta de error, texto cortado y barra trabada -->
+<div id="e1" class="capa">
+  <div id="h1" class="titulo" style="position:absolute;left:70px;right:70px;top:300px;text-align:center;font-size:118px;line-height:1.02"></div>
+  <div id="alerta" class="tarjeta alerta" style="left:150px;top:720px;width:780px;height:230px;font-size:70px">Campo no coincide</div>
+  <div id="corte" class="tarjeta oscura" style="left:150px;top:1000px;width:780px;height:150px;font-size:52px;justify-content:flex-start;text-align:left">Proveedor: Distribuid</div>
+  <div id="barra" class="tarjeta" style="left:150px;top:1200px;width:780px;height:120px;font-size:46px;overflow:hidden"><div style="position:absolute;left:0;top:0;bottom:0;width:70%;background:rgba(250,204,21,.35)"></div><span style="position:relative">Guardando…</span></div>
+</div>
+
+<!-- E2 contexto (2.55 - 6.07): documento grande y pastillas que viajan -->
+<div id="e2" class="capa">
+  <div id="h2" class="titulo" style="position:absolute;left:70px;right:70px;top:240px;text-align:center;font-size:120px"></div>
+  <div class="papel" style="left:250px;top:620px;width:580px;height:760px">
+    <div class="linea" style="left:60px;top:90px;width:300px"></div>
+    <div class="linea" style="left:60px;top:170px;width:420px"></div>
+    <div class="linea" style="left:60px;top:250px;width:380px"></div>
+    <div class="linea" style="left:60px;top:330px;width:440px"></div>
+    <div class="linea" style="left:60px;top:410px;width:250px"></div>
+  </div>
+  <div style="position:absolute;left:120px;right:120px;top:1460px;height:4px;border-top:4px dotted rgba(250,204,21,.6)"></div>
+  <div id="p1" class="tarjeta dorada" style="left:120px;top:1420px;width:200px;height:80px;border-radius:40px;font-size:34px">Factura</div>
+  <div id="p2" class="tarjeta dorada" style="left:120px;top:1420px;width:200px;height:80px;border-radius:40px;font-size:34px">Otra</div>
+  <div id="p3" class="tarjeta dorada" style="left:120px;top:1420px;width:200px;height:80px;border-radius:40px;font-size:34px">Otra</div>
+  <div id="s2" class="titulo" style="position:absolute;left:0;right:0;top:1560px;text-align:center;font-size:64px"></div>
+</div>
+
+<!-- E3 tensión, pantalla dividida (6.07 - 10.39): MANUAL a la izquierda, CAPTURADO a la derecha -->
+<div id="e3" class="capa">
+  <div id="h3" class="titulo" style="position:absolute;left:70px;right:70px;top:200px;text-align:center;font-size:110px"></div>
+  <div style="position:absolute;left:0;top:520px;width:400px;height:900px;background:rgba(255,255,255,.05)">
+    <div id="manual" class="mono" style="position:absolute;left:0;right:0;top:40px;text-align:center;color:#94A3B8;font-size:40px">MANUAL</div>
+    <div class="papel" style="left:80px;top:200px;width:240px;height:320px"></div>
+    <div class="papel" style="left:110px;top:240px;width:240px;height:320px;opacity:.85"></div>
+    <div id="tecle" class="mono" style="position:absolute;left:0;right:0;top:640px;text-align:center;color:#94A3B8;font-size:40px">Tecleando…</div>
+  </div>
+  <div id="divisor" style="position:absolute;left:400px;top:520px;width:8px;height:900px;background:#FACC15"></div>
+  <div style="position:absolute;left:408px;top:520px;width:672px;height:900px;background:rgba(84,102,180,.18)">
+    <div id="capt" class="mono oro" style="position:absolute;left:0;right:0;top:40px;text-align:center;font-size:40px">CAPTURADO</div>
+    <div class="tarjeta" style="left:60px;top:160px;width:552px;height:170px;font-size:44px">Proveedor ✓</div>
+    <div class="tarjeta" style="left:60px;top:370px;width:552px;height:170px;font-size:44px">Fecha ✓</div>
+    <div class="tarjeta dorada" style="left:60px;top:580px;width:552px;height:170px;font-size:44px">Total ✓</div>
+  </div>
+</div>
+
+<!-- E4 giro y solución (10.39 - 18.95): pantalla amarilla, robot que lee, tarjeta verificada, quietud -->
+<div id="e4" class="capa">
+  <div id="fondoE4" style="position:absolute;inset:0;background:#FACC15;opacity:0"></div>
+  <div id="docu" class="papel" style="left:180px;top:560px;width:400px;height:520px;opacity:0"></div>
+  <div id="robot" style="position:absolute;left:640px;top:720px;width:260px;height:260px;border-radius:50px;background:#0A0E27;border:4px solid #FACC15;box-sizing:border-box;opacity:0">
+    <div style="position:absolute;left:60px;top:90px;width:50px;height:50px;border-radius:50%;background:#FACC15"></div>
+    <div style="position:absolute;left:150px;top:90px;width:50px;height:50px;border-radius:50%;background:#FACC15"></div>
+  </div>
+  <div id="flecha" style="position:absolute;left:580px;top:780px;width:200px;height:12px;background:#FACC15;opacity:0"></div>
+  <div id="verif" class="tarjeta alerta" style="left:150px;top:1080px;width:780px;height:200px;font-size:60px;opacity:0">Campo no coincide</div>
+  <div id="t4" class="titulo" style="position:absolute;left:70px;right:70px;top:300px;text-align:center;font-size:104px;line-height:1.05"></div>
+  <div id="sv4" class="mono" style="position:absolute;left:70px;right:70px;top:1340px;text-align:center;font-size:44px;color:#94A3B8;opacity:0">Automatización con IA</div>
+  <div id="s4" class="titulo" style="position:absolute;left:70px;right:70px;top:1340px;text-align:center;font-size:58px;opacity:0"></div>
+</div>
+
+<!-- E5 notificaciones (18.95 - 20.79): fondo azul, avisos que caen -->
+<div id="e5" class="capa">
+  <div id="t5" class="titulo" style="position:absolute;left:70px;right:70px;top:280px;text-align:center;font-size:110px"></div>
+  <div id="n1" class="tarjeta" style="left:150px;top:700px;width:780px;height:170px;font-size:56px">Factura leída</div>
+  <div id="n2" class="tarjeta" style="left:150px;top:920px;width:780px;height:170px;font-size:56px">Datos extraídos</div>
+  <div id="n3" class="tarjeta dorada" style="left:150px;top:1140px;width:780px;height:170px;font-size:56px">Listo para aprobar</div>
+</div>
+
+<!-- E6 cierre (20.79 - 23.5): llamado a la acción, logo y @technologicsjdt -->
+<div id="e6" class="capa">
+  <img id="logo" src="../recursos/logo.jpeg" style="position:absolute;left:290px;top:420px;width:500px;border-radius:90px;opacity:0">
+  <div id="c6" class="titulo" style="position:absolute;left:0;right:0;top:1000px;text-align:center;font-size:118px;line-height:1.05;opacity:0">Hablemos de <span class="oro">tu proyecto</span></div>
+  <div id="pild" style="position:absolute;left:0;right:0;top:1380px;text-align:center;opacity:0"><span class="pildora">@technologicsjdt</span></div>
+</div>
+
+<!-- Persiana de cambio entre el giro y la notificación -->
+<div id="persiana" style="position:absolute;left:0;width:1080px;height:0;background:#FACC15;z-index:9"></div>
+
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+window.DURACION = 23.5;
+const ESC = [["e1",0,2.55],["e2",2.55,6.07],["e3",6.07,10.39],["e4",10.39,18.95],["e5",18.95,20.79],["e6",20.79,23.5]];
+const dentro = (t, a, b) => t >= a && t < b;
+const L = (s, a, b) => clamp((s - a) / (b - a));
+const escribir = (el, html, t, a, b) => { if (t >= a) { el.innerHTML = html; } };
+
+window.render = (t) => {
+  ESC.forEach(([id,a,b]) => $(id).style.display = dentro(t,a,b) ? "block" : "none");
+  // fondo: el look amarillo solo en la escena 4 (giro); el resto, fondo de marca
+  const amarillo = dentro(t, 10.39, 12.5);
+  if (!amarillo && !dentro(t,18.95,20.79)) JDT.fondo(bg, t); else bg.clearRect(0,0,JDT.W,JDT.H);
+  if (dentro(t,18.95,20.79)) { bg.fillStyle = "#5466B4"; bg.globalAlpha = .18; bg.fillRect(0,0,JDT.W,JDT.H); bg.globalAlpha = 1; }
+  if (t >= 10.39 && t < 12.8) $("fondoE4").style.opacity = t < 12.3 ? seg(t,10.39,10.6,"outExpo") : 1 - seg(t,12.3,12.8,"inOutCubic"); else $("fondoE4").style.opacity = 0;
+  JDT.grano(fg, t, .03);
+
+  // E1 gancho: titular y alerta que tiembla
+  if (dentro(t,0,2.55)) {
+    $("h1").innerHTML = '¿Error? Un dato <span class="oro">mal copiado</span>';
+    JDT.revelar($("h1"), 1, "arriba");
+    const vib = Math.sin(t*60) * 4 * (1 - L(t,0,2.2));
+    const golpe = t >= 0.15 && t < 0.3;
+    $("alerta").style.transform = `translateX(${golpe ? 18 : vib}px) scale(1)`;
+    $("alerta").style.filter = golpe ? "brightness(1.25) contrast(1.4)" : "none";
+    $("alerta").style.opacity = 1;
+    $("corte").style.opacity = seg(t,0.5,0.9,"lineal");
+    $("barra").style.opacity = seg(t,0.9,1.2,"lineal");
+  }
+
+  // E2 contexto: pastillas viajando de izquierda a derecha, con el texto de apoyo
+  if (dentro(t,2.55,6.07)) {
+    $("h2").innerHTML = 'Dato por <span class="oro">dato</span>';
+    JDT.revelar($("h2"), seg(t,2.55,2.9,"outExpo"), "arriba");
+    [["p1",0],["p2",0.45],["p3",0.9]].forEach(([id,d]) => {
+      const k = seg(t,2.8+d,3.8+d,"inOutCubic");
+      $(id).style.left = lerp(120, 760, k) + "px";
+      $(id).style.opacity = seg(t,2.8+d,3.0+d,"lineal");
+    });
+    $("s2").innerHTML = 'Una factura. Otra. <span class="oro">Otra.</span>';
+    $("s2").style.opacity = seg(t,3.0,3.4,"lineal");
+  }
+
+  // E3 tensión: pantalla dividida, el lado capturado lleno desde el inicio
+  if (dentro(t,6.07,10.39)) {
+    $("h3").innerHTML = '<span class="oro">A mano</span> o ya capturado';
+    JDT.revelar($("h3"), seg(t,6.07,6.4,"outExpo"), "arriba");
+    $("capt").style.opacity = seg(t,8.0,8.4,"lineal");
+    $("tecle").style.transform = `translateY(${Math.sin(t*8)*3}px)`;
+    $("divisor").style.opacity = seg(t,6.07,6.3,"lineal");
+  }
+
+  // E4 giro y solución: documento, robot que lee, tarjeta verificada, quietud final
+  if (dentro(t,10.39,18.95)) {
+    $("t4").innerHTML = '<span class="oro">JDT</span>: la IA lee, tú <span class="oro">revisas</span>';
+    JDT.revelar($("t4"), seg(t,10.6,11.0,"outExpo"), "arriba");
+    $("t4").classList.toggle("sobre-amarillo", t < 12.6);
+    $("docu").style.opacity = seg(t,10.6,11.0,"lineal");
+    $("robot").style.opacity = seg(t,11.9,12.4,"lineal");
+    $("flecha").style.opacity = seg(t,12.2,12.6,"lineal");
+    $("flecha").style.width = lerp(0,200,seg(t,12.2,12.8,"outExpo")) + "px";
+    $("verif").style.opacity = seg(t,14.5,15.0,"lineal");
+    if (t >= 14.5) { $("verif").innerHTML = "✓ Campo verificado"; $("verif").className = "tarjeta dorada"; $("verif").style.background = "linear-gradient(145deg,rgba(250,204,21,.45),rgba(234,179,8,.15))"; $("verif").style.color = "#FFFFFF"; }
+    $("s4").innerHTML = 'Con revisión de <span class="oro">tu equipo</span>';
+    $("s4").style.opacity = seg(t,16.5,17.0,"lineal");
+    $("sv4").style.opacity = seg(t,10.8,11.3,"lineal") * (1 - seg(t,14.3,14.7,"lineal"));
+    // cámara: acercamiento lento en el giro
+    JDT.camara($("e4"), {s: lerp(1, 1.03, L(t,14.5,18.95))});
+  }
+
+  // E5 notificaciones que caen
+  if (dentro(t,18.95,20.79)) {
+    $("t5").innerHTML = 'Más <span class="oro">control</span> de tus datos';
+    JDT.revelar($("t5"), seg(t,18.95,19.3,"outExpo"), "arriba");
+    [["n1",19.0],["n2",19.2],["n3",19.4]].forEach(([id,d]) => {
+      const k = seg(t,d,d+0.35,"outBack");
+      $(id).style.transform = `translateY(${lerp(-60,0,k)}px)`;
+      $(id).style.opacity = seg(t,d,d+0.2,"lineal");
+    });
+  }
+
+  // E6 cierre: logo, llamado a la acción y @technologicsjdt
+  if (dentro(t,20.79,23.5)) {
+    $("logo").style.opacity = seg(t,20.9,21.3,"lineal");
+    $("c6").style.opacity = seg(t,21.1,21.5,"lineal");
+    JDT.revelar($("c6"), seg(t,21.1,21.6,"outExpo"), "arriba");
+    $("pild").style.opacity = seg(t,21.8,22.2,"lineal");
+  }
+
+  // persiana de cambio a la escena 5 (cubre a 18.6-18.95 y baja a 19.3)
+  const cubre = seg(t,18.6,18.95,"outExpo"), baja = seg(t,18.95,19.35,"inOutCubic");
+  const alto = t < 18.95 ? cubre * 1920 : (1 - baja) * 1920;
+  $("persiana").style.height = alto + "px";
+  $("persiana").style.top = (t < 18.95 ? 0 : baja * 1920) + "px";
+};
+</script></body></html>

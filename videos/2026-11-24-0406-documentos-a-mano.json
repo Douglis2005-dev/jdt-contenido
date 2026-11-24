@@ -1,0 +1,498 @@
+{
+  "salida": "videos/2026-11-24-0406-documentos-a-mano.mp4",
+  "formato": "microdocumental en cinco planos (detalle con error falso, contexto, pantalla dividida, giro quieto, salida) y cierre",
+  "concepto": "El error en pantalla no es del sistema sino de la mano que copia cada factura dato por dato; con IA el dato llega leído y tu equipo solo lo revisa.",
+  "produccion": "Microdocumental-cinematográfico con apoyo de pantalla-dividida-dinámica y gancho error-falso: abre con una ventana de aviso «Campo no coincide» y texto cortado legible desde t=0 con el ÚNICO golpe de glitch y cámara latido; plano de contexto con grano, viñeta, paneo-der y fundido; corte motivado en barrido a una pantalla partida asimétrica (manual estrecho a la izquierda, dato capturado lleno desde el inicio a la derecha) que cambia de lado con la voz con cámara quieta; giro quieto en look amarillo de pantalla completa con destello y acercamiento lento donde el aviso se resuelve; salida en notificaciones (escena nueva) en look azul con desliza-arriba; cierre con círculo. Paleta azul marino, amarillo/dorado, blanco y gris azulado.",
+  "fuente": "marca.md",
+  "tendencias": {
+    "video": "microdocumental-cinematico",
+    "apoyo": "pantalla-dividida-dinamica",
+    "gancho": "error-falso",
+    "ritmo": "mixto",
+    "banner": "collage-recorte",
+    "pulso": "resumen fechado: Metricool 2026 (Reels vs YouTube), interempresas (motion en video corporativo B2B)",
+    "fuentes": [
+      "https://metricool.com/es/tendencias-instagram/",
+      "https://www.interempresas.net/TIC/618149-Eficiencia-y-creatividad-en-los-videos-corporativos-con-IA.html"
+    ]
+  },
+  "escenas": [
+    {
+      "tipo": "libre",
+      "texto": "¿Error? Un dato *mal copiado*",
+      "voz": "¡Uy! Un dato mal copiado.",
+      "fx": [
+        "glitch"
+      ],
+      "camara": "latido",
+      "transicion": "fundido",
+      "duracion": 2.8,
+      "elementos": [
+        {
+          "el": "tarjeta",
+          "texto": "Campo no coincide",
+          "icono": "alerta",
+          "x": 50,
+          "y": 52,
+          "ancho": 76,
+          "color": "amarillo",
+          "t": 0,
+          "entra": "aparece",
+          "mueve": "tiembla"
+        },
+        {
+          "el": "texto",
+          "texto": "Proveedor: Distribuid",
+          "x": 50,
+          "y": 62,
+          "tam": "m",
+          "color": "gris",
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "barra",
+          "x": 50,
+          "y": 71,
+          "ancho": 64,
+          "valor": 70,
+          "color": "dorado",
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "texto",
+          "texto": "Guardando…",
+          "x": 50,
+          "y": 77,
+          "tam": "s",
+          "color": "gris",
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "icono",
+          "nombre": "documento",
+          "x": 50,
+          "y": 87,
+          "tam": 9,
+          "color": "blanco",
+          "opacidad": 0.6,
+          "t": 0.3,
+          "entra": "pop"
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "texto": "Dato por *dato*",
+      "voz": "Alguien pasa cada factura a mano, dato por dato.",
+      "fx": [
+        "grano",
+        "vineta"
+      ],
+      "camara": "paneo-der",
+      "transicion": "fundido",
+      "duracion": 2.8,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "documento",
+          "x": 24,
+          "y": 62,
+          "tam": 30,
+          "color": "blanco",
+          "entra": "aparece",
+          "t": 0
+        },
+        {
+          "el": "icono",
+          "nombre": "pantalla",
+          "x": 80,
+          "y": 56,
+          "tam": 16,
+          "color": "gris",
+          "opacidad": 0.7,
+          "entra": "aparece",
+          "t": 0
+        },
+        {
+          "el": "linea",
+          "x": 40,
+          "y": 59,
+          "a": [
+            70,
+            57
+          ],
+          "estilo": "punteada",
+          "color": "gris",
+          "t": 0.05
+        },
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 40,
+          "y": 59,
+          "ancho": 9,
+          "alto": 2.2,
+          "color": "dorado",
+          "t": 0.15,
+          "a": [
+            70,
+            57
+          ],
+          "sale": 0.45
+        },
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 40,
+          "y": 59,
+          "ancho": 9,
+          "alto": 2.2,
+          "color": "dorado",
+          "t": 0.42,
+          "a": [
+            70,
+            57
+          ],
+          "sale": 0.72
+        },
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 40,
+          "y": 59,
+          "ancho": 9,
+          "alto": 2.2,
+          "color": "amarillo",
+          "t": 0.68,
+          "a": [
+            70,
+            57
+          ],
+          "sale": 0.97
+        },
+        {
+          "el": "texto",
+          "texto": "Una factura. Otra. *Otra.*",
+          "x": 50,
+          "y": 84,
+          "tam": "m",
+          "color": "gris",
+          "t": 0.5,
+          "entra": "aparece"
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "texto": "*A mano* o ya capturado",
+      "voz": "De este lado, tecleas. De este otro, el dato ya llegó.",
+      "camara": "quieta",
+      "transicion": "barrido",
+      "duracion": 3,
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 21,
+          "y": 64,
+          "ancho": 36,
+          "alto": 46,
+          "color": "superficie",
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 70,
+          "y": 64,
+          "ancho": 54,
+          "alto": 46,
+          "color": "azul",
+          "opacidad": 0.35,
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "linea",
+          "x": 41,
+          "y": 40,
+          "a": [
+            41,
+            88
+          ],
+          "estilo": "solida",
+          "color": "amarillo",
+          "pulso": true,
+          "t": 0
+        },
+        {
+          "el": "texto",
+          "texto": "MANUAL",
+          "x": 21,
+          "y": 45,
+          "tam": "s",
+          "color": "gris",
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "icono",
+          "nombre": "papeles",
+          "x": 21,
+          "y": 60,
+          "tam": 16,
+          "color": "gris",
+          "t": 0,
+          "entra": "aparece",
+          "mueve": "tiembla"
+        },
+        {
+          "el": "texto",
+          "texto": "Tecleando…",
+          "x": 21,
+          "y": 76,
+          "tam": "s",
+          "color": "gris",
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Proveedor",
+          "icono": "check",
+          "x": 70,
+          "y": 52,
+          "ancho": 44,
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Fecha",
+          "icono": "check",
+          "x": 70,
+          "y": 64,
+          "ancho": 44,
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Total",
+          "icono": "check",
+          "x": 70,
+          "y": 76,
+          "ancho": 44,
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "texto",
+          "texto": "*CAPTURADO*",
+          "x": 70,
+          "y": 45,
+          "tam": "s",
+          "t": 0.5,
+          "entra": "pop"
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "texto": "*JDT*: la IA lee, tú *revisas*",
+      "voz": "En JDT TECHNOLOGICS hacemos automatización con IA: lee tus documentos y extrae los datos. Tu equipo solo revisa.",
+      "look": "amarillo",
+      "camara": "acerca",
+      "transicion": "destello",
+      "duracion": 4.8,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "documento",
+          "x": 24,
+          "y": 58,
+          "tam": 20,
+          "entra": "aparece",
+          "t": 0
+        },
+        {
+          "el": "linea",
+          "x": 36,
+          "y": 58,
+          "a": [
+            46,
+            58
+          ],
+          "estilo": "flecha",
+          "pulso": true,
+          "t": 0.15
+        },
+        {
+          "el": "icono",
+          "nombre": "robot",
+          "x": 60,
+          "y": 58,
+          "tam": 20,
+          "entra": "pop",
+          "mueve": "flota",
+          "t": 0.25
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Campo verificado",
+          "icono": "check",
+          "x": 50,
+          "y": 78,
+          "ancho": 58,
+          "t": 0.55,
+          "entra": "sube"
+        },
+        {
+          "el": "texto",
+          "texto": "Con revisión de *tu equipo*",
+          "x": 50,
+          "y": 88,
+          "tam": "s",
+          "t": 0.7,
+          "entra": "aparece"
+        }
+      ]
+    },
+    {
+      "tipo": "notificaciones",
+      "texto": "Del papel a *tu sistema*",
+      "etiquetas": [
+        "Factura leída",
+        "Datos extraídos",
+        "Listo para aprobar"
+      ],
+      "detalles": [
+        "Proveedor y fecha",
+        "Total y concepto",
+        "Revisión de tu equipo"
+      ],
+      "iconos": [
+        "documento",
+        "datos",
+        "check"
+      ],
+      "voz": "Más control de tus datos.",
+      "look": "azul",
+      "camara": "latido",
+      "transicion": "desliza-arriba",
+      "duracion": 3
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*",
+      "subtexto": "@technologicsjdt",
+      "voz": "Hablemos de tu proyecto.",
+      "transicion": "circulo",
+      "duracion": 3
+    }
+  ],
+  "tiempos": {
+    "inicios": [
+      0.0,
+      2.55,
+      6.07,
+      10.39,
+      18.95,
+      20.79
+    ],
+    "retardo": 0.3,
+    "duracion": 23.5
+  },
+  "direccion": {
+    "hook": "Tarjeta de alerta amarilla «Campo no coincide» con texto cortado y barra trabada que se lee desde t=0; un solo golpe de glitch.",
+    "payoff": "La tarjeta de alerta se resuelve en «Campo verificado» con la IA leyendo el documento y el equipo revisando: el error del gancho tiene solución de JDT.",
+    "familias": [
+      "motion-graphics",
+      "mixed-media"
+    ],
+    "beats": [
+      {
+        "inicio": 0.0,
+        "fin": 2.2,
+        "funcion": "hook",
+        "familia": "motion-graphics",
+        "visual": "Alerta «Campo no coincide» trabada y texto cortado; glitch único"
+      },
+      {
+        "inicio": 2.2,
+        "fin": 4.3,
+        "funcion": "contexto",
+        "familia": "mixed-media",
+        "visual": "Documento grande en primer plano con grano y viñeta"
+      },
+      {
+        "inicio": 4.3,
+        "fin": 6.07,
+        "funcion": "contexto",
+        "familia": "motion-graphics",
+        "visual": "Tres píldoras doradas viajan una a una por línea punteada"
+      },
+      {
+        "inicio": 6.07,
+        "fin": 8.0,
+        "funcion": "tension",
+        "familia": "mixed-media",
+        "visual": "Pantalla dividida: lado MANUAL estrecho con papeles que tiemblan"
+      },
+      {
+        "inicio": 8.0,
+        "fin": 10.39,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Divisor amarillo; lado CAPTURADO lleno desde el inicio"
+      },
+      {
+        "inicio": 10.39,
+        "fin": 12.5,
+        "funcion": "giro",
+        "familia": "motion-graphics",
+        "visual": "Pantalla completa amarilla con destello; documento y robot"
+      },
+      {
+        "inicio": 12.5,
+        "fin": 14.5,
+        "funcion": "demostracion",
+        "familia": "mixed-media",
+        "visual": "Flecha y robot leen el documento; tarjetas de datos se llenan"
+      },
+      {
+        "inicio": 14.5,
+        "fin": 16.5,
+        "funcion": "recompensa",
+        "familia": "motion-graphics",
+        "visual": "Tarjeta «Campo verificado» que resuelve el error del gancho"
+      },
+      {
+        "inicio": 16.5,
+        "fin": 18.95,
+        "funcion": "respiro",
+        "familia": "mixed-media",
+        "visual": "Plano quieto: «Con revisión de tu equipo», cámara sin movimiento"
+      },
+      {
+        "inicio": 18.95,
+        "fin": 20.79,
+        "funcion": "recompensa",
+        "familia": "motion-graphics",
+        "visual": "Notificaciones en azul: Factura leída, Datos extraídos"
+      },
+      {
+        "inicio": 20.79,
+        "fin": 23.5,
+        "funcion": "cierre",
+        "familia": "motion-graphics",
+        "visual": "«Hablemos de tu proyecto» con @technologicsjdt y logo JDT"
+      }
+    ]
+  },
+  "validacion": "corregido: revisión creativa (opus) con nota 7; se aplicó: gancho visible desde t=0 con un golpe de glitch en la alerta, barra de «Guardando…» con relleno, salida del fondo amarillo sin corte seco, flecha y robot en amarillo sobre azul, la alerta se resuelve en «Campo verificado» y se nombra «Automatización con IA»."
+}

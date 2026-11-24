@@ -87,6 +87,14 @@
       "gancho": "pov",
       "ritmo": "rapido",
       "banner": "neobrutal"
+    },
+    {
+      "fecha": "2026-11-24T04:06:15",
+      "video": "microdocumental-cinematico",
+      "apoyo": "pantalla-dividida-dinamica",
+      "gancho": "error-falso",
+      "ritmo": "mixto",
+      "banner": "collage-recorte"
     }
   ]
 }
