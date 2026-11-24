@@ -1,0 +1,382 @@
+{
+ "fuente": "marca.md",
+ "url": "jdt:mvp-para-validar",
+ "titulo": "La app de un solo botón",
+ "formato": "resultado primero y marcha atrás: se muestra la app mínima terminada, se revela lo que no se construyó, se ve a alguien usarla, giro quieto y solución JDT",
+ "concepto": "La app más pequeña posible, con un solo botón, ya responde la pregunta más cara de tu idea —¿alguien la va a usar?— antes de que pagues por todo lo demás; JDT te arma ese MVP.",
+ "produccion": "Vidrio-líquido (principal): paneles de vidrio esmerilado sobre orbes dorados y azules con cámara 3D suave, un panel = una idea y mucho aire; apoyo interfaz-en-movimiento en la escena 3 (cursor que viaja y toca el único botón y aparece la tarjeta «Primer pedido»); gancho resultado-primero con la app mínima legible desde t=0 sin glitch; contraste con las funciones que se van flotando; giro quieto en look amarillo con el ÚNICO destello y acercamiento lento; solución en look azul; cierre con círculo. Se distingue de los anteriores: no abre con glitch ni latido, transiciones zoom, desliza-izq y giro nunca usadas como apertura, y el protagonista es un solo botón dorado.",
+ "tendencias": {
+  "video": "vidrio-liquido",
+  "apoyo": "interfaz-en-movimiento",
+  "gancho": "resultado-primero",
+  "ritmo": "mixto",
+  "banner": "tipografia-gigante",
+  "pulso": "resumen fechado de la búsqueda",
+  "fuentes": [
+   "https://metricool.com/es/tendencias-instagram/"
+  ]
+ },
+ "salida": "videos/2026-11-24-0606-mvp-para-validar.mp4",
+ "escenas": [
+  {
+   "tipo": "libre",
+   "texto": "Esta app tiene *un solo botón*.",
+   "voz": "Mira esta app: tiene UN solo botón… y ya está lista.",
+   "transicion": "zoom",
+   "duracion_objetivo_s": 3,
+   "elementos": [
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 30,
+     "y": 50,
+     "ancho": 44,
+     "color": "dorado",
+     "opacidad": 0.35,
+     "t": 0,
+     "mueve": "flota"
+    },
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 72,
+     "y": 74,
+     "ancho": 38,
+     "color": "azul",
+     "opacidad": 0.45,
+     "t": 0,
+     "mueve": "flota"
+    },
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 50,
+     "y": 62,
+     "ancho": 50,
+     "alto": 46,
+     "color": "superficie",
+     "opacidad": 0.8,
+     "t": 0
+    },
+    {
+     "el": "forma",
+     "forma": "pildora",
+     "x": 50,
+     "y": 66,
+     "ancho": 32,
+     "alto": 7,
+     "color": "amarillo",
+     "t": 0,
+     "mueve": "late"
+    },
+    {
+     "el": "texto",
+     "texto": "Pedir",
+     "x": 50,
+     "y": 66,
+     "tam": "m",
+     "color": "fondo",
+     "t": 0
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "texto": "Ibas a pagar *todo esto*.",
+   "voz": "¿Chat, mapa, puntos, tienda? Ibas a pagarlo todo de una.",
+   "transicion": "desliza-izq",
+   "duracion_objetivo_s": 2.5,
+   "elementos": [
+    {
+     "el": "forma",
+     "forma": "anillo",
+     "x": 50,
+     "y": 40,
+     "ancho": 40,
+     "color": "dorado",
+     "opacidad": 0.5,
+     "t": 0,
+     "mueve": "flota"
+    },
+    {
+     "el": "texto",
+     "texto": "Todo junto",
+     "x": 50,
+     "y": 40,
+     "tam": "s",
+     "color": "blanco",
+     "t": 0.2
+    },
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 20,
+     "y": 66,
+     "ancho": 14,
+     "color": "azul",
+     "t": 0.3
+    },
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 38,
+     "y": 66,
+     "ancho": 14,
+     "color": "azul",
+     "t": 0.4
+    },
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 56,
+     "y": 66,
+     "ancho": 14,
+     "color": "azul",
+     "t": 0.5
+    },
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 74,
+     "y": 66,
+     "ancho": 14,
+     "color": "azul",
+     "t": 0.6
+    },
+    {
+     "el": "texto",
+     "texto": "Chat",
+     "x": 20,
+     "y": 78,
+     "tam": "s",
+     "color": "blanco",
+     "t": 0.5
+    },
+    {
+     "el": "texto",
+     "texto": "Mapa",
+     "x": 38,
+     "y": 78,
+     "tam": "s",
+     "color": "blanco",
+     "t": 0.6
+    },
+    {
+     "el": "texto",
+     "texto": "Puntos",
+     "x": 56,
+     "y": 78,
+     "tam": "s",
+     "color": "blanco",
+     "t": 0.7
+    },
+    {
+     "el": "texto",
+     "texto": "Tienda",
+     "x": 74,
+     "y": 78,
+     "tam": "s",
+     "color": "blanco",
+     "t": 0.8
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "texto": "Pruébala con *gente real*.",
+   "voz": "Con un MVP la pruebas con gente real, solo con lo esencial.",
+   "transicion": "giro",
+   "duracion_objetivo_s": 3,
+   "elementos": [
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 50,
+     "y": 58,
+     "ancho": 56,
+     "color": "azul",
+     "opacidad": 0.3,
+     "t": 0
+    },
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 50,
+     "y": 60,
+     "ancho": 46,
+     "alto": 40,
+     "color": "superficie",
+     "opacidad": 0.85,
+     "t": 0
+    },
+    {
+     "el": "forma",
+     "forma": "pildora",
+     "x": 50,
+     "y": 52,
+     "ancho": 30,
+     "alto": 7,
+     "color": "amarillo",
+     "t": 0
+    },
+    {
+     "el": "texto",
+     "texto": "Pedir",
+     "x": 50,
+     "y": 52,
+     "tam": "m",
+     "color": "fondo",
+     "t": 0
+    },
+    {
+     "el": "icono",
+     "nombre": "flecha",
+     "x": 82,
+     "y": 84,
+     "tam": 10,
+     "color": "blanco",
+     "t": 0.1,
+     "a": [
+      60,
+      57
+     ]
+    },
+    {
+     "el": "forma",
+     "forma": "anillo",
+     "x": 50,
+     "y": 52,
+     "ancho": 14,
+     "color": "dorado",
+     "t": 0.5,
+     "entra": "pop",
+     "sale": 0.75
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Primer pedido",
+     "icono": "check",
+     "x": 50,
+     "y": 70,
+     "ancho": 40,
+     "t": 0.6,
+     "entra": "sube"
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "amarillo",
+   "texto": "¿La usan? *Crece.* ¿No? *Ajustas.*",
+   "voz": "Si la usan, crece. Si no… ajustas sin gastar de más.",
+   "transicion": "destello",
+   "fx": [
+    "destello"
+   ],
+   "camara": "acerca",
+   "duracion_objetivo_s": 4.5,
+   "elementos": [
+    {
+     "el": "forma",
+     "forma": "anillo",
+     "x": 50,
+     "y": 62,
+     "ancho": 40,
+     "color": "fondo",
+     "opacidad": 0.5,
+     "t": 0
+    },
+    {
+     "el": "icono",
+     "nombre": "objetivo",
+     "x": 50,
+     "y": 62,
+     "tam": 28,
+     "color": "fondo",
+     "t": 0.1,
+     "entra": "pop"
+    },
+    {
+     "el": "texto",
+     "texto": "Sin gastar *de más*",
+     "x": 50,
+     "y": 84,
+     "tam": "l",
+     "color": "fondo",
+     "t": 0.45
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "azul",
+   "texto": "*JDT* arma tu MVP.",
+   "voz": "En JDT te armamos ese MVP, y tu app crece contigo.",
+   "transicion": "fundido",
+   "camara": "giro-lento",
+   "duracion_objetivo_s": 3,
+   "elementos": [
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 66,
+     "y": 52,
+     "ancho": 36,
+     "color": "dorado",
+     "opacidad": 0.3,
+     "t": 0,
+     "mueve": "flota"
+    },
+    {
+     "el": "icono",
+     "nombre": "telefono",
+     "x": 50,
+     "y": 56,
+     "tam": 30,
+     "color": "blanco",
+     "entra": "sube"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Lo esencial",
+     "icono": "check",
+     "x": 30,
+     "y": 80,
+     "ancho": 38,
+     "entra": "izquierda"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Listo para probar",
+     "icono": "cohete",
+     "x": 70,
+     "y": 80,
+     "ancho": 40,
+     "entra": "derecha",
+     "color": "amarillo"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de *tu proyecto*.",
+   "subtexto": "@technologicsjdt",
+   "voz": "¿Tienes la idea? Hablemos de tu proyecto.",
+   "transicion": "circulo",
+   "duracion_objetivo_s": 3
+  }
+ ],
+ "tiempos": {
+  "inicios": [
+   0.0,
+   4.12,
+   9.75,
+   13.66,
+   17.35,
+   21.44
+  ],
+  "retardo": 0.3,
+  "duracion": 24.94
+ },
+ "audio": "videos/2026-11-24-0606-mvp-para-validar.mp3"
+}

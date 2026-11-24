@@ -103,6 +103,14 @@
       "gancho": "cuenta-regresiva",
       "ritmo": "rapido",
       "banner": "amarillo-total"
+    },
+    {
+      "fecha": "2026-11-24T06:06:46",
+      "video": "vidrio-liquido",
+      "apoyo": "interfaz-en-movimiento",
+      "gancho": "resultado-primero",
+      "ritmo": "mixto",
+      "banner": "tipografia-gigante"
     }
   ]
 }
