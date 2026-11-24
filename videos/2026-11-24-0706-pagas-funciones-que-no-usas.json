@@ -1,0 +1,245 @@
+{
+  "salida": "videos/2026-11-24-0706-pagas-funciones-que-no-usas.mp4",
+  "formato": "«3 señales de que…» narrado por el propio problema: la función que nadie usa se presenta como personaje, cuenta las tres señales con descaro y al final JDT la deja sin puesto",
+  "concepto": "La función premium que pagas cada mes y nunca abres se confiesa con toda la tranquilidad del mundo, te da 3 señales de que tiene muchas compañeras igual de vagas y termina sin puesto cuando JDT hace software a medida que trae solo lo que tu negocio usa.",
+  "produccion": "Mascota-con-actitud (principal) en todo el Reel: la estrella-función es el personaje con cara de descaro y burbujas cortas; en el gancho (rasgo 1) aparece gigante y quieta con su burbuja de confesión y el rótulo «3 señales» legible desde t=0, con el ÚNICO golpe de vibra y cámara empuja; en la señal 1-2 (rasgo 2) se queda dormida en un rincón del menú con su «Zzz» mientras un solo botón trabaja; en el giro (rasgo 3) se va de la pantalla con su maleta de burbuja «¿Me van a despedir?» mientras el engranaje a medida queda solo y tranquilo. Apoyo motion-modular solo en las escenas 2 y 3: sistema de rótulos «SEÑAL 1/2/3» en píldora, tarjetas de módulo y notificaciones que caen con la misma jerarquía. Ritmo contemplativo: planos de 4 a 5 s con un solo movimiento limpio y una pausa (puntos suspensivos y escena quieta en azul) antes del remate amarillo. Transiciones: persiana para cambiar de capítulo, destello UNA vez en el giro, círculo al cierre. Sin glitch (distinto de los anteriores que abrían con glitch o zoom).",
+  "fuente": "marca.md",
+  "url": "jdt:pagas-funciones-que-no-usas",
+  "tendencias": {
+    "video": "mascota-con-actitud",
+    "apoyo": "motion-modular",
+    "gancho": "tres-senales",
+    "ritmo": "contemplativo",
+    "banner": "vidrio-liquido",
+    "pulso": "2026-11-24: búsquedas Reels 2026 (formato vertical, texto grande que carga el mensaje, contenido humano) y motion B2B (sistemas modulares de rótulos y proceso real en pantalla); sin cifras verificadas, solo titulares y listados.",
+    "fuentes": [
+      "https://metricool.com/es/tendencias-instagram/",
+      "https://advids.co/blog/ui-animation-motion-design-trends"
+    ]
+  },
+  "escenas": [
+    {
+      "tipo": "libre",
+      "texto": "*3 señales* de más",
+      "fx": [
+        "vibra"
+      ],
+      "camara": "empuja",
+      "voz": "Hola, soy la función que pagas… y NUNCA usas. Tres señales de que tienes más como yo.",
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "circulo",
+          "x": 50,
+          "y": 56,
+          "ancho": 52,
+          "color": "superficie",
+          "t": 0
+        },
+        {
+          "el": "icono",
+          "nombre": "estrella",
+          "x": 50,
+          "y": 56,
+          "tam": 34,
+          "color": "amarillo",
+          "t": 0,
+          "mueve": "balancea"
+        },
+        {
+          "el": "burbuja",
+          "texto": "Me pagas… y nunca me usas.",
+          "x": 64,
+          "y": 39,
+          "cola": "izq",
+          "color": "blanco",
+          "ancho": 54,
+          "t": 0.05
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Función premium",
+          "icono": "candado",
+          "x": 50,
+          "y": 80,
+          "ancho": 50,
+          "t": 0.35
+        }
+      ],
+      "duracion": 5.786
+    },
+    {
+      "tipo": "libre",
+      "texto": "Señal 1 y 2: *nadie* la toca",
+      "transicion": "persiana",
+      "voz": "Uno: botones que nadie toca. Dos: tu equipo usa siempre lo mismito.",
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 24,
+          "y": 40,
+          "ancho": 34,
+          "alto": 5,
+          "color": "amarillo",
+          "t": 0
+        },
+        {
+          "el": "texto",
+          "texto": "SEÑAL 1 · 2",
+          "x": 24,
+          "y": 40,
+          "tam": "s",
+          "color": "fondo",
+          "t": 0
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Informes avanzados",
+          "icono": "grafica",
+          "x": 38,
+          "y": 51,
+          "ancho": 56,
+          "opacidad": 0.5,
+          "t": 0.1
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Módulo de flotas",
+          "icono": "camion",
+          "x": 38,
+          "y": 61,
+          "ancho": 56,
+          "opacidad": 0.5,
+          "t": 0.2
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Facturar",
+          "icono": "check",
+          "x": 38,
+          "y": 71,
+          "ancho": 56,
+          "color": "amarillo",
+          "t": 0.55,
+          "mueve": "late"
+        },
+        {
+          "el": "icono",
+          "nombre": "estrella",
+          "x": 80,
+          "y": 80,
+          "tam": 14,
+          "color": "dorado",
+          "t": 0.3,
+          "giro": -20
+        },
+        {
+          "el": "burbuja",
+          "texto": "Zzz…",
+          "x": 82,
+          "y": 68,
+          "cola": "izq",
+          "ancho": 22,
+          "t": 0.4,
+          "mueve": "flota"
+        }
+      ],
+      "duracion": 4.962
+    },
+    {
+      "tipo": "notificaciones",
+      "texto": "Señal 3: *cobra todo*, igual",
+      "look": "azul",
+      "transicion": "persiana",
+      "camara": "paneo",
+      "etiquetas": [
+        "Licencia renovada",
+        "Usuario adicional",
+        "Módulo extra"
+      ],
+      "detalles": [
+        "Se cobró completa",
+        "Nadie lo pidió",
+        "Sin abrir todavía"
+      ],
+      "iconos": [
+        "moneda",
+        "usuario",
+        "caja"
+      ],
+      "voz": "Tres: la renovación cobra todo… lo uses o no.",
+      "duracion": 3.198
+    },
+    {
+      "tipo": "libre",
+      "texto": "Con *JDT* pagas solo lo que *usas*",
+      "look": "amarillo",
+      "fx": [
+        "destello"
+      ],
+      "transicion": "destello",
+      "camara": "acerca",
+      "voz": "¿Y si pagaras solo lo que usas? Uy, me quedo sin puesto: JDT TECHNOLOGICS hace software a medida.",
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "engranaje",
+          "x": 50,
+          "y": 58,
+          "tam": 32,
+          "color": "fondo",
+          "t": 0.25,
+          "entra": "pop",
+          "mueve": "gira"
+        },
+        {
+          "el": "icono",
+          "nombre": "estrella",
+          "x": 26,
+          "y": 42,
+          "tam": 12,
+          "color": "fondo",
+          "t": 0,
+          "a": [
+            14,
+            40
+          ],
+          "sale": 0.6
+        },
+        {
+          "el": "burbuja",
+          "texto": "¿Me van a despedir?",
+          "x": 40,
+          "y": 41,
+          "cola": "izq",
+          "color": "fondo",
+          "ancho": 44,
+          "t": 0.02,
+          "sale": 0.55
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Solo lo que usas",
+          "icono": "check",
+          "x": 50,
+          "y": 82,
+          "ancho": 54,
+          "t": 0.6
+        }
+      ],
+      "duracion": 6.55
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*",
+      "subtexto": "@technologicsjdt",
+      "transicion": "circulo",
+      "voz": "Hablemos de tu proyecto.",
+      "duracion": 3.4
+    }
+  ],
+  "audio": "videos/2026-11-24-0706-pagas-funciones-que-no-usas.mp3",
+  "sincronia": "exacta",
+  "voz_motor": "local"
+}
