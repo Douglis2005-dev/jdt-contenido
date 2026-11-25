@@ -1,0 +1,14 @@
+{
+  "salida": "banners/2026-11-25-0506-inventario-conteo-manual.png",
+  "estilo": "neobrutal",
+  "titulo": "¿Tu inventario se cuenta *a mano* cada fin de mes?",
+  "subtitulo": "Lo que dice la hoja no siempre es lo que hay en la bodega.",
+  "puntos": [
+    "Cada venta actualiza tu stock",
+    "Conectado a tu contabilidad",
+    "Software a medida, a tu proceso"
+  ],
+  "cta": "Hablemos de tu proyecto",
+  "icono": "documento",
+  "etiqueta": "INVENTARIO CONECTADO"
+}

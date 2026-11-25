@@ -1,0 +1,116 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+  .nota { position: absolute; background: #FACC15; color: #0A0E27; font-weight: 900; border-radius: 6px; padding: 34px 40px; box-shadow: 0 18px 40px rgba(0,0,0,.35); }
+  .tinta { position: absolute; font-weight: 900; color: #FFFFFF; line-height: 1.04; letter-spacing: -0.03em; }
+  .tarjeta { position: absolute; background: rgba(19,26,58,.92); border: 3px solid #2A3460; border-radius: 28px; }
+  .pill { display: inline-block; border: 3px solid #FACC15; color: #FACC15; border-radius: 60px; padding: 18px 36px; font-family: "DejaVu Sans Mono", monospace; font-size: 34px; letter-spacing: .12em; }
+  .nodo { position: absolute; width: 230px; height: 230px; border-radius: 50%; background: #131A3A; border: 4px solid #94A3B8; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 800; font-size: 24px; color: #FFFFFF; }
+  .nodo.sol { background: #FACC15; color: #0A0E27; border-color: #FACC15; }
+</style></head>
+<body>
+<div id="e1" class="capa">
+  <div class="nota" id="n1" style="left:120px;top:300px;width:700px;font-size:92px;transform:rotate(-4deg)">Hoja: SÍ hay</div>
+  <div class="tarjeta" id="caja" style="left:330px;top:820px;width:420px;height:420px;background:transparent;border:5px dashed #94A3B8;border-radius:28px"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:220px;font-weight:900;color:#94A3B8">?</div></div>
+  <div class="tinta" style="left:140px;top:1262px;width:800px;white-space:nowrap;text-align:center;font-size:50px;color:#94A3B8">Bodega: ¿dónde?</div>
+  <div class="tinta" id="t1" style="left:90px;top:1380px;width:900px;font-size:96px"></div>
+  <div id="lupa" style="position:absolute;left:640px;top:520px;width:260px;height:260px;border:22px solid #FACC15;border-radius:50%;box-sizing:border-box"></div>
+  <div id="mango" style="position:absolute;left:870px;top:760px;width:20px;height:190px;background:#FACC15;transform:rotate(-45deg);border-radius:10px"></div>
+</div>
+<div id="e2" class="capa" style="background:#FACC15"><div class="tinta" id="t2" style="left:0;right:0;top:700px;text-align:center;font-size:150px;color:#0A0E27"></div></div>
+<div id="e3" class="capa">
+  <div class="tarjeta" id="cal" style="left:150px;top:520px;width:780px;height:700px"></div>
+  <div class="tinta" style="left:200px;top:580px;font-size:70px;color:#94A3B8">SÁBADO</div>
+  <div id="tach" style="position:absolute;left:200px;top:612px;width:680px;height:10px;background:#FACC15;transform-origin:left center"></div>
+  <div class="nota" id="n3" style="left:520px;top:1020px;width:520px;font-size:70px;transform:rotate(3deg)">Cuadrar inventario</div>
+  <div class="tinta" id="t3" style="left:90px;top:1420px;width:900px;font-size:88px;text-align:center"></div>
+</div>
+<div id="e4" class="capa">
+  <div class="pill" id="pill" style="position:absolute;left:50%;top:330px;transform:translateX(-50%);white-space:nowrap">INVENTARIO CONECTADO</div>
+  <div class="tinta" style="left:0;right:0;top:470px;text-align:center;font-size:84px"><span class="clave">JDT</span>: software a medida</div>
+  <div class="nodo" id="v" style="left:110px;top:900px">Venta</div>
+  <div class="nodo sol" id="c" style="left:425px;top:900px">Inventario</div>
+  <div class="nodo" id="k" style="left:740px;top:900px">Contabilidad</div>
+  <div id="linea1" style="position:absolute;left:340px;top:1015px;width:85px;height:6px;background:#FACC15;transform-origin:left"></div>
+  <div id="linea2" style="position:absolute;left:655px;top:1015px;width:85px;height:6px;background:#FACC15;transform-origin:left"></div>
+  <div style="position:absolute;left:110px;top:1240px;width:860px;height:18px;background:#2A3460;border-radius:9px;overflow:hidden"><i id="barra" style="display:block;height:100%;width:0;background:#FACC15"></i></div>
+  <div class="tinta" id="t4" style="left:0;right:0;top:1340px;text-align:center;font-size:64px;color:#94A3B8;font-weight:700"></div>
+</div>
+<div id="e5" class="capa">
+  <div id="bloque" style="position:absolute;left:190px;top:640px;width:700px;height:700px;background:#FACC15;border-radius:60px"></div>
+  <div style="position:absolute;left:150px;top:600px;width:780px;height:780px;border:4px solid #EAB308;border-radius:90px"></div>
+  <div class="tinta" id="t5" style="left:0;right:0;top:1480px;text-align:center;font-size:110px"></div>
+  <div class="nota" id="n5" style="left:470px;top:1040px;width:560px;white-space:nowrap;background:#FFFFFF;font-size:60px;transform:rotate(4deg)">Bodega: SÍ hay</div>
+  <svg id="sub" style="position:absolute;left:150px;top:1600px;width:780px;height:40px" viewBox="0 0 780 40"><path id="subp" d="M10 25 Q 390 5 770 25" stroke="#FACC15" stroke-width="10" fill="none" stroke-linecap="round"/></svg>
+</div>
+<div id="e6" class="capa">
+  <img id="logo" src="../recursos/logo.jpeg" style="position:absolute;left:290px;top:420px;width:500px;border-radius:90px">
+  <div class="tinta" id="t6" style="left:0;right:0;top:1000px;text-align:center;font-size:110px">Hablemos de tu <span class="clave">proyecto.</span></div>
+  <div style="position:absolute;left:0;right:0;top:1270px;text-align:center"><span class="pill" id="pill6">@technologicsjdt</span></div>
+</div>
+<div id="fl" class="capa" style="background:#FFFFFF;opacity:0;z-index:7"></div>
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+const bg = JDT.lienzo(0); document.getElementById("e1").style.zIndex = 2;
+window.DURACION = 24.0;
+const dentro = (t, a, b) => t >= a && t < b;
+const ESC = [["e1",0,5.59],["e2",5.59,9.74],["e3",9.74,12.66],["e4",12.66,18.48],["e5",18.48,22.26],["e6",22.26,24.0]];
+const ESCRITO = (el, s) => { if (el.textContent !== s) el.textContent = s; };
+window.render = (t) => {
+  ESC.forEach(([id,a,b]) => $(id).style.display = dentro(t,a,b) ? "block" : "none");
+  JDT.fondo(bg, t, {claro: dentro(t,5.59,9.74) ? 0 : 1});
+  // E1 gancho (0-5.75): nota amarilla, caja que flota, lupa que busca y texto de POV
+  if (dentro(t,0,5.59)) {
+    const k = seg(t, 0, .6, "outBack");
+    $("n1").style.opacity = 1; $("n1").style.transform = `rotate(${lerp(-12,-4,k)}deg) scale(${lerp(.9,1,k)})`;
+    $("caja").style.transform = `translateY(${Math.sin(t*1.6)*18}px) rotate(${Math.sin(t*.8)*2}deg)`;
+    $("caja").style.opacity = lerp(.5, .85, seg(t, .4, 1.2, "lineal"));
+    $("lupa").style.transform = `translate(${lerp(-120,0,seg(t,1.0,2.2))}px, ${lerp(120,0,seg(t,1.0,2.2))}px)`;
+    $("mango").style.transform = `translate(${lerp(-120,0,seg(t,1.0,2.2))}px, ${lerp(120,0,seg(t,1.0,2.2))}px) rotate(-45deg)`;
+    ESCRITO($("t1"), "POV: buscas una caja fantasma");
+    $("t1").style.opacity = 1;
+    $("t1").style.color = t > 2.2 ? "#FFFFFF" : "#FFFFFF";
+  }
+  // E2 (5.75-10.03): palabras gigantes sobre amarillo, una frase por golpe
+  if (dentro(t,5.59,9.74)) {
+    ESCRITO($("t2"), t < 7.6 ? "Cuentas. Recuentas." : "¡No cuadra!");
+    $("t2").style.transform = `scale(${lerp(1.08,1,seg(t, t<7.6?5.59:7.6, (t<7.6?5.59:7.6)+.4))})`;
+  }
+  // E3 (10.03-13.03): calendario del sábado tachado a mano y nota
+  if (dentro(t,9.74,12.66)) {
+    $("tach").style.transform = `scaleX(${seg(t, 10.31, 11.31, "inOutCubic")})`;
+    $("n3").style.opacity = seg(t, 10.91, 11.51, "lineal");
+    ESCRITO($("t3"), "Sábado perdido, otra vez.");
+    $("t3").style.opacity = seg(t, 9.91, 10.51, "lineal");
+  }
+  // E4 (13.03-19.02): motion modular: pastilla, recorrido venta → inventario → contabilidad y barra
+  if (dentro(t,12.66,18.48)) {
+    $("pill").style.opacity = seg(t, 12.73, 13.13, "lineal");
+    $("v").style.opacity = seg(t, 13.03, 13.53, "outExpo");
+    $("c").style.opacity = seg(t, 14.03, 14.53, "outExpo");
+    $("k").style.opacity = seg(t, 15.03, 15.53, "outExpo");
+    $("linea1").style.transform = `scaleX(${seg(t, 13.63, 14.23, "inOutCubic")})`;
+    $("linea2").style.transform = `scaleX(${seg(t, 14.63, 15.23, "inOutCubic")})`;
+    $("barra").style.width = `${clamp((t-15.6)/2.4)*100}%`;
+    ESCRITO($("t4"), t < 15.6 ? "Venta, entrada y contabilidad" : "Todo cuadra solo");
+  }
+  // E5 (19.02-22.93): remate con caja sólida, zoom lento y subrayado dibujado
+  if (dentro(t,18.48,22.26)) {
+    const k = seg(t, 18.5, .6, "outBack");
+    $("bloque").style.transform = `scale(${lerp(.85,1,clamp(k))}) rotate(${lerp(-6,0,clamp(k))}deg)`;
+    $("e5").style.transform = `scale(${lerp(1,1.06,seg(t,18.48,22.26,"lineal"))})`;
+    ESCRITO($("t5"), "Bodega = sistema");
+    $("n5").style.opacity = seg(t, 19.6, 20.2, "lineal");
+    $("subp").setAttribute("stroke-dasharray", "800");
+    $("subp").setAttribute("stroke-dashoffset", String(800*(1-seg(t, 19.5, 20.7))));
+  }
+  // E6 cierre (22.93-25.7): logo, CTA y @ de marca
+  if (dentro(t,22.26,24.0)) {
+    $("logo").style.opacity = seg(t, 22.26, 22.9, "lineal");
+    $("t6").style.opacity = seg(t, 22.3, 22.8, "lineal");
+    $("pill6").style.opacity = seg(t, 22.7, 23.2, "lineal");
+  }
+  // destello unico en el giro 19.0
+  $("fl").style.opacity = dentro(t, 18.4, 18.52) ? .85 : 0;
+};
+</script></body></html>

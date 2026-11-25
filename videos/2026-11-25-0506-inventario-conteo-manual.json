@@ -1,0 +1,440 @@
+{
+  "salida": "videos/2026-11-25-0506-inventario-conteo-manual.mp4",
+  "fuente": "marca.md",
+  "url": "jdt:inventario-conteo-manual",
+  "titulo": "Tu inventario se cuenta a mano cada fin de mes",
+  "formato": "POV de cacería en primera persona: el dueño busca en la bodega una «caja fantasma» que solo existe en la hoja de cálculo, el conteo no cuadra, se le va el sábado, giro con JDT conectando venta, caja y contabilidad, y remate: la caja fantasma se vuelve real y cuadra",
+  "concepto": "Tu inventario tiene cajas fantasma: existen en la hoja de cálculo pero no en la bodega, y JDT TECHNOLOGICS las desaparece con un software a medida que se actualiza solo con cada venta o entrada y cuadra con tu contabilidad.",
+  "produccion": "Creator-auténtico (principal): gancho POV con encuadre íntimo, nota adhesiva amarilla inclinada «Hoja: SÍ hay» y la caja fantasma translúcida flotando junto a una lupa, todo visible desde t=0, con grano como única textura de cámara en mano; golpe de texto en look amarillo (Cuentas / Recuentas / No cuadra) con desliza-arriba; calendario del sábado tachado a mano con nota adhesiva y barrido; apoyo motion-modular SOLO en la escena 4: look azul, pastilla de sección «INVENTARIO CONECTADO», recorrido carrito → caja → documento con flechas que pulsan y barra que se llena, con el ÚNICO destello del video; remate quieto con la caja ya sólida en amarillo, subrayado dibujado a mano y cámara acerca; cierre con zoom. Distinto de los anteriores: sin glitch ni vibra, sin persiana ni círculo, primera escena POV con notas adhesivas.",
+  "tendencias": {
+    "video": "creator-autentico",
+    "apoyo": "motion-modular",
+    "gancho": "pov",
+    "ritmo": "rapido",
+    "banner": "neobrutal",
+    "pulso": "2026-11-25: búsquedas de tendencias de Reels nov 2026 (sin cifras verificadas) y de motion B2B; señal útil: formato creador en primera persona y video B2B que muestra un proceso real en movimiento, adaptado a JDT como POV del dueño y recorrido venta-inventario-contabilidad",
+    "fuentes": [
+      "https://metricool.com/es/tendencias-instagram/",
+      "https://advids.co/blog/images/motion-design-video"
+    ]
+  },
+  "escenas": [
+    {
+      "tipo": "libre",
+      "texto": "POV: buscas una caja *fantasma*",
+      "voz": "POV: eres el dueño buscando una caja que SOLO existe en tu hoja de cálculo.",
+      "fx": [
+        "grano"
+      ],
+      "duracion": 3,
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 32,
+          "y": 48,
+          "ancho": 40,
+          "alto": 9,
+          "color": "amarillo",
+          "giro": -6,
+          "t": 0
+        },
+        {
+          "el": "texto",
+          "texto": "Hoja: SÍ hay",
+          "x": 32,
+          "y": 48,
+          "tam": "m",
+          "color": "fondo",
+          "giro": -6,
+          "t": 0
+        },
+        {
+          "el": "icono",
+          "nombre": "caja",
+          "x": 66,
+          "y": 66,
+          "tam": 30,
+          "color": "gris",
+          "opacidad": 0.35,
+          "t": 0,
+          "mueve": "flota"
+        },
+        {
+          "el": "icono",
+          "nombre": "lupa",
+          "x": 30,
+          "y": 74,
+          "tam": 16,
+          "color": "blanco",
+          "t": 0,
+          "mueve": "balancea"
+        },
+        {
+          "el": "texto",
+          "texto": "Bodega: ¿dónde?",
+          "x": 62,
+          "y": 86,
+          "tam": "s",
+          "color": "gris",
+          "t": 0
+        }
+      ]
+    },
+    {
+      "tipo": "palabras",
+      "look": "amarillo",
+      "transicion": "desliza-arriba",
+      "frases": [
+        "Cuentas.",
+        "Recuentas.",
+        "*No cuadra.*"
+      ],
+      "voz": "Cuentas, recuentas… ¡y no cuadra!",
+      "duracion": 2.5
+    },
+    {
+      "tipo": "libre",
+      "texto": "Tu *sábado*, cuadrando inventario",
+      "transicion": "barrido",
+      "voz": "Y otra vez, el sábado cuadrando a mano.",
+      "duracion": 3,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "calendario",
+          "x": 50,
+          "y": 58,
+          "tam": 30,
+          "color": "blanco",
+          "t": 0
+        },
+        {
+          "el": "linea",
+          "x": 36,
+          "y": 50,
+          "a": [
+            64,
+            68
+          ],
+          "estilo": "solida",
+          "color": "amarillo",
+          "entra": "dibuja",
+          "t": 0.2
+        },
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 66,
+          "y": 80,
+          "ancho": 46,
+          "alto": 8,
+          "color": "amarillo",
+          "giro": 5,
+          "t": 0.35,
+          "entra": "pop"
+        },
+        {
+          "el": "texto",
+          "texto": "Cuadrar inventario",
+          "x": 66,
+          "y": 80,
+          "tam": "s",
+          "color": "fondo",
+          "giro": 5,
+          "t": 0.35
+        },
+        {
+          "el": "icono",
+          "nombre": "persona-triste",
+          "x": 22,
+          "y": 80,
+          "tam": 14,
+          "color": "gris",
+          "t": 0.1
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "look": "azul",
+      "texto": "*JDT*: software a medida",
+      "transicion": "destello",
+      "fx": [
+        "destello"
+      ],
+      "voz": "En JDT TECHNOLOGICS hacemos software a medida: cada venta o entrada actualiza tu inventario solo.",
+      "duracion": 3.5,
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 50,
+          "y": 42,
+          "ancho": 70,
+          "alto": 5,
+          "color": "amarillo",
+          "t": 0
+        },
+        {
+          "el": "texto",
+          "texto": "INVENTARIO CONECTADO",
+          "x": 50,
+          "y": 42,
+          "tam": "s",
+          "color": "fondo",
+          "t": 0
+        },
+        {
+          "el": "icono",
+          "nombre": "carrito",
+          "x": 16,
+          "y": 62,
+          "tam": 14,
+          "color": "blanco",
+          "t": 0.1
+        },
+        {
+          "el": "linea",
+          "x": 26,
+          "y": 62,
+          "a": [
+            38,
+            62
+          ],
+          "estilo": "flecha",
+          "color": "amarillo",
+          "pulso": true,
+          "t": 0.2
+        },
+        {
+          "el": "icono",
+          "nombre": "caja",
+          "x": 50,
+          "y": 62,
+          "tam": 18,
+          "color": "amarillo",
+          "t": 0.3,
+          "entra": "pop",
+          "mueve": "late"
+        },
+        {
+          "el": "linea",
+          "x": 62,
+          "y": 62,
+          "a": [
+            74,
+            62
+          ],
+          "estilo": "flecha",
+          "color": "amarillo",
+          "pulso": true,
+          "t": 0.4
+        },
+        {
+          "el": "icono",
+          "nombre": "documento",
+          "x": 84,
+          "y": 62,
+          "tam": 14,
+          "color": "blanco",
+          "t": 0.5
+        },
+        {
+          "el": "barra",
+          "x": 50,
+          "y": 79,
+          "ancho": 64,
+          "valor": 100,
+          "color": "amarillo",
+          "t": 0.55
+        },
+        {
+          "el": "texto",
+          "texto": "Se actualiza solo",
+          "x": 50,
+          "y": 86,
+          "tam": "m",
+          "color": "blanco",
+          "t": 0.6
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "texto": "Y cuadra con *tu contabilidad*",
+      "camara": "acerca",
+      "voz": "Conectado a tu contabilidad. ¿La caja fantasma? Desapareció.",
+      "duracion": 3,
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "anillo",
+          "x": 50,
+          "y": 60,
+          "ancho": 46,
+          "color": "dorado",
+          "t": 0,
+          "entra": "dibuja"
+        },
+        {
+          "el": "icono",
+          "nombre": "caja",
+          "x": 50,
+          "y": 60,
+          "tam": 30,
+          "color": "amarillo",
+          "t": 0.1,
+          "entra": "pop"
+        },
+        {
+          "el": "icono",
+          "nombre": "check",
+          "x": 74,
+          "y": 46,
+          "tam": 12,
+          "color": "blanco",
+          "t": 0.35,
+          "entra": "pop"
+        },
+        {
+          "el": "texto",
+          "texto": "Bodega = sistema",
+          "x": 50,
+          "y": 82,
+          "tam": "m",
+          "color": "blanco",
+          "t": 0.45
+        },
+        {
+          "el": "linea",
+          "x": 26,
+          "y": 86,
+          "a": [
+            74,
+            86
+          ],
+          "estilo": "solida",
+          "color": "amarillo",
+          "entra": "dibuja",
+          "t": 0.55
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*",
+      "subtexto": "@technologicsjdt",
+      "transicion": "zoom",
+      "voz": "¡Hablemos de tu proyecto!",
+      "duracion": 3
+    }
+  ],
+  "tiempos": {
+    "inicios": [
+      0.0,
+      5.59,
+      9.74,
+      12.66,
+      18.48,
+      22.26
+    ],
+    "retardo": 0.3,
+    "duracion": 24.0
+  },
+  "direccion": {
+    "hook": "Caja fantasma en tarjeta de vidrio con nota amarilla «Hoja: SÍ hay» en el primer segundo",
+    "payoff": "La caja fantasma desaparece y la bodega queda igual que la hoja; cierre con CTA",
+    "familias": [
+      "motion-graphics",
+      "mixed-media"
+    ],
+    "beats": [
+      {
+        "inicio": 0,
+        "fin": 2,
+        "funcion": "hook",
+        "familia": "mixed-media",
+        "visual": "Nota amarilla inclinada y caja translúcida que flota; lupa que busca"
+      },
+      {
+        "inicio": 2,
+        "fin": 3.2,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "Titular POV que aparece con fundido"
+      },
+      {
+        "inicio": 3.2,
+        "fin": 5.59,
+        "funcion": "contexto",
+        "familia": "mixed-media",
+        "visual": "Lupa y cursor sobre la caja fantasma"
+      },
+      {
+        "inicio": 5.59,
+        "fin": 7.6,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "Palabras gigantes sobre amarillo: Cuentas. Recuentas."
+      },
+      {
+        "inicio": 7.6,
+        "fin": 9.74,
+        "funcion": "giro",
+        "familia": "motion-graphics",
+        "visual": "¡No cuadra! en tipografía cinética"
+      },
+      {
+        "inicio": 9.74,
+        "fin": 11.31,
+        "funcion": "demostracion",
+        "familia": "mixed-media",
+        "visual": "Calendario del sábado con línea tachada a mano"
+      },
+      {
+        "inicio": 11.31,
+        "fin": 12.66,
+        "funcion": "recompensa",
+        "familia": "mixed-media",
+        "visual": "Nota «Cuadrar inventario» pegada sobre el calendario"
+      },
+      {
+        "inicio": 12.66,
+        "fin": 15.0,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Pastilla INVENTARIO CONECTADO y nodos Venta, Inventario, Contabilidad"
+      },
+      {
+        "inicio": 15.0,
+        "fin": 17.6,
+        "funcion": "giro",
+        "familia": "motion-graphics",
+        "visual": "Líneas que conectan los nodos y barra que se llena; destello único al cambiar"
+      },
+      {
+        "inicio": 17.6,
+        "fin": 18.48,
+        "funcion": "payoff",
+        "familia": "mixed-media",
+        "visual": "Caja amarilla sólida dentro de anillo"
+      },
+      {
+        "inicio": 18.48,
+        "fin": 21.6,
+        "funcion": "recompensa",
+        "familia": "mixed-media",
+        "visual": "Acercamiento lento sobre la caja resuelta"
+      },
+      {
+        "inicio": 21.6,
+        "fin": 24.0,
+        "funcion": "cierre",
+        "familia": "motion-graphics",
+        "visual": "Logo, Hablemos de tu proyecto y @technologicsjdt"
+      }
+    ]
+  },
+  "validacion": "corregido: revisor creativo (modelo capaz) pidió 7 correcciones (gancho legible desde t=0, lupa, caja con «?» y «Bodega: ¿dónde?», JDT en pantalla antes del cierre, tachado sobre SÁBADO, CTA antes); aplicadas y aprobadas en segunda revisión (nota interna 7,5). Después se añadió la nota «Bodega: SÍ hay» en el remate y se subió la opacidad de la caja, sugerencias opcionales del mismo revisor; cuadros revisados."
+}

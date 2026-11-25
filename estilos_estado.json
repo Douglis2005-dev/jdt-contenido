@@ -135,6 +135,14 @@
       "gancho": "confesion",
       "ritmo": "contemplativo",
       "banner": "bento"
+    },
+    {
+      "fecha": "2026-11-25T05:07:08",
+      "video": "creator-autentico",
+      "apoyo": "motion-modular",
+      "gancho": "pov",
+      "ritmo": "rapido",
+      "banner": "neobrutal"
     }
   ]
 }
