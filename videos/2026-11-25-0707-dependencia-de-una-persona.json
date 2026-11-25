@@ -1,0 +1,244 @@
+{
+  "salida": "videos/2026-11-25-0707-dependencia-de-una-persona.mp4",
+  "formato": "Reel vertical 9:16, unos 29 s, 5 escenas. Microdocumental en cuenta regresiva: detalle, contexto, problema, giro con pantalla dividida y remate quieto.",
+  "concepto": "La hoja de cálculo que sostiene el negocio tiene una nota pegada que dice «NO TOCAR · solo Martha», Martha se va el viernes, y el remate es que con el software a medida de JDT la respuesta deja de ser «pregúntale a Martha» y pasa a ser «pregúntale al sistema».",
+  "produccion": "Microdocumental cinematográfico (principal): gancho en plano de detalle oscuro con viñeta y cámara quieta sobre la hoja con la nota amarilla torcida «NO TOCAR · solo Martha» y una barra de tiempo casi vacía, todo legible desde t=0; la cuenta regresiva sigue con notificaciones que caen (miércoles a lunes) con persiana y grano; apoyo pantalla dividida dinámica SOLO en la escena 3 (una cabeza contra un sistema) con barrido y paneo; remate quieto en look azul con el ÚNICO destello del video, cámara acerca y la nota vieja que cae para dar paso a «Pregúntale al sistema»; cierre con círculo. Sin glitch ni vibra.",
+  "tendencias": {
+    "video": "microdocumental-cinematico",
+    "apoyo": "pantalla-dividida-dinamica",
+    "gancho": "cuenta-regresiva",
+    "ritmo": "rapido",
+    "banner": "terminal-ui",
+    "pulso": "2026-11-25 búsquedas Reels 2026 y motion B2B (listados; sin cifras)",
+    "fuentes": [
+      "https://marketing4ecommerce.net/que-funciona-en-instagram-en-2026/",
+      "https://metricool.com/es/tendencias-instagram/"
+    ]
+  },
+  "fuente": "marca.md",
+  "escenas": [
+    {
+      "tipo": "libre",
+      "texto": "Martha se va *el viernes*",
+      "fx": [
+        "vineta"
+      ],
+      "transicion": "fundido",
+      "duracion": 3,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "tabla",
+          "x": 46,
+          "y": 60,
+          "tam": 34,
+          "color": "blanco",
+          "entra": "aparece",
+          "t": 0
+        },
+        {
+          "el": "tarjeta",
+          "texto": "NO TOCAR · solo Martha",
+          "icono": "alerta",
+          "x": 54,
+          "y": 43,
+          "color": "amarillo",
+          "giro": -6,
+          "entra": "aparece",
+          "t": 0
+        },
+        {
+          "el": "linea",
+          "x": 52,
+          "y": 47,
+          "a": [
+            47,
+            53
+          ],
+          "estilo": "flecha",
+          "color": "amarillo",
+          "pulso": true,
+          "t": 0
+        },
+        {
+          "el": "icono",
+          "nombre": "reloj",
+          "x": 16,
+          "y": 82,
+          "tam": 10,
+          "color": "dorado",
+          "mueve": "late",
+          "t": 0
+        },
+        {
+          "el": "barra",
+          "x": 56,
+          "y": 82,
+          "ancho": 58,
+          "valor": 15,
+          "color": "amarillo",
+          "t": 0
+        }
+      ],
+      "voz": "Martha se va el viernes… y SOLO ella sabe cómo cuadra la hoja de cálculo."
+    },
+    {
+      "tipo": "notificaciones",
+      "texto": "La cuenta *regresiva*",
+      "etiquetas": [
+        "Último día de Martha",
+        "Cierre de mes",
+        "¿Quién sabe la fórmula?"
+      ],
+      "detalles": [
+        "Viernes",
+        "Lunes temprano",
+        "Sin respuesta"
+      ],
+      "iconos": [
+        "calendario",
+        "alerta",
+        "pregunta"
+      ],
+      "fx": [
+        "grano"
+      ],
+      "transicion": "persiana",
+      "duracion": 4.5,
+      "voz": "Miércoles, jueves… viernes: se fue. Lunes, cierre de mes. ¿Y la fórmula? ¡Nadie sabe!"
+    },
+    {
+      "tipo": "dividida",
+      "etiquetas": [
+        "La lógica en *una cabeza*",
+        "La lógica en *un sistema*"
+      ],
+      "iconos": [
+        "persona-pensando",
+        "pantalla"
+      ],
+      "rotulos": [
+        "HOY",
+        "CON JDT"
+      ],
+      "transicion": "barrido",
+      "camara": "paneo",
+      "duracion": 6,
+      "voz": "Uy, no… En JDT hacemos software a medida: la lógica sale de una cabeza y queda en un sistema."
+    },
+    {
+      "tipo": "libre",
+      "look": "azul",
+      "texto": "Pregúntale al *sistema*",
+      "fx": [
+        "destello"
+      ],
+      "transicion": "destello",
+      "camara": "acerca",
+      "duracion": 4.5,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "pantalla",
+          "x": 50,
+          "y": 64,
+          "tam": 30,
+          "color": "blanco",
+          "entra": "pop",
+          "t": 0
+        },
+        {
+          "el": "tarjeta",
+          "texto": "NO TOCAR · solo Martha",
+          "icono": "alerta",
+          "x": 50,
+          "y": 44,
+          "color": "gris",
+          "giro": -6,
+          "entra": "aparece",
+          "t": 0,
+          "sale": 0.35,
+          "a": [
+            50,
+            88
+          ]
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Todo tu equipo lo usa",
+          "icono": "check",
+          "x": 50,
+          "y": 44,
+          "color": "amarillo",
+          "entra": "pop",
+          "t": 0.4
+        },
+        {
+          "el": "icono",
+          "nombre": "usuario",
+          "x": 16,
+          "y": 84,
+          "tam": 12,
+          "color": "gris",
+          "t": 0.15
+        },
+        {
+          "el": "icono",
+          "nombre": "equipo",
+          "x": 84,
+          "y": 84,
+          "tam": 12,
+          "color": "gris",
+          "t": 0.2
+        },
+        {
+          "el": "linea",
+          "x": 22,
+          "y": 82,
+          "a": [
+            40,
+            70
+          ],
+          "estilo": "punteada",
+          "color": "dorado",
+          "pulso": true,
+          "t": 0.25
+        },
+        {
+          "el": "linea",
+          "x": 78,
+          "y": 82,
+          "a": [
+            60,
+            70
+          ],
+          "estilo": "punteada",
+          "color": "dorado",
+          "pulso": true,
+          "t": 0.3
+        }
+      ],
+      "voz": "Todo tu equipo lo usa. ¿Cómo cuadra? Pregúntale al sistema."
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*.",
+      "subtexto": "@technologicsjdt",
+      "transicion": "circulo",
+      "duracion": 3,
+      "voz": "¡Hablemos de tu proyecto!"
+    }
+  ],
+  "audio": "videos/2026-11-25-0707-dependencia-de-una-persona.mp3",
+  "tiempos": {
+    "inicios": [
+      0.0,
+      5.84,
+      12.5,
+      22.69,
+      26.59
+    ],
+    "retardo": 0.3,
+    "duracion": 29.29
+  }
+}

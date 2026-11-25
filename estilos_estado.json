@@ -151,6 +151,14 @@
       "gancho": "error-falso",
       "ritmo": "mixto",
       "banner": "editorial"
+    },
+    {
+      "fecha": "2026-11-25T07:07:07",
+      "video": "microdocumental-cinematico",
+      "apoyo": "pantalla-dividida-dinamica",
+      "gancho": "cuenta-regresiva",
+      "ritmo": "rapido",
+      "banner": "terminal-ui"
     }
   ]
 }
