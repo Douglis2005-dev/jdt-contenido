@@ -1,0 +1,266 @@
+{
+  "fuente": "marca.md",
+  "url": "jdt:como-trabaja-jdt",
+  "titulo": "Analizamos, desarrollamos, entregamos: así se construye tu sistema",
+  "salida": "videos/2026-11-25-0406-como-trabaja-jdt.mp4",
+  "formato": "confesión con demostración de interfaz: JDT confiesa algo que parece un error (no empieza programando) y luego la pantalla del proyecto avanza en tres capítulos quietos, Analizamos, Desarrollamos, Entregamos, hasta el sistema terminado",
+  "concepto": "Una empresa de software confiesa que lo primero que hace NO es programar, y esa aparente falla es justo lo que desactiva el miedo del dueño a un proyecto eterno: la pantalla del proyecto avanza por tres pasos claros y llega al final.",
+  "produccion": "Interfaz-en-movimiento (principal): rasgo 1 en el gancho, ventana de editor genérica VACÍA (barra de título con tres puntos, línea 1, cursor amarillo que parpadea y puntero que llega) con el ÚNICO glitch del video para la confesión; rasgo 2 en la escena 2, checklist de proyecto cuyas casillas se marcan una a una mientras el puntero baja; rasgo 3 en la escena 3, terminal que escribe sola lo acordado, y en la escena 4 barra de progreso que se llena al final. Apoyo dorado-3d solo en la escena 4: look azul, check dorado gigante con halo y cámara giro-lento, quieta antes del remate. Ritmo contemplativo: gancho de 3 s y planos de 4 a 5 s con un solo movimiento limpio; transiciones persiana (capítulo 1), desliza-izq (capítulo 2), zoom (entrega) y círculo al cierre; sin destellos, glitch solo en el gancho.",
+  "tendencias": {
+    "video": "interfaz-en-movimiento",
+    "apoyo": "dorado-3d",
+    "gancho": "confesion",
+    "ritmo": "contemplativo",
+    "banner": "bento",
+    "pulso": "2026-11-25 búsquedas de tendencias Reels y motion B2B, listados SEO sin cifras verificadas",
+    "fuentes": [
+      "https://metricool.com/es/tendencias-instagram/",
+      "https://advids.co/blog/images/motion-design-video"
+    ]
+  },
+  "escenas": [
+    {
+      "tipo": "libre",
+      "texto": "Confieso: *no empezamos* programando",
+      "voz": "Confieso algo: en JDT NO empezamos programando.",
+      "fx": [
+        "glitch"
+      ],
+      "duracion": 3,
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 50,
+          "y": 61,
+          "ancho": 82,
+          "alto": 62,
+          "color": "superficie",
+          "t": 0
+        },
+        {
+          "el": "forma",
+          "forma": "circulo",
+          "x": 16,
+          "y": 47,
+          "ancho": 3,
+          "color": "amarillo",
+          "t": 0
+        },
+        {
+          "el": "forma",
+          "forma": "circulo",
+          "x": 21,
+          "y": 47,
+          "ancho": 3,
+          "color": "gris",
+          "t": 0
+        },
+        {
+          "el": "forma",
+          "forma": "circulo",
+          "x": 26,
+          "y": 47,
+          "ancho": 3,
+          "color": "gris",
+          "t": 0
+        },
+        {
+          "el": "texto",
+          "texto": "nuevo_sistema",
+          "x": 62,
+          "y": 47,
+          "tam": "s",
+          "color": "gris",
+          "t": 0
+        },
+        {
+          "el": "texto",
+          "texto": "1",
+          "x": 16,
+          "y": 55,
+          "tam": "s",
+          "color": "gris",
+          "t": 0
+        },
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 22,
+          "y": 55,
+          "ancho": 1.4,
+          "alto": 3.2,
+          "color": "amarillo",
+          "t": 0,
+          "mueve": "late"
+        },
+        {
+          "el": "texto",
+          "texto": "// aún sin código",
+          "x": 44,
+          "y": 62,
+          "tam": "s",
+          "color": "gris",
+          "t": 0
+        },
+        {
+          "el": "icono",
+          "nombre": "flecha",
+          "x": 80,
+          "y": 76,
+          "tam": 9,
+          "color": "blanco",
+          "t": 0,
+          "a": [
+            30,
+            70
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "texto": "¿Proyecto eterno? Primero *analizamos*",
+      "voz": "¿Tu miedo? Un proyecto que nunca termina. Por eso primero analizamos contigo qué necesitas.",
+      "transicion": "persiana",
+      "duracion": 5,
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 50,
+          "y": 64,
+          "ancho": 84,
+          "alto": 66,
+          "color": "superficie",
+          "t": 0
+        },
+        {
+          "el": "texto",
+          "texto": "PASO 1 · ANALIZAMOS",
+          "x": 50,
+          "y": 49,
+          "tam": "s",
+          "color": "amarillo",
+          "t": 0
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Qué te duele",
+          "icono": "check",
+          "x": 50,
+          "y": 57,
+          "ancho": 60,
+          "t": 0.15
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Qué sobra",
+          "icono": "check",
+          "x": 50,
+          "y": 66,
+          "ancho": 60,
+          "t": 0.35
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Qué necesitas",
+          "icono": "check",
+          "x": 50,
+          "y": 75,
+          "ancho": 60,
+          "color": "amarillo",
+          "t": 0.55
+        },
+        {
+          "el": "icono",
+          "nombre": "flecha",
+          "x": 15,
+          "y": 55,
+          "tam": 7,
+          "color": "blanco",
+          "t": 0.1,
+          "a": [
+            15,
+            75
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "terminal",
+      "texto": "Luego *desarrollamos* a medida",
+      "titulo": "jdt@tu-sistema",
+      "lineas": [
+        "> construir lo acordado",
+        "módulo de pedidos listo",
+        "> conectar inventario",
+        "conexión lista"
+      ],
+      "voz": "Luego desarrollamos tu software a medida, sin rodeos.",
+      "fx": [
+        "escaneo"
+      ],
+      "transicion": "desliza-izq",
+      "duracion": 4.5
+    },
+    {
+      "tipo": "libre",
+      "look": "azul",
+      "texto": "Y al final, *entregamos*.",
+      "voz": "Y entregamos… un sistema que se adapta a tu proceso, no al revés.",
+      "transicion": "zoom",
+      "duracion": 5,
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "check",
+          "x": 50,
+          "y": 57,
+          "tam": 28,
+          "color": "amarillo",
+          "t": 0.05,
+          "entra": "pop"
+        },
+        {
+          "el": "barra",
+          "x": 50,
+          "y": 78,
+          "ancho": 70,
+          "valor": 100,
+          "color": "amarillo",
+          "t": 0.2
+        },
+        {
+          "el": "texto",
+          "texto": "Se adapta a tu proceso",
+          "x": 50,
+          "y": 85,
+          "tam": "m",
+          "color": "blanco",
+          "t": 0.45
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*.",
+      "subtexto": "@technologicsjdt",
+      "voz": "Te respondemos en menos de 24 horas. ¡Hablemos de tu proyecto!",
+      "transicion": "circulo",
+      "duracion": 3.5
+    }
+  ],
+  "tiempos": {
+    "inicios": [
+      0.0,
+      4.55,
+      10.94,
+      14.17,
+      18.46
+    ],
+    "retardo": 0.3,
+    "duracion": 23.82
+  },
+  "audio": "videos/2026-11-25-0406-como-trabaja-jdt.mp3"
+}
