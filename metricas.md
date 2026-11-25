@@ -1,5 +1,5 @@
 ---
-actualizado: 2026-11-25 00:14 (hora de Colombia)
+actualizado: 2026-11-25 00:49 (hora de Colombia)
 fuente: API de Instagram, flujo n8n «JDT - Métricas de Instagram»
 publicaciones_analizadas: 38
 publicaciones_maduras: 21
@@ -14,7 +14,7 @@ datos_completos: metricas.json
 
 ## Cuenta
 - Seguidores: 9 · Publicaciones: 38
-- Últimos 28 días: 1750 vistas · alcance 1115 · visitas al perfil 231 · cuentas que interactuaron 7 · interacciones 101
+- Últimos 28 días: 1751 vistas · alcance 1117 · visitas al perfil 231 · cuentas que interactuaron 7 · interacciones 101
 - Seguidores nuevos (neto diario, 28 días): –
 
 ## Lecciones para el próximo contenido
@@ -27,14 +27,14 @@ datos_completos: metricas.json
 ## Vistas: seguidores vs. no seguidores (28 días)
 | Origen | Valor | % |
 |---|---|---|
-| NON_FOLLOWER | 1442 | 82.4% |
+| NON_FOLLOWER | 1443 | 82.4% |
 | FOLLOWER | 308 | 17.6% |
 
 ## Vistas por formato (28 días)
 | Formato | Valor | % |
 |---|---|---|
 | AD | 1020 | 58.3% |
-| REEL | 593 | 33.9% |
+| REEL | 594 | 33.9% |
 | POST | 137 | 7.8% |
 
 ## Audiencia (seguidores)
@@ -120,7 +120,7 @@ _Sin datos._
 | 2026-11-23 18:32 | Reel | ¿Tu equipo en campo manda fotos y «ya quedó» por W | 5 | 3 | 2 | 0 | 0 | 0 | – | – | 66.7% | 7.0 s | 100.0% | 0.0% | en curso |
 | 2026-11-23 18:32 | Reel | Cada lunes, alguien copia datos de una hoja a otra | 9 | 9 | 2 | 0 | 0 | 0 | – | – | 22.2% | 4.8 s | 87.5% | 12.5% | en curso |
 | 2026-11-23 18:24 | Reel | ¿Cuánto te ahorró la IA este mes? | 5 | 3 | 2 | 0 | 0 | 0 | – | – | 66.7% | 10.4 s | 100.0% | 0.0% | en curso |
-| 2026-11-22 16:45 | Reel | ¿Ya tienes IA en la empresa y todavía no se nota e | 134 | 117 | 4 | 0 | 0 | 0 | – | – | 3.4% | 10.0 s | 56.3% | 43.7% | en curso |
+| 2026-11-22 16:45 | Reel | ¿Ya tienes IA en la empresa y todavía no se nota e | 135 | 118 | 4 | 0 | 0 | 0 | – | – | 3.4% | 10.0 s | 55.8% | 44.2% | en curso |
 | 2026-11-22 16:45 | Imagen/banner | ¿Ya tienes IA en la empresa y todavía no se nota e | 4 | 2 | 1 | 0 | 0 | 0 | 0 | 4 | 50.0% | – | – | – | en curso |
 | 2026-11-21 16:39 | Reel | ¿Un chatbot sin IA? Sí, existe. Entre programadore | 23 | 16 | 2 | 0 | 0 | 0 | – | – | 18.8% | 2.7 s | 93.8% | 6.2% | sí |
 | 2026-11-21 16:39 | Reel | ¿Se desinfló el hype? Entre tanta moda del softwar | 38 | 23 | 3 | 0 | 0 | 0 | – | – | 17.4% | 5.7 s | 70.0% | 30.0% | sí |
