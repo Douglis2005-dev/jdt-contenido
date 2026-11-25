@@ -1,0 +1,175 @@
+{
+  "salida": "videos/2026-11-25-0606-cotizar-a-mano.mp4",
+  "formato": "Reel vertical 9:16, 24 s, 5 escenas. Tipografía cinética con un error falso en el gancho e interfaz en movimiento en el giro",
+  "concepto": "La cotización hecha a mano se ve como una ventana trabada que dice «No responde». El giro: la ventana se quiebra y aparece un cotizador conectado al catálogo que arma la cotización sola.",
+  "produccion": "Tipografía cinética principal; gancho de error falso desde t=0 con vibra solo en la ventana; escena 2 en look amarillo con palabras que caen; escena 3 quieta de 4 a 5 s; apoyo de interfaz en movimiento solo en la escena 4 con el único destello del video; cierre limpio con zoom.",
+  "fuente": "marca.md",
+  "tema": "Cotizar a mano te cuesta clientes (plan B propio de JDT)",
+  "tendencias": {
+    "video": "tipografia-cinetica",
+    "apoyo": "interfaz-en-movimiento",
+    "gancho": "error-falso",
+    "ritmo": "mixto",
+    "banner": "editorial",
+    "pulso": "2026-11-25 búsquedas Instagram 2026: más Reels, menos hashtags; motion tipográfico y pantallas de producto como lenguaje visual",
+    "fuentes": [
+      "https://marketing4ecommerce.net/que-funciona-en-instagram-en-2026/",
+      "https://metricool.com/es/tendencias-instagram/"
+    ]
+  },
+  "escenas": [
+    {
+      "id": 1,
+      "tipo": "libre",
+      "texto": "*Error*: tu cotización no responde",
+      "voz": "Te escriben: «¿cuánto vale?». Y tu cotización… no responde.",
+      "duracion": 4.072
+    },
+    {
+      "id": 2,
+      "tipo": "palabras",
+      "frases": [
+        "Buscar.",
+        "Copiar.",
+        "*Pegar.*",
+        "Esperar…"
+      ],
+      "texto": "",
+      "voz": "Buscas la lista vieja, copias, pegas, revisas.",
+      "duracion": 4.14
+    },
+    {
+      "id": 3,
+      "tipo": "titular",
+      "texto": "Cuando respondes, ya *compró* a otro",
+      "voz": "Cuando por fin mandas el precio, el cliente ya le compró a otro.",
+      "duracion": 4.134
+    },
+    {
+      "id": 4,
+      "tipo": "libre",
+      "texto": "*JDT*: cotizador conectado a tu catálogo",
+      "voz": "En JDT te hacemos un cotizador a medida, conectado a tu catálogo: eliges el producto y la cotización se arma sola, sin copiar y pegar.",
+      "duracion": 9.573
+    },
+    {
+      "id": 5,
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*.",
+      "voz": "Hablemos de tu proyecto.",
+      "duracion": 3.4
+    }
+  ],
+  "caption": "¿Te piden precio por chat y la cotización sale al otro día?\n\nMientras alguien busca la lista vieja, copia y pega, el cliente sigue esperando… y a veces ya le compró a otro.\n\nEn JDT TECHNOLOGICS construimos un cotizador a medida conectado a tu catálogo: eliges el producto y la cotización se arma sola, sin copiar y pegar. Se adapta a tu proceso, no al revés.\n\nHablemos de tu proyecto. Escríbenos a @technologicsjdt\n\n#JDTTechnologics #SoftwareAMedida #Automatizacion #DesarrolloDeSoftware #TransformacionDigital #Pymes #Bogota #Colombia",
+  "audio": "videos/2026-11-25-0606-cotizar-a-mano.mp3",
+  "sincronia": "exacta",
+  "voz_motor": "local",
+  "tiempos": {
+    "inicios": [
+      0.0,
+      5.0,
+      8.4,
+      12.54,
+      22.11
+    ],
+    "retardo": 0.3,
+    "duracion": 27.0,
+    "logo": 22.1
+  },
+  "direccion": {
+    "hook": "Ventana de sistema trabada con el aviso «No responde» y el titular *Error* visibles desde t=0",
+    "payoff": "La misma ventana se quiebra y aparece el cotizador conectado al catálogo que arma la cotización sola",
+    "familias": [
+      "motion-graphics",
+      "mixed-media"
+    ],
+    "beats": [
+      {
+        "inicio": 0,
+        "fin": 2.0,
+        "funcion": "hook",
+        "familia": "mixed-media",
+        "visual": "Ventana genérica trabada, titular *Error* y aviso «No responde»; vibra solo en la ventana"
+      },
+      {
+        "inicio": 2.0,
+        "fin": 3.6,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "Burbuja «¿Cuánto vale?» que queda sin respuesta"
+      },
+      {
+        "inicio": 3.6,
+        "fin": 5.0,
+        "funcion": "contexto",
+        "familia": "motion-graphics",
+        "visual": "Puntero de espera girando sobre la ventana"
+      },
+      {
+        "inicio": 5.0,
+        "fin": 6.6,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Palabras Buscar y Copiar que caen y se apilan"
+      },
+      {
+        "inicio": 6.6,
+        "fin": 8.4,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "Pegar y Esperar apilados, torre de tareas desordenada"
+      },
+      {
+        "inicio": 8.4,
+        "fin": 11.6,
+        "funcion": "respiro",
+        "familia": "motion-graphics",
+        "visual": "Escena quieta en azul marino con la frase del titular y aire"
+      },
+      {
+        "inicio": 11.6,
+        "fin": 12.6,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "La palabra compró se apaga a gris: la venta se fue"
+      },
+      {
+        "inicio": 12.6,
+        "fin": 14.0,
+        "funcion": "contexto",
+        "familia": "motion-graphics",
+        "visual": "Aparece el nombre JDT en el titular con la frase del cotizador"
+      },
+      {
+        "inicio": 14.0,
+        "fin": 16.0,
+        "funcion": "giro",
+        "familia": "mixed-media",
+        "visual": "Destello único: la ventana se quiebra y se abre el panel del cotizador"
+      },
+      {
+        "inicio": 16.0,
+        "fin": 19.0,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Tarjetas de catálogo genéricas conectadas por una línea con pulso a la tabla"
+      },
+      {
+        "inicio": 19.0,
+        "fin": 22.1,
+        "funcion": "payoff",
+        "familia": "motion-graphics",
+        "visual": "Filas que se llenan, total en dorado y check de cotización lista"
+      },
+      {
+        "inicio": 22.1,
+        "fin": 24.0,
+        "funcion": "cierre",
+        "familia": "motion-graphics",
+        "visual": "Logo JDT, Hablemos de tu proyecto y @technologicsjdt"
+      }
+    ]
+  },
+  "duracion": 27.0,
+  "validacion": "corregido: revisor final (opus) pidió CORREGIR (video 6,5; banner 8). Aplicado: cierre visible hasta 27 s (duración del audio) con logo, CTA y @technologicsjdt; espacio corregido en «compró a otro»; filas con «listo ✓» en lugar de precios vacíos; casillas de catálogo coherentes; HUD oculto sobre el fondo amarillo; banner con etiqueta retirada, CTA con punto y ícono de documento."
+}

@@ -218,5 +218,10 @@
     "url": "jdt:inventario-conteo-manual",
     "titulo": "Tu inventario se cuenta a mano cada fin de mes",
     "fecha": "2026-11-25T10:18:29.218932+00:00"
+  },
+  {
+    "url": "jdt:cotizar-a-mano",
+    "titulo": "Cotizar a mano te cuesta clientes",
+    "fecha": "2026-11-25T11:20:00.317233+00:00"
   }
 ]

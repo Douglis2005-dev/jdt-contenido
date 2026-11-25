@@ -1,0 +1,157 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<!-- Reel: cotizar a mano te cuesta clientes. Estilo del dia: tipografia cinetica (principal), interfaz en movimiento (apoyo), gancho error falso. -->
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script></head>
+<body>
+<div id="vol" class="capa"></div>
+
+<!-- E1 0.0-5.0 gancho: ventana trabada + titular visible desde t=0 -->
+<div id="e1" class="capa">
+  <div id="t1" class="titulo" style="position:absolute;left:70px;right:70px;top:250px;text-align:center;font-size:112px;opacity:1"></div>
+  <div id="b1" style="position:absolute;left:150px;top:640px;padding:24px 42px;border-radius:999px;background:#fff;color:#0A0E27;font-weight:800;font-size:54px">¿Cuánto vale?</div>
+  <div id="p1" class="vidrio" style="left:110px;top:820px;width:860px;height:640px">
+    <div class="mono" style="position:absolute;left:36px;top:30px">precios_viejo</div>
+    <div style="position:absolute;left:0;right:0;top:150px;text-align:center">
+      <div id="tri" style="font-size:150px;color:#FACC15;line-height:1">▲</div>
+      <div class="titulo" style="font-size:90px;margin-top:20px">No responde</div>
+    </div>
+    <div id="spin" style="position:absolute;right:48px;bottom:44px;width:92px;height:92px;border-radius:50%;border:10px solid rgba(250,204,21,.22);border-top-color:#FACC15"></div>
+  </div>
+</div>
+
+<!-- E2 5.0-8.4 palabras que caen sobre look amarillo -->
+<div id="e2" class="capa" style="background:#FACC15">
+  <div id="w2a" class="titulo" style="position:absolute;left:80px;top:360px;font-size:200px;color:#0A0E27">Buscar.</div>
+  <div id="w2b" class="titulo" style="position:absolute;left:300px;top:640px;font-size:200px;color:#0A0E27">Copiar.</div>
+  <div id="w2c" class="titulo" style="position:absolute;left:120px;top:920px;font-size:200px;color:#0A0E27">Pegar.</div>
+  <div id="w2d" class="titulo" style="position:absolute;left:200px;top:1200px;font-size:200px;color:#131A3A;opacity:.85">Esperar…</div>
+</div>
+
+<!-- E3 8.4-12.54 respiro quieto: la venta se va -->
+<div id="e3" class="capa">
+  <div id="t3" class="titulo" style="position:absolute;left:70px;right:70px;top:700px;text-align:center;font-size:104px"></div>
+  <div id="v3" style="position:absolute;right:160px;top:1180px;padding:18px 36px;border-radius:36px;background:rgba(255,255,255,.12);font-weight:700;font-size:44px;color:#94A3B8">Visto</div>
+</div>
+
+<!-- E4 12.54-22.11 giro: la ventana se quiebra y aparece el cotizador conectado -->
+<div id="e4" class="capa">
+  <div id="t4" class="titulo" style="position:absolute;left:70px;right:70px;top:190px;text-align:center;font-size:84px;opacity:1"></div>
+  <div id="p4" class="vidrio" style="left:110px;top:520px;width:860px;height:300px">
+    <div class="titulo" style="position:absolute;left:0;right:0;top:80px;text-align:center;font-size:84px">No responde</div>
+  </div>
+  <div id="q4" style="position:absolute;left:60px;top:500px;width:960px;height:1040px">
+    <div class="vidrio" style="left:0;top:0;width:260px;height:900px;padding:0">
+      <div class="mono" style="position:absolute;left:28px;top:30px;font-size:22px">Catálogo</div>
+      <div id="c4a" class="vidrio" style="left:24px;top:110px;width:212px;height:200px"><div style="position:absolute;left:26px;top:28px;width:44px;height:44px;background:#FACC15;border-radius:10px"></div><div class="titulo" style="position:absolute;left:26px;top:110px;font-size:28px;white-space:nowrap">Producto 1</div></div>
+      <div id="c4b" class="vidrio" style="left:24px;top:340px;width:212px;height:200px"><div style="position:absolute;left:26px;top:28px;width:44px;height:44px;background:#FACC15;border-radius:10px"></div><div class="titulo" style="position:absolute;left:26px;top:110px;font-size:28px;white-space:nowrap">Producto 2</div></div>
+      <div id="c4c" class="vidrio" style="left:24px;top:570px;width:212px;height:200px"><div style="position:absolute;left:26px;top:28px;width:44px;height:44px;background:#FACC15;border-radius:10px"></div><div class="titulo" style="position:absolute;left:26px;top:110px;font-size:28px;white-space:nowrap">Producto 3</div></div>
+    </div>
+    <div id="lin" style="position:absolute;left:280px;top:330px;width:120px;height:6px;background:#FACC15;transform-origin:left center"></div>
+    <div class="vidrio oro" style="left:420px;top:0;width:540px;height:900px;padding:0">
+      <div class="mono" style="position:absolute;left:30px;top:30px;font-size:22px">Cotización</div>
+      <div id="r1" style="position:absolute;left:30px;top:130px;width:480px;height:70px;background:rgba(255,255,255,.14);border-radius:14px"><div class="titulo" style="position:absolute;left:24px;top:18px;font-size:32px;white-space:nowrap;color:#FFFFFF">Producto 1 · cant. 2 · listo ✓</div></div>
+      <div id="r2" style="position:absolute;left:30px;top:240px;width:480px;height:70px;background:rgba(255,255,255,.14);border-radius:14px"><div class="titulo" style="position:absolute;left:24px;top:18px;font-size:32px;white-space:nowrap;color:#FFFFFF">Producto 2 · cant. 1 · listo ✓</div></div>
+      <div id="r3" style="position:absolute;left:30px;top:350px;width:480px;height:70px;background:rgba(255,255,255,.14);border-radius:14px"><div class="titulo" style="position:absolute;left:24px;top:18px;font-size:32px;white-space:nowrap;color:#FFFFFF">Envío · listo ✓</div></div>
+      <div style="position:absolute;left:30px;top:560px;width:480px;height:18px;background:rgba(255,255,255,.18);border-radius:9px;overflow:hidden"><div id="total" style="height:100%;width:0;background:#FACC15"></div></div>
+      <div id="chk" style="position:absolute;left:30px;top:650px;padding:20px 30px;border-radius:999px;background:#FACC15;color:#0A0E27;font-weight:800;font-size:42px;opacity:0">✓ Cotización lista</div>
+    </div>
+  </div>
+  <div id="bub4" style="position:absolute;left:0;right:0;top:1640px;text-align:center"><span class="pildora" style="opacity:0">¿Cuánto vale? Lista.</span></div>
+</div>
+
+<!-- E5 22.11-24.0 cierre -->
+<div id="e5" class="capa">
+  <img id="logo" src="../recursos/logo.jpeg" style="position:absolute;left:330px;top:560px;width:420px;border-radius:80px">
+  <div id="c5" class="titulo" style="position:absolute;left:0;right:0;top:1100px;text-align:center;font-size:96px">Hablemos de <span class="clave">tu proyecto</span>.</div>
+  <div style="position:absolute;left:0;right:0;top:1330px;text-align:center"><span class="pildora">@technologicsjdt</span></div>
+</div>
+
+<div id="fl" class="capa" style="background:#fff;opacity:0;z-index:7"></div>
+<div id="hud" class="hud"></div>
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+document.getElementById("vol").remove();
+window.DURACION = 27;
+const dentro = (t, a, b) => t >= a && t < b;
+const escenas = [["e1", 0, 5.0], ["e2", 5.0, 8.4], ["e3", 8.4, 12.54], ["e4", 12.54, 22.11], ["e5", 22.11, 27]];
+const TXT1 = '<span class="clave">Error</span>: tu cotización no responde';
+const TXT3 = 'Cuando respondes, ya <span id="comp" class="clave">compró</span> a otro';
+const TXT4 = '<span class="clave">JDT</span>: cotizador conectado a tu catálogo';
+window.render = (t) => {
+  escenas.forEach(([id, a, b]) => $(id).style.display = dentro(t, a, b) ? "block" : "none");
+  JDT.fondo(bg, t);
+
+  // E1 gancho: el titular se lee desde t=0; la ventana vibra solo en el momento de la falla
+  if (dentro(t, 0, 5)) {
+    $("t1").innerHTML = TXT1; $("t1").style.opacity = 1; $("t1").style.transform = `translateY(${lerp(14, 0, seg(t, 0, .3, "outExpo"))}px)`;
+    $("b1").style.opacity = seg(t, .6, 1.2, "outBack");
+    $("b1").style.transform = `translateY(${lerp(30, 0, seg(t, .6, 1.2, "outExpo"))}px)`;
+    const vib = dentro(t, 1.0, 2.0) ? Math.sin(t * 90) * 7 : 0;
+    $("p1").style.opacity = seg(t, .3, .9, "lineal");
+    $("p1").style.transform = `translateX(${vib}px)`;
+    $("tri").style.opacity = .6 + .4 * Math.sin(t * 6);
+    $("spin").style.transform = `rotate(${t * 240}deg)`;
+  }
+
+  // E2 palabras que caen y se apilan (una por golpe de voz)
+  if (dentro(t, 5, 8.4)) {
+    const caer = (id, k, rot) => {
+      const y = lerp(-420, 0, E.outBack(clamp(k, 0, 1)));
+      $(id).style.transform = `translateY(${y}px) rotate(${rot}deg)`;
+      $(id).style.opacity = clamp(k * 4, 0, 1);
+    };
+    caer("w2a", seg(t, 5.0, 5.5, "lineal"), -3);
+    caer("w2b", seg(t, 5.6, 6.1, "lineal"), 2);
+    caer("w2c", seg(t, 6.2, 6.8, "lineal"), -1.5);
+    caer("w2d", seg(t, 7.0, 7.6, "lineal"), 0);
+  }
+
+  // E3 respiro: una frase, la palabra compró pierde color al final (la venta se fue)
+  if (dentro(t, 8.4, 12.54)) {
+    $("t3").innerHTML = TXT3; $("t3").style.opacity = seg(t, 8.4, 8.9, "outExpo");
+    const c = $("comp"); if (c) { c.style.display = "inline-block"; c.style.color = t < 11.6 ? "#FACC15" : "#94A3B8"; c.style.opacity = 1 - seg(t, 11.9, 12.5, "lineal") * .6; }
+    $("v3").style.opacity = seg(t, 9.4, 9.9, "lineal");
+  }
+
+  // E4 giro: el aviso se quiebra con el unico destello y entra el cotizador conectado al catalogo
+  if (dentro(t, 12.54, 22.11)) {
+    $("t4").innerHTML = TXT4; $("t4").style.opacity = 1; $("t4").style.transform = `scale(${lerp(1.12, 1, seg(t, 12.54, 13.0, "outExpo"))})`;
+    const quiebra = seg(t, 13.6, 14.2, "outExpo");
+    $("p4").style.opacity = 1 - quiebra;
+    $("p4").style.transform = `scale(${1 - .06 * quiebra}) rotate(${quiebra * 2.2}deg)`;
+    const q = seg(t, 13.8, 14.4, "outExpo");
+    $("q4").style.opacity = q;
+    $("q4").style.transform = `translateY(${lerp(40, 0, q)}px)`;
+    JDT.camara($("q4"), {ry: lerp(-10, 0, seg(t, 14, 19, "inOutCubic")), rx: 0, y: 0, s: lerp(.96, 1, seg(t, 14, 19))});
+    // catalogo: el puntero dorado conecta la tarjeta con la tabla
+    $("c4a").style.opacity = seg(t, 15.0, 15.4, "lineal");
+    $("c4b").style.opacity = seg(t, 15.4, 15.8, "lineal");
+    $("c4c").style.opacity = seg(t, 15.8, 16.2, "lineal");
+    $("lin").style.transform = `scaleX(${seg(t, 16.0, 16.6, "outExpo")})`;
+    $("lin").style.opacity = dentro(t, 16, 19) ? 1 : 0;
+    // filas que se llenan solas
+    $("r1").style.opacity = seg(t, 16.2, 16.9, "outExpo");
+    $("r2").style.opacity = seg(t, 17.0, 17.7, "outExpo");
+    $("r3").style.opacity = seg(t, 17.8, 18.5, "outExpo");
+    $("total").style.width = `${100 * seg(t, 18.6, 19.6, "outExpo")}%`;
+    $("chk").style.opacity = seg(t, 19.6, 20.1, "outBack");
+    $("bub4").querySelector(".pildora").style.opacity = seg(t, 20.2, 20.8, "outExpo");
+  }
+
+  // E5 cierre: logo y llamado a la accion
+  if (dentro(t, 22.11, 24)) {
+    $("logo").style.opacity = seg(t, 22.1, 22.4, "lineal");
+    $("logo").style.transform = `scale(${lerp(1.08, 1, seg(t, 22.1, 22.8, "outExpo"))})`;
+    $("c5").style.opacity = seg(t, 22.5, 23.0, "outQuart");
+    $("c5").style.transform = `translateY(${lerp(50, 0, seg(t, 22.5, 23.2, "outExpo"))}px)`;
+  }
+
+  // unico destello del video (giro) y un barrido al cambiar de capitulo
+  JDT.flash($("fl"), dentro(t, 14.0, 14.18) ? 1 - (t - 14.0) / .18 : 0);
+  fg.clearRect(0, 0, JDT.W, JDT.H);
+  JDT.barrido(fg, dentro(t, 4.9, 5.3) ? (t - 4.9) / .4 : 0);
+  JDT.grano(fg, t, .04);
+  $("hud").style.opacity = dentro(t, 5, 8.4) ? 0 : 1;
+  JDT.hud($("hud"), t, 27, ["01 · FALLA", "02 · MANUAL", "03 · LA VENTA SE VA", "04 · LA SOLUCIÓN", "05 · CIERRE"][Math.max(0, escenas.findLastIndex(([, a]) => t >= a))]);
+};
+</script></body></html>

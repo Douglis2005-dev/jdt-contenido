@@ -143,6 +143,14 @@
       "gancho": "pov",
       "ritmo": "rapido",
       "banner": "neobrutal"
+    },
+    {
+      "fecha": "2026-11-25T06:06:54",
+      "video": "tipografia-cinetica",
+      "apoyo": "interfaz-en-movimiento",
+      "gancho": "error-falso",
+      "ritmo": "mixto",
+      "banner": "editorial"
     }
   ]
 }
