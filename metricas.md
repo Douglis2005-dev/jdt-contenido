@@ -1,5 +1,5 @@
 ---
-actualizado: 2026-11-24 23:18 (hora de Colombia)
+actualizado: 2026-11-24 23:19 (hora de Colombia)
 fuente: API de Instagram, flujo n8n «JDT - Métricas de Instagram»
 publicaciones_analizadas: 38
 publicaciones_maduras: 0
