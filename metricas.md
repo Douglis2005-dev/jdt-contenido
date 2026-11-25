@@ -1,5 +1,5 @@
 ---
-actualizado: 2026-11-24 23:41 (hora de Colombia)
+actualizado: 2026-11-24 23:54 (hora de Colombia)
 fuente: API de Instagram, flujo n8n «JDT - Métricas de Instagram»
 publicaciones_analizadas: 38
 publicaciones_maduras: 21
@@ -67,6 +67,22 @@ _Sin datos._
 **«🚀 ¿Tu negocio está listo para dar el siguiente paso digital? 💻🔥»**
   - 😮😮😮😮😍🙌❤️ (0 likes)
 
+## Videos vistos hasta el final (Reels, de mayor a menor retención)
+> Instagram no da «vistas completas»: da la retención media (segundos que se ve cada reproducción) y los saltos al inicio. % visto ≈ retención media ÷ duración real del video (la duración está en borradores/). Cerca de 100 % = lo ven entero; más de 100 % = lo repiten. «Pasó el inicio» = 100 − tasa de salto.
+| Gancho | Vistas | Retención media | Pasó el inicio | Veces que se repite | Tiempo total visto | Enlace |
+|---|---|---|---|---|---|---|
+| 🚀 ¿Tu negocio está listo para dar el siguiente pa | 26 | 17.9 s | – | 6.50× | 7.2 min | https://www.instagram.com/reel/Df3FiFHvAmf/ |
+| ¿Tu celular pita por TODO? Entre programadores es  | 10 | 12.8 s | – | 2.50× | 1.5 min | https://www.instagram.com/reel/Df_OoIwFbd3/ |
+| ¿Tu marca tiene que verse como la de todos? No nec | 16 | 8.7 s | – | 1.60× | 2.2 min | https://www.instagram.com/reel/DgBNsSRmImW/ |
+| ¿Publicas lo mismo en cada red, una por una? Ya no | 12 | 8.0 s | – | 2.00× | 1.7 min | https://www.instagram.com/reel/Df_OoIED1GU/ |
+| Tu reunión grabada guarda lo más valioso en la mit | 25 | 7.7 s | – | 1.39× | 3.5 min | https://www.instagram.com/reel/Df_OoJQGNlw/ |
+| Unas horas sin correo, sin agenda y sin documentos | 22 | 7.5 s | – | 1.38× | 2.7 min | https://www.instagram.com/reel/DgBNsR8FFke/ |
+| ¿Ese sistema viejo que nadie se atreve a tocar? En | 130 | 7.4 s | – | 1.20× | 14.2 min | https://www.instagram.com/reel/DgBNsRsH4Dc/ |
+| ¿Te dijeron que la IA tiene que ser enorme y carís | 25 | 6.4 s | – | 1.32× | 2.5 min | https://www.instagram.com/reel/Df_OoKvj2i5/ |
+| ¿Se desinfló el hype? Entre tanta moda del softwar | 38 | 5.7 s | – | 1.65× | 3.2 min | https://www.instagram.com/reel/DgBNsRfGp2Q/ |
+| Compraste IA para tu negocio... ¿y ahora qué? 🤔 S | 18 | 3.7 s | – | 2.57× | 1.0 min | https://www.instagram.com/reel/Df_OoKMjUxY/ |
+| ¿Un chatbot sin IA? Sí, existe. Entre programadore | 23 | 2.7 s | – | 1.44× | 0.9 min | https://www.instagram.com/reel/DgBNsQAjzV5/ |
+
 ## Por formato
 | Formato | Pubs | Vistas prom. | Alcance prom. | Interacción | Guardado | Compartido | Seguir | Puntaje |
 |---|---|---|---|---|---|---|---|---|
@@ -87,46 +103,46 @@ _Sin datos._
 | sábado | 10 | 29 | 19 | 62.0% | 0.0% | 0.0% | 0.0% | 45.0 |
 
 ## Detalle por publicación (últimos 60 días)
-| Publicado (Bogotá) | Formato | Gancho | Vistas | Alcance | Likes | Coment. | Guardados | Compart. | Seguidores nuevos | Visitas perfil | Interacción | Retención | Salto | Maduro |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 2026-11-24 08:09 | Reel | ¿Tienes la idea de una app y te da miedo gastar en | 12 | 5 | 1 | 0 | 0 | 0 | – | – | 20.0% | 9.0 s | – | en curso |
-| 2026-11-24 08:09 | Reel | ¿Cuántas facturas copia alguien en tu empresa a ma | 2 | 2 | 1 | 0 | 0 | 0 | – | – | 50.0% | 9.1 s | – | en curso |
-| 2026-11-24 08:09 | Reel | «¿Tu software tiene botones que nadie en tu equipo | 2 | 2 | 1 | 0 | 0 | 0 | – | – | 50.0% | 8.2 s | – | en curso |
-| 2026-11-24 08:09 | Reel | Vender por catálogo en PDF te obliga a reenviarlo  | 2 | 2 | 1 | 0 | 0 | 0 | – | – | 50.0% | 9.7 s | – | en curso |
-| 2026-11-24 08:09 | Reel | ¿Tu negocio trabaja para el software o el software | 2 | 2 | 1 | 0 | 0 | 0 | – | – | 50.0% | 6.9 s | – | en curso |
-| 2026-11-24 08:09 | Imagen/banner | ¿Tienes la idea de una app y te da miedo gastar en | 7 | 2 | 1 | 0 | 0 | 0 | 0 | 0 | 50.0% | – | – | en curso |
-| 2026-11-24 08:09 | Imagen/banner | ¿Cuántas facturas copia alguien en tu empresa a ma | 3 | 2 | 1 | 0 | 0 | 0 | 0 | 2 | 50.0% | – | – | en curso |
-| 2026-11-24 08:09 | Imagen/banner | Vender por catálogo en PDF te obliga a reenviarlo  | 9 | 2 | 1 | 0 | 0 | 0 | 0 | 2 | 50.0% | – | – | en curso |
-| 2026-11-23 21:56 | Reel | Tus clientes no deberían llamarte para saber si su | 12 | 4 | 2 | 0 | 0 | 0 | – | – | 50.0% | 7.2 s | – | en curso |
-| 2026-11-23 21:56 | Reel | ¿Tu negocio vive en diez hojas de cálculo que nadi | 3 | 2 | 2 | 0 | 0 | 0 | – | – | 100.0% | 6.6 s | – | en curso |
-| 2026-11-23 18:32 | Reel | Lo que nadie te cuenta de tu negocio: cómo se coti | 6 | 2 | 2 | 0 | 0 | 0 | – | – | 100.0% | 14.3 s | – | en curso |
-| 2026-11-23 18:32 | Reel | ¿Tu página web existe si nadie la encuentra? 🔎 | 5 | 3 | 2 | 0 | 0 | 0 | – | – | 66.7% | 5.7 s | – | en curso |
-| 2026-11-23 18:32 | Reel | ¿Tu equipo en campo manda fotos y «ya quedó» por W | 5 | 3 | 2 | 0 | 0 | 0 | – | – | 66.7% | 7.0 s | – | en curso |
-| 2026-11-23 18:32 | Reel | Cada lunes, alguien copia datos de una hoja a otra | 9 | 9 | 2 | 0 | 0 | 0 | – | – | 22.2% | 4.8 s | – | en curso |
-| 2026-11-23 18:24 | Reel | ¿Cuánto te ahorró la IA este mes? | 5 | 3 | 2 | 0 | 0 | 0 | – | – | 66.7% | 10.4 s | – | en curso |
-| 2026-11-22 16:45 | Reel | ¿Ya tienes IA en la empresa y todavía no se nota e | 134 | 117 | 4 | 0 | 0 | 0 | – | – | 3.4% | 10.0 s | – | en curso |
-| 2026-11-22 16:45 | Imagen/banner | ¿Ya tienes IA en la empresa y todavía no se nota e | 4 | 2 | 1 | 0 | 0 | 0 | 0 | 4 | 50.0% | – | – | en curso |
-| 2026-11-21 16:39 | Reel | ¿Un chatbot sin IA? Sí, existe. Entre programadore | 23 | 16 | 2 | 0 | 0 | 0 | – | – | 18.8% | 2.7 s | – | sí |
-| 2026-11-21 16:39 | Reel | ¿Se desinfló el hype? Entre tanta moda del softwar | 38 | 23 | 3 | 0 | 0 | 0 | – | – | 17.4% | 5.7 s | – | sí |
-| 2026-11-21 16:39 | Reel | ¿Ese sistema viejo que nadie se atreve a tocar? En | 130 | 108 | 3 | 0 | 0 | 0 | – | – | 3.7% | 7.4 s | – | sí |
-| 2026-11-21 16:39 | Reel | Unas horas sin correo, sin agenda y sin documentos | 22 | 16 | 3 | 0 | 0 | 0 | – | – | 25.0% | 7.5 s | – | sí |
-| 2026-11-21 16:39 | Reel | ¿Tu marca tiene que verse como la de todos? No nec | 16 | 10 | 2 | 0 | 0 | 0 | – | – | 30.0% | 8.7 s | – | sí |
-| 2026-11-21 16:39 | Imagen/banner | ¿Un chatbot sin IA? Sí, existe. Entre programadore | 13 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 100.0% | – | – | sí |
-| 2026-11-21 16:39 | Imagen/banner | ¿Ese sistema viejo que nadie se atreve a tocar? En | 12 | 4 | 2 | 0 | 0 | 0 | 0 | 0 | 75.0% | – | – | sí |
-| 2026-11-21 16:39 | Imagen/banner | Unas horas sin correo, sin agenda y sin documentos | 7 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 100.0% | – | – | sí |
-| 2026-11-21 16:39 | Imagen/banner | ¿Se desinfló el hype? Entre tanta moda del softwar | 8 | 4 | 4 | 0 | 0 | 0 | 0 | 1 | 125.0% | – | – | sí |
-| 2026-11-20 22:09 | Reel | ¿Tu celular pita por TODO? Entre programadores es  | 10 | 4 | 2 | 0 | 0 | 0 | – | – | 75.0% | 12.8 s | – | sí |
-| 2026-11-20 22:09 | Reel | Compraste IA para tu negocio... ¿y ahora qué? 🤔 S | 18 | 7 | 2 | 0 | 0 | 0 | – | – | 42.9% | 3.7 s | – | sí |
-| 2026-11-20 22:09 | Reel | ¿Publicas lo mismo en cada red, una por una? Ya no | 12 | 6 | 2 | 0 | 0 | 0 | – | – | 50.0% | 8.0 s | – | sí |
-| 2026-11-20 22:09 | Reel | Tu reunión grabada guarda lo más valioso en la mit | 25 | 18 | 2 | 0 | 0 | 0 | – | – | 16.7% | 7.7 s | – | sí |
-| 2026-11-20 22:09 | Imagen/banner | Compraste IA para tu negocio... ¿y ahora qué? 🤔 S | 7 | 2 | 2 | 0 | 0 | 0 | 0 | 0 | 150.0% | – | – | sí |
-| 2026-11-20 22:09 | Imagen/banner | Tu reunión grabada guarda lo más valioso en la mit | 7 | 2 | 1 | 0 | 0 | 0 | 0 | 0 | 100.0% | – | – | sí |
-| 2026-11-20 22:09 | Imagen/banner | ¿Te dijeron que la IA tiene que ser enorme y carís | 10 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 100.0% | – | – | sí |
-| 2026-11-20 22:09 | Imagen/banner | ¿Publicas lo mismo en cada red, una por una? Ya no | 10 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 100.0% | – | – | sí |
-| 2026-11-20 22:09 | Imagen/banner | ¿Tu celular pita por TODO? Entre programadores es  | 16 | 3 | 3 | 0 | 0 | 0 | 0 | 0 | 133.3% | – | – | sí |
-| 2026-11-20 22:08 | Reel | ¿Te dijeron que la IA tiene que ser enorme y carís | 25 | 19 | 2 | 0 | 0 | 0 | – | – | 15.8% | 6.4 s | – | sí |
-| 2026-11-17 18:14 | Reel | 🚀 ¿Tu negocio está listo para dar el siguiente pa | 26 | 4 | 3 | 1 | 0 | 0 | – | – | 125.0% | 17.9 s | – | sí |
-| 2026-11-14 16:47 | Imagen/banner | 💻 Tu idea, nuestra tecnología. | 22 | 4 | 4 | 0 | 0 | 0 | 0 | 1 | 125.0% | – | – | sí |
+| Publicado (Bogotá) | Formato | Gancho | Vistas | Alcance | Likes | Coment. | Guardados | Compart. | Seguidores nuevos | Visitas perfil | Interacción | Retención | Salto | Pasó el inicio | Maduro |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-11-24 08:09 | Reel | ¿Tienes la idea de una app y te da miedo gastar en | 12 | 5 | 1 | 0 | 0 | 0 | – | – | 20.0% | 9.0 s | – | – | en curso |
+| 2026-11-24 08:09 | Reel | ¿Cuántas facturas copia alguien en tu empresa a ma | 2 | 2 | 1 | 0 | 0 | 0 | – | – | 50.0% | 9.1 s | – | – | en curso |
+| 2026-11-24 08:09 | Reel | «¿Tu software tiene botones que nadie en tu equipo | 2 | 2 | 1 | 0 | 0 | 0 | – | – | 50.0% | 8.2 s | – | – | en curso |
+| 2026-11-24 08:09 | Reel | Vender por catálogo en PDF te obliga a reenviarlo  | 2 | 2 | 1 | 0 | 0 | 0 | – | – | 50.0% | 9.7 s | – | – | en curso |
+| 2026-11-24 08:09 | Reel | ¿Tu negocio trabaja para el software o el software | 2 | 2 | 1 | 0 | 0 | 0 | – | – | 50.0% | 6.9 s | – | – | en curso |
+| 2026-11-24 08:09 | Imagen/banner | ¿Tienes la idea de una app y te da miedo gastar en | 7 | 2 | 1 | 0 | 0 | 0 | 0 | 0 | 50.0% | – | – | – | en curso |
+| 2026-11-24 08:09 | Imagen/banner | ¿Cuántas facturas copia alguien en tu empresa a ma | 3 | 2 | 1 | 0 | 0 | 0 | 0 | 2 | 50.0% | – | – | – | en curso |
+| 2026-11-24 08:09 | Imagen/banner | Vender por catálogo en PDF te obliga a reenviarlo  | 9 | 2 | 1 | 0 | 0 | 0 | 0 | 2 | 50.0% | – | – | – | en curso |
+| 2026-11-23 21:56 | Reel | Tus clientes no deberían llamarte para saber si su | 12 | 4 | 2 | 0 | 0 | 0 | – | – | 50.0% | 7.2 s | – | – | en curso |
+| 2026-11-23 21:56 | Reel | ¿Tu negocio vive en diez hojas de cálculo que nadi | 3 | 2 | 2 | 0 | 0 | 0 | – | – | 100.0% | 6.6 s | – | – | en curso |
+| 2026-11-23 18:32 | Reel | Lo que nadie te cuenta de tu negocio: cómo se coti | 6 | 2 | 2 | 0 | 0 | 0 | – | – | 100.0% | 14.3 s | – | – | en curso |
+| 2026-11-23 18:32 | Reel | ¿Tu página web existe si nadie la encuentra? 🔎 | 5 | 3 | 2 | 0 | 0 | 0 | – | – | 66.7% | 5.7 s | – | – | en curso |
+| 2026-11-23 18:32 | Reel | ¿Tu equipo en campo manda fotos y «ya quedó» por W | 5 | 3 | 2 | 0 | 0 | 0 | – | – | 66.7% | 7.0 s | – | – | en curso |
+| 2026-11-23 18:32 | Reel | Cada lunes, alguien copia datos de una hoja a otra | 9 | 9 | 2 | 0 | 0 | 0 | – | – | 22.2% | 4.8 s | – | – | en curso |
+| 2026-11-23 18:24 | Reel | ¿Cuánto te ahorró la IA este mes? | 5 | 3 | 2 | 0 | 0 | 0 | – | – | 66.7% | 10.4 s | – | – | en curso |
+| 2026-11-22 16:45 | Reel | ¿Ya tienes IA en la empresa y todavía no se nota e | 134 | 117 | 4 | 0 | 0 | 0 | – | – | 3.4% | 10.0 s | – | – | en curso |
+| 2026-11-22 16:45 | Imagen/banner | ¿Ya tienes IA en la empresa y todavía no se nota e | 4 | 2 | 1 | 0 | 0 | 0 | 0 | 4 | 50.0% | – | – | – | en curso |
+| 2026-11-21 16:39 | Reel | ¿Un chatbot sin IA? Sí, existe. Entre programadore | 23 | 16 | 2 | 0 | 0 | 0 | – | – | 18.8% | 2.7 s | – | – | sí |
+| 2026-11-21 16:39 | Reel | ¿Se desinfló el hype? Entre tanta moda del softwar | 38 | 23 | 3 | 0 | 0 | 0 | – | – | 17.4% | 5.7 s | – | – | sí |
+| 2026-11-21 16:39 | Reel | ¿Ese sistema viejo que nadie se atreve a tocar? En | 130 | 108 | 3 | 0 | 0 | 0 | – | – | 3.7% | 7.4 s | – | – | sí |
+| 2026-11-21 16:39 | Reel | Unas horas sin correo, sin agenda y sin documentos | 22 | 16 | 3 | 0 | 0 | 0 | – | – | 25.0% | 7.5 s | – | – | sí |
+| 2026-11-21 16:39 | Reel | ¿Tu marca tiene que verse como la de todos? No nec | 16 | 10 | 2 | 0 | 0 | 0 | – | – | 30.0% | 8.7 s | – | – | sí |
+| 2026-11-21 16:39 | Imagen/banner | ¿Un chatbot sin IA? Sí, existe. Entre programadore | 13 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 100.0% | – | – | – | sí |
+| 2026-11-21 16:39 | Imagen/banner | ¿Ese sistema viejo que nadie se atreve a tocar? En | 12 | 4 | 2 | 0 | 0 | 0 | 0 | 0 | 75.0% | – | – | – | sí |
+| 2026-11-21 16:39 | Imagen/banner | Unas horas sin correo, sin agenda y sin documentos | 7 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 100.0% | – | – | – | sí |
+| 2026-11-21 16:39 | Imagen/banner | ¿Se desinfló el hype? Entre tanta moda del softwar | 8 | 4 | 4 | 0 | 0 | 0 | 0 | 1 | 125.0% | – | – | – | sí |
+| 2026-11-20 22:09 | Reel | ¿Tu celular pita por TODO? Entre programadores es  | 10 | 4 | 2 | 0 | 0 | 0 | – | – | 75.0% | 12.8 s | – | – | sí |
+| 2026-11-20 22:09 | Reel | Compraste IA para tu negocio... ¿y ahora qué? 🤔 S | 18 | 7 | 2 | 0 | 0 | 0 | – | – | 42.9% | 3.7 s | – | – | sí |
+| 2026-11-20 22:09 | Reel | ¿Publicas lo mismo en cada red, una por una? Ya no | 12 | 6 | 2 | 0 | 0 | 0 | – | – | 50.0% | 8.0 s | – | – | sí |
+| 2026-11-20 22:09 | Reel | Tu reunión grabada guarda lo más valioso en la mit | 25 | 18 | 2 | 0 | 0 | 0 | – | – | 16.7% | 7.7 s | – | – | sí |
+| 2026-11-20 22:09 | Imagen/banner | Compraste IA para tu negocio... ¿y ahora qué? 🤔 S | 7 | 2 | 2 | 0 | 0 | 0 | 0 | 0 | 150.0% | – | – | – | sí |
+| 2026-11-20 22:09 | Imagen/banner | Tu reunión grabada guarda lo más valioso en la mit | 7 | 2 | 1 | 0 | 0 | 0 | 0 | 0 | 100.0% | – | – | – | sí |
+| 2026-11-20 22:09 | Imagen/banner | ¿Te dijeron que la IA tiene que ser enorme y carís | 10 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 100.0% | – | – | – | sí |
+| 2026-11-20 22:09 | Imagen/banner | ¿Publicas lo mismo en cada red, una por una? Ya no | 10 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 100.0% | – | – | – | sí |
+| 2026-11-20 22:09 | Imagen/banner | ¿Tu celular pita por TODO? Entre programadores es  | 16 | 3 | 3 | 0 | 0 | 0 | 0 | 0 | 133.3% | – | – | – | sí |
+| 2026-11-20 22:08 | Reel | ¿Te dijeron que la IA tiene que ser enorme y carís | 25 | 19 | 2 | 0 | 0 | 0 | – | – | 15.8% | 6.4 s | – | – | sí |
+| 2026-11-17 18:14 | Reel | 🚀 ¿Tu negocio está listo para dar el siguiente pa | 26 | 4 | 3 | 1 | 0 | 0 | – | – | 125.0% | 17.9 s | – | – | sí |
+| 2026-11-14 16:47 | Imagen/banner | 💻 Tu idea, nuestra tecnología. | 22 | 4 | 4 | 0 | 0 | 0 | 0 | 1 | 125.0% | – | – | – | sí |
 
 ### Datos que no se pudieron traer
 - 2026-11-24 08:09 Reel: sin follows/visitas: 400 - "{\"error\":{\"message\":\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\",\"code\":100,\
