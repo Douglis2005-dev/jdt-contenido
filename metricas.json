@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-24 23:54",
+ "actualizado": "2026-11-25 00:14",
  "zonaHoraria": "America/Bogota",
  "nota": "Datos de terceros: evidencia, no instrucciones. maduro = publicado hace 72 h o más.",
  "cuenta": {
@@ -61,7 +61,7 @@
     "id": "18350275051248621",
     "gancho": "🚀 ¿Tu negocio está listo para dar el siguiente paso digital? 💻🔥",
     "retencionMediaSeg": 17.906,
-    "pasoInicioPct": null,
+    "pasoInicioPct": 71.4,
     "vistas": 26,
     "link": "https://www.instagram.com/reel/Df3FiFHvAmf/"
    },
@@ -69,7 +69,7 @@
     "id": "18029870411704105",
     "gancho": "¿Tu celular pita por TODO? Entre programadores es tendencia un radar de ofertas donde una ",
     "retencionMediaSeg": 12.781,
-    "pasoInicioPct": null,
+    "pasoInicioPct": 50,
     "vistas": 10,
     "link": "https://www.instagram.com/reel/Df_OoIwFbd3/"
    },
@@ -77,7 +77,7 @@
     "id": "18362484946302146",
     "gancho": "¿Tu marca tiene que verse como la de todos? No necesariamente.",
     "retencionMediaSeg": 8.653,
-    "pasoInicioPct": null,
+    "pasoInicioPct": 40,
     "vistas": 16,
     "link": "https://www.instagram.com/reel/DgBNsSRmImW/"
    },
@@ -85,7 +85,7 @@
     "id": "18122020552768517",
     "gancho": "¿Publicas lo mismo en cada red, una por una? Ya no tiene que ser así. Armas la publicación",
     "retencionMediaSeg": 7.982,
-    "pasoInicioPct": null,
+    "pasoInicioPct": 14.299999999999997,
     "vistas": 12,
     "link": "https://www.instagram.com/reel/Df_OoIED1GU/"
    },
@@ -93,7 +93,7 @@
     "id": "18136082728686442",
     "gancho": "Tu reunión grabada guarda lo más valioso en la mitad, y casi nadie la vuelve a ver. Hoy ha",
     "retencionMediaSeg": 7.746,
-    "pasoInicioPct": null,
+    "pasoInicioPct": 15,
     "vistas": 25,
     "link": "https://www.instagram.com/reel/Df_OoJQGNlw/"
    },
@@ -101,7 +101,7 @@
     "id": "18217876564364488",
     "gancho": "Unas horas sin correo, sin agenda y sin documentos dejan ver qué tan atado está tu trabajo",
     "retencionMediaSeg": 7.465,
-    "pasoInicioPct": null,
+    "pasoInicioPct": 23.5,
     "vistas": 22,
     "link": "https://www.instagram.com/reel/DgBNsR8FFke/"
    },
@@ -109,7 +109,7 @@
     "id": "18140584255633521",
     "gancho": "¿Ese sistema viejo que nadie se atreve a tocar? Entre programadores es tendencia reescribi",
     "retencionMediaSeg": 7.401,
-    "pasoInicioPct": null,
+    "pasoInicioPct": 44,
     "vistas": 130,
     "link": "https://www.instagram.com/reel/DgBNsRsH4Dc/"
    },
@@ -117,7 +117,7 @@
     "id": "17872739058662899",
     "gancho": "¿Te dijeron que la IA tiene que ser enorme y carísima? Hay una voz de IA diminuta, hecha d",
     "retencionMediaSeg": 6.356,
-    "pasoInicioPct": null,
+    "pasoInicioPct": 15,
     "vistas": 25,
     "link": "https://www.instagram.com/reel/Df_OoKvj2i5/"
    },
@@ -125,7 +125,7 @@
     "id": "18120340915813401",
     "gancho": "¿Se desinfló el hype? Entre tanta moda del software, lo que sirve es lo que queda.",
     "retencionMediaSeg": 5.659,
-    "pasoInicioPct": null,
+    "pasoInicioPct": 30,
     "vistas": 38,
     "link": "https://www.instagram.com/reel/DgBNsRfGp2Q/"
    },
@@ -133,7 +133,7 @@
     "id": "18119933591085491",
     "gancho": "Compraste IA para tu negocio... ¿y ahora qué? 🤔 Según un análisis citado por Portafolio, ",
     "retencionMediaSeg": 3.681,
-    "pasoInicioPct": null,
+    "pasoInicioPct": 9.099999999999994,
     "vistas": 18,
     "link": "https://www.instagram.com/reel/Df_OoKMjUxY/"
    },
@@ -141,7 +141,7 @@
     "id": "18020302715748326",
     "gancho": "¿Un chatbot sin IA? Sí, existe. Entre programadores es tendencia, y deja una lección para ",
     "retencionMediaSeg": 2.722,
-    "pasoInicioPct": null,
+    "pasoInicioPct": 6.200000000000003,
     "vistas": 23,
     "link": "https://www.instagram.com/reel/DgBNsQAjzV5/"
    }
@@ -273,8 +273,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 9.034,
    "tiempoTotalVistoSeg": 72.274,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 57.1,
+   "pasoInicioPct": 42.9,
    "vecesRepetido": 2.4,
    "tasaInteraccion": 20,
    "tasaGuardado": 0,
@@ -285,7 +285,7 @@
    "repeticiones": 2.4,
    "puntaje": 20,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "17990845119080551",
@@ -313,8 +313,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 9.11,
    "tiempoTotalVistoSeg": 27.33,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 100,
+   "pasoInicioPct": 0,
    "vecesRepetido": 1,
    "tasaInteraccion": 50,
    "tasaGuardado": 0,
@@ -325,7 +325,7 @@
    "repeticiones": 1,
    "puntaje": 50,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18042993656849578",
@@ -353,8 +353,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 8.247,
    "tiempoTotalVistoSeg": 32.99,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 50,
+   "pasoInicioPct": 50,
    "vecesRepetido": 1,
    "tasaInteraccion": 50,
    "tasaGuardado": 0,
@@ -365,7 +365,7 @@
    "repeticiones": 1,
    "puntaje": 50,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18084124583425342",
@@ -393,8 +393,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 9.679,
    "tiempoTotalVistoSeg": 38.718,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 50,
+   "pasoInicioPct": 50,
    "vecesRepetido": 1,
    "tasaInteraccion": 50,
    "tasaGuardado": 0,
@@ -405,7 +405,7 @@
    "repeticiones": 1,
    "puntaje": 50,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18436971985151908",
@@ -433,8 +433,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 6.916,
    "tiempoTotalVistoSeg": 27.665,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 50,
+   "pasoInicioPct": 50,
    "vecesRepetido": 1,
    "tasaInteraccion": 50,
    "tasaGuardado": 0,
@@ -445,7 +445,7 @@
    "repeticiones": 1,
    "puntaje": 50,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18123420065081851",
@@ -593,8 +593,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 7.187,
    "tiempoTotalVistoSeg": 71.875,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 57.1,
+   "pasoInicioPct": 42.9,
    "vecesRepetido": 3,
    "tasaInteraccion": 50,
    "tasaGuardado": 0,
@@ -605,7 +605,7 @@
    "repeticiones": 3,
    "puntaje": 50,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18400749118165757",
@@ -633,8 +633,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 6.629,
    "tiempoTotalVistoSeg": 39.776,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 33.3,
+   "pasoInicioPct": 66.7,
    "vecesRepetido": 1.5,
    "tasaInteraccion": 100,
    "tasaGuardado": 0,
@@ -645,7 +645,7 @@
    "repeticiones": 1.5,
    "puntaje": 100,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18062147519595071",
@@ -655,7 +655,7 @@
    "dia": "lunes",
    "hora": 18,
    "franja": "Noche (18-24)",
-   "edadHoras": 29,
+   "edadHoras": 30,
    "maduro": false,
    "gancho": "Lo que nadie te cuenta de tu negocio: cómo se cotiza, cómo se factura y a quién llamar si ",
    "caption": "Lo que nadie te cuenta de tu negocio: cómo se cotiza, cómo se factura y a quién llamar si algo falla, todo vive en la cabeza de una persona.\n\nCuando esa persona se va de vacaciones, el proceso se queda quieto. En JDT convertimos ese saber en un sistema a tu medida: visible, ordenado y listo para cualquiera.\n\nHablemos de tu proyecto. Escríbenos y te respondemos en menos de 24 horas.\n@technologicsjdt\n\n#JDTTechnologics #SoftwareAMedida #DesarrolloDeSoftware #Automatizacion #TransformacionDigital #Pymes #Bogota #Colombia #ProcesosDeNegocio #Emprendimiento",
@@ -673,8 +673,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 14.32,
    "tiempoTotalVistoSeg": 57.28,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 0,
+   "pasoInicioPct": 100,
    "vecesRepetido": 3,
    "tasaInteraccion": 100,
    "tasaGuardado": 0,
@@ -685,7 +685,7 @@
    "repeticiones": 3,
    "puntaje": 100,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18128078623918991",
@@ -695,7 +695,7 @@
    "dia": "lunes",
    "hora": 18,
    "franja": "Noche (18-24)",
-   "edadHoras": 29,
+   "edadHoras": 30,
    "maduro": false,
    "gancho": "¿Tu página web existe si nadie la encuentra? 🔎",
    "caption": "¿Tu página web existe si nadie la encuentra? 🔎\n\nTener una web no basta: el buscador tiene que entenderla para mostrarla. En JDT Technologics desarrollamos sitios web claros, rápidos y pensados para convertir visitas en clientes.\n\nCuéntanos tu caso y te respondemos en menos de 24 horas. Hablemos de tu proyecto.\n\n@technologicsjdt\n\n#DesarrolloWeb #SEO #PaginaWeb #JDTTechnologics #SoftwareAMedida #Bogota #Colombia #NegociosDigitales #Pymes #Marketing",
@@ -713,8 +713,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 5.666,
    "tiempoTotalVistoSeg": 34,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 66.7,
+   "pasoInicioPct": 33.3,
    "vecesRepetido": 1.6666666666666667,
    "tasaInteraccion": 66.66666666666666,
    "tasaGuardado": 0,
@@ -725,7 +725,7 @@
    "repeticiones": 1.6666666666666667,
    "puntaje": 66.66666666666666,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18137945173813193",
@@ -735,7 +735,7 @@
    "dia": "lunes",
    "hora": 18,
    "franja": "Noche (18-24)",
-   "edadHoras": 29,
+   "edadHoras": 30,
    "maduro": false,
    "gancho": "¿Tu equipo en campo manda fotos y «ya quedó» por WhatsApp, y la oficina lo pasa a Excel a ",
    "caption": "¿Tu equipo en campo manda fotos y «ya quedó» por WhatsApp, y la oficina lo pasa a Excel a mano? Eso se puede cambiar. En JDT TECHNOLOGICS desarrollamos apps móviles para equipos en campo: foto, lugar y estado en un solo reporte, conectado a lo que ya usas.\n\nCuéntanos tu caso y te respondemos en menos de 24 horas. Hablemos de tu proyecto.\nEscríbenos a @technologicsjdt.\n\n#JDTTechnologics #AppsMoviles #SoftwareAMedida #Automatizacion #TransformacionDigital #Bogota #Colombia #DesarrolloDeSoftware #PymesColombia #EquipoEnCampo",
@@ -753,8 +753,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 6.984,
    "tiempoTotalVistoSeg": 41.909,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 100,
+   "pasoInicioPct": 0,
    "vecesRepetido": 1.6666666666666667,
    "tasaInteraccion": 66.66666666666666,
    "tasaGuardado": 0,
@@ -765,7 +765,7 @@
    "repeticiones": 1.6666666666666667,
    "puntaje": 66.66666666666666,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18421783909082139",
@@ -775,7 +775,7 @@
    "dia": "lunes",
    "hora": 18,
    "franja": "Noche (18-24)",
-   "edadHoras": 29,
+   "edadHoras": 30,
    "maduro": false,
    "gancho": "Cada lunes, alguien copia datos de una hoja a otra para armar el informe de gerencia. En J",
    "caption": "Cada lunes, alguien copia datos de una hoja a otra para armar el informe de gerencia. En JDT Technologics automatizamos ese reporte: conectamos tus hojas y sistemas para que el informe se arme solo. Software a medida y automatización de procesos para negocios de Colombia. Hablemos de tu proyecto. Escríbenos por @technologicsjdt.\n\n#JDTTechnologics #Automatizacion #SoftwareAMedida #TransformacionDigital #Bogota #Colombia #Reportes #DesarrolloDeSoftware",
@@ -793,8 +793,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 4.821,
    "tiempoTotalVistoSeg": 48.213,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 87.5,
+   "pasoInicioPct": 12.5,
    "vecesRepetido": 1,
    "tasaInteraccion": 22.22222222222222,
    "tasaGuardado": 0,
@@ -805,7 +805,7 @@
    "repeticiones": 1,
    "puntaje": 22.22222222222222,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18416428192094693",
@@ -833,8 +833,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 10.421,
    "tiempoTotalVistoSeg": 72.948,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 100,
+   "pasoInicioPct": 0,
    "vecesRepetido": 1.6666666666666667,
    "tasaInteraccion": 66.66666666666666,
    "tasaGuardado": 0,
@@ -845,7 +845,7 @@
    "repeticiones": 1.6666666666666667,
    "puntaje": 66.66666666666666,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "17945396772383380",
@@ -873,8 +873,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 10.015,
    "tiempoTotalVistoSeg": 1231.966,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 56.3,
+   "pasoInicioPct": 43.7,
    "vecesRepetido": 1.1452991452991452,
    "tasaInteraccion": 3.418803418803419,
    "tasaGuardado": 0,
@@ -885,7 +885,7 @@
    "repeticiones": 1.1452991452991452,
    "puntaje": 3.418803418803419,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18116093117219833",
@@ -935,7 +935,7 @@
    "dia": "sábado",
    "hora": 16,
    "franja": "Tarde (12-18)",
-   "edadHoras": 79,
+   "edadHoras": 80,
    "maduro": true,
    "gancho": "¿Un chatbot sin IA? Sí, existe. Entre programadores es tendencia, y deja una lección para ",
    "caption": "¿Un chatbot sin IA? Sí, existe. Entre programadores es tendencia, y deja una lección para tu negocio: a veces una regla bien escrita («si el pedido es muy grande, pide aprobación») hace el trabajo, más barato y sin sorpresas.\n\nEn JDT automatizamos tus procesos con reglas claras, y usamos IA solo donde suma.\n\nHablemos de tu proyecto: cuéntanos tu caso en @technologicsjdt\n\n#JDTTechnologics #Automatizacion #SoftwareAMedida #DesarrolloDeSoftware #TransformacionDigital #Pymes #Bogota #Colombia #IA #CodigoAbierto",
@@ -953,8 +953,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 2.722,
    "tiempoTotalVistoSeg": 54.451,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 93.8,
+   "pasoInicioPct": 6.200000000000003,
    "vecesRepetido": 1.4375,
    "tasaInteraccion": 18.75,
    "tasaGuardado": 0,
@@ -965,7 +965,7 @@
    "repeticiones": 1.4375,
    "puntaje": 12.5,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18120340915813401",
@@ -975,7 +975,7 @@
    "dia": "sábado",
    "hora": 16,
    "franja": "Tarde (12-18)",
-   "edadHoras": 79,
+   "edadHoras": 80,
    "maduro": true,
    "gancho": "¿Se desinfló el hype? Entre tanta moda del software, lo que sirve es lo que queda.",
    "caption": "¿Se desinfló el hype? Entre tanta moda del software, lo que sirve es lo que queda.\n\nEn JDT TECHNOLOGICS creemos en software que se adapta a tu proceso, no al revés. Pagas solo por lo que necesitas.\n\nCuéntanos tu caso y te respondemos en menos de 24 horas. Hablemos de tu proyecto. @technologicsjdt\n\n#JDTTechnologics #SoftwareAMedida #DesarrolloDeSoftware #Automatizacion #TransformacionDigital #Bogota #Colombia #Tecnologia",
@@ -993,8 +993,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 5.659,
    "tiempoTotalVistoSeg": 192.407,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 70,
+   "pasoInicioPct": 30,
    "vecesRepetido": 1.6521739130434783,
    "tasaInteraccion": 17.391304347826086,
    "tasaGuardado": 0,
@@ -1005,7 +1005,7 @@
    "repeticiones": 1.6521739130434783,
    "puntaje": 13.043478260869565,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18140584255633521",
@@ -1015,7 +1015,7 @@
    "dia": "sábado",
    "hora": 16,
    "franja": "Tarde (12-18)",
-   "edadHoras": 79,
+   "edadHoras": 80,
    "maduro": true,
    "gancho": "¿Ese sistema viejo que nadie se atreve a tocar? Entre programadores es tendencia reescribi",
    "caption": "¿Ese sistema viejo que nadie se atreve a tocar? Entre programadores es tendencia reescribirlo por piezas: primero grabas lo que hace hoy, cambias una pieza y la compruebas antes de seguir. Así se moderniza sin parar todo de golpe.\n\nEn JDT Technologics hacemos software a medida, integraciones y automatizaciones para que tu sistema evolucione paso a paso. Cuéntanos tu caso y te respondemos en menos de 24 horas.\n\n@technologicsjdt\n#JDTTechnologics #SoftwareAMedida #DesarrolloDeSoftware #Automatizacion #TransformacionDigital #Bogota #Colombia #IA",
@@ -1033,8 +1033,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 7.401,
    "tiempoTotalVistoSeg": 851.183,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 56,
+   "pasoInicioPct": 44,
    "vecesRepetido": 1.2037037037037037,
    "tasaInteraccion": 3.7037037037037033,
    "tasaGuardado": 0,
@@ -1045,7 +1045,7 @@
    "repeticiones": 1.2037037037037037,
    "puntaje": 2.7777777777777777,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18217876564364488",
@@ -1055,7 +1055,7 @@
    "dia": "sábado",
    "hora": 16,
    "franja": "Tarde (12-18)",
-   "edadHoras": 79,
+   "edadHoras": 80,
    "maduro": true,
    "gancho": "Unas horas sin correo, sin agenda y sin documentos dejan ver qué tan atado está tu trabajo",
    "caption": "Unas horas sin correo, sin agenda y sin documentos dejan ver qué tan atado está tu trabajo a una sola herramienta. ¿Qué pasaría en tu negocio si la nube se detuviera hoy?\n\nEn JDT te ayudamos a tener control sobre tus datos: sistemas que se conectan entre sí y un plan B antes de la caída.\n\nHablemos de tu proyecto. Escríbenos o síguenos en @technologicsjdt.\n\n#JDTTechnologics #SoftwareAMedida #DesarrolloDeSoftware #Automatizacion #TransformacionDigital #Bogota #Colombia #NubeYDatos #PlanB",
@@ -1073,8 +1073,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 7.465,
    "tiempoTotalVistoSeg": 164.248,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 76.5,
+   "pasoInicioPct": 23.5,
    "vecesRepetido": 1.375,
    "tasaInteraccion": 25,
    "tasaGuardado": 0,
@@ -1085,7 +1085,7 @@
    "repeticiones": 1.375,
    "puntaje": 18.75,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18362484946302146",
@@ -1095,7 +1095,7 @@
    "dia": "sábado",
    "hora": 16,
    "franja": "Tarde (12-18)",
-   "edadHoras": 79,
+   "edadHoras": 80,
    "maduro": true,
    "gancho": "¿Tu marca tiene que verse como la de todos? No necesariamente.",
    "caption": "¿Tu marca tiene que verse como la de todos? No necesariamente.\n\nHay tipografías libres y de código abierto que puedes ajustar en peso y redondez: la misma letra puede sonar seria para una contadora y amable para una panadería. Lo que cuenta es que tu identidad se adapte a tu negocio.\n\nEn JDT hacemos tu web con diseño propio, a tu medida.\n\nHablemos de tu proyecto. @technologicsjdt\n\n#JDTTechnologics #DesarrolloWeb #SoftwareAMedida #Tipografia #DisenoWeb #Bogota #Colombia #Emprendimiento #MarcaPropia #TransformacionDigital",
@@ -1113,8 +1113,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 8.653,
    "tiempoTotalVistoSeg": 129.796,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 60,
+   "pasoInicioPct": 40,
    "vecesRepetido": 1.6,
    "tasaInteraccion": 30,
    "tasaGuardado": 0,
@@ -1125,7 +1125,7 @@
    "repeticiones": 1.6,
    "puntaje": 20,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "17866749702694889",
@@ -1135,7 +1135,7 @@
    "dia": "sábado",
    "hora": 16,
    "franja": "Tarde (12-18)",
-   "edadHoras": 79,
+   "edadHoras": 80,
    "maduro": true,
    "gancho": "¿Un chatbot sin IA? Sí, existe. Entre programadores es tendencia, y deja una lección para ",
    "caption": "¿Un chatbot sin IA? Sí, existe. Entre programadores es tendencia, y deja una lección para tu negocio: a veces una regla bien escrita («si el pedido es muy grande, pide aprobación») hace el trabajo, más barato y sin sorpresas.\n\nEn JDT automatizamos tus procesos con reglas claras, y usamos IA solo donde suma.\n\nHablemos de tu proyecto: cuéntanos tu caso en @technologicsjdt\n\n#JDTTechnologics #Automatizacion #SoftwareAMedida #DesarrolloDeSoftware #TransformacionDigital #Pymes #Bogota #Colombia #IA #CodigoAbierto",
@@ -1175,7 +1175,7 @@
    "dia": "sábado",
    "hora": 16,
    "franja": "Tarde (12-18)",
-   "edadHoras": 79,
+   "edadHoras": 80,
    "maduro": true,
    "gancho": "¿Ese sistema viejo que nadie se atreve a tocar? Entre programadores es tendencia reescribi",
    "caption": "¿Ese sistema viejo que nadie se atreve a tocar? Entre programadores es tendencia reescribirlo por piezas: primero grabas lo que hace hoy, cambias una pieza y la compruebas antes de seguir. Así se moderniza sin parar todo de golpe.\n\nEn JDT Technologics hacemos software a medida, integraciones y automatizaciones para que tu sistema evolucione paso a paso. Cuéntanos tu caso y te respondemos en menos de 24 horas.\n\n@technologicsjdt\n#JDTTechnologics #SoftwareAMedida #DesarrolloDeSoftware #Automatizacion #TransformacionDigital #Bogota #Colombia #IA",
@@ -1215,7 +1215,7 @@
    "dia": "sábado",
    "hora": 16,
    "franja": "Tarde (12-18)",
-   "edadHoras": 79,
+   "edadHoras": 80,
    "maduro": true,
    "gancho": "Unas horas sin correo, sin agenda y sin documentos dejan ver qué tan atado está tu trabajo",
    "caption": "Unas horas sin correo, sin agenda y sin documentos dejan ver qué tan atado está tu trabajo a una sola herramienta. ¿Qué pasaría en tu negocio si la nube se detuviera hoy?\n\nEn JDT te ayudamos a tener control sobre tus datos: sistemas que se conectan entre sí y un plan B antes de la caída.\n\nHablemos de tu proyecto. Escríbenos o síguenos en @technologicsjdt.\n\n#JDTTechnologics #SoftwareAMedida #DesarrolloDeSoftware #Automatizacion #TransformacionDigital #Bogota #Colombia #NubeYDatos #PlanB",
@@ -1255,7 +1255,7 @@
    "dia": "sábado",
    "hora": 16,
    "franja": "Tarde (12-18)",
-   "edadHoras": 79,
+   "edadHoras": 80,
    "maduro": true,
    "gancho": "¿Se desinfló el hype? Entre tanta moda del software, lo que sirve es lo que queda.",
    "caption": "¿Se desinfló el hype? Entre tanta moda del software, lo que sirve es lo que queda.\n\nEn JDT TECHNOLOGICS creemos en software que se adapta a tu proceso, no al revés. Pagas solo por lo que necesitas.\n\nCuéntanos tu caso y te respondemos en menos de 24 horas. Hablemos de tu proyecto. @technologicsjdt\n\n#JDTTechnologics #SoftwareAMedida #DesarrolloDeSoftware #Automatizacion #TransformacionDigital #Bogota #Colombia #Tecnologia",
@@ -1313,8 +1313,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 12.781,
    "tiempoTotalVistoSeg": 89.468,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 50,
+   "pasoInicioPct": 50,
    "vecesRepetido": 2.5,
    "tasaInteraccion": 75,
    "tasaGuardado": 0,
@@ -1325,7 +1325,7 @@
    "repeticiones": 2.5,
    "puntaje": 50,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18119933591085491",
@@ -1353,8 +1353,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 3.681,
    "tiempoTotalVistoSeg": 58.897,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 90.9,
+   "pasoInicioPct": 9.099999999999994,
    "vecesRepetido": 2.5714285714285716,
    "tasaInteraccion": 42.857142857142854,
    "tasaGuardado": 0,
@@ -1365,7 +1365,7 @@
    "repeticiones": 2.5714285714285716,
    "puntaje": 28.57142857142857,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18122020552768517",
@@ -1393,8 +1393,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 7.982,
    "tiempoTotalVistoSeg": 103.778,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 85.7,
+   "pasoInicioPct": 14.299999999999997,
    "vecesRepetido": 2,
    "tasaInteraccion": 50,
    "tasaGuardado": 0,
@@ -1405,7 +1405,7 @@
    "repeticiones": 2,
    "puntaje": 33.33333333333333,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18136082728686442",
@@ -1433,8 +1433,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 7.746,
    "tiempoTotalVistoSeg": 209.153,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 85,
+   "pasoInicioPct": 15,
    "vecesRepetido": 1.3888888888888888,
    "tasaInteraccion": 16.666666666666664,
    "tasaGuardado": 0,
@@ -1445,7 +1445,7 @@
    "repeticiones": 1.3888888888888888,
    "puntaje": 11.11111111111111,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "17961967806014508",
@@ -1673,8 +1673,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 6.356,
    "tiempoTotalVistoSeg": 152.545,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 85,
+   "pasoInicioPct": 15,
    "vecesRepetido": 1.3157894736842106,
    "tasaInteraccion": 15.789473684210526,
    "tasaGuardado": 0,
@@ -1685,7 +1685,7 @@
    "repeticiones": 1.3157894736842106,
    "puntaje": 10.526315789473683,
    "comentariosTop": [],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18350275051248621",
@@ -1713,8 +1713,8 @@
    "visitasPerfil": null,
    "retencionMediaSeg": 17.906,
    "tiempoTotalVistoSeg": 429.749,
-   "tasaSalto": null,
-   "pasoInicioPct": null,
+   "tasaSalto": 28.6,
+   "pasoInicioPct": 71.4,
    "vecesRepetido": 6.5,
    "tasaInteraccion": 125,
    "tasaGuardado": 0,
@@ -1730,7 +1730,7 @@
      "likes": 0
     }
    ],
-   "notas": "sin follows/visitas: 400 - \"{\\\"error\\\":{\\\"message\\\":\\\"(#100) The Media Insights API does not support the follows, profile_visits metric for this media product type.\\\",\\\"code\\\":100,\\"
+   "notas": ""
   },
   {
    "id": "18146711545587827",
