@@ -1,0 +1,360 @@
+{
+ "salida": "videos/2026-11-25-0306-control-de-tus-datos.mp4",
+ "formato": "«Lo que nadie te cuenta de…» en minimalismo audaz: verdad incómoda, piezas regadas, pregunta quieta, las piezas se ordenan con JDT y cierre",
+ "concepto": "Tus datos no viven en tu negocio sino regados entre una hoja, un correo y un chat; JDT TECHNOLOGICS los junta con software a medida para que tú decidas quién ve qué y cómo se protege.",
+ "produccion": "Minimalismo-audaz (principal): pantallas completas amarillas con tinta azul marino (escenas 1, 3 y 5) y azules (2 y 4), un solo elemento enorme y una frase corta por escena, cortes secos con fundido corto, cero partículas, cero HUD y fx vacíos salvo el ÚNICO destello en la escena 4; gancho nadie-te-cuenta en amarillo con el icono de datos gigante y titular legible desde t=0; apoyo datos-que-se-arman en las escenas 2 (tres piezas regadas e inclinadas: hoja, correo, chat) y 4 (las mismas piezas viajan al centro, entra un anillo y tres barras se llenan en orden, sin cifras); ritmo mixto: 3,2 / 3 s activos, giro QUIETO de 4,5 s en amarillo con el signo de pregunta gigante sin movimiento, luego 3 / 2,6 s y cierre.",
+ "tendencias": {
+  "video": "minimalismo-audaz",
+  "apoyo": "datos-que-se-arman",
+  "gancho": "nadie-te-cuenta",
+  "ritmo": "mixto",
+  "banner": "cromo-dorado",
+  "pulso": "resumen fechado: ver estilos.py --lista; búsquedas del 2026-11-25",
+  "fuentes": [
+   "https://metricool.com/es/tendencias-instagram/",
+   "https://advids.co/blog/images/motion-design-video"
+  ]
+ },
+ "fuente": "jdt:control-de-tus-datos",
+ "titulo": "¿Quién controla los datos de tu negocio?",
+ "escenas": [
+  {
+   "tipo": "libre",
+   "look": "amarillo",
+   "texto": "Lo que nadie te cuenta de *tus datos*",
+   "transicion": "fundido",
+   "fx": [],
+   "voz": "Lo que nadie te cuenta de tus datos: están regados por TODAS partes.",
+   "duracion": 3.2,
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "datos",
+     "x": 50,
+     "y": 64,
+     "tam": 46,
+     "color": "fondo",
+     "t": 0,
+     "entra": "aparece"
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "azul",
+   "texto": "Una hoja, un correo, *un chat*",
+   "transicion": "fundido",
+   "fx": [],
+   "voz": "Clientes en una hoja, pedidos en un correo, precios en un chat.",
+   "duracion": 3,
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "tabla",
+     "x": 26,
+     "y": 48,
+     "tam": 20,
+     "color": "amarillo",
+     "giro": -12,
+     "t": 0,
+     "entra": "aparece"
+    },
+    {
+     "el": "texto",
+     "texto": "Clientes",
+     "x": 26,
+     "y": 59,
+     "tam": "s",
+     "color": "blanco",
+     "t": 0
+    },
+    {
+     "el": "icono",
+     "nombre": "correo",
+     "x": 74,
+     "y": 56,
+     "tam": 20,
+     "color": "amarillo",
+     "giro": 10,
+     "t": 0.15,
+     "entra": "aparece"
+    },
+    {
+     "el": "texto",
+     "texto": "Pedidos",
+     "x": 74,
+     "y": 67,
+     "tam": "s",
+     "color": "blanco",
+     "t": 0.15
+    },
+    {
+     "el": "icono",
+     "nombre": "chat",
+     "x": 36,
+     "y": 74,
+     "tam": 20,
+     "color": "amarillo",
+     "giro": 8,
+     "t": 0.3,
+     "entra": "aparece"
+    },
+    {
+     "el": "texto",
+     "texto": "Precios",
+     "x": 36,
+     "y": 85,
+     "tam": "s",
+     "color": "blanco",
+     "t": 0.3
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "amarillo",
+   "texto": "¿Quién *controla* tus datos?",
+   "transicion": "fundido",
+   "fx": [],
+   "voz": "Y si alguien se va… ¿quién controla de verdad tus datos?",
+   "duracion": 4.5,
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "pregunta",
+     "x": 50,
+     "y": 64,
+     "tam": 52,
+     "color": "fondo",
+     "t": 0,
+     "entra": "aparece"
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "azul",
+   "texto": "*JDT*: software a medida",
+   "transicion": "destello",
+   "fx": [
+    "destello"
+   ],
+   "voz": "En JDT TECHNOLOGICS hacemos software a medida: todo en un solo lugar.",
+   "duracion": 3,
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "tabla",
+     "x": 22,
+     "y": 46,
+     "tam": 12,
+     "color": "amarillo",
+     "t": 0,
+     "entra": "aparece",
+     "a": [
+      50,
+      56
+     ],
+     "sale": 0.4
+    },
+    {
+     "el": "icono",
+     "nombre": "correo",
+     "x": 78,
+     "y": 50,
+     "tam": 12,
+     "color": "amarillo",
+     "t": 0,
+     "entra": "aparece",
+     "a": [
+      50,
+      56
+     ],
+     "sale": 0.4
+    },
+    {
+     "el": "icono",
+     "nombre": "chat",
+     "x": 30,
+     "y": 70,
+     "tam": 12,
+     "color": "amarillo",
+     "t": 0,
+     "entra": "aparece",
+     "a": [
+      50,
+      56
+     ],
+     "sale": 0.4
+    },
+    {
+     "el": "forma",
+     "forma": "anillo",
+     "x": 50,
+     "y": 56,
+     "ancho": 34,
+     "color": "amarillo",
+     "t": 0.35,
+     "entra": "pop"
+    },
+    {
+     "el": "icono",
+     "nombre": "carpeta",
+     "x": 50,
+     "y": 56,
+     "tam": 16,
+     "color": "blanco",
+     "t": 0.4,
+     "entra": "pop"
+    },
+    {
+     "el": "barra",
+     "x": 50,
+     "y": 73,
+     "ancho": 56,
+     "valor": 100,
+     "color": "amarillo",
+     "t": 0.45
+    },
+    {
+     "el": "barra",
+     "x": 50,
+     "y": 78,
+     "ancho": 56,
+     "valor": 100,
+     "color": "blanco",
+     "t": 0.55
+    },
+    {
+     "el": "barra",
+     "x": 50,
+     "y": 83,
+     "ancho": 56,
+     "valor": 100,
+     "color": "amarillo",
+     "t": 0.65
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "amarillo",
+   "texto": "Tú decides *quién ve qué*",
+   "transicion": "fundido",
+   "fx": [],
+   "voz": "Y tú decides quién ve qué y cómo se protege.",
+   "duracion": 2.6,
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "escudo",
+     "x": 50,
+     "y": 64,
+     "tam": 46,
+     "color": "fondo",
+     "t": 0,
+     "entra": "aparece"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de *tu proyecto*",
+   "subtexto": "@technologicsjdt",
+   "transicion": "fundido",
+   "voz": "Hablemos de tu proyecto.",
+   "duracion": 3
+  }
+ ],
+ "tiempos": {
+  "duracion": 24.0
+ },
+ "validacion": "corregido: titular de la escena 1 visible desde t=0; tarjetas de la escena 2 con textos legibles que terminan en una pila; texto de la escena 4 desde 14,1 s; destello amarillo en 13,9 s. La duración de la escena 1 se mantiene porque la sincronía con la voz depende de ella.",
+ "direccion": {
+  "hook": "Pantalla amarilla completa con titular desde t=0 y un solo icono de base de datos gigante",
+  "payoff": "Los datos se reúnen en un solo lugar bajo control del dueño y JDT lo resuelve con software a medida",
+  "familias": [
+   "motion-graphics",
+   "mixed-media"
+  ],
+  "beats": [
+   {
+    "inicio": 0,
+    "fin": 2.4,
+    "funcion": "hook",
+    "familia": "motion-graphics",
+    "visual": "Titular y base de datos gigante amarilla"
+   },
+   {
+    "inicio": 2.4,
+    "fin": 5.35,
+    "funcion": "contexto",
+    "familia": "motion-graphics",
+    "visual": "Titular del dolor sobre fondo azul"
+   },
+   {
+    "inicio": 5.35,
+    "fin": 8.5,
+    "funcion": "demostracion",
+    "familia": "mixed-media",
+    "visual": "Tarjetas Clientes, Pedidos y Precios regadas"
+   },
+   {
+    "inicio": 8.5,
+    "fin": 9.66,
+    "funcion": "demostracion",
+    "familia": "mixed-media",
+    "visual": "Tarjetas que se apilan en el centro"
+   },
+   {
+    "inicio": 9.66,
+    "fin": 12.8,
+    "funcion": "tension",
+    "familia": "motion-graphics",
+    "visual": "Signo de pregunta gigante quieto en amarillo"
+   },
+   {
+    "inicio": 12.8,
+    "fin": 13.91,
+    "funcion": "respiro",
+    "familia": "motion-graphics",
+    "visual": "Pausa breve antes del anillo"
+   },
+   {
+    "inicio": 13.91,
+    "fin": 17.1,
+    "funcion": "demostracion",
+    "familia": "motion-graphics",
+    "visual": "Anillo que se dibuja y barras que se llenan"
+   },
+   {
+    "inicio": 17.1,
+    "fin": 19.18,
+    "funcion": "recompensa",
+    "familia": "motion-graphics",
+    "visual": "JDT: software a medida"
+   },
+   {
+    "inicio": 19.18,
+    "fin": 20.9,
+    "funcion": "giro",
+    "familia": "mixed-media",
+    "visual": "Escudo que aparece en amarillo"
+   },
+   {
+    "inicio": 20.9,
+    "fin": 22.46,
+    "funcion": "giro",
+    "familia": "mixed-media",
+    "visual": "Check dibujado y Tú decides quién ve qué"
+   },
+   {
+    "inicio": 22.46,
+    "fin": 24.0,
+    "funcion": "cierre",
+    "familia": "motion-graphics",
+    "visual": "Logo, Hablemos de tu proyecto y @technologicsjdt"
+   }
+  ]
+ }
+}
