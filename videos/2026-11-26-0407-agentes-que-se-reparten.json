@@ -1,0 +1,524 @@
+{
+  "salida": "videos/2026-11-26-0407-agentes-que-se-reparten.mp4",
+  "formato": "Reel vertical 1080x1920, unos 22 s, 6 escenas con cortes rápidos: pantalla de producto en movimiento, collage de papel para el antes, voz en off es-CO",
+  "concepto": "El video abre con el pedido ya resuelto en pantalla y cuenta cómo se llegó ahí: antes el pedido pasaba de mano en mano en tiras de papel; ahora un agente de IA coordina, cuatro agentes hacen cada uno su parte con reglas claras y revisión humana, y el dueño por fin se toma el tinto caliente.",
+  "produccion": "Interfaz-en-movimiento como estilo principal: una ventana de producto con el pedido resuelto y la barra llena desde el cuadro 0, y un cursor que sube hasta la tarjeta del pedido sin taparla (gancho resultado-primero, titular completo y quieto desde t=0). Apoyo collage-recorte solo en la escena 2: tiras de papel blancas y amarillas pegadas con cinta, con grano. El giro es el único momento fuerte: destello cuando el agente coordinador reparte las cuatro tarjetas y se marca la casilla. Notificaciones en look azul para JDT, con reglas, aprobación humana y registro; remate en look amarillo. Ritmo rápido, de 2 a 3 s por corte, sin glitch ni vibra.",
+  "fuente": "https://dev.to/hemapriya_kanagala/i-built-my-first-multi-agent-system-on-aws-and-it-was-easier-than-i-expected-58c2",
+  "tema": "Agentes de IA que se reparten el trabajo: uno coordina, otros ejecutan, con reglas y revisión humana",
+  "tendencias": {
+    "video": "interfaz-en-movimiento",
+    "apoyo": "collage-recorte",
+    "gancho": "resultado-primero",
+    "ritmo": "rapido",
+    "banner": "amarillo-total",
+    "pulso": "2026-11-26 dev.to: sistema multiagente práctico con orquestador, cuatro agentes especializados, reglas y trazas; Reels B2B con pantallas de producto en acción",
+    "fuentes": [
+      "https://dev.to/hemapriya_kanagala/i-built-my-first-multi-agent-system-on-aws-and-it-was-easier-than-i-expected-58c2"
+    ]
+  },
+  "escenas": [
+    {
+      "tipo": "libre",
+      "texto": "Pedido *resuelto*. Nadie lo persiguió.",
+      "voz": "¡Mira! Pedido resuelto, y nadie tuvo que perseguirlo.",
+      "duracion": 2.8,
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 50,
+          "y": 60,
+          "ancho": 84,
+          "alto": 38,
+          "color": "superficie",
+          "t": 0
+        },
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 50,
+          "y": 44,
+          "ancho": 76,
+          "alto": 2.5,
+          "color": "borde",
+          "t": 0
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Pedido entregado",
+          "icono": "check",
+          "x": 46,
+          "y": 53,
+          "ancho": 62,
+          "color": "amarillo",
+          "t": 0
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Cliente avisado",
+          "icono": "check",
+          "x": 46,
+          "y": 64,
+          "ancho": 62,
+          "t": 0
+        },
+        {
+          "el": "barra",
+          "x": 46,
+          "y": 74,
+          "ancho": 62,
+          "valor": 100,
+          "color": "amarillo",
+          "t": 0
+        },
+        {
+          "el": "icono",
+          "nombre": "flecha",
+          "x": 88,
+          "y": 76,
+          "tam": 7,
+          "color": "blanco",
+          "giro": 135,
+          "t": 0,
+          "a": [
+            86,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "texto": "Antes: de *mano en mano*",
+      "voz": "Pero antes pasaba de mano en mano… ¡y se perdía!",
+      "fx": [
+        "grano"
+      ],
+      "transicion": "barrido",
+      "duracion": 2.8,
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 36,
+          "y": 45,
+          "ancho": 50,
+          "alto": 6,
+          "color": "blanco",
+          "giro": -5,
+          "t": 0,
+          "entra": "izquierda"
+        },
+        {
+          "el": "texto",
+          "texto": "Ventas lo anota",
+          "x": 36,
+          "y": 45,
+          "tam": "s",
+          "color": "fondo",
+          "giro": -5,
+          "t": 0
+        },
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 15,
+          "y": 42,
+          "ancho": 12,
+          "alto": 2.4,
+          "color": "gris",
+          "giro": 35,
+          "opacidad": 0.75,
+          "t": 0.05
+        },
+        {
+          "el": "linea",
+          "x": 52,
+          "y": 49,
+          "a": [
+            60,
+            55
+          ],
+          "estilo": "flecha",
+          "color": "gris",
+          "t": 0.2
+        },
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 64,
+          "y": 60,
+          "ancho": 50,
+          "alto": 6,
+          "color": "blanco",
+          "giro": 4,
+          "t": 0.25,
+          "entra": "derecha"
+        },
+        {
+          "el": "texto",
+          "texto": "Bodega lo busca",
+          "x": 64,
+          "y": 60,
+          "tam": "s",
+          "color": "fondo",
+          "giro": 4,
+          "t": 0.25
+        },
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 86,
+          "y": 57,
+          "ancho": 12,
+          "alto": 2.4,
+          "color": "gris",
+          "giro": -30,
+          "opacidad": 0.75,
+          "t": 0.3
+        },
+        {
+          "el": "linea",
+          "x": 58,
+          "y": 64,
+          "a": [
+            46,
+            70
+          ],
+          "estilo": "flecha",
+          "color": "gris",
+          "t": 0.45
+        },
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 40,
+          "y": 75,
+          "ancho": 52,
+          "alto": 6,
+          "color": "amarillo",
+          "giro": -3,
+          "t": 0.5,
+          "entra": "pop"
+        },
+        {
+          "el": "texto",
+          "texto": "Jefe: ¿ya lo aprobé?",
+          "x": 40,
+          "y": 75,
+          "tam": "s",
+          "color": "fondo",
+          "giro": -3,
+          "t": 0.5
+        },
+        {
+          "el": "burbuja",
+          "texto": "¿Quién tiene el pedido?",
+          "x": 58,
+          "y": 86,
+          "cola": "der",
+          "ancho": 60,
+          "t": 0.7
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "texto": "Uno coordina. Cuatro *hacen su parte*.",
+      "voz": "¿El truco? Un agente de IA coordina y cuatro hacen su parte.",
+      "fx": [
+        "destello"
+      ],
+      "transicion": "zoom",
+      "duracion": 3,
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "anillo",
+          "x": 50,
+          "y": 46,
+          "ancho": 20,
+          "color": "dorado",
+          "t": 0,
+          "entra": "dibuja"
+        },
+        {
+          "el": "icono",
+          "nombre": "robot",
+          "x": 50,
+          "y": 46,
+          "tam": 12,
+          "color": "amarillo",
+          "t": 0,
+          "entra": "pop",
+          "mueve": "late"
+        },
+        {
+          "el": "linea",
+          "x": 44,
+          "y": 52,
+          "a": [
+            28,
+            59
+          ],
+          "estilo": "punteada",
+          "color": "azul",
+          "pulso": true,
+          "t": 0.15
+        },
+        {
+          "el": "linea",
+          "x": 56,
+          "y": 52,
+          "a": [
+            72,
+            59
+          ],
+          "estilo": "punteada",
+          "color": "azul",
+          "pulso": true,
+          "t": 0.15
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Inventario",
+          "icono": "caja",
+          "x": 28,
+          "y": 64,
+          "ancho": 42,
+          "t": 0.2,
+          "entra": "sube"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Políticas",
+          "icono": "documento",
+          "x": 72,
+          "y": 64,
+          "ancho": 42,
+          "t": 0.3,
+          "entra": "sube"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Devoluciones",
+          "icono": "ciclo",
+          "x": 28,
+          "y": 75,
+          "ancho": 42,
+          "t": 0.4,
+          "entra": "sube"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Comunicación",
+          "icono": "chat",
+          "x": 72,
+          "y": 75,
+          "ancho": 42,
+          "t": 0.5,
+          "entra": "sube"
+        },
+        {
+          "el": "icono",
+          "nombre": "check",
+          "x": 50,
+          "y": 86,
+          "tam": 9,
+          "color": "amarillo",
+          "t": 0.75,
+          "entra": "pop"
+        }
+      ]
+    },
+    {
+      "tipo": "notificaciones",
+      "look": "azul",
+      "texto": "*JDT*: automatización con IA",
+      "voz": "En JDT automatizamos tu proceso: reglas claras y revisión humana.",
+      "transicion": "desliza-arriba",
+      "duracion": 3.2,
+      "etiquetas": [
+        "Regla aplicada",
+        "Aprobación: tú decides",
+        "Registro guardado"
+      ],
+      "detalles": [
+        "Política de devolución",
+        "Revisión humana",
+        "Todo queda a la vista"
+      ],
+      "iconos": [
+        "escudo",
+        "usuario",
+        "datos"
+      ]
+    },
+    {
+      "tipo": "libre",
+      "look": "amarillo",
+      "texto": "El tinto, por fin, *caliente*.",
+      "voz": "¿Y tú? Por fin te tomas el tinto CALIENTE.",
+      "transicion": "giro",
+      "duracion": 2.6,
+      "elementos": [
+        {
+          "el": "tarjeta",
+          "texto": "Perseguir pedidos",
+          "icono": "equis",
+          "x": 50,
+          "y": 46,
+          "ancho": 64,
+          "t": 0,
+          "sale": 0.45,
+          "a": [
+            50,
+            88
+          ]
+        },
+        {
+          "el": "icono",
+          "nombre": "persona-feliz",
+          "x": 50,
+          "y": 64,
+          "tam": 26,
+          "t": 0.35,
+          "entra": "pop"
+        },
+        {
+          "el": "icono",
+          "nombre": "chispa",
+          "x": 70,
+          "y": 54,
+          "tam": 8,
+          "t": 0.5,
+          "mueve": "late"
+        },
+        {
+          "el": "texto",
+          "texto": "Tú revisas. Ellos *trabajan*.",
+          "x": 50,
+          "y": 83,
+          "tam": "m",
+          "t": 0.55
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "texto": "Hablemos de *tu proyecto*.",
+      "subtexto": "@technologicsjdt",
+      "voz": "¡Hablemos de tu proyecto!",
+      "transicion": "fundido",
+      "duracion": 2.6
+    }
+  ],
+  "caption": "¿Pedidos, consultas o aprobaciones que pasan de mano en mano hasta que alguien pregunta «¿y quién lo tiene?»\n\nHay otra forma: agentes de IA que se reparten el trabajo. Uno coordina y los demás hacen cada uno su parte (revisar inventario, aplicar tus políticas, gestionar devoluciones, avisarle al cliente), con reglas claras y revisión humana cuando hace falta. Y todo queda registrado para que puedas revisarlo.\n\nEn JDT TECHNOLOGICS automatizamos tus procesos con IA y lo conectamos a los sistemas que ya usas. Se adapta a tu proceso, no al revés.\n\nHablemos de tu proyecto. Escríbenos a @technologicsjdt\n\n#JDTTechnologics #Automatizacion #InteligenciaArtificial #SoftwareAMedida #TransformacionDigital #Pymes #Bogota #Colombia",
+  "tiempos": {
+    "inicios": [
+      0.0,
+      4.22,
+      7.83,
+      12.22,
+      16.78,
+      20.06
+    ],
+    "retardo": 0.3,
+    "duracion": 22.54
+  },
+  "direccion": {
+    "hook": "Pedido ya resuelto en una ventana de producto desde el cuadro 0; el cursor hace clic y se marca la última fila",
+    "payoff": "Se entiende que el trabajo se reparte y se registra; el remate del tinto caliente y el CTA cierran la promesa",
+    "familias": [
+      "motion-graphics",
+      "mixed-media"
+    ],
+    "beats": [
+      {
+        "inicio": 0,
+        "fin": 1.6,
+        "funcion": "hook",
+        "familia": "motion-graphics",
+        "visual": "Titular 'Pedido resuelto.' y tarjetas marcadas, legibles desde t=0"
+      },
+      {
+        "inicio": 1.6,
+        "fin": 3.0,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Cursor que va a la tarjeta, clic y fila final que se marca"
+      },
+      {
+        "inicio": 3.0,
+        "fin": 4.22,
+        "funcion": "contexto",
+        "familia": "motion-graphics",
+        "visual": "Barra de estado completa; cambia el foco hacia el antes"
+      },
+      {
+        "inicio": 4.22,
+        "fin": 6.0,
+        "funcion": "tension",
+        "familia": "mixed-media",
+        "visual": "Tiras de papel con cinta y 'de mano en mano' en el collage"
+      },
+      {
+        "inicio": 6.0,
+        "fin": 7.83,
+        "funcion": "tension",
+        "familia": "mixed-media",
+        "visual": "Notas pegadas: 'Bodega lo busca' y 'Jefe: ¿ya lo aprobé?'"
+      },
+      {
+        "inicio": 7.83,
+        "fin": 9.6,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Nodo IA central con líneas punteadas hacia el coordinador"
+      },
+      {
+        "inicio": 9.6,
+        "fin": 12.22,
+        "funcion": "giro",
+        "familia": "motion-graphics",
+        "visual": "Cuatro agentes marcan su parte; destello blanco breve al cierre del reparto"
+      },
+      {
+        "inicio": 12.22,
+        "fin": 14.4,
+        "funcion": "contexto",
+        "familia": "motion-graphics",
+        "visual": "Primera notificación: 'Regla aplicada' cae con orden"
+      },
+      {
+        "inicio": 14.4,
+        "fin": 16.78,
+        "funcion": "recompensa",
+        "familia": "motion-graphics",
+        "visual": "Tres notificaciones ordenadas: aprobación y registro"
+      },
+      {
+        "inicio": 16.78,
+        "fin": 18.6,
+        "funcion": "respiro",
+        "familia": "motion-graphics",
+        "visual": "Pantalla amarilla de una sola idea: 'El tinto, por fin, caliente.'"
+      },
+      {
+        "inicio": 18.6,
+        "fin": 20.06,
+        "funcion": "recompensa",
+        "familia": "motion-graphics",
+        "visual": "Vapor de la taza sobre el remate"
+      },
+      {
+        "inicio": 20.06,
+        "fin": 22.54,
+        "funcion": "cierre",
+        "familia": "motion-graphics",
+        "visual": "Logo JDT, 'Hablemos de tu proyecto.' y @technologicsjdt"
+      }
+    ]
+  },
+  "validacion": "corregido: revisor (modelo opus, 3b) dio CORREGIR con nota interna 8; se aplicaron las correcciones de tiempo de «¿Quién tiene el pedido?» (entra antes), ajuste de tamaño de las tarjetas de agentes para que «Comunicación» quepa, destello a la mitad de intensidad y formato del guion (unos 22 s). Ritmo medio aceptado."
+}

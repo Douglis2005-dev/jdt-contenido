@@ -1,0 +1,179 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+  .cap { position: absolute; left: 90px; right: 90px; text-align: center; font-size: 104px; }
+  .sub { position: absolute; left: 90px; right: 90px; text-align: center; font-size: 46px; color: var(--gris); font-weight: 700; }
+  .card { position: absolute; width: 400px; height: 150px; border-radius: 28px; background: rgba(19,26,58,.92);
+          border: 2px solid rgba(255,255,255,.16); display: flex; align-items: center; gap: 18px; padding: 0 26px;
+          font-size: 36px; font-weight: 800; box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+  .card .ok { width: 54px; height: 54px; border-radius: 50%; background: var(--amarillo); color: var(--fondo);
+              display: flex; align-items: center; justify-content: center; font-size: 34px; font-weight: 900; flex: none; }
+  .tarea { position: absolute; left: 110px; width: 860px; height: 128px; border-radius: 26px; background: rgba(255,255,255,.06);
+           border: 2px solid rgba(255,255,255,.18); display: flex; align-items: center; gap: 28px; padding: 0 40px; font-size: 44px; font-weight: 700; }
+  .tarea .ok { width: 52px; height: 52px; border-radius: 50%; background: var(--amarillo); color: var(--fondo);
+               display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 32px; flex: none; }
+  .papel { position: absolute; background: #FFFFFF; color: var(--fondo); font-weight: 800; font-size: 46px; padding: 26px 34px;
+           box-shadow: 0 20px 40px rgba(0,0,0,.35); }
+  .papel.amar { background: var(--amarillo); }
+  .papel.gris { background: #CBD5E1; }
+  .cinta { position: absolute; width: 170px; height: 42px; background: rgba(250,204,21,.55); }
+  .toast { position: absolute; left: 110px; width: 860px; height: 150px; border-radius: 32px; background: rgba(19,26,58,.94);
+           border: 2px solid rgba(250,204,21,.45); display: flex; align-items: center; gap: 30px; padding: 0 44px; font-size: 48px; font-weight: 800; }
+  .toast .pt { width: 22px; height: 22px; border-radius: 50%; background: var(--amarillo); flex: none; }
+  .amar-full { position: absolute; inset: 0; background: var(--amarillo); color: var(--fondo); }
+  .amar-full .clave { color: var(--fondo); text-decoration: underline; text-decoration-thickness: 10px; text-underline-offset: 12px; }
+  .taza { position: absolute; left: 340px; top: 760px; width: 400px; height: 330px; border-radius: 0 0 170px 170px; background: var(--fondo); }
+  .asa { position: absolute; left: 720px; top: 840px; width: 130px; height: 150px; border: 24px solid var(--fondo); border-left: none; border-radius: 0 90px 90px 0; }
+  .vapor { position: absolute; top: 640px; width: 14px; height: 120px; border-radius: 7px; background: var(--fondo); opacity: .55; }
+  .nodo { position: absolute; width: 150px; height: 150px; border-radius: 50%; background: var(--amarillo); color: var(--fondo);
+          display: flex; align-items: center; justify-content: center; font-size: 46px; font-weight: 900; text-align: center; line-height: 1.05; }
+  .linea { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+  .cursor { position: absolute; width: 0; height: 0; border-left: 26px solid #FFFFFF; border-top: 16px solid transparent; border-bottom: 16px solid transparent;
+            transform: rotate(-35deg); filter: drop-shadow(0 6px 10px rgba(0,0,0,.5)); }
+  .clic { position: absolute; width: 90px; height: 90px; border-radius: 50%; border: 4px solid var(--amarillo); }
+</style></head><body>
+
+<!-- E1 0-4.22: gancho resultado-primero: el pedido ya resuelto, titular legible desde t=0 -->
+<div id="e1" class="capa">
+  <div class="cap" style="top:250px;font-size:96px">Pedido <span class="clave">resuelto.</span></div>
+  <div class="sub" style="top:460px">Nadie lo persiguió</div>
+  <div id="p1" class="vidrio" style="left:110px;top:640px;width:860px;height:600px"></div>
+  <div class="tarea" style="top:690px"><span class="ok">✓</span>Pedido entregado</div>
+  <div class="tarea" style="top:846px"><span class="ok">✓</span>Cliente avisado</div>
+  <div id="fila3" class="tarea" style="top:1002px"><span id="ok3" class="ok" style="opacity:0">✓</span>Pedido cerrado</div>
+  <div style="position:absolute;left:110px;top:1160px;width:860px;height:22px;border-radius:11px;background:rgba(255,255,255,.15);overflow:hidden">
+    <div id="barra" style="height:100%;width:100%;background:var(--amarillo)"></div></div>
+  <div id="cur" class="cursor" style="left:960px;top:1400px"></div>
+  <div id="clic" class="clic" style="left:0;top:0;opacity:0"></div>
+</div>
+
+<!-- E2 4.22-7.83: collage de papel: el antes, de mano en mano -->
+<div id="e2" class="capa">
+  <div class="cap" style="top:300px;font-size:100px">Antes: <span class="clave">de mano en mano</span></div>
+  <div class="cinta" style="left:120px;top:560px;transform:rotate(-6deg)"></div>
+  <div id="pa" class="papel" style="left:110px;top:600px;width:560px;transform:rotate(-4deg)">Ventas lo anota</div>
+  <div id="pb" class="papel amar" style="left:420px;top:830px;width:560px;transform:rotate(3deg)">Bodega lo busca</div>
+  <div id="pc" class="papel gris" style="left:150px;top:1060px;width:600px;transform:rotate(-2deg)">Jefe: ¿ya lo aprobé?</div>
+  <div id="pd" class="papel" style="left:330px;top:1290px;width:560px;transform:rotate(5deg);font-weight:600;font-size:40px">¿Quién tiene el pedido?</div>
+</div>
+
+<!-- E3 7.83-12.22: interfaz en movimiento: un coordinador y cuatro agentes que hacen su parte -->
+<div id="e3" class="capa">
+  <div class="cap" style="top:260px;font-size:84px">Uno coordina. <span class="clave">Cuatro hacen su parte.</span></div>
+  <svg class="linea" viewBox="0 0 1080 1920">
+    <line id="l1" x1="540" y1="760" x2="250" y2="880" stroke="#FACC15" stroke-width="5" stroke-dasharray="14 12"/>
+    <line id="l2" x1="540" y1="760" x2="830" y2="880" stroke="#FACC15" stroke-width="5" stroke-dasharray="14 12"/>
+    <line id="l3" x1="540" y1="760" x2="250" y2="1080" stroke="#FACC15" stroke-width="5" stroke-dasharray="14 12"/>
+    <line id="l4" x1="540" y1="760" x2="830" y2="1080" stroke="#FACC15" stroke-width="5" stroke-dasharray="14 12"/>
+  </svg>
+  <div id="nodo" class="nodo" style="left:465px;top:685px">IA</div>
+  <div id="a1" class="card" style="left:50px;top:880px;width:400px"><span id="v1" class="ok" style="opacity:0">✓</span>Inventario</div>
+  <div id="a2" class="card" style="left:630px;top:880px;width:400px"><span id="v2" class="ok" style="opacity:0">✓</span>Políticas</div>
+  <div id="a3" class="card" style="left:50px;top:1080px;width:400px"><span id="v3" class="ok" style="opacity:0">✓</span>Devoluciones</div>
+  <div id="a4" class="card" style="left:630px;top:1080px;width:400px"><span id="v4" class="ok" style="opacity:0">✓</span>Comunicación</div>
+  <div class="sub" style="top:1330px;font-size:40px">Reglas claras · revisión humana cuando haga falta</div>
+</div>
+
+<!-- E4 12.22-16.78: notificaciones de JDT: reglas, aprobación y registro -->
+<div id="e4" class="capa">
+  <div class="cap" style="top:260px;font-size:92px"><span class="clave">JDT</span>: automatización con IA</div>
+  <div id="t4a" class="toast" style="top:640px"><span class="pt"></span>Regla aplicada</div>
+  <div id="t4b" class="toast" style="top:850px"><span class="pt"></span>Aprobación: tú decides</div>
+  <div id="t4c" class="toast" style="top:1060px"><span class="pt"></span>Registro guardado</div>
+  <div class="sub" style="top:1280px">Todo queda a la vista</div>
+</div>
+
+<!-- E5 16.78-20.06: remate en amarillo: el tinto, por fin, caliente -->
+<div id="e5" class="capa">
+  <div class="amar-full">
+    <div class="cap" style="top:330px;font-size:112px;color:var(--fondo)">El tinto, por fin, <span class="clave">caliente.</span></div>
+    <div class="taza"></div><div class="asa"></div>
+    <div id="v5a" class="vapor" style="left:460px"></div>
+    <div id="v5b" class="vapor" style="left:560px"></div>
+    <div id="v5c" class="vapor" style="left:660px"></div>
+  </div>
+</div>
+
+<!-- E6 20.06-22.54: cierre: JDT, CTA y @technologicsjdt -->
+<div id="e6" class="capa">
+  <img id="logo" src="../recursos/logo.jpeg" style="position:absolute;left:290px;top:560px;width:500px;border-radius:90px;opacity:0">
+  <div id="c6" class="cap" style="top:1080px;font-size:104px">Hablemos de <span class="oro">tu proyecto.</span></div>
+  <div style="position:absolute;left:0;right:0;top:1450px;text-align:center"><span class="pildora">@technologicsjdt</span></div>
+  <div class="sub" style="top:1580px;font-size:44px">JDT TECHNOLOGICS · Bogotá</div>
+</div>
+
+<div id="fl" class="capa" style="background:#fff;opacity:0;z-index:7"></div>
+
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+window.DURACION = 22.54;
+const dentro = (t, a, b) => t >= a && t < b;
+const escenas = [["e1", 0, 4.22], ["e2", 4.22, 7.83], ["e3", 7.83, 12.22], ["e4", 12.22, 16.78], ["e5", 16.78, 20.06], ["e6", 20.06, 22.54]];
+// Trayectoria del cursor en E1 (de la tarjeta del pedido, en el ritmo de la voz)
+window.render = (t) => {
+  escenas.forEach(([id, a, b]) => $(id).style.display = dentro(t, a, b) ? "block" : "none");
+  JDT.fondo(bg, t);
+
+  // E1: el pedido ya resuelto desde el cuadro 0; el cursor hace clic y la última fila se marca
+  if (dentro(t, 0, 4.22)) {
+    const p = $("p1"); p.style.opacity = 1;
+    const cx = lerp(960, 560, seg(t, .5, 1.8, "inOutCubic")), cy = lerp(1400, 980, seg(t, .5, 1.8, "inOutCubic"));
+    $("cur").style.left = cx + "px"; $("cur").style.top = cy + "px";
+    const k = seg(t, 1.9, 2.4, "outExpo");
+    $("clic").style.left = "515px"; $("clic").style.top = "1005px";
+    $("clic").style.opacity = t > 1.85 && t < 2.5 ? (1 - seg(t, 1.9, 2.5)) : 0;
+    $("clic").style.transform = `scale(${lerp(.4, 1.6, k)})`;
+    $("ok3").style.opacity = seg(t, 2.1, 2.3, "outBack");
+    $("barra").style.width = "100%";
+  }
+
+  // E2: el antes en papel; cada pieza se pega en pasos cortos (stop motion)
+  if (dentro(t, 4.22, 7.83)) {
+    const q = Math.floor(t * 10) / 10;
+    [["pa", 4.3], ["pb", 4.8], ["pc", 5.3], ["pd", 5.8]].forEach(([id, a]) => {
+      const k = seg(q, a, a + .3, "outBack");
+      $(id).style.opacity = clamp(k * 1.5);
+      $(id).style.transform = `${$(id).style.transform.replace(/scale\([^)]*\)/, "")} scale(${lerp(1.2, 1, clamp(k))})`;
+    });
+  }
+
+  // E3: el coordinador reparte el trabajo; cada agente marca su parte (giro con destello)
+  if (dentro(t, 7.83, 12.22)) {
+    const ln = ["l1", "l2", "l3", "l4"];
+    ln.forEach((id, i) => { $(id).style.strokeDashoffset = (t - 8.2 - i * .15) * -60; $(id).style.opacity = seg(t, 8.1 + i * .1, 8.5 + i * .1); });
+    ["a1", "a2", "a3", "a4"].forEach((id, i) => { $(id).style.opacity = seg(t, 8.3 + i * .15, 8.7 + i * .15); });
+    ["v1", "v2", "v3", "v4"].forEach((id, i) => { $(id).style.opacity = seg(t, 9.6 + i * .3, 9.8 + i * .3, "outBack"); });
+    $("nodo").style.transform = `scale(${lerp(.9, 1.06, Math.sin(t * 4) * .5 + .5)})`;
+    }
+  JDT.flash($("fl"), t > 11 && t < 11.2 ? .5 * (1 - (t - 11) / .2) : 0);
+
+  // E4: notificaciones que caen con orden; la última línea deja el registro
+  if (dentro(t, 12.22, 16.78)) {
+    [["t4a", 12.3], ["t4b", 13.0], ["t4c", 13.7]].forEach(([id, a]) => {
+      const k = seg(t, a, a + .5, "outBack");
+      $(id).style.opacity = clamp(k * 1.4);
+      $(id).style.transform = `translateY(${lerp(-120, 0, k)}px)`;
+    });
+  }
+
+  // E5: remate en amarillo; el vapor del tinto sube
+  if (dentro(t, 16.78, 20.06)) {
+    ["v5a", "v5b", "v5c"].forEach((id, i) => {
+      const s = (t * 1.2 + i * .33) % 1;
+      $(id).style.top = lerp(700, 610, s) + "px"; $(id).style.opacity = (.55 * Math.sin(Math.PI * s)).toFixed(3);
+    });
+  }
+
+  // E6: cierre: logo, payoff y CTA
+  if (dentro(t, 20.06, 22.54)) {
+    $("logo").style.opacity = seg(t, 20.06, 20.4, "lineal");
+    $("c6").style.opacity = seg(t, 20.3, 20.8, "outQuart");
+    $("c6").style.transform = `translateY(${lerp(50, 0, seg(t, 20.3, 21, "outExpo"))}px)`;
+  }
+
+  // barrido entre capítulos (uno solo, al cambiar a la escena de papel)
+  fg.clearRect(0, 0, JDT.W, JDT.H);
+  const kb = t > 4.2 && t < 4.6 ? (t - 4.2) / .4 : 0; if (kb > 0 && kb < 1) JDT.barrido(fg, kb);
+};
+</script></body></html>
