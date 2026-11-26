@@ -1,0 +1,489 @@
+{
+ "salida": "videos/2026-11-26-0505-ia-con-revision-humana.mp4",
+ "formato": "Reel vertical 1080x1920, unos 24 s, 6 escenas en POV de creador: gancho de tres señales, una pantalla dividida que reparte los papeles entre la IA y tú, remate en amarillo y voz en off es-CO cercana",
+ "concepto": "POV de dueño de pyme: tres señales de que el correo te maneja (contestas de noche, se pierden solicitudes, copias datos a mano); la pantalla se parte en dos, la IA ordena y prepara arriba, tú decides abajo, y el remate es un botón Enviar que solo aparece cuando tú lo apruebas.",
+ "produccion": "Estilos: creator-autentico (principal) + pantalla-dividida-dinamica (apoyo) + gancho tres-senales + ritmo mixto. Rasgos de creador: rótulo POV tipo pie de foto desde el cuadro 0 en el gancho, cámara en mano (latido en el gancho, balanceo en el conflicto) y notas en primera persona en burbuja (yo, otra vez a medianoche / yo: leo, ajusto y envío). Gancho con titular completo y quieto desde t=0, sobre fondo oscuro; las tres señales caen en la escena 2 como tarjetas que entran cada una con su golpe (izquierda, derecha, pop) junto a un personaje triste. Apoyo en una sola escena dividida: arriba LA IA ordena y prepara, abajo TÚ decides, el corte diagonal amarillo explica el reparto de papeles. Remate en look amarillo con el único momento fuerte: destello cuando entra el botón Enviar. JDT y el servicio en look azul con un flujo correo, IA, tú. Cierre con logo JDT y @technologicsjdt. Transiciones suaves (desliza, persiana, fundido, zoom).",
+ "fuente": "marca.md",
+ "url": "jdt:ia-con-revision-humana",
+ "titulo": "La IA ordena tus correos, tú decides qué se envía",
+ "tema": "La IA ordena tus correos, tú decides qué se envía (automatización con IA y revisión humana)",
+ "tendencias": {
+  "video": "creator-autentico",
+  "apoyo": "pantalla-dividida-dinamica",
+  "gancho": "tres-senales",
+  "ritmo": "mixto",
+  "banner": "vidrio-liquido",
+  "pulso": "2026-11-26: búsquedas Reels y motion B2B 2026, evidencia limitada a titulares",
+  "fuentes": [
+   "https://metricool.com/es/tendencias-instagram",
+   "https://advids.co/design/video-style-guide-for-b2b-digital-experience-platform-saas-platform-30-visual-examples"
+  ]
+ },
+ "escenas": [
+  {
+   "tipo": "libre",
+   "texto": "3 señales: tu correo *te maneja*",
+   "voz": "Tres señales de que tu correo te maneja.",
+   "duracion": 2.6,
+   "camara": "latido",
+   "elementos": [
+    {
+     "el": "forma",
+     "forma": "pildora",
+     "x": 22,
+     "y": 40,
+     "ancho": 26,
+     "alto": 4.2,
+     "color": "amarillo",
+     "t": 0,
+     "entra": "aparece"
+    },
+    {
+     "el": "texto",
+     "texto": "POV",
+     "x": 22,
+     "y": 40,
+     "tam": "s",
+     "color": "fondo",
+     "t": 0,
+     "entra": "aparece"
+    },
+    {
+     "el": "texto",
+     "texto": "abres el correo",
+     "x": 62,
+     "y": 40,
+     "tam": "s",
+     "color": "gris",
+     "t": 0,
+     "entra": "aparece"
+    },
+    {
+     "el": "forma",
+     "forma": "anillo",
+     "x": 50,
+     "y": 60,
+     "ancho": 44,
+     "color": "borde",
+     "t": 0,
+     "entra": "aparece",
+     "mueve": "late"
+    },
+    {
+     "el": "icono",
+     "nombre": "correo",
+     "x": 50,
+     "y": 60,
+     "tam": 28,
+     "color": "amarillo",
+     "t": 0,
+     "entra": "aparece",
+     "mueve": "tiembla"
+    },
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 32,
+     "y": 80,
+     "ancho": 9,
+     "color": "superficie",
+     "t": 0.1,
+     "entra": "pop"
+    },
+    {
+     "el": "texto",
+     "texto": "1",
+     "x": 32,
+     "y": 80,
+     "tam": "m",
+     "color": "amarillo",
+     "t": 0.1,
+     "entra": "pop"
+    },
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 50,
+     "y": 80,
+     "ancho": 9,
+     "color": "superficie",
+     "t": 0.2,
+     "entra": "pop"
+    },
+    {
+     "el": "texto",
+     "texto": "2",
+     "x": 50,
+     "y": 80,
+     "tam": "m",
+     "color": "amarillo",
+     "t": 0.2,
+     "entra": "pop"
+    },
+    {
+     "el": "forma",
+     "forma": "circulo",
+     "x": 68,
+     "y": 80,
+     "ancho": 9,
+     "color": "superficie",
+     "t": 0.3,
+     "entra": "pop"
+    },
+    {
+     "el": "texto",
+     "texto": "3",
+     "x": 68,
+     "y": 80,
+     "tam": "m",
+     "color": "amarillo",
+     "t": 0.3,
+     "entra": "pop"
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "voz": "Uno: contestas de noche. Dos: se pierden solicitudes. Tres: copias datos a mano.",
+   "duracion": 5,
+   "camara": "paneo",
+   "transicion": "desliza-izq",
+   "elementos": [
+    {
+     "el": "texto",
+     "texto": "*1*",
+     "x": 12,
+     "y": 30,
+     "tam": "l",
+     "t": 0,
+     "entra": "pop"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Contestas de noche",
+     "x": 56,
+     "y": 30,
+     "ancho": 72,
+     "t": 0,
+     "entra": "izquierda"
+    },
+    {
+     "el": "texto",
+     "texto": "*2*",
+     "x": 12,
+     "y": 44,
+     "tam": "l",
+     "t": 0.28,
+     "entra": "pop"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Se pierden solicitudes",
+     "x": 56,
+     "y": 44,
+     "ancho": 72,
+     "t": 0.28,
+     "entra": "derecha",
+     "mueve": "tiembla"
+    },
+    {
+     "el": "texto",
+     "texto": "*3*",
+     "x": 12,
+     "y": 58,
+     "tam": "l",
+     "t": 0.5,
+     "entra": "pop"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Copias datos a mano",
+     "x": 56,
+     "y": 58,
+     "ancho": 72,
+     "t": 0.5,
+     "entra": "pop"
+    },
+    {
+     "el": "burbuja",
+     "texto": "yo, otra vez a medianoche",
+     "x": 66,
+     "y": 76,
+     "cola": "izq",
+     "ancho": 52,
+     "t": 0.58
+    }
+   ]
+  },
+  {
+   "tipo": "dividida",
+   "etiquetas": [
+    "La IA *ordena*",
+    "*Tú* decides"
+   ],
+   "voz": "La IA clasifica, saca los datos y deja el borrador. Tú decides.",
+   "duracion": 4,
+   "camara": "aleja",
+   "transicion": "persiana"
+  },
+  {
+   "tipo": "libre",
+   "look": "amarillo",
+   "texto": "Nada sale sin *tu visto bueno*",
+   "voz": "Y nada se envía sin tu visto bueno.",
+   "duracion": 2.8,
+   "fx": [
+    "destello"
+   ],
+   "transicion": "fundido",
+   "elementos": [
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 50,
+     "y": 55,
+     "ancho": 84,
+     "alto": 40,
+     "color": "fondo",
+     "t": 0,
+     "entra": "aparece"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Borrador listo",
+     "x": 50,
+     "y": 49,
+     "ancho": 70,
+     "t": 0,
+     "entra": "sube"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Datos: nombre y fecha",
+     "x": 50,
+     "y": 60,
+     "ancho": 70,
+     "t": 0.12,
+     "entra": "sube"
+    },
+    {
+     "el": "forma",
+     "forma": "pildora",
+     "x": 64,
+     "y": 75,
+     "ancho": 42,
+     "alto": 9.5,
+     "color": "fondo",
+     "t": 0.4,
+     "entra": "pop"
+    },
+    {
+     "el": "texto",
+     "texto": "*Enviar*",
+     "x": 64,
+     "y": 75,
+     "tam": "m",
+     "t": 0.4,
+     "entra": "pop"
+    },
+    {
+     "el": "burbuja",
+     "texto": "yo: leo, ajusto y envío",
+     "x": 50,
+     "y": 86,
+     "cola": "ninguna",
+     "ancho": 62,
+     "color": "blanco",
+     "t": 0.35
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "azul",
+   "texto": "*JDT*: IA con revisión humana",
+   "voz": "En JDT automatizamos procesos con IA y revisión humana.",
+   "duracion": 3.4,
+   "transicion": "zoom",
+   "elementos": [
+    {
+     "el": "linea",
+     "x": 27,
+     "y": 52,
+     "a": [
+      41,
+      52
+     ],
+     "estilo": "flecha",
+     "color": "blanco",
+     "pulso": true,
+     "t": 0.12
+    },
+    {
+     "el": "linea",
+     "x": 59,
+     "y": 52,
+     "a": [
+      73,
+      52
+     ],
+     "estilo": "flecha",
+     "color": "blanco",
+     "pulso": true,
+     "t": 0.3
+    },
+    {
+     "el": "texto",
+     "texto": "Llega",
+     "x": 18,
+     "y": 61,
+     "tam": "s",
+     "color": "gris",
+     "t": 0.05
+    },
+    {
+     "el": "texto",
+     "texto": "Ordena",
+     "x": 50,
+     "y": 61,
+     "tam": "s",
+     "color": "gris",
+     "t": 0.22
+    },
+    {
+     "el": "texto",
+     "texto": "*Decides*",
+     "x": 82,
+     "y": 61,
+     "tam": "s",
+     "t": 0.4
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Se adapta a tu proceso",
+     "x": 50,
+     "y": 76,
+     "ancho": 72,
+     "t": 0.45,
+     "entra": "sube"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de *tu proyecto*.",
+   "subtexto": "@technologicsjdt",
+   "voz": "¡Hablemos de tu proyecto!",
+   "duracion": 2.6,
+   "transicion": "fundido"
+  }
+ ],
+ "tiempos": {
+  "inicios": [
+   0.0,
+   2.73,
+   10.37,
+   15.15,
+   17.51,
+   21.09
+  ],
+  "retardo": 0.3,
+  "duracion": 23.57
+ },
+ "direccion": {
+  "hook": "3 señales en letras grandes desde t=0 y un sobre que tiembla: el espectador entiende el tema sin sonido",
+  "payoff": "El botón Enviar que espera el visto bueno humano, luego JDT con su servicio y el CTA",
+  "familias": [
+   "motion-graphics",
+   "mixed-media",
+   "vfx-tracking"
+  ],
+  "beats": [
+   {
+    "inicio": 0,
+    "fin": 2.0,
+    "funcion": "hook",
+    "familia": "motion-graphics",
+    "visual": "Titular «3 señales: tu correo te maneja» y pastilla POV visibles desde t=0; sobre que tiembla dentro de un anillo que late, cámara en latido"
+   },
+   {
+    "inicio": 2.0,
+    "fin": 5.2,
+    "funcion": "contexto",
+    "familia": "motion-graphics",
+    "visual": "Círculos 1-2-3 se fijan y la primera tarjeta entra desde la izquierda; las tarjetas 2 y 3 entran con golpe"
+   },
+   {
+    "inicio": 5.2,
+    "fin": 7.8,
+    "funcion": "tension",
+    "familia": "motion-graphics",
+    "visual": "Paneo lento descubre el conflicto con las tres tarjetas ya visibles"
+   },
+   {
+    "inicio": 7.8,
+    "fin": 9.6,
+    "funcion": "demostracion",
+    "familia": "mixed-media",
+    "visual": "Burbuja de nota en primera persona «yo, otra vez a medianoche» sobre las tarjetas"
+   },
+   {
+    "inicio": 9.6,
+    "fin": 10.37,
+    "funcion": "respiro",
+    "familia": "motion-graphics",
+    "visual": "Plano quieto breve con solo paneo"
+   },
+   {
+    "inicio": 10.37,
+    "fin": 12.7,
+    "funcion": "giro",
+    "familia": "motion-graphics",
+    "visual": "Pantalla dividida: arriba «La IA ordena» sobre fondo gris azulado; barrido de transición al cambio de capítulo"
+   },
+   {
+    "inicio": 12.7,
+    "fin": 15.15,
+    "funcion": "demostracion",
+    "familia": "motion-graphics",
+    "visual": "Corte diagonal amarillo que se dibuja y separa la mitad inferior «Tú decides»"
+   },
+   {
+    "inicio": 15.15,
+    "fin": 16.4,
+    "funcion": "giro",
+    "familia": "vfx-tracking",
+    "visual": "Look amarillo a pantalla completa; el botón Enviar entra con destello (único momento fuerte)"
+   },
+   {
+    "inicio": 16.4,
+    "fin": 17.51,
+    "funcion": "recompensa",
+    "familia": "mixed-media",
+    "visual": "Burbuja oscura «yo: leo, ajusto y envío» sobre las tarjetas de borrador"
+   },
+   {
+    "inicio": 17.51,
+    "fin": 19.6,
+    "funcion": "demostracion",
+    "familia": "motion-graphics",
+    "visual": "Look azul: correo → IA → tú con etiquetas Llega, Ordena, Decides"
+   },
+   {
+    "inicio": 19.6,
+    "fin": 21.09,
+    "funcion": "recompensa",
+    "familia": "motion-graphics",
+    "visual": "Tarjeta «Se adapta a tu proceso» y el servicio de JDT en el titular"
+   },
+   {
+    "inicio": 21.09,
+    "fin": 23.57,
+    "funcion": "cierre",
+    "familia": "motion-graphics",
+    "visual": "Logo JDT, «Hablemos de tu proyecto.» y pastilla @technologicsjdt"
+   }
+  ]
+ },
+ "validacion": "corregido: dos rondas del modelo capaz (CORREGIR, notas internas 6,5 y 8,0). Aplicado: azul #131A3A, persona triste y burbuja a la derecha, «✓ Aprobado por ti», chips de la escena 3, JSON sin iconos no dibujados, sincronía de 12 % en la voz, duración 23,57 s."
+}

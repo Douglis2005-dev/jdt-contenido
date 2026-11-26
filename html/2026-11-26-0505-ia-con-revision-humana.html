@@ -1,0 +1,149 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+.abs{position:absolute}
+.centrado{position:absolute;left:0;right:0;text-align:center;padding:0 60px}
+.tarjeta{position:absolute;border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,.05));border:2px solid rgba(255,255,255,.25);padding:26px 34px;font-weight:800;font-size:58px;box-sizing:border-box}
+.num{display:inline-block;width:86px;height:86px;border-radius:50%;background:#131A3A;color:#FACC15;font-weight:900;font-size:56px;text-align:center;line-height:86px;margin-right:24px;vertical-align:middle}
+.burbuja{position:absolute;background:#FFFFFF;color:#0A0E27;border-radius:36px;padding:24px 34px;font-weight:700;font-size:44px;box-sizing:border-box}
+.circ{position:absolute;border-radius:50%;width:230px;height:230px;margin-left:-115px;margin-top:-115px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:50px;border:4px solid #2A3460;background:#131A3A}
+.chip{position:absolute;padding:22px 36px;border-radius:999px;background:#0A0E27;color:#FFFFFF;border:2px solid #2A3460;font-weight:800;font-size:50px;opacity:0;white-space:nowrap}
+.chip.am{background:#FACC15;color:#0A0E27;border-color:#FACC15}
+.lab{position:absolute;font-weight:700;font-size:44px;color:#94A3B8;text-align:center;width:300px;margin-left:-150px}
+.amar{background:#FACC15;color:#0A0E27}
+.amar .clave{color:#0A0E27}
+.azulfondo{background:#131A3A}
+</style></head><body>
+<div id="fl" class="capa" style="background:#FFFFFF;opacity:0;z-index:8"></div>
+
+<!-- ESCENA 1 · 0–2,73 s · gancho: POV + titular visible desde t=0 -->
+<div id="e1" class="capa"><div id="w1" style="position:absolute;inset:0">
+  <div class="abs pildora" style="left:50%;top:330px;transform:translateX(-50%);white-space:nowrap">POV · abres el correo</div>
+  <div class="centrado titulo" style="top:440px;font-size:116px">3 señales: tu correo <span class="clave">te maneja</span></div>
+  <div id="ring" class="abs" style="left:50%;top:1100px;width:420px;height:420px;margin-left:-210px;border-radius:50%;border:4px solid #2A3460"></div>
+  <div id="sobre" class="abs" style="left:50%;top:1170px;width:220px;height:150px;margin-left:-110px;border-radius:18px;background:#FACC15"></div>
+  <div id="c1a" class="circ" style="left:200px;top:1560px;opacity:0"><span class="clave">1</span></div>
+  <div id="c1b" class="circ" style="left:540px;top:1560px;opacity:0"><span class="clave">2</span></div>
+  <div id="c1c" class="circ" style="left:880px;top:1560px;opacity:0"><span class="clave">3</span></div>
+</div></div>
+
+<!-- ESCENA 2 · 2,73–10,37 s · las tres señales -->
+<div id="e2" class="capa"><div id="w2" style="position:absolute;inset:0">
+  <div class="tarjeta" id="k1" style="left:60px;top:520px;width:960px"><span class="num">1</span>Contestas de noche</div>
+  <div class="tarjeta" id="k2" style="left:60px;top:800px;width:960px"><span class="num">2</span>Se pierden solicitudes</div>
+  <div class="tarjeta" id="k3" style="left:60px;top:1080px;width:960px"><span class="num">3</span>Copias datos a mano</div>
+  <div class="abs" id="cab" style="left:150px;top:1400px;width:170px;height:170px;border-radius:50%;background:#94A3B8;opacity:0"><div class="abs" style="left:38px;top:58px;width:22px;height:22px;border-radius:50%;background:#0A0E27"></div><div class="abs" style="left:110px;top:58px;width:22px;height:22px;border-radius:50%;background:#0A0E27"></div><div class="abs" style="left:50px;top:112px;width:70px;height:34px;border-top:8px solid #0A0E27;border-radius:50% 50% 0 0/100% 100% 0 0"></div></div><div class="abs" id="cue" style="left:120px;top:1560px;width:240px;height:200px;border-radius:120px 120px 24px 24px;background:#94A3B8;opacity:0"></div><div class="burbuja" id="bur2" style="left:270px;top:1290px;width:740px;opacity:0">yo, otra vez a medianoche</div>
+</div></div>
+
+<!-- ESCENA 3 · 10,37–15,15 s · pantalla dividida: la IA ordena, tú decides -->
+<div id="e3" class="capa"><div id="w3" style="position:absolute;inset:0">
+  <div class="abs" style="left:0;top:0;width:1080px;height:960px;background:#131A3A"></div>
+  <div class="abs" style="left:0;top:960px;width:1080px;height:960px;background:#0A0E27"></div>
+  <div class="centrado titulo" style="top:420px;font-size:110px">La IA <span class="clave">ordena</span></div>
+  <div class="centrado titulo" style="top:1320px;font-size:110px"><span class="clave">Tú</span> decides</div>
+  <div class="chip" id="ch1" style="left:90px;top:555px">Clasifica</div>
+  <div class="chip" id="ch2" style="left:90px;top:650px">Saca los datos</div>
+  <div class="chip" id="ch3" style="left:90px;top:745px">Deja el borrador</div>
+  <div class="chip am" id="ch4" style="left:90px;top:1460px">Revisas y apruebas</div>
+  <div id="diag" class="abs" style="left:-200px;top:950px;width:1480px;height:16px;background:#FACC15;transform-origin:0 50%"></div>
+</div></div>
+
+<!-- ESCENA 4 · 15,15–17,51 s · look amarillo: el único momento fuerte -->
+<div id="e4" class="capa"><div id="w4" style="position:absolute;inset:0" class="amar">
+  <div class="centrado titulo" style="top:360px;font-size:110px">Nada sale sin <span class="clave">tu visto bueno</span></div>
+  <div class="tarjeta" id="k4a" style="left:90px;top:640px;width:900px;background:#0A0E27;color:#FFFFFF;border-color:#0A0E27">Borrador listo</div>
+  <div class="tarjeta" id="k4b" style="left:90px;top:820px;width:900px;background:#0A0E27;color:#FFFFFF;border-color:#0A0E27">Datos: nombre y fecha</div>
+  <div class="abs" id="enviar" style="left:540px;top:1080px;width:420px;height:150px;border-radius:999px;background:#0A0E27;color:#FACC15;font-weight:900;font-size:70px;text-align:center;line-height:150px">Enviar</div>
+  <div class="abs" id="aprob" style="left:0;right:0;top:1270px;text-align:center;color:#0A0E27;font-weight:900;font-size:56px;opacity:0">✓ Aprobado por ti</div><div class="burbuja" id="bur4" style="left:160px;top:1360px;width:760px;background:#0A0E27;color:#FFFFFF;opacity:0">yo: leo, ajusto y envío</div>
+</div></div>
+
+<!-- ESCENA 5 · 17,51–21,09 s · look azul: JDT y el servicio -->
+<div id="e5" class="capa"><div id="w5" style="position:absolute;inset:0" class="azulfondo">
+  <div class="centrado titulo" style="top:380px;font-size:100px">JDT: <span class="clave">IA con revisión humana</span></div>
+  <div class="abs" style="left:150px;top:880px;width:780px;height:6px;background:#FFFFFF"></div>
+  <div class="circ" style="left:150px;top:880px;background:#0A0E27;border-color:#FFFFFF;font-size:60px">@</div>
+  <div class="circ" style="left:540px;top:880px;background:#0A0E27;border-color:#FACC15;color:#FACC15;font-size:60px">IA</div>
+  <div class="circ" style="left:930px;top:880px;background:#FACC15;color:#0A0E27;border-color:#FACC15;font-size:60px">Tú</div>
+  <div class="lab" style="left:150px;top:1040px">Llega</div>
+  <div class="lab" style="left:540px;top:1040px">Ordena</div>
+  <div class="lab" style="left:930px;top:1040px">Decides</div>
+  <div class="tarjeta" style="left:90px;top:1300px;width:900px;background:#0A0E27;border-color:#0A0E27;font-size:52px">Se adapta a tu proceso</div>
+</div></div>
+
+<!-- ESCENA 6 · 21,09–23,57 s · cierre: logo, CTA y @technologicsjdt -->
+<div id="e6" class="capa"><div id="w6" style="position:absolute;inset:0">
+  <img src="../recursos/logo.jpeg" class="abs" style="left:290px;top:480px;width:500px;border-radius:90px;opacity:0" id="logo6">
+  <div class="centrado titulo" id="cta6" style="top:1040px;font-size:120px;opacity:0">Hablemos de <span class="clave">tu proyecto.</span></div>
+  <div class="abs" style="left:0;right:0;top:1360px;text-align:center;opacity:0" id="pill6"><span class="pildora" style="font-size:58px;padding:22px 48px">@technologicsjdt</span></div>
+</div></div>
+
+<div id="hud" class="hud"></div>
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+// Tiempos reales de la voz (sincronia.py): inicios de cada escena y duracion total
+const I = [0, 2.73, 10.37, 15.15, 17.51, 21.09], DUR = 23.57;
+const T = {e1:[I[0],I[1]], e2:[I[1],I[2]], e3:[I[2],I[3]], e4:[I[3],I[4]], e5:[I[4],I[5]], e6:[I[5],DUR]};
+window.DURACION = DUR;
+const dentro = (t, a, b) => t >= a && t < b;
+window.render = (t) => {
+  for (const id in T) $(id).style.display = dentro(t, T[id][0], T[id][1]) ? "block" : "none";
+  JDT.fondo(bg, t);
+  // E1: latido de camara en mano; el sobre tiembla y caen los tres circulos
+  if (dentro(t, T.e1[0], T.e1[1])) {
+    $("w1").style.transform = `scale(${1 + .012 * Math.sin(t * 2 * Math.PI * 2)})`;
+    $("ring").style.transform = `scale(${1 + .03 * Math.sin(t * 2 * Math.PI * 1.2)})`;
+    $("sobre").style.transform = `rotate(${Math.sin(t * 22) * 2.5}deg)`;
+    [["c1a", .1], ["c1b", .2], ["c1c", .3]].forEach(([id, d]) => {
+      const k = seg(t, d, d + .4, "outBack"); $(id).style.opacity = clamp(k * 1.2); $(id).style.transform = `scale(${k})`;
+    });
+  }
+  // E2: paneo lento y tarjetas que entran con su golpe
+  if (dentro(t, T.e2[0], T.e2[1])) {
+    const lt = t - T.e2[0], dur = T.e2[1] - T.e2[0];
+    $("w2").style.transform = `translateX(${lerp(0, -30, clamp(lt / dur))}px)`;
+    $("k1").style.transform = `translateX(${lerp(-900, 0, seg(lt, 0, .5, "outExpo"))}px)`;
+    $("k2").style.transform = `translateX(${lerp(900, 0, seg(lt, .28, .78, "outExpo"))}px)`;
+    $("k3").style.opacity = seg(lt, .5, .8, "outExpo"); $("k3").style.transform = `scale(${lerp(.8, 1, seg(lt, .5, .8, "outBack"))})`;
+    $("bur2").style.opacity = seg(lt, .58, .9, "outExpo");
+    $("cab").style.opacity = $("cue").style.opacity = seg(lt, .6, 1, "outExpo");
+    $("cab").style.transform = $("cue").style.transform = `rotate(${Math.sin(t * 3) * 2}deg)`;
+    $("k2").style.opacity = 1 - .5 * Math.sin(Math.PI * clamp((lt - 4) / 2));
+  }
+  // E3: pantalla dividida; el corte amarillo se dibuja y explica el reparto
+  if (dentro(t, T.e3[0], T.e3[1])) {
+    const lt = t - T.e3[0];
+    $("diag").style.transform = `rotate(-8deg) scaleX(${seg(lt, 0, 1.2, "inOutCubic")})`;
+    $("ch1").style.opacity = seg(lt, .3, .6, "outExpo"); $("ch2").style.opacity = seg(lt, 1.0, 1.3, "outExpo"); $("ch3").style.opacity = seg(lt, 1.7, 2.0, "outExpo");
+    $("ch4").style.opacity = seg(lt, 2.4, 2.7, "outExpo");
+    $("w3").style.transform = `scale(${lerp(1.02, 1, seg(lt, 0, 2, "outExpo"))})`;
+  }
+  // E4: look amarillo; tarjetas y boton Enviar con destello (unico momento fuerte)
+  if (dentro(t, T.e4[0], T.e4[1])) {
+    const lt = t - T.e4[0];
+    $("k4a").style.transform = `translateY(${lerp(60, 0, seg(lt, 0, .4, "outExpo"))}px)`;
+    $("k4b").style.transform = `translateY(${lerp(60, 0, seg(lt, .12, .52, "outExpo"))}px)`;
+    const k = seg(lt, .4, .75, "outBack"); $("enviar").style.transform = `scale(${k})`; $("enviar").style.opacity = clamp(k * 2);
+    $("bur4").style.opacity = seg(lt, .35, .7, "outExpo");
+    $("aprob").style.opacity = seg(lt, .8, 1.1, "outExpo");
+    $("fl").style.opacity = dentro(lt, .4, .54) ? .85 : 0;
+  }
+  // E5: flujo correo, IA, tu
+  if (dentro(t, T.e5[0], T.e5[1])) {
+    const lt = t - T.e5[0];
+    $("w5").style.transform = `scale(${lerp(1.04, 1, seg(lt, 0, 1, "outExpo"))})`;
+  }
+  // E6: logo, CTA y @technologicsjdt
+  if (dentro(t, T.e6[0], T.e6[1])) {
+    const lt = t - T.e6[0];
+    $("logo6").style.opacity = seg(lt, 0, .5, "outQuart");
+    $("cta6").style.opacity = seg(lt, .3, .8, "outQuart");
+    $("cta6").style.transform = `translateY(${lerp(60, 0, seg(lt, .3, .9, "outExpo"))}px)`;
+    $("pill6").style.opacity = seg(lt, 1.0, 1.4, "outQuart");
+  }
+  // barrido unico entre la dividida y el look amarillo
+  fg.clearRect(0, 0, JDT.W, JDT.H);
+  const idx = Object.keys(T).findIndex(k => dentro(t, T[k][0], T[k][1]));
+  JDT.hud($("hud"), t, DUR, ["01 · GANCHO", "02 · LAS SEÑALES", "03 · LA IDEA", "04 · EL VISTO BUENO", "05 · JDT", "06 · CIERRE"][Math.max(0, idx)]);
+};
+</script></body></html>
