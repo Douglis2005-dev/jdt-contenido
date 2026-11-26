@@ -1,0 +1,140 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#0A0E27;position:relative;font-family:'Montserrat',Inter,sans-serif}
+.s{position:absolute;left:0;top:0;width:1080px;height:1920px;display:none}
+.am{background:#FACC15}
+.nv{background:#0A0E27}
+.abs{position:absolute}
+.txt{position:absolute;left:90px;width:900px;text-align:center;line-height:1.08;font-weight:800}
+.bloque{position:absolute;border-radius:14px;background:#94A3B8;opacity:.55}
+.pill{position:absolute;background:#FACC15;color:#0A0E27;font-weight:800;border-radius:70px;padding:22px 44px;font-size:56px;white-space:nowrap;transform:translateX(-50%)}
+.card{position:absolute;background:#131A3A;border:4px solid #FACC15;border-radius:30px;overflow:hidden}
+.txt span{color:#FACC15}
+#t1 span{background:#0A0E27;color:#FACC15;padding:0 18px;border-radius:14px}
+.linea{position:absolute;height:22px;border-radius:11px;background:#94A3B8;opacity:.6}
+</style></head><body>
+
+<!-- ESCENA 1 (0 – 7,55 s): gancho en pantalla amarilla, ojo gigante y titular -->
+<div id="e1" class="s am">
+  <div class="abs" id="ojo" style="left:330px;top:200px;width:420px;height:280px;border-radius:50%;background:#fff;overflow:hidden">
+    <div class="abs" id="pup" style="width:150px;height:150px;border-radius:50%;background:#0A0E27;left:135px;top:65px"></div>
+  </div>
+  <div class="txt" id="t1" style="top:600px;font-size:112px;color:#0A0E27">Tu web tiene<br><span>un lector nuevo</span></div>
+  <div class="card" id="br1" style="left:110px;top:1960px;width:860px;height:560px;background:#0A0E27">
+    <div class="linea" style="left:60px;top:70px;width:520px;height:34px;background:#FACC15;opacity:1"></div>
+    <div class="linea" style="left:60px;top:150px;width:700px"></div>
+    <div class="linea" style="left:60px;top:200px;width:640px"></div>
+    <div class="linea" style="left:60px;top:250px;width:690px"></div>
+    <div class="linea" style="left:60px;top:300px;width:420px"></div>
+    <div class="linea" style="left:60px;top:380px;width:300px;height:60px;background:#FACC15;opacity:.9"></div>
+  </div>
+</div>
+
+<!-- ESCENA 2 (7,55 – 12,79 s): la web confusa; el lector duda -->
+<div id="e2" class="s nv">
+  <div class="txt" id="t2" style="top:300px;font-size:96px;color:#fff">Si no dice<br><span>qué vendes</span>,<br>nadie entiende</div>
+  <div class="txt" id="q2" style="left:700px;top:1700px;width:200px;font-size:120px;color:#FACC15;opacity:0">?</div>
+  <div class="abs" id="ojo2" style="left:400px;top:1730px;width:280px;height:200px;border-radius:50%;background:#fff;overflow:hidden">
+    <div class="abs" id="pup2" style="width:100px;height:100px;border-radius:50%;background:#0A0E27;left:90px;top:50px"></div>
+  </div>
+</div>
+
+<!-- ESCENA 3 (12,79 – 17,56 s): los bloques se ordenan; destello en el botón -->
+<div id="e3" class="s nv">
+  <div class="txt" id="t3" style="top:280px;font-size:92px;color:#fff">Claro para<br><span>personas</span> y para <span>máquinas</span></div>
+</div>
+
+<!-- ESCENA 4 (17,56 – 23,82 s): servicio JDT y cierre -->
+<div id="e4" class="s nv">
+  <div class="abs" id="srv" style="left:0;top:520px;width:1080px;height:200px;text-align:center"></div>
+  <div class="txt" id="t4" style="top:820px;font-size:112px;color:#fff">Una web que<br><span>hable claro</span></div>
+  <div class="abs" id="cierre" style="left:0;top:700px;width:1080px;opacity:0">
+    <img src="../recursos/logo.jpeg" style="display:block;margin:0 auto;width:360px;border-radius:70px">
+    <div class="txt" style="position:relative;top:90px;font-size:96px;color:#fff">Hablemos<br>de tu <span>proyecto.</span></div>
+    <div style="position:relative;top:230px;text-align:center"><span class="pildora" style="background:#FACC15;color:#0A0E27;font-size:52px;padding:18px 40px;border-radius:70px;font-weight:800">@technologicsjdt</span></div>
+  </div>
+</div>
+
+<!-- CAPA COMPARTIDA (7,55 – 17,56 s): la web que pasa de confusa a ordenada -->
+<div id="gl" class="s" style="background:transparent">
+  <div class="card" id="web" style="left:110px;top:800px;width:860px;height:900px;background:#131A3A"><div id="conf" style="position:absolute;inset:0"></div></div>
+  <div class="abs" id="boton" style="left:290px;top:1500px;width:500px;height:130px;border-radius:70px;background:#FACC15;color:#0A0E27;font-weight:800;font-size:58px;text-align:center;line-height:130px">Contacto</div>
+  <div class="abs" id="lectores" style="left:0;top:1720px;width:1080px;height:120px;color:#fff;font-weight:700;font-size:50px;text-align:center;opacity:0">Persona &nbsp;·&nbsp; IA &nbsp;·&nbsp; las dos la entienden</div>
+</div>
+
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+window.DURACION = 23.82;
+const dentro = (t, a, b) => t >= a && t < b;
+const rnd = i => { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+const BLOQ = [];
+for (let i = 0; i < 9; i++) { const d = document.createElement("div"); d.className = "bloque"; $("conf").appendChild(d); BLOQ.push(d); }
+const ALTURAS = [60, 40, 70, 40, 50, 80, 40, 60, 50];
+// posiciones finales (grilla de web ordenada) dentro de la tarjeta #web (860 x 900)
+const FIN = [[60,50,740,120],[60,210,250,260],[335,210,250,260],[610,210,190,260],[60,500,740,70],[60,600,500,40],[60,680,0,0],[60,760,0,0],[60,820,0,0]];
+const CONF = [[60,60,520,60],[460,140,300,60],[80,250,380,50],[480,300,300,50],[120,400,560,60],[60,500,260,50],[400,520,380,50],[80,620,480,50],[560,600,240,50]];
+const HOLD = [0,0,0,0,0,0,0,0,0];
+window.render = (t) => {
+  ["e1","e2","e3","e4"].forEach((id, i) => $(id).style.display = dentro(t, [0,7.55,12.79,17.56][i], [7.55,12.79,17.56,23.82][i]) ? "block" : "none");
+  $("gl").style.display = dentro(t, 7.55, 17.56) ? "block" : "none";
+
+  // ESCENA 1: ojo que parpadea y mira a la tarjeta; aparece el navegador
+  if (dentro(t, 0, 7.55)) {
+    const cierra = dentro(t, 2.6, 2.75) || dentro(t, 5.2, 5.33);
+    $("ojo").style.transform = `scaleY(${cierra ? 0.08 : 1})`;
+    $("pup").style.left = (135 + 80 * Math.sin(clamp(t, 0, 4.2) * 1.6)) + "px";
+    const fuera = seg(t, 6.2, 6.8, "lineal");
+    $("t1").style.opacity = 1 - fuera;
+    $("br1").style.top = lerp(1900, 1080, seg(t, 2.0, 3.2, "outExpo")) + "px";
+    $("ojo").style.opacity = 1 - seg(t, 6.6, 7.2, "lineal");
+  }
+
+  // ESCENA 2: la web confusa se mueve suave; el ojo se entrecierra
+  if (dentro(t, 7.55, 12.79)) {
+    $("t2").style.opacity = seg(t, 7.6, 8.1, "lineal");
+    CONF.forEach(([x, y, w, h], i) => {
+      const b = $("conf").children[i]; if (!b) return;
+      const j = 10 * Math.sin(t * 1.3 + i * 1.7);
+      b.style.left = (x + j) + "px"; b.style.top = (y + 8 * Math.cos(t * 1.1 + i)) + "px";
+      b.style.width = w + "px"; b.style.height = h + "px";
+      b.style.opacity = seg(t, 7.7 + i * 0.1, 8.2 + i * 0.1, "lineal") * 0.6;
+    });
+    $("q2").style.opacity = seg(t, 10.0, 10.4, "lineal");
+    $("ojo2").style.transform = `scaleY(${lerp(1, 0.35, seg(t, 8.0, 8.8, "inOutCubic"))})`;
+    $("pup2").style.left = (90 + 60 * Math.sin(t * 1.9)) + "px";
+  }
+
+  // ESCENA 3: los bloques se ordenan (datos que se arman); destello en el botón
+  if (dentro(t, 12.79, 17.56)) {
+    $("t3").style.opacity = seg(t, 12.85, 13.3, "lineal");
+    const p = seg(t, 12.9, 14.6, "outExpo");
+    CONF.forEach(([x, y, w, h], i) => {
+      const b = $("conf").children[i]; if (!b) return;
+      const f = FIN[i] || [0,0,0,0];
+      b.style.left = lerp(x, f[0], p) + "px"; b.style.top = lerp(y, f[1], p) + "px";
+      b.style.width = lerp(w, f[2], p) + "px"; b.style.height = lerp(h, f[3], p) + "px";
+      b.style.opacity = 0.6 + 0.4 * p;
+    });
+    // mover los bloques de la web de la escena 2 a la tarjeta de la escena 3
+    const boton = $("boton");
+    const g = seg(t, 15.0, 15.6, "outExpo") * (1 - seg(t, 16.2, 16.8, "lineal"));
+    boton.style.boxShadow = `0 0 ${70 * g}px ${20 * g}px rgba(250,204,21,${0.8 * g})`;
+    boton.style.transform = `scale(${1 + 0.06 * g})`;
+    $("lectores").style.opacity = seg(t, 15.6, 16.0, "lineal") * (1 - seg(t, 17.3, 17.5, "lineal"));
+  }
+
+  // ESCENA 4: servicio JDT, titular y cierre
+  if (dentro(t, 17.56, 23.82)) {
+    const srv = $("srv");
+    const serv = "Desarrollo web a tu medida";
+    srv.innerHTML = `<span class="pill" style="left:540px;top:0;opacity:${seg(t, 17.6, 17.9, "lineal")}">${serv}</span><div style="position:absolute;left:0;width:1080px;top:150px;color:#94A3B8;font-weight:700;font-size:50px;opacity:${seg(t, 18.6, 19.0, "lineal")}">Clara · Rápida · Fácil de encontrar</div>`;
+    $("t4").style.opacity = t < 19.5 ? 0 : (t < 20.6 ? seg(t, 19.5, 19.9, "lineal") : 1 - seg(t, 20.6, 20.9, "lineal"));
+    $("t4").style.transform = `translateY(${lerp(40, 0, seg(t, 19.5, 20.0, "outExpo"))}px)`;
+    $("srv").style.opacity = 1 - seg(t, 19.2, 19.5, "lineal");
+    $("cierre").style.opacity = seg(t, 21.0, 21.5, "lineal");
+    $("cierre").style.transform = `translateY(${lerp(50, 0, seg(t, 21.0, 21.6, "outExpo"))}px)`;
+  }
+};
+</script>
+</body></html>

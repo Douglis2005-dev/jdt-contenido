@@ -1,0 +1,151 @@
+{
+  "salida": "videos/2026-11-26-0706-lector-nuevo-web.mp4",
+  "formato": "Reel vertical 1080x1920, unos 22 s, 4 escenas. Gancho de afirmación absurda (un lector nuevo en tu web), problema, demostración de que una web clara se arma sola y cierre de JDT.",
+  "concepto": "Tu web tiene un lector nuevo: una inteligencia artificial que la lee igual que una persona. Si la página no dice claro qué vendes, ninguno de los dos entiende. Un ojo grande recorre una web confusa, después las piezas se ordenan solas y el botón de contacto brilla: JDT construye webs claras para personas y para máquinas.",
+  "produccion": "Minimalismo audaz en pantalla completa amarilla con tinta azul marino para el gancho (un ojo gigante y una frase); se pasa a azul para el problema, con la página gris desordenada; datos que se arman como apoyo en una sola escena (bloques que se ordenan en una web limpia); destello solo en el botón de contacto (giro); cierre en azul con logo y CTA. Transiciones secas: persiana y círculo.",
+  "fuente": "marca.md",
+  "url": "jdt:web-lector-nuevo",
+  "titulo": "¿Quién lee tu web: una persona o una IA?",
+  "tema": "Tu web la leen personas y también sistemas de IA: si no dice claro qué vendes, ninguno la entiende (desarrollo web de JDT)",
+  "tendencias": {
+    "video": "minimalismo-audaz",
+    "apoyo": "datos-que-se-arman",
+    "gancho": "afirmacion-absurda",
+    "ritmo": "rapido",
+    "banner": "bento",
+    "pulso": "2026-11-26: titulares de búsquedas sobre Reels 2026 (reasonwhy.es, metricool.com) y motion B2B; evidencia limitada a titulares, sin cifras",
+    "fuentes": [
+      "https://www.reasonwhy.es/actualidad/estudio-tendencias-redes-sociales-metricool-2026",
+      "https://metricool.com/es/tendencias-instagram"
+    ]
+  },
+  "escenas": [
+    {
+      "tipo": "libre",
+      "texto": "Tu web tiene *un lector nuevo*",
+      "voz": "¡Tu página web ya tiene un lector nuevo! Una inteligencia artificial que también la lee, y no se aburre."
+    },
+    {
+      "tipo": "libre",
+      "texto": "Si no dice *qué vendes*, nadie entiende",
+      "voz": "Si no dice claro qué vendes, ni la persona ni la IA entienden nada."
+    },
+    {
+      "tipo": "libre",
+      "texto": "Claro para *personas* y para *máquinas*",
+      "voz": "En JDT hacemos webs claras, rápidas y fáciles de encontrar."
+    },
+    {
+      "tipo": "cierre",
+      "texto": "",
+      "voz": "Una web que hable claro, para personas y para máquinas. Hablemos de tu proyecto."
+    }
+  ],
+  "direccion": {
+    "hook": "Ojo gigante amarillo a pantalla completa con «Tu web tiene un lector nuevo» desde t=0; sin logo ni intro",
+    "payoff": "Botón de contacto que brilla en una web ordenada; luego JDT con desarrollo web y el CTA",
+    "familias": [
+      "motion-graphics",
+      "mixed-media",
+      "vfx-tracking"
+    ],
+    "beats": [
+      {
+        "inicio": 0,
+        "fin": 2.0,
+        "funcion": "hook",
+        "familia": "motion-graphics",
+        "visual": "Pantalla amarilla, ojo gigante que parpadea y titular «Tu web tiene un lector nuevo» desde t=0"
+      },
+      {
+        "inicio": 2.0,
+        "fin": 4.2,
+        "funcion": "contexto",
+        "familia": "motion-graphics",
+        "visual": "Ventana de navegador azul que entra; el ojo recorre la página de izquierda a derecha"
+      },
+      {
+        "inicio": 4.2,
+        "fin": 6.1,
+        "funcion": "tension",
+        "familia": "mixed-media",
+        "visual": "Bloques de texto desordenado con recortes; la IA aparece como icono de robot a un lado"
+      },
+      {
+        "inicio": 6.1,
+        "fin": 7.55,
+        "funcion": "respiro",
+        "familia": "motion-graphics",
+        "visual": "Plano quieto con paneo lento de la página confusa"
+      },
+      {
+        "inicio": 7.55,
+        "fin": 10.0,
+        "funcion": "tension",
+        "familia": "mixed-media",
+        "visual": "Página gris confusa; el ojo se entrecierra y aparece el gesto de duda de la persona"
+      },
+      {
+        "inicio": 10.0,
+        "fin": 12.79,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "Bloques sueltos sin jerarquía; el texto «qué vendes» queda sin respuesta visible"
+      },
+      {
+        "inicio": 12.79,
+        "fin": 15.0,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Datos que se arman: los bloques se ordenan en encabezado, tres servicios y botón de contacto"
+      },
+      {
+        "inicio": 15.0,
+        "fin": 16.8,
+        "funcion": "giro",
+        "familia": "vfx-tracking",
+        "visual": "Destello amarillo sobre el botón de contacto (único momento fuerte del video)"
+      },
+      {
+        "inicio": 16.8,
+        "fin": 17.56,
+        "funcion": "recompensa",
+        "familia": "mixed-media",
+        "visual": "Icono de persona y robot leyendo la misma página con gesto de acuerdo"
+      },
+      {
+        "inicio": 17.56,
+        "fin": 19.5,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Pastillas de servicio JDT: desarrollo web, clara, rápida, fácil de encontrar"
+      },
+      {
+        "inicio": 19.5,
+        "fin": 21.0,
+        "funcion": "payoff",
+        "familia": "motion-graphics",
+        "visual": "Titular «Una web que hable claro» con la palabra clave subrayada"
+      },
+      {
+        "inicio": 21.0,
+        "fin": 23.82,
+        "funcion": "cierre",
+        "familia": "motion-graphics",
+        "visual": "Logo JDT, «Hablemos de tu proyecto.» y pastilla @technologicsjdt"
+      }
+    ]
+  },
+  "tiempos": {
+    "inicios": [
+      0.0,
+      7.55,
+      12.79,
+      17.56
+    ],
+    "retardo": 0.3,
+    "duracion": 23.82
+  },
+  "duracion": 23.82,
+  "validacion": "corregido: revisión de opus (CORREGIR, nota interna 6,5). Aplicado: estilo amarillo en resaltados, «?» y bloques de la web dentro del borde, cierre sin solaparse con el titular, beneficios en la escena 4 y lectores visibles 15,6–17,5 s. No aplicado: robot con etiqueta IA y zoom de la tarjeta (cambio de identidad del ojo, se evalúa en la rehecha)."
+}
