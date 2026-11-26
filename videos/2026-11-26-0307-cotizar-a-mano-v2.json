@@ -1,0 +1,151 @@
+{
+  "salida": "videos/2026-11-26-0307-cotizar-a-mano-v2.mp4",
+  "formato": "Reel vertical 1080x1920, 15 a 24 s, 5 escenas de vidrio esmerilado con cámara 3D suave, voz en off es-CO y música tenue",
+  "concepto": "Cotizar a mano empaña la venta: cada copiar y pegar escarcha el vidrio hasta que el cliente, una luz dorada del otro lado, se apaga y se va; un barrido dorado del cotizador a medida de JDT limpia el vidrio de una pasada y la cotización aparece clara.",
+  "produccion": "Arranca con un panel de vidrio esmerilado sobre manchas azul marino y una luz dorada (el cliente) con la pregunta visible desde el cuadro 0; en el conflicto, recortes de listas viejas se pegan al vidrio y lo empañan mientras la luz dorada se aleja, pausa quieta con el vidrio opaco; en el giro un arco dorado tipo limpiaparabrisas desempaña el panel de una pasada con leve inclinación 3D; apoyo datos-que-se-arman con filas genéricas del catálogo que se dibujan y ordenan en la cotización; cierre en panel limpio con la luz dorada de vuelta, CTA y @technologicsjdt. Transiciones por cambio de enfoque y empañado, sin cortes duros.",
+  "fuente": "marca.md",
+  "tema": "Cotizar a mano te cuesta clientes (plan B propio de JDT, versión 2)",
+  "tendencias": {
+    "video": "vidrio-liquido",
+    "apoyo": "datos-que-se-arman",
+    "gancho": "pregunta-incomoda",
+    "ritmo": "contemplativo",
+    "banner": "tipografia-gigante",
+    "pulso": "2026-11-26 Metricool y marketing4ecommerce.net: alcance de Reels cae por saturación, menos hashtags; video B2B como confianza en movimiento",
+    "fuentes": [
+      "https://marketing4ecommerce.net/que-funciona-en-instagram-en-2026/",
+      "https://metricool.com/es/tendencias-instagram/"
+    ]
+  },
+  "escenas": [
+    {
+      "id": 1,
+      "tipo": "libre",
+      "texto": "¿Te piden precio y respondes *mañana*?",
+      "voz": "¿Te piden precio y respondes mañana?",
+      "duracion": 0
+    },
+    {
+      "id": 2,
+      "tipo": "libre",
+      "texto": "Copiar, pegar… y el cliente *se fue*.",
+      "voz": "Buscas la lista, copias, pegas, revisas… Uy, no… el cliente ya le compró a otro.",
+      "duracion": 0
+    },
+    {
+      "id": 3,
+      "tipo": "libre",
+      "texto": "Un *cotizador a medida*, hecho por JDT.",
+      "voz": "En JDT te armamos un cotizador a medida, conectado a tu catálogo.",
+      "duracion": 0
+    },
+    {
+      "id": 4,
+      "tipo": "libre",
+      "texto": "Eliges producto. La cotización *sale sola*.",
+      "voz": "Eliges el producto y la cotización sale de una.",
+      "duracion": 0
+    },
+    {
+      "id": 5,
+      "tipo": "cierre",
+      "texto": "*Hablemos* de tu proyecto.",
+      "voz": "¡Hablemos de tu proyecto!",
+      "duracion": 0
+    }
+  ],
+  "caption": "¿Te piden precio y la cotización sale al otro día?\n\nMientras alguien busca la lista, copia y pega, el cliente se enfría… y le compra a otro.\n\nEn JDT TECHNOLOGICS construimos un cotizador a medida conectado a tu catálogo: eliges el producto y la cotización se arma sola, sin copiar y pegar. Se adapta a tu proceso, no al revés.\n\nHablemos de tu proyecto. Escríbenos a @technologicsjdt\n\n#JDTTechnologics #SoftwareAMedida #Automatizacion #TransformacionDigital #Bogota",
+  "tiempos": {
+    "inicios": [
+      0.0,
+      2.71,
+      9.75,
+      13.83,
+      16.71
+    ],
+    "retardo": 0.3,
+    "duracion": 19.34
+  },
+  "direccion": {
+    "hook": "Titular con la pregunta visible desde t=0 y panel de vidrio que entra con una luz dorada detrás",
+    "payoff": "La cotización se arma sola en el cotizador a medida de JDT, con el sello Lista y el cierre con @technologicsjdt",
+    "familias": [
+      "motion-graphics",
+      "vfx-tracking",
+      "mixed-media"
+    ],
+    "beats": [
+      {
+        "inicio": 0,
+        "fin": 2.4,
+        "funcion": "hook",
+        "familia": "motion-graphics",
+        "visual": "Pregunta en titular y panel de vidrio que entra"
+      },
+      {
+        "inicio": 2.4,
+        "fin": 4.6,
+        "funcion": "contexto",
+        "familia": "mixed-media",
+        "visual": "Tiras de listas viejas que se deslizan sobre el panel"
+      },
+      {
+        "inicio": 4.6,
+        "fin": 6.3,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "Palabras Pegas y Revisas que aparecen en pantalla"
+      },
+      {
+        "inicio": 6.3,
+        "fin": 8.6,
+        "funcion": "tension",
+        "familia": "vfx-tracking",
+        "visual": "El vidrio se empaña y la luz dorada del cliente se aleja (simulado en CSS)"
+      },
+      {
+        "inicio": 8.6,
+        "fin": 9.75,
+        "funcion": "respiro",
+        "familia": "vfx-tracking",
+        "visual": "Pausa quieta con el vidrio opaco y el texto del problema"
+      },
+      {
+        "inicio": 9.75,
+        "fin": 10.8,
+        "funcion": "giro",
+        "familia": "vfx-tracking",
+        "visual": "Limpiaparabrisas dorado que despeja el vidrio en una pasada"
+      },
+      {
+        "inicio": 10.8,
+        "fin": 13.8,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Cotizador a medida con inclinación 3D y primera fila"
+      },
+      {
+        "inicio": 13.8,
+        "fin": 16.7,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Filas genéricas que se dibujan y el sello Lista"
+      },
+      {
+        "inicio": 16.7,
+        "fin": 17.6,
+        "funcion": "payoff",
+        "familia": "motion-graphics",
+        "visual": "Cierre con JDT TECHNOLOGICS y Hablemos de tu proyecto"
+      },
+      {
+        "inicio": 17.6,
+        "fin": 19.34,
+        "funcion": "cierre",
+        "familia": "motion-graphics",
+        "visual": "Pildora @technologicsjdt como cierre visual"
+      }
+    ]
+  },
+  "validacion": "corregido: validación 3b (opus, nota interna 5,5 antes de correcciones). Aplicado: título visible desde t=0; burbuja del cliente que cambia de texto y sigue la luz; reflejo de vidrio y tilt suave; limpiaparabrisas con rotación; encabezado COTIZADOR A MEDIDA y fila TOTAL para no dejar hueco en 10-14 s; sello Cotización lista; beat 3 describe palabras que aparecen; fade de filas antes del cierre."
+}

@@ -17,7 +17,14 @@
     "2026-11-25-0306-control-de-tus-datos": 7.0,
     "2026-11-25-0406-como-trabaja-jdt": 7.0,
     "2026-11-25-0506-inventario-conteo-manual": 7.5,
-    "2026-11-25-0707-dependencia-de-una-persona": 5.0
+    "2026-11-25-0707-dependencia-de-una-persona": 5.0,
+    "2026-11-26-0307-cotizar-a-mano-v2": 7.5
   },
-  "revisados": {}
+  "revisados": {
+    "2026-11-25-0606-cotizar-a-mano": {
+      "nueva_version": "2026-11-26-0307-cotizar-a-mano-v2",
+      "fecha": "2026-11-26",
+      "cambio": "Se rehizo el Reel (nunca se renderizó) y el banner con estilos distintos; concepto de vidrio que se empaña y cotizador a medida; burbuja del cliente y fila TOTAL."
+    }
+  }
 }
