@@ -131,6 +131,18 @@ TEMAS_JDT = [
     ("mvp-para-validar", "Tienes la idea de una app: pruébala con un MVP antes de gastar de más", "Apps móviles (prototipos y MVP)"),
     ("pagas-funciones-que-no-usas", "Pagas licencias llenas de funciones que nunca usas", "Software a medida (pagas solo lo que necesitas)"),
     ("control-de-tus-datos", "¿Quién controla los datos de tu negocio?", "Software a medida (más control sobre tus datos)"),
+    ("cuando-el-cliente-pide-cambios", "Cada cambio pequeño se vuelve una semana de espera", "Software a medida (sistemas que evolucionan contigo)"),
+    ("datos-que-no-son-tuyos", "Tu información vive en la nube de otro y no puedes exportarla fácil", "Software a medida (datos bajo tu control)"),
+    ("pedidos-por-whatsapp", "Pedidos y pagos que se pierden entre mensajes de WhatsApp", "Apps móviles (pedidos para clientes)"),
+    ("gerencia-espera-el-informe", "Gerencia espera el informe y nadie sabe qué cifra es la correcta", "Automatización de procesos (reportes automáticos)"),
+    ("inventario-en-una-libreta", "El inventario vive en una libreta o en la cabeza de una persona", "Software a medida (sistemas de gestión internos)"),
+    ("la-pagina-que-no-convierte", "Tu sitio se ve bien, pero no llega ni a un contacto al mes", "Desarrollo web (páginas que convierten)"),
+    ("integrar-sin-copiar-y-pegar", "Pasar datos de una herramienta a otra a mano cada día", "Automatización de procesos (flujos entre sistemas)"),
+    ("clientes-que-piden-estado", "Clientes que escriben todos los días para preguntar cómo va su caso", "Software a medida (portales para clientes)"),
+    ("proveedores-sin-portal", "Proveedores que mandan facturas por correo y nadie sabe cuál está aprobada", "Software a medida (portales para proveedores)"),
+    ("app-de-campo-sin-internet", "Tu equipo en campo necesita trabajar donde no hay señal", "Apps móviles (apps internas para equipos en campo)"),
+    ("ia-que-borra-tu-trabajo", "¿Una IA que responde por ti sin que nadie revise? Mejor con revisión humana", "Automatización con IA (con revisión humana)"),
+    ("pagos-y-cobros-a-mano", "Cobros que se siguen en un cuaderno y la cartera se vuelve un misterio", "Software a medida (integraciones con pasarelas de pago)"),
     ("como-trabaja-jdt", "Analizamos, desarrollamos, entregamos: así se construye tu sistema", "Proceso JDT en tres pasos"),
 ]
 
@@ -149,7 +161,8 @@ def temas_propios(limite: int = 5) -> list[dict]:
         }
         for slug, titulo, servicio in TEMAS_JDT
     ]
-    # Primero los nunca usados (fecha vacia), luego los mas antiguos.
+    # Primero los nunca usados (fecha vacia), luego los mas antiguos. Cuando ya se usaron todos,
+    # el agente reutiliza el mas antiguo con un angulo distinto (ver INSTRUCCIONES.md, plan B).
     candidatos.sort(key=lambda t: ultima_vez.get(t["url"], ""))
     return candidatos[:limite]
 
