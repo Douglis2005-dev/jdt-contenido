@@ -1,0 +1,509 @@
+{
+  "salida": "videos/2026-11-27-0407-agentes-con-permiso.mp4",
+  "formato": "Reel vertical 1080x1920, unos 22 s, 6 escenas en minimalismo audaz: afirmación absurda en amarillo, planos largos de 4 a 5 s con un solo movimiento, un llavero que se arma como infografía, quietud antes del remate y voz en off es-CO cercana",
+  "concepto": "Afirmación absurda: «Tu robot tiene más llaves que el celador». Se justifica: un agente de IA ya se conecta al correo, los archivos y el calendario, así que la pregunta es qué llaves le das. Escena 1 (amarillo): una llave azul marino enorme hecha de formas y, al lado, la llavecita gris del celador. Escena 2 (azul): el robot gigante con la llave y tres puertas pequeñas (correo, carpeta, calendario) que se encienden al nombrarlas. Escena 3 (oscuro, datos que se arman): se dibuja el tallo dorado de una llave y sus tres dientes entran uno por uno y se ordenan: «Lee», «Envía, con candado» y «Aprueba: tú» (el diente amarillo). Escena 4 (amarillo, quietud): el candado crece hasta ser enorme y remata «La caja fuerte, ni al celador». Escena 5 (azul): escudo enorme de JDT con la tarjeta «Permisos por API» y su check: software a medida con integraciones y permisos claros. Cierre con logo, CTA y @technologicsjdt.",
+  "produccion": "Estilos: minimalismo-audaz (principal) + datos-que-se-arman (apoyo, solo escena 3) + gancho afirmacion-absurda + ritmo contemplativo. Rasgos del principal: pantalla completa amarilla con tinta azul marino desde el cuadro 0 con un solo elemento enorme (la llave) y frase corta; cortes secos entre amarillo, azul y amarillo; quietud total del candado enorme antes del remate. Cero partículas, cero HUD, sin glitch ni vibra; un solo destello en todo el video (el clic del candado). Planos de 4 a 5 s con un único movimiento limpio por plano (empuja lento en el gancho, nada en el remate).",
+  "fuente": "Google Workspace, «Configure the Google Workspace MCP servers»: https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "url": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "titulo": "Agentes de IA en tu correo: ¿quién les da permiso?",
+  "tema": "Las herramientas de correo, archivos y calendario ya pueden ser usadas por agentes de IA mediante servidores MCP documentados; el dueño necesita reglas: qué lee, qué envía y quién aprueba (software a medida: permisos e integraciones por API)",
+  "servicio": "Software a medida (permisos e integraciones por API)",
+  "tendencias": {
+    "video": "minimalismo-audaz",
+    "apoyo": "datos-que-se-arman",
+    "gancho": "afirmacion-absurda",
+    "ritmo": "contemplativo",
+    "banner": "bento",
+    "pulso": "resumen fechado 2026-11-27",
+    "fuentes": [
+      "https://metricool.com/instagram-reels-guide/"
+    ]
+  },
+  "escenas": [
+    {
+      "tipo": "libre",
+      "look": "amarillo",
+      "camara": "empuja",
+      "duracion": 2.6,
+      "texto": "Tu robot tiene *más llaves* que el celador.",
+      "voz": "¡Tu robot tiene más llaves que el celador!",
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "anillo",
+          "x": 44,
+          "y": 50,
+          "ancho": 26,
+          "grosor": 10,
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 44,
+          "y": 69,
+          "ancho": 7,
+          "alto": 38,
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 50,
+          "y": 75,
+          "ancho": 9,
+          "alto": 4,
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 49,
+          "y": 80,
+          "ancho": 7,
+          "alto": 4,
+          "t": 0,
+          "entra": "aparece"
+        },
+        {
+          "el": "forma",
+          "forma": "anillo",
+          "x": 76,
+          "y": 74,
+          "ancho": 6,
+          "grosor": 3,
+          "color": "gris",
+          "t": 0.6,
+          "entra": "pop"
+        },
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 76,
+          "y": 79,
+          "ancho": 1.6,
+          "alto": 6,
+          "color": "gris",
+          "t": 0.6,
+          "entra": "pop"
+        },
+        {
+          "el": "texto",
+          "texto": "la del celador",
+          "x": 76,
+          "y": 86,
+          "tam": "s",
+          "ancho": 30,
+          "t": 0.65,
+          "entra": "aparece"
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "look": "azul",
+      "transicion": "fundido",
+      "duracion": 4.4,
+      "texto": "Correo, archivos y agenda: *ya entra*",
+      "voz": "Hoy un agente de IA ya se conecta a tu correo, archivos y calendario.",
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "robot",
+          "x": 50,
+          "y": 52,
+          "tam": 32,
+          "entra": "aparece"
+        },
+        {
+          "el": "linea",
+          "x": 44,
+          "y": 64,
+          "a": [
+            26,
+            72
+          ],
+          "estilo": "punteada",
+          "color": "gris",
+          "t": 0.3,
+          "entra": "dibuja"
+        },
+        {
+          "el": "linea",
+          "x": 50,
+          "y": 65,
+          "a": [
+            50,
+            72
+          ],
+          "estilo": "punteada",
+          "color": "gris",
+          "t": 0.3,
+          "entra": "dibuja"
+        },
+        {
+          "el": "linea",
+          "x": 56,
+          "y": 64,
+          "a": [
+            74,
+            72
+          ],
+          "estilo": "punteada",
+          "color": "gris",
+          "t": 0.3,
+          "entra": "dibuja"
+        },
+        {
+          "el": "icono",
+          "nombre": "correo",
+          "x": 26,
+          "y": 78,
+          "tam": 13,
+          "t": 0.35,
+          "entra": "pop"
+        },
+        {
+          "el": "icono",
+          "nombre": "carpeta",
+          "x": 50,
+          "y": 78,
+          "tam": 13,
+          "t": 0.55,
+          "entra": "pop"
+        },
+        {
+          "el": "icono",
+          "nombre": "calendario",
+          "x": 74,
+          "y": 78,
+          "tam": 13,
+          "t": 0.75,
+          "entra": "pop"
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "transicion": "persiana",
+      "duracion": 4.6,
+      "texto": "Qué *lee*. Qué *envía*. Quién *aprueba*.",
+      "voz": "La pregunta es otra: ¿qué lee, qué envía… y quién aprueba?",
+      "elementos": [
+        {
+          "el": "forma",
+          "forma": "rect",
+          "x": 26,
+          "y": 63,
+          "ancho": 5,
+          "alto": 44,
+          "color": "dorado",
+          "entra": "dibuja"
+        },
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 52,
+          "y": 48,
+          "ancho": 48,
+          "alto": 9,
+          "color": "superficie",
+          "t": 0.2,
+          "entra": "derecha"
+        },
+        {
+          "el": "texto",
+          "texto": "Lee",
+          "x": 52,
+          "y": 48,
+          "tam": "m",
+          "ancho": 44,
+          "t": 0.25,
+          "entra": "aparece"
+        },
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 52,
+          "y": 62,
+          "ancho": 48,
+          "alto": 9,
+          "color": "superficie",
+          "t": 0.45,
+          "entra": "derecha"
+        },
+        {
+          "el": "texto",
+          "texto": "Envía, con candado",
+          "x": 52,
+          "y": 62,
+          "tam": "s",
+          "ancho": 44,
+          "t": 0.5,
+          "entra": "aparece"
+        },
+        {
+          "el": "forma",
+          "forma": "pildora",
+          "x": 52,
+          "y": 76,
+          "ancho": 48,
+          "alto": 9,
+          "color": "amarillo",
+          "t": 0.7,
+          "entra": "derecha"
+        },
+        {
+          "el": "texto",
+          "texto": "Aprueba: *tú*",
+          "x": 52,
+          "y": 76,
+          "tam": "m",
+          "ancho": 44,
+          "color": "fondo",
+          "t": 0.75,
+          "entra": "aparece"
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "look": "amarillo",
+      "fx": [
+        "destello"
+      ],
+      "transicion": "zoom",
+      "duracion": 4.6,
+      "texto": "La caja fuerte, *ni al celador*.",
+      "voz": "Al celador no le das la llave de la caja fuerte, ¿o sí?",
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "candado",
+          "x": 50,
+          "y": 60,
+          "tam": 36,
+          "entra": "pop"
+        }
+      ]
+    },
+    {
+      "tipo": "libre",
+      "look": "azul",
+      "transicion": "desliza-arriba",
+      "duracion": 4.0,
+      "texto": "*JDT*: software a medida, *permisos claros*",
+      "voz": "En JDT hacemos software a medida con permisos claros por API.",
+      "elementos": [
+        {
+          "el": "icono",
+          "nombre": "escudo",
+          "x": 50,
+          "y": 54,
+          "tam": 30,
+          "entra": "aparece"
+        },
+        {
+          "el": "tarjeta",
+          "texto": "Permisos por API",
+          "icono": "check",
+          "x": 50,
+          "y": 80,
+          "ancho": 70,
+          "t": 0.45,
+          "entra": "sube"
+        }
+      ]
+    },
+    {
+      "tipo": "cierre",
+      "transicion": "fundido",
+      "duracion": 2.4,
+      "texto": "Hablemos de *tu proyecto*.",
+      "subtexto": "@technologicsjdt",
+      "voz": "¡Hablemos de tu proyecto!"
+    }
+  ],
+  "direccion": {
+    "hook": "Afirmación absurda legible desde t=0 sobre amarillo total: una llave enorme y «Tu robot tiene más llaves que el celador»",
+    "payoff": "El candado enorme y quieto remata «La caja fuerte, ni al celador»: no toda llave se entrega; JDT pone permisos claros por API",
+    "familias": [
+      "motion-graphics",
+      "vfx-tracking"
+    ],
+    "beats": [
+      {
+        "inicio": 0,
+        "fin": 1.8,
+        "funcion": "hook",
+        "familia": "motion-graphics",
+        "visual": "Pantalla completa amarilla; una llave azul marino enorme ya dibujada en el centro y el titular «Tu robot tiene más llaves que el celador» completo y quieto desde t=0"
+      },
+      {
+        "inicio": 1.8,
+        "fin": 2.6,
+        "funcion": "contexto",
+        "familia": "motion-graphics",
+        "visual": "Junto a la llave gigante entra una llavecita gris del celador: contraste de escala extremo (chiste visual)"
+      },
+      {
+        "inicio": 2.6,
+        "fin": 4.8,
+        "funcion": "contexto",
+        "familia": "vfx-tracking",
+        "visual": "Corte seco a azul con match cut: la llave enorme encoge y queda anclada en la mano del robot gigante"
+      },
+      {
+        "inicio": 4.8,
+        "fin": 7.0,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Tres puertas pequeñas (correo, carpeta, calendario) se encienden en amarillo cuando la voz las nombra, unidas al robot por líneas punteadas"
+      },
+      {
+        "inicio": 7.0,
+        "fin": 9.2,
+        "funcion": "tension",
+        "familia": "motion-graphics",
+        "visual": "Fondo oscuro: se dibuja el tallo dorado de una llave y el primer diente «Lee» entra y encaja (datos que se arman)"
+      },
+      {
+        "inicio": 9.2,
+        "fin": 11.6,
+        "funcion": "demostracion",
+        "familia": "motion-graphics",
+        "visual": "Encajan en orden los dientes «Envía, con candado» y «Aprueba: tú» (amarillo); la llave queda armada y quieta"
+      },
+      {
+        "inicio": 11.6,
+        "fin": 13.4,
+        "funcion": "respiro",
+        "familia": "vfx-tracking",
+        "visual": "Corte seco a amarillo: el candado del diente «Envía» crece en match cut hasta ser un candado enorme; quietud total, pausa antes del remate"
+      },
+      {
+        "inicio": 13.4,
+        "fin": 16.2,
+        "funcion": "payoff",
+        "familia": "motion-graphics",
+        "visual": "Remate: aparece «La caja fuerte, ni al celador» y el candado hace un único clic seco; nada más se mueve"
+      },
+      {
+        "inicio": 16.2,
+        "fin": 18.4,
+        "funcion": "recompensa",
+        "familia": "motion-graphics",
+        "visual": "Corte seco a azul: escudo amarillo enorme con JDT en el titular; las tres puertas pasan a tener cada una su permiso"
+      },
+      {
+        "inicio": 18.4,
+        "fin": 20.2,
+        "funcion": "recompensa",
+        "familia": "motion-graphics",
+        "visual": "Tarjeta «Permisos por API» entra bajo el escudo y se marca con un check"
+      },
+      {
+        "inicio": 20.2,
+        "fin": 22.6,
+        "funcion": "cierre",
+        "familia": "motion-graphics",
+        "visual": "Logo JDT, «Hablemos de tu proyecto.» y @technologicsjdt; la llave vuelve pequeña junto al CTA para cerrar el loop con el inicio"
+      }
+    ]
+  },
+  "beats": [
+    {
+      "inicio": 0,
+      "fin": 1.8,
+      "funcion": "hook",
+      "familia": "motion-graphics",
+      "visual": "Pantalla completa amarilla; una llave azul marino enorme ya dibujada en el centro y el titular «Tu robot tiene más llaves que el celador» completo y quieto desde t=0"
+    },
+    {
+      "inicio": 1.8,
+      "fin": 2.6,
+      "funcion": "contexto",
+      "familia": "motion-graphics",
+      "visual": "Junto a la llave gigante entra una llavecita gris del celador: contraste de escala extremo (chiste visual)"
+    },
+    {
+      "inicio": 2.6,
+      "fin": 4.8,
+      "funcion": "contexto",
+      "familia": "vfx-tracking",
+      "visual": "Corte seco a azul con match cut: la llave enorme encoge y queda anclada en la mano del robot gigante"
+    },
+    {
+      "inicio": 4.8,
+      "fin": 7.0,
+      "funcion": "demostracion",
+      "familia": "motion-graphics",
+      "visual": "Tres puertas pequeñas (correo, carpeta, calendario) se encienden en amarillo cuando la voz las nombra, unidas al robot por líneas punteadas"
+    },
+    {
+      "inicio": 7.0,
+      "fin": 9.2,
+      "funcion": "tension",
+      "familia": "motion-graphics",
+      "visual": "Fondo oscuro: se dibuja el tallo dorado de una llave y el primer diente «Lee» entra y encaja (datos que se arman)"
+    },
+    {
+      "inicio": 9.2,
+      "fin": 11.6,
+      "funcion": "demostracion",
+      "familia": "motion-graphics",
+      "visual": "Encajan en orden los dientes «Envía, con candado» y «Aprueba: tú» (amarillo); la llave queda armada y quieta"
+    },
+    {
+      "inicio": 11.6,
+      "fin": 13.4,
+      "funcion": "respiro",
+      "familia": "vfx-tracking",
+      "visual": "Corte seco a amarillo: el candado del diente «Envía» crece en match cut hasta ser un candado enorme; quietud total, pausa antes del remate"
+    },
+    {
+      "inicio": 13.4,
+      "fin": 16.2,
+      "funcion": "payoff",
+      "familia": "motion-graphics",
+      "visual": "Remate: aparece «La caja fuerte, ni al celador» y el candado hace un único clic seco; nada más se mueve"
+    },
+    {
+      "inicio": 16.2,
+      "fin": 18.4,
+      "funcion": "recompensa",
+      "familia": "motion-graphics",
+      "visual": "Corte seco a azul: escudo amarillo enorme con JDT en el titular; las tres puertas pasan a tener cada una su permiso"
+    },
+    {
+      "inicio": 18.4,
+      "fin": 20.2,
+      "funcion": "recompensa",
+      "familia": "motion-graphics",
+      "visual": "Tarjeta «Permisos por API» entra bajo el escudo y se marca con un check"
+    },
+    {
+      "inicio": 20.2,
+      "fin": 22.6,
+      "funcion": "cierre",
+      "familia": "motion-graphics",
+      "visual": "Logo JDT, «Hablemos de tu proyecto.» y @technologicsjdt; la llave vuelve pequeña junto al CTA para cerrar el loop con el inicio"
+    }
+  ],
+  "audio": "videos/2026-11-27-0407-agentes-con-permiso.mp3",
+  "tiempos": {
+    "inicios": [
+      0.0,
+      2.81,
+      7.58,
+      12.08,
+      16.0,
+      20.05
+    ],
+    "retardo": 0.3,
+    "duracion": 22.5
+  }
+}

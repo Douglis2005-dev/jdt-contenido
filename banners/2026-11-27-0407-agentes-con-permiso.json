@@ -1,0 +1,10 @@
+{
+  "salida": "banners/2026-11-27-0407-agentes-con-permiso.png",
+  "estilo": "bento",
+  "titulo": "¿Quién le dio las *llaves* a tu agente de IA?",
+  "subtitulo": "Define qué lee, qué envía y quién aprueba.",
+  "puntos": ["Permisos claros por agente", "Integraciones por API", "Tú apruebas lo sensible"],
+  "cta": "Hablemos de tu proyecto.",
+  "icono": "candado",
+  "etiqueta": "PERMISOS CLAROS"
+}
