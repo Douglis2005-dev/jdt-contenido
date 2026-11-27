@@ -1,0 +1,127 @@
+{
+ "salida": "videos/2026-11-27-0607-agente-en-tu-correo.mp4",
+ "formato": "Confesión en primera persona con un conflicto visible y un remate de control humano",
+ "concepto": "Le abrí mi correo a un agente de IA: la pregunta que importa es quién le pone los límites. El agente propone y tú apruebas.",
+ "produccion": "Minimalismo audaz: pantallas completas amarillas con tinta azul marino y fondos azul marino, un solo elemento gigante por escena, cortes secos, quietud antes del remate. Apoyo datos-que-se-arman solo en la escena 3 con barras rellenas y etiquetas genéricas.",
+ "tendencias": {
+  "video": "minimalismo-audaz",
+  "apoyo": "datos-que-se-arman",
+  "gancho": "confesion",
+  "ritmo": "contemplativo",
+  "banner": "cromo-dorado",
+  "pulso": "2026-11-27: tipografía y formas sobrias con texto que carga el mensaje sin sonido; gancho de 2 a 3 s (dev.to, mirra 2026). Sin cifras verificadas.",
+  "fuentes": [
+   "https://developers.google.com/workspace/guides/configure-mcp-servers",
+   "https://www.mirra.my/en/blog/ai-motion-graphics-social-media-reels-shorts-2026"
+  ]
+ },
+ "fuente": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+ "escenas": [
+  {
+   "tipo": "palabras",
+   "frases": [
+    "Le abrí mi *correo*",
+    "a un agente."
+   ],
+   "voz": "Lo confieso: le abrí mi correo a un agente de IA.",
+   "look": "amarillo",
+   "transicion": "persiana",
+   "duracion": 4.06
+  },
+  {
+   "tipo": "libre",
+   "texto": "¿Quién decide qué *puede* hacer?",
+   "voz": "Y también mis documentos y mi agenda. Entonces me pregunté: ¿quién decide qué puede hacer?",
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "candado",
+     "x": 50,
+     "y": 60,
+     "tam": 34,
+     "color": "amarillo",
+     "entra": "pop"
+    }
+   ],
+   "duracion": 6.73,
+   "camara": "acerca"
+  },
+  {
+   "tipo": "libre",
+   "texto": "JDT · automatización con *revisión humana*",
+   "voz": "En JDT armamos automatización de procesos con revisión humana. Tú pones las reglas.",
+   "elementos": [
+    {
+     "el": "tarjeta",
+     "texto": "Leer",
+     "icono": "documento",
+     "x": 50,
+     "y": 48,
+     "ancho": 76
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Proponer",
+     "icono": "robot",
+     "x": 50,
+     "y": 63,
+     "ancho": 76,
+     "t": 0.3
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Aprobar",
+     "icono": "check",
+     "x": 50,
+     "y": 78,
+     "ancho": 76,
+     "t": 0.6
+    }
+   ],
+   "duracion": 5.51,
+   "look": "oscuro",
+   "transicion": "barrido"
+  },
+  {
+   "tipo": "libre",
+   "texto": "El agente propone. *Tú* apruebas.",
+   "voz": "El agente propone. Tú apruebas.",
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "check",
+     "x": 50,
+     "y": 60,
+     "tam": 30,
+     "color": "amarillo",
+     "entra": "pop",
+     "t": 0.5
+    }
+   ],
+   "duracion": 2.41,
+   "fx": [
+    "destello"
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de *tu proyecto*",
+   "subtexto": "@technologicsjdt",
+   "voz": "Más control sobre tus datos. Hablemos de tu proyecto.",
+   "duracion": 4.47,
+   "transicion": "circulo"
+  }
+ ],
+ "tiempos": {
+  "inicios": [
+   0.0,
+   4.06,
+   10.79,
+   16.3,
+   18.71
+  ],
+  "retardo": 0.3,
+  "duracion": 23.18
+ },
+ "audio": "videos/2026-11-27-0607-agente-en-tu-correo.mp3"
+}

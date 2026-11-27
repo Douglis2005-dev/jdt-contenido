@@ -1,0 +1,13 @@
+{
+ "salida": "banners/2026-11-27-0607-agente-en-tu-correo.png",
+ "estilo": "bento",
+ "titulo": "¿Quién decide qué *puede hacer* tu agente de IA?",
+ "subtitulo": "Tú apruebas antes de que el agente actúe.",
+ "puntos": [
+  "Reglas claras para cada tarea",
+  "Revisión humana antes de actuar",
+  "Tus datos, bajo tu control"
+ ],
+ "cta": "Hablemos de tu proyecto",
+ "icono": "candado"
+}
