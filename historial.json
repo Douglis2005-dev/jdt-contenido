@@ -238,5 +238,10 @@
     "url": "jdt:ia-con-revision-humana",
     "titulo": "La IA ordena tus correos, tú decides qué se envía",
     "fecha": "2026-11-26T10:19:55.382371+00:00"
+  },
+  {
+    "url": "https://developers.google.com/workspace/gmail/api/guides/configure-mcp-server",
+    "titulo": "Agentes de IA en tu correo: quién pone los límites",
+    "fecha": "2026-11-27T08:11:20.488215+00:00"
   }
 ]

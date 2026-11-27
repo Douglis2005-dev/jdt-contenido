@@ -1,0 +1,106 @@
+{
+ "salida": "videos/2026-11-27-0305-agentes-en-tu-correo.mp4",
+ "audio": "videos/2026-11-27-0305-agentes-en-tu-correo.mp3",
+ "formato": "Lo que nadie te cuenta (verdad sorprendente, minimalismo amarillo/azul, cuatro escenas)",
+ "concepto": "Tu correo ya puede tener un asistente con IA: la pregunta que importa es quién le pone los límites, y ahí entra JDT con permisos claros y revisión humana.",
+ "produccion": "Arranca con pantalla completa amarilla y una frase gigante (minimalismo audaz); pasa a fondo azul con un robot que se conecta a un documento y una flecha que pulsa; luego pasos que se encienden en azul y cierra en amarillo con el CTA.",
+ "tendencias": {
+  "video": "minimalismo-audaz",
+  "apoyo": "datos-que-se-arman",
+  "gancho": "nadie-te-cuenta",
+  "ritmo": "contemplativo",
+  "banner": "bento",
+  "pulso": "Guías de video corto 2026: texto legible sin sonido y formatos limpios; aplicación: una idea por escena y hook en texto desde t=0.",
+  "fuentes": [
+   "https://shortgenius.com/es/blog/tendencias-video-formato-corto-2026",
+   "https://www.informabtl.com/tendencias-video-marketing-2026/",
+   "https://developers.google.com/workspace/gmail/api/guides/configure-mcp-server"
+  ]
+ },
+ "escenas": [
+  {
+   "tipo": "marquesina",
+   "palabras": [
+    "NADIE",
+    "TE",
+    "CUENTA"
+   ],
+   "texto": "Tu correo *ya tiene un asistente*",
+   "look": "amarillo",
+   "voz": "Lo que nadie te cuenta: tu correo ya puede tener un asistente con IA. Lee y responde solo.",
+   "fx": [
+    "glitch"
+   ],
+   "frases": [
+    "Tu correo",
+    "*ya puede tener un asistente*"
+   ]
+  },
+  {
+   "tipo": "terminal",
+   "titulo": "tu-correo@negocio",
+   "lineas": [
+    "> leer correo nuevo",
+    "pedido detectado",
+    "> responder al cliente",
+    "¿quién lo autoriza?"
+   ],
+   "look": "oscuro",
+   "fx": [
+    "grano"
+   ],
+   "voz": "Pero, ¿quién decide qué puede tocar? Sin reglas, la IA puede enviar lo que no debe.",
+   "camara": "latido"
+  },
+  {
+   "tipo": "notificaciones",
+   "etiquetas": [
+    "Permisos claros",
+    "Revisión humana",
+    "Registro guardado"
+   ],
+   "detalles": [
+    "Solo lo que autorizas",
+    "Tú apruebas el envío",
+    "Cada acción queda"
+   ],
+   "iconos": [
+    "candado",
+    "check",
+    "documento"
+   ],
+   "voz": "En JDT lo diseñamos con permisos claros, revisión humana,",
+   "look": "oscuro",
+   "camara": "paneo"
+  },
+  {
+   "tipo": "contador",
+   "valor": "1",
+   "unidad": "aprobación",
+   "etiqueta": "Tú decides *cada* envío",
+   "look": "amarillo",
+   "fx": [
+    "destello"
+   ],
+   "voz": "y registro de cada acción."
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de *tu proyecto*",
+   "subtexto": "JDT TECHNOLOGICS · @technologicsjdt",
+   "voz": "Hablemos de tu proyecto. Escríbenos por redes: arroba technologicsjdt."
+  }
+ ],
+ "voz_proveedor": "ElevenLabs (Teno pupi, eleven_v4)",
+ "tiempos": {
+  "inicios": [
+   0.0,
+   7.1,
+   13.44,
+   19.32,
+   20.62
+  ],
+  "retardo": 0.3,
+  "duracion": 25.04
+ }
+}
