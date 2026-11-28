@@ -1,0 +1,335 @@
+{
+ "salida": "videos/2026-11-28-0305-tienda-con-invitados.mp4",
+ "formato": "Reel vertical 1080x1920, unos 21 s, 5 escenas minimalistas: pantalla amarilla con un titular gigante, conflicto con un script ajeno que se pega a la página, apoyo de datos que se ordenan, JDT como solución a medida y cierre con @technologicsjdt. Voz en off es-CO con humor sobrio.",
+ "concepto": "El empleado fantasma: un script ajeno pegado a tu tienda online es como un empleado que nunca contrataste y que tiene acceso a la caja. JDT hace la web y la tienda a medida, con código que el cliente conoce y controla. Remate: cero invitados sorpresa.",
+ "produccion": "Estilos: minimalismo-audaz (principal) + datos-que-se-arman (apoyo, solo en la escena 3) + gancho afirmacion-absurda + ritmo rapido + banner cromo-dorado. Rasgos del principal: (1) pantalla completa amarilla con tinta azul marino y una sola frase enorme en el gancho; (2) cortes secos entre escenas, cada una con un único movimiento limpio y quietud total en el momento clave (la palabra «fantasma» queda quieta); (3) cero partículas y cero HUD. Sin fondos con manchas ni rejilla. Efectos: destello solo en el golpe del conflicto (escena 2, cuando el script se pega a la página); transiciones de persiana y fundido. Cámara casi quieta: un acercamiento lento en la escena 4.",
+ "fuente": "marca.md",
+ "url": "jdt:tienda-con-invitados",
+ "titulo": "Tu tienda tiene un empleado fantasma",
+ "tema": "Scripts ajenos en tiendas online que copian datos de tarjetas, y por qué conviene conocer el código de tu tienda (desarrollo web a medida de JDT)",
+ "tendencias": {
+  "video": "minimalismo-audaz",
+  "apoyo": "datos-que-se-arman",
+  "gancho": "afirmacion-absurda",
+  "ritmo": "rapido",
+  "banner": "neobrutal",
+  "pulso": "2026-11-28: búsquedas Reels y motion 2026 devolvieron solo títulos (metricool Instagram trends; advids.co UI animation); señal débil: color pleno + una palabra gigante, producto en acción",
+  "fuentes": [
+   "https://metricool.com/instagram-trends/",
+   "https://advids.co/blog/ui-animation-motion-design-trends"
+  ]
+ },
+ "escenas": [
+  {
+   "tipo": "libre",
+   "look": "amarillo",
+   "texto": "Tu tienda tiene un *empleado fantasma*",
+   "voz": "Tu tienda online tiene un empleado que nunca contrataste.",
+   "duracion": 3.2,
+   "camara": "latido",
+   "elementos": [
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 50,
+     "y": 66,
+     "ancho": 34,
+     "alto": 22,
+     "color": "fondo",
+     "t": 0.1,
+     "entra": "pop",
+     "mueve": "flota"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "SIN CONTRATO",
+     "x": 50,
+     "y": 76,
+     "ancho": 44,
+     "color": "amarillo",
+     "t": 0.4,
+     "entra": "pop"
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "oscuro",
+   "texto": "Un script *ajeno* en tu página",
+   "voz": "Un script ajeno en tu página. Hace poco encontraron algunos que copian datos de tarjetas.",
+   "duracion": 6.2,
+   "transicion": "persiana",
+   "fx": [
+    "destello"
+   ],
+   "elementos": [
+    {
+     "el": "tarjeta",
+     "texto": "Chat",
+     "x": 30,
+     "y": 42,
+     "ancho": 52,
+     "t": 0.0,
+     "entra": "izquierda"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Anuncios",
+     "x": 70,
+     "y": 52,
+     "ancho": 52,
+     "t": 0.02,
+     "entra": "derecha"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Widget",
+     "x": 30,
+     "y": 62,
+     "ancho": 52,
+     "t": 0.05,
+     "entra": "izquierda"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Script ajeno",
+     "x": 40,
+     "y": 76,
+     "ancho": 60,
+     "color": "amarillo",
+     "t": 0.12,
+     "entra": "pop"
+    },
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 50,
+     "y": 84,
+     "ancho": 78,
+     "alto": 6,
+     "color": "gris",
+     "t": 0.3,
+     "entra": "aparece"
+    },
+    {
+     "el": "icono",
+     "nombre": "ojo",
+     "x": 88,
+     "y": 66,
+     "tam": 14,
+     "color": "amarillo",
+     "t": 0.78,
+     "entra": "pop",
+     "mueve": "tiembla"
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "azul",
+   "texto": "¿Sabes qué *código corre* ahí?",
+   "voz": "Si no sabes qué código corre ahí, tu tienda no es del todo tuya.",
+   "duracion": 4.2,
+   "camara": "aleja",
+   "transicion": "fundido",
+   "elementos": [
+    {
+     "el": "tarjeta",
+     "texto": "Chat",
+     "x": 30,
+     "y": 40,
+     "ancho": 44,
+     "t": 0.0,
+     "entra": "izquierda",
+     "mueve": "tiembla"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Pago",
+     "x": 70,
+     "y": 52,
+     "ancho": 44,
+     "t": 0.1,
+     "entra": "derecha"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Pedidos",
+     "x": 36,
+     "y": 64,
+     "ancho": 44,
+     "t": 0.2,
+     "entra": "izquierda"
+    },
+    {
+     "el": "forma",
+     "forma": "rect",
+     "x": 50,
+     "y": 78,
+     "ancho": 58,
+     "alto": 26,
+     "color": "amarillo",
+     "t": 0.6,
+     "entra": "aparece"
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "amarillo",
+   "texto": "Web a medida, *código tuyo*",
+   "voz": "En JDT hacemos tu web y tu tienda a medida, con código que conoces.",
+   "duracion": 4.6,
+   "camara": "acerca",
+   "transicion": "persiana",
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "candado",
+     "x": 50,
+     "y": 54,
+     "tam": 30,
+     "color": "fondo",
+     "t": 0.0,
+     "entra": "pop"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Web a medida",
+     "x": 50,
+     "y": 70,
+     "ancho": 64,
+     "color": "fondo",
+     "t": 0.13,
+     "entra": "sube"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Tienda a medida",
+     "x": 50,
+     "y": 80,
+     "ancho": 64,
+     "color": "fondo",
+     "t": 0.3,
+     "entra": "sube"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Código que conoces",
+     "x": 50,
+     "y": 90,
+     "ancho": 64,
+     "color": "fondo",
+     "t": 0.55,
+     "entra": "sube"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de tu proyecto.",
+   "subtexto": "@technologicsjdt",
+   "voz": "Cero invitados sorpresa. ¡Hablemos de tu proyecto!",
+   "duracion": 3.4
+  }
+ ],
+ "tiempos": {
+  "inicios": [
+   0.0,
+   3.83,
+   10.43,
+   14.84,
+   19.35
+  ],
+  "retardo": 0.3,
+  "duracion": 23.74
+ },
+ "direccion": {
+  "hook": "Titular amarillo a pantalla completa «Tu tienda tiene un empleado» y pastilla navy «fantasma» visibles desde el cuadro 0",
+  "payoff": "Se resuelve el fantasma: JDT hace la tienda a medida con codigo que el cliente conoce y controla; cierre con @technologicsjdt",
+  "familias": [
+   "motion-graphics",
+   "mixed-media"
+  ],
+  "beats": [
+   {
+    "inicio": 0,
+    "fin": 1.8,
+    "funcion": "hook",
+    "familia": "motion-graphics",
+    "visual": "Titular amarillo y pastilla navy «fantasma» visibles desde el cuadro 0, sin movimiento"
+   },
+   {
+    "inicio": 1.8,
+    "fin": 3.83,
+    "funcion": "contexto",
+    "familia": "motion-graphics",
+    "visual": "El fantasma navy con ojos amarillos y gafete SIN CONTRATO entra con pop hacia 1,9-2,4 s y flota suave"
+   },
+   {
+    "inicio": 3.83,
+    "fin": 6.9,
+    "funcion": "tension",
+    "familia": "mixed-media",
+    "visual": "Tarjetas Chat, Anuncios y Widget entran en cortes secos sobre la tienda; Script ajeno hace pop en 4,28 s"
+   },
+   {
+    "inicio": 6.9,
+    "fin": 9.6,
+    "funcion": "demostracion",
+    "familia": "mixed-media",
+    "visual": "La barra PAGO pasa a amarillo al decir copian datos de tarjetas y aparece un ojo amarillo junto al pago"
+   },
+   {
+    "inicio": 9.6,
+    "fin": 10.43,
+    "funcion": "giro",
+    "familia": "motion-graphics",
+    "visual": "Destello blanco breve y quietud total en el golpe del conflicto"
+   },
+   {
+    "inicio": 10.43,
+    "fin": 13.0,
+    "funcion": "recompensa",
+    "familia": "motion-graphics",
+    "visual": "Tarjetas blancas Chat, Pago y Pedidos llegan desordenadas y rotadas sobre fondo navy"
+   },
+   {
+    "inicio": 13.0,
+    "fin": 14.84,
+    "funcion": "respiro",
+    "familia": "motion-graphics",
+    "visual": "Al decir tuya las tarjetas se encajan en x=540 dentro de un marco amarillo con la pastilla Tu tienda sobre el borde"
+   },
+   {
+    "inicio": 14.84,
+    "fin": 17.6,
+    "funcion": "recompensa",
+    "familia": "motion-graphics",
+    "visual": "Logo JDT desde el inicio, candado navy que aparece y titular Web a medida, código tuyo"
+   },
+   {
+    "inicio": 17.6,
+    "fin": 19.35,
+    "funcion": "demostracion",
+    "familia": "mixed-media",
+    "visual": "Tarjetas Web a medida, Tienda a medida y Código que conoces se apilan en pasos de 140 px"
+   },
+   {
+    "inicio": 19.35,
+    "fin": 22.5,
+    "funcion": "payoff",
+    "familia": "motion-graphics",
+    "visual": "Cero invitados sorpresa a 76 px desde el inicio; Hablemos de tu proyecto entra entre 1,4 y 1,9 s"
+   },
+   {
+    "inicio": 22.5,
+    "fin": 23.74,
+    "funcion": "cierre",
+    "familia": "mixed-media",
+    "visual": "Logo y pastilla amarilla @technologicsjdt bajo el titular con fundido final"
+   }
+  ]
+ },
+ "validacion": "corregido: Opus (Fable sin creditos) dio NO APROBADO 6,5; aplicado: titular visible en t=0, fantasma SVG con gafete, tarjetas Chat/Pago/Pedidos, sin lavanda, JDT visible en E4, pastilla @ separada del CTA, banner a bento por rejilla que cruzaba texto"
+}

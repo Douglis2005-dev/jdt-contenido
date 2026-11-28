@@ -1,0 +1,144 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+.abs{position:absolute}
+.centrado{position:absolute;left:0;right:0;text-align:center;padding:0 60px;box-sizing:border-box}
+.caja{position:absolute;border-radius:28px;box-sizing:border-box;font-weight:800;white-space:nowrap;opacity:0}
+.blanca{background:#FFFFFF;color:#0A0E27}
+.navy{background:#0A0E27;color:#FFFFFF;border:3px solid #2A3460}
+.amar{background:#FACC15;color:#0A0E27}
+.pastilla{background:#0A0E27;color:#FACC15;padding:0 40px;border-radius:70px;display:inline-block}
+.pastilla-am{position:absolute;background:#FACC15;color:#0A0E27;border-radius:50px;font-weight:900;text-align:center;box-sizing:border-box;white-space:nowrap}
+.fondo-amar{background:#FACC15}
+.fondo-navy{background:#0A0E27}
+.fondo-navy2{background:#131A3A}
+</style></head><body>
+
+<!-- ESCENA 1 · 0 a 3,83 s · GANCHO: pantalla amarilla, titular visible desde t=0; fantasma con gafete -->
+<div id="e1" class="capa fondo-amar">
+  <div class="centrado titulo" style="top:380px;font-size:88px;color:#0A0E27;line-height:1.08">Tu tienda tiene<br>un empleado</div>
+  <div class="centrado titulo" style="top:600px;font-size:180px;color:#0A0E27;line-height:1"><span class="pastilla">fantasma</span></div>
+  <div id="fantasma" class="abs" style="left:360px;top:1040px;width:360px;height:420px;opacity:0">
+    <svg width="360" height="420" viewBox="0 0 360 420" style="position:absolute;left:0;top:0;overflow:visible">
+      <path d="M0,420 L0,180 A180,180 0 0 1 360,180 L360,420 Q330,380 300,420 Q270,380 240,420 Q210,380 180,420 Q150,380 120,420 Q90,380 60,420 Q30,380 0,420 Z" fill="#0A0E27"/>
+      <ellipse cx="110" cy="140" rx="22" ry="32" fill="#FACC15"/>
+      <ellipse cx="250" cy="140" rx="22" ry="32" fill="#FACC15"/>
+    </svg>
+    <div class="abs" style="left:60px;top:245px;width:240px;height:70px;border-radius:12px;background:#FACC15;color:#0A0E27;font-weight:900;font-size:27px;line-height:70px;text-align:center;white-space:nowrap">SIN CONTRATO</div>
+  </div>
+</div>
+
+<!-- ESCENA 2 · 3,83 a 10,43 s · CONFLICTO: script ajeno pegado a la página; PAGO se marca en «copian datos de tarjetas»; destello único -->
+<div id="e2" class="capa fondo-navy">
+  <div class="centrado titulo" style="top:260px;font-size:84px;color:#FFFFFF">Un script <span class="clave">ajeno</span> en tu página</div>
+  <div class="abs" style="left:90px;top:560px;width:900px;height:900px;border-radius:36px;background:#131A3A;border:3px solid #2A3460"></div>
+  <div id="pago" class="abs" style="left:150px;top:1290px;width:780px;height:120px;border-radius:24px;background:#0A0E27;border:3px solid #2A3460;color:#94A3B8;font-weight:800;font-size:44px;line-height:114px;text-align:center">PAGO</div>
+  <div id="c-chat" class="caja blanca" style="left:150px;top:660px;font-size:58px;padding:24px 40px">Chat</div>
+  <div id="c-anun" class="caja blanca" style="left:430px;top:820px;font-size:58px;padding:24px 40px">Anuncios</div>
+  <div id="c-wid" class="caja blanca" style="left:150px;top:980px;font-size:58px;padding:24px 40px">Widget</div>
+  <div id="c-script" class="caja amar" style="left:200px;top:1110px;font-size:62px;padding:26px 44px;transform-origin:50% 50%">Script ajeno</div>
+  <div id="ojo2" class="abs" style="left:880px;top:1180px;width:86px;height:86px;border-radius:50%;background:#FACC15;opacity:0"></div>
+</div>
+
+<!-- ESCENA 3 · 10,43 a 14,84 s · APOYO: tarjetas desordenadas que se encajan en una tienda con marco amarillo -->
+<div id="e3" class="capa fondo-navy2">
+  <div class="centrado titulo" style="top:300px;font-size:96px;color:#FFFFFF">¿Sabes qué <span class="clave">código corre</span> ahí?</div>
+  <div id="marco" class="abs" style="left:220px;top:860px;width:640px;height:420px;border:3px solid #FACC15;border-radius:28px;box-sizing:border-box;opacity:0"></div>
+  <div id="tu-tienda" class="pastilla-am" style="left:400px;top:812px;width:280px;height:70px;font-size:46px;line-height:70px;opacity:0">Tu tienda</div>
+  <div id="p-chat" class="caja blanca" style="font-size:56px;padding:20px 36px;width:480px;text-align:center;top:760px;left:120px">Chat</div>
+  <div id="p-pago" class="caja blanca" style="font-size:56px;padding:20px 36px;width:480px;text-align:center;top:1000px;left:620px">Pago</div>
+  <div id="p-ped" class="caja blanca" style="font-size:56px;padding:20px 36px;width:480px;text-align:center;top:1180px;left:180px">Pedidos</div>
+</div>
+
+<!-- ESCENA 4 · 14,84 a 19,35 s · JDT COMO SOLUCIÓN: amarillo, logo desde el inicio, candado y tres tarjetas -->
+<div id="e4" class="capa fondo-amar"><div id="e4in" class="abs" style="inset:0">
+  <img id="logo4" src="../recursos/logo.jpeg" style="position:absolute;left:470px;top:120px;width:140px;height:140px;border-radius:32px">
+  <div class="centrado titulo" style="top:300px;font-size:100px;line-height:1.35;color:#0A0E27">Web a medida, <span class="pastilla" style="display:inline-block;margin-top:14px;padding:6px 26px 14px">código tuyo</span></div>
+  <div id="cand" class="abs" style="left:50%;top:780px;width:300px;height:240px;margin-left:-150px;border-radius:36px;background:#0A0E27;opacity:0">
+    <div class="abs" style="left:50px;top:-150px;width:200px;height:200px;border-radius:100px;border:24px solid #0A0E27;box-sizing:border-box;border-bottom:none"></div>
+    <div class="abs" style="left:132px;top:86px;width:36px;height:70px;border-radius:18px;background:#FACC15"></div>
+  </div>
+  <div id="k1" class="caja navy" style="left:50%;top:1080px;width:760px;margin-left:-380px;font-size:60px;padding:24px 40px;text-align:center">Web a medida</div>
+  <div id="k2" class="caja navy" style="left:50%;top:1220px;width:760px;margin-left:-380px;font-size:60px;padding:24px 40px;text-align:center">Tienda a medida</div>
+  <div id="k3" class="caja navy" style="left:50%;top:1360px;width:760px;margin-left:-380px;font-size:60px;padding:24px 40px;text-align:center">Código que conoces</div>
+</div></div>
+
+<!-- ESCENA 5 · 19,35 a 23,74 s · CIERRE: frase, logo, llamado a la acción y @technologicsjdt -->
+<div id="e5" class="capa fondo-navy">
+  <div id="sorp" class="centrado" style="top:360px;font-size:76px;font-weight:800;color:#FFFFFF;opacity:0">Cero invitados sorpresa.</div>
+  <img id="logo" src="../recursos/logo.jpeg" style="position:absolute;left:290px;top:520px;width:500px;border-radius:90px;opacity:0">
+  <div id="cierre" class="centrado titulo" style="top:1090px;font-size:112px;color:#FFFFFF;opacity:0;line-height:1.05">Hablemos de tu <span class="oro">proyecto.</span></div>
+  <div id="pill" class="abs" style="left:0;right:0;top:1420px;text-align:center;opacity:0"><span class="pildora">@technologicsjdt</span></div>
+</div>
+
+<div id="fl" class="capa" style="background:#FFFFFF;opacity:0;z-index:8"></div>
+
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+window.DURACION = 23.74;
+const ESC = [["e1", 0, 3.83], ["e2", 3.83, 10.43], ["e3", 10.43, 14.84], ["e4", 14.84, 19.35], ["e5", 19.35, 23.74]];
+const dentro = (t, a, b) => t >= a && t < b;
+window.render = (t) => {
+  ESC.forEach(([id, a, b]) => $(id).style.display = dentro(t, a, b) ? "block" : "none");
+
+  // E1 · gancho: el titular está visible desde t=0; el fantasma entra con pop hacia 1,9-2,4 s y flota suave
+  if (dentro(t, 0, 3.83)) {
+    const f = seg(t, 1.9, 2.4, "outBack");
+    $("fantasma").style.opacity = seg(t, 1.9, 2.2, "lineal");
+    const dy = t > 2.4 ? 6 * Math.sin((t - 2.4) * 1.2) : 0;
+    $("fantasma").style.transform = `translateY(${dy}px) scale(${lerp(.6, 1, f)})`;
+  }
+
+  // E2 · conflicto: el script se pega a la página; PAGO se marca al decir «copian datos de tarjetas»; un solo destello
+  if (dentro(t, 3.83, 10.43)) {
+    const u = t - 3.83;
+    const caja = (id, ini, de) => { const k = seg(u, ini, ini + .25, "outExpo"); $(id).style.opacity = k; $(id).style.transform = `translateX(${lerp(de, 0, k)}px)`; };
+    caja("c-chat", 0, -120); caja("c-anun", .15, 160); caja("c-wid", .3, -120);
+    const ks = seg(u, .45, .75, "outBack");
+    $("c-script").style.opacity = seg(u, .45, .6, "lineal");
+    $("c-script").style.transform = `scale(${lerp(.6, 1, ks)}) rotate(-4deg)`;
+    const alarma = u >= 4.63;
+    $("pago").style.borderColor = alarma ? "#FACC15" : "#2A3460";
+    $("pago").style.color = alarma ? "#FACC15" : "#94A3B8";
+    const ko = seg(u, 4.63, 5.0, "outBack");
+    $("ojo2").style.opacity = seg(u, 4.63, 4.8, "lineal");
+    $("ojo2").style.transform = `scale(${lerp(.6, 1, ko)})`;
+  }
+  $("fl").style.opacity = t >= 9.6 && t < 9.85 ? 1 - (t - 9.6) / .25 : 0;
+
+  // E3 · apoyo: tarjetas desordenadas que se encajan en la tienda (marco amarillo) en «tuya»
+  if (dentro(t, 10.43, 14.84)) {
+    const u = t - 10.43, k1 = seg(u, 0, 1, "outExpo"), k2 = seg(u, 3.71, 4.1, "outExpo");
+    const pos = (id, xIni, xDes, yDes, rotDes, xFin, yFin) => {
+      const x = lerp(lerp(xIni, xDes, k1), xFin, k2), y = lerp(yDes, yFin, k2), r = lerp(rotDes, 0, k2);
+      $(id).style.opacity = seg(u, 0, .3, "lineal");
+      $(id).style.left = `${x}px`; $(id).style.top = `${y}px`; $(id).style.transform = `rotate(${r}deg)`;
+    };
+    pos("p-chat", -300, 120, 760, -12, 300, 900);
+    pos("p-pago", 1040, 500, 1000, 9, 300, 1020);
+    pos("p-ped", -300, 180, 1180, -6, 300, 1140);
+    $("marco").style.opacity = seg(u, 3.71, 4.0, "lineal");
+    $("tu-tienda").style.opacity = seg(u, 3.71, 4.0, "lineal");
+  }
+
+  // E4 · JDT como solución: logo desde el inicio; candado; tarjetas en pasos de 140 px; cámara lenta
+  if (dentro(t, 14.84, 19.35)) {
+    const u = t - 14.84;
+    $("e4in").style.transform = `scale(${lerp(1, 1.04, seg(u, 0, 4.5, "lineal"))})`;
+    const c = seg(u, 0, .5, "outBack");
+    $("cand").style.opacity = seg(u, 0, .3, "lineal"); $("cand").style.transform = `scale(${lerp(.8, 1, c)})`;
+    const caja = (id, ini) => { const k = seg(u, ini, ini + .35, "outExpo"); $(id).style.opacity = k; $(id).style.transform = `translateX(${lerp(-200, 0, k)}px)`; };
+    caja("k1", 1.0); caja("k2", 1.56); caja("k3", 2.9);
+  }
+
+  // E5 · cierre: frase desde el inicio, logo, llamado a la acción y @technologicsjdt
+  if (dentro(t, 19.35, 23.74)) {
+    const u = t - 19.35;
+    $("sorp").style.opacity = seg(u, 0, .2, "lineal");
+    $("logo").style.opacity = seg(u, 0, .4, "lineal");
+    const c = seg(u, 1.4, 1.9, "outQuart");
+    $("cierre").style.opacity = c; $("cierre").style.transform = `translateY(${lerp(50, 0, c)}px)`;
+    $("pill").style.opacity = seg(u, 2.0, 2.4, "lineal");
+  }
+};
+</script></body></html>

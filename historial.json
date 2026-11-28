@@ -238,5 +238,10 @@
     "url": "jdt:ia-con-revision-humana",
     "titulo": "La IA ordena tus correos, tú decides qué se envía",
     "fecha": "2026-11-26T10:19:55.382371+00:00"
+  },
+  {
+    "url": "jdt:tienda-script-ajeno",
+    "titulo": "Tu tienda online tiene un script ajeno que nadie revisa (empleado fantasma)",
+    "fecha": "2026-11-28T08:19:36.670399+00:00"
   }
 ]

@@ -1,0 +1,19 @@
+# Borrador 2026-11-28-0305-tienda-con-invitados
+
+- **Modo**: nuevo. Tema: «Tu tienda online tiene un script ajeno que nadie revisa» (empleado fantasma).
+- **Fuente**: Hacker News «Credit card skimming scripts using WebRTC found on popular shopping sites» (https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer). La página no abrió desde la nube; la búsqueda web confirmó reportes de skimmers en tiendas online en temporada Black Friday. Solo se usa el hecho general, sin cifras ni marcas.
+- **Servicio JDT**: Desarrollo web (web y tienda a medida, código que el cliente conoce).
+- **Estilo del día**: video minimalismo-audaz + apoyo datos-que-se-arman; gancho afirmación-absurda; ritmo rápido; banner neobrutal (se cambió de cromo-dorado a bento y a neobrutal: la rejilla cruzaba el CTA y bento trae lavanda fuera de paleta).
+- **Investigación audiovisual (2026-11-28)**: las dos búsquedas devolvieron solo títulos (metricool.com/instagram-trends, advids.co/blog/ui-animation-motion-design-trends); señal débil, sin evidencia de conversión. Rasgos aplicados: (1) pantalla amarilla con frase enorme desde t=0; (2) cortes secos y quietud en «fantasma»; (3) cero partículas/HUD.
+- **Métricas (1C)**: pocas publicaciones maduras, 81,7 % de vistas de no seguidores; el Reel más retenido dura ~18 s con gancho de pregunta. Se eligió ~24 s con gancho absurdo claro en 2 s y caption con pregunta y 8 hashtags. Hipótesis de retención: titular completo en t=0 + fantasma en 2 s + 11 beats ayudan a pasar el inicio; a contrastar con métricas.
+- **Concepto**: el script ajeno es el empleado que nunca contrataste y tiene acceso a la caja; remate «Cero invitados sorpresa».
+- **Locución (331 caracteres)**: «Tu tienda online tiene un empleado que nunca contrataste. Un script ajeno en tu página. Hace poco encontraron algunos que copian datos de tarjetas. Si no sabes qué código corre ahí, tu tienda no es del todo tuya. En JDT hacemos tu web y tu tienda a medida, con código que conoces. Cero invitados sorpresa. ¡Hablemos de tu proyecto!»
+- **Voz**: ElevenLabs, Teno pupi (voice_id uxgGF2sgmrmx7FWDZmtU), eleven_v4, una generación; 382 créditos gastados (cuota previa 36.966 de 40.000 caracteres según el subagente). Transcripción scribe_v1 para sincronía exacta.
+- **Video**: videos/2026-11-28-0305-tienda-con-invitados.mp4 (23,85 s, 1080x1920, con audio, 1,3 MB). HTML: html/2026-11-28-0305-tienda-con-invitados.html. Guion: videos/2026-11-28-0305-tienda-con-invitados.json.
+- **Banner**: banners/2026-11-28-0305-tienda-con-invitados.png (neobrutal): «¿Quién tiene la *llave* de tu tienda online?».
+- **Caption**: videos/2026-11-28-0305-tienda-con-invitados.caption.txt
+  Tu tienda online tiene un empleado que nunca contrataste. ¿Quién más tiene llave de tu tienda? Un script ajeno puede estar pegado a tu página sin que nadie lo revise, y hace poco encontraron algunos que copian datos de tarjetas. En JDT hacemos tu web y tu tienda a medida, con código que conoces y puedes controlar. Hablemos de tu proyecto. Te respondemos en menos de 24 horas. @technologicsjdt (8 hashtags al final del archivo).
+- **Revisiones del modelo capaz**: Fable sin créditos (429); se usó Opus. Validación 3b: NO APROBADO 6,5 → se corrigió (titular en t=0, fantasma SVG, tarjetas Chat/Pago/Pedidos, sin lavanda, JDT visible en E4, pastilla @ separada). Revisión final: 7,5 con bloqueante en banner (lavanda de bento) → banner cambiado a neobrutal; ajustes de margen del chip «Pago» y del candado. 3 consultas en total.
+- **Nota interna final**: 8,0 (mía, tras corregir; el revisor dio 7,5 antes de arreglar el banner y los márgenes).
+- **Lecciones aplicadas**: titular desde t=0, sin lavanda, el HTML manda y el guion describe lo dibujado, nada cruza texto. Nueva lección guardada.
+- Para calificar: agrega en calificaciones.md la fila | 2026-11-28-0305-tienda-con-invitados | nota | comentario |
