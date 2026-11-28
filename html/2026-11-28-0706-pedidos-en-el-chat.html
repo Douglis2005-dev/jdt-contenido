@@ -1,0 +1,205 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+.abs{position:absolute}
+.centrado{position:absolute;left:0;right:0;text-align:center;padding:0 60px;box-sizing:border-box}
+.fn{background:#0A0E27}.fn2{background:#0D1230}.fa{background:#FACC15}
+.ven{position:absolute;border-radius:44px;background:#131A3A;border:4px solid #94A3B8;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.55)}
+.cab{position:absolute;left:0;right:0;top:0;height:104px;background:#0A0E27;border-bottom:3px solid #2A3460}
+.av{position:absolute;left:30px;top:20px;width:64px;height:64px;border-radius:50%;background:#FACC15}
+.nom{position:absolute;left:116px;top:26px;font-weight:800;font-size:34px;color:#fff}
+.sub{position:absolute;left:116px;top:66px;font-weight:600;font-size:22px;color:#94A3B8}
+.msg{position:absolute;border-radius:30px;background:#0A0E27;border:3px solid #2A3460;color:#fff;font-weight:700;font-size:38px;display:none;overflow:hidden}
+.msg.ped{border-color:#FACC15;background:#1B2350}
+.msg.comp{background:#fff;color:#0A0E27;border-color:#FACC15;border-width:5px}
+.btn{position:absolute;border-radius:36px;background:#FACC15;color:#0A0E27;font-weight:900;text-align:center}
+.col{position:absolute;top:130px;width:260px;text-align:center;font-weight:800;font-size:30px;letter-spacing:.1em;color:#94A3B8}
+.cel{position:absolute;width:260px;height:150px;border-radius:26px;background:#131A3A;border:3px solid #2A3460;color:#fff;font-weight:800;font-size:32px;line-height:1.15;display:flex;align-items:center;justify-content:center;text-align:center;opacity:0}
+.cel.ok{border-color:#FACC15}
+.noti{position:absolute;left:90px;width:900px;height:150px;border-radius:34px;background:#fff;color:#0A0E27;font-weight:800;font-size:46px;box-shadow:8px 12px 0 rgba(0,0,0,.4);opacity:0;display:flex;align-items:center;padding:0 36px;gap:28px}
+.noti small{display:block;font-size:26px;color:#131A3A;font-weight:700}
+</style></head><body>
+<div id="bgw" class="capa"></div>
+
+<!-- PLANO CONTINUO 1-2: el chat -->
+<div id="e1" class="capa fn">
+  <div id="cam" class="abs" style="left:0;top:0;width:1080px;height:1920px;transform-origin:50% 85%">
+    <div id="chat" class="ven" style="left:90px;top:560px;width:900px;height:1060px">
+      <div class="cab"><div class="av"></div><div class="nom">Chat del negocio</div><div class="sub">Pedidos de hoy</div></div>
+      <div id="vp" class="abs" style="left:0;top:104px;width:900px;height:940px;overflow:hidden"></div>
+    </div>
+  </div>
+<div id="vig" class="capa" style="z-index:3;pointer-events:none;background:radial-gradient(ellipse at 50% 55%,rgba(10,14,39,0) 45%,rgba(10,14,39,.75) 100%)"></div>
+<div id="luz" class="capa" style="z-index:2;pointer-events:none;background:linear-gradient(90deg,rgba(84,102,180,.22) 0%,rgba(84,102,180,0) 40%,rgba(250,204,21,0) 60%,rgba(250,204,21,.14) 100%)"></div>
+  <div id="tt" class="centrado titulo" style="z-index:8;top:120px;font-size:92px;line-height:1.04;color:#fff"></div>
+  <div id="ring" class="abs" style="z-index:8;left:445px;top:360px;width:190px;height:190px"></div>
+  <div id="pregunta" class="abs titulo" style="z-index:8;left:200px;top:900px;width:680px;padding:26px 0 32px;border-radius:40px;background:#FACC15;color:#0A0E27;text-align:center;font-size:84px;box-shadow:10px 14px 0 rgba(0,0,0,.4);opacity:0">¿Quién pagó?</div>
+</div>
+
+<!-- E3: el cliente espera -->
+<div id="e3" class="capa fn2">
+  <div id="h3" class="centrado titulo" style="top:140px;font-size:100px;line-height:1.04;color:#fff">Tu cliente<br><span class="clave">espera.</span></div>
+  <div id="face3" class="abs" style="left:380px;top:470px;width:320px;height:320px"></div>
+  <div id="n0" class="noti" style="top:830px;gap:20px"><div style="display:flex;gap:14px"><i id="d1" style="width:26px;height:26px;border-radius:50%;background:#94A3B8"></i><i id="d2" style="width:26px;height:26px;border-radius:50%;background:#94A3B8"></i><i id="d3" style="width:26px;height:26px;border-radius:50%;background:#94A3B8"></i></div><div style="font-size:34px;color:#131A3A">Cliente escribiendo…</div></div>
+  <div id="n1" class="noti" style="top:830px"><div style="width:70px;height:70px;border-radius:50%;background:#FACC15;flex:none"></div><div><small>Cliente</small>¿Ya salió mi pedido?</div></div>
+  <div id="n2" class="noti" style="top:1010px"><div style="width:70px;height:70px;border-radius:50%;background:#FACC15;flex:none"></div><div><small>Cliente</small>¿Hola? ¿Y el pago?</div></div>
+  <div id="n3" class="noti" style="top:1190px"><div style="width:70px;height:70px;border-radius:50%;background:#FACC15;flex:none"></div><div><small>Cliente</small>Mi pedido…</div></div>
+</div>
+
+<!-- E4: JDT, app de pedidos -->
+<div id="e4" class="capa fa">
+  <img src="../recursos/logo.jpeg" style="position:absolute;left:480px;top:120px;width:120px;height:120px;border-radius:26px">
+  <div class="centrado" style="top:252px;font-weight:800;font-size:30px;letter-spacing:.12em;color:#0A0E27">JDT TECHNOLOGICS</div>
+  <div id="h4" class="centrado titulo" style="top:330px;font-size:88px;line-height:1.1;color:#0A0E27">Apps móviles<br>de <span style="background:#0A0E27;color:#FACC15;padding:0 30px 6px;border-radius:70px;display:inline-block;margin-top:8px">pedidos</span></div>
+  <div id="bd" class="ven" style="left:70px;top:760px;width:940px;height:830px;background:#0A0E27;border-color:#0A0E27">
+    <div class="col" style="left:30px">PEDIDO</div><div class="col" style="left:340px">PAGO</div><div class="col" style="left:650px">ENTREGA</div>
+    <div class="cel" id="c11" style="left:30px;top:200px">Pedido 1</div><div class="cel ok" id="c12" style="left:340px;top:200px">Pagado ✓</div><div class="cel ok" id="c13" style="left:650px;top:200px">En camino ✓</div>
+    <div class="cel" id="c21" style="left:30px;top:390px">Pedido 2</div><div class="cel ok" id="c22" style="left:340px;top:390px">Pagado ✓</div><div class="cel ok" id="c23" style="left:650px;top:390px">Listo ✓</div>
+    <div class="cel" id="c31" style="left:30px;top:580px">Pedido 3</div><div class="cel ok" id="c32" style="left:340px;top:580px">Pagado ✓</div><div class="cel ok" id="c33" style="left:650px;top:580px">Preparando</div>
+  </div>
+  <div id="u4" class="centrado" style="top:1650px;font-weight:900;font-size:52px;color:#0A0E27;opacity:0">Sin buscar en el chat</div>
+</div>
+
+<!-- E5 · cierre -->
+<div id="e5" class="capa fn">
+  <div id="c1" class="centrado titulo" style="top:260px;font-size:110px;line-height:1.05;color:#fff;opacity:0">Que ningún<br>pedido <span class="clave">se pierda.</span></div>
+  <img id="lg" src="../recursos/logo.jpeg" style="position:absolute;left:350px;top:760px;width:380px;height:380px;border-radius:76px;opacity:0">
+  <div id="c2" class="centrado titulo" style="top:1240px;font-size:104px;line-height:1.05;color:#fff;opacity:0">Hablemos de tu <span class="oro">proyecto.</span></div>
+  <div id="c3" class="abs" style="left:0;right:0;top:1520px;text-align:center;opacity:0"><span class="pildora">@technologicsjdt</span></div>
+</div>
+<div id="fl" class="capa" style="background:#fff;opacity:0;z-index:9"></div>
+
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+window.DURACION = 23.5;
+const ESC = [["e1", 0, 11.5], ["e3", 11.5, 14.12], ["e4", 14.12, 19.26], ["e5", 19.26, 23.5]];
+const dentro = (t, a, b) => t >= a && t < b;
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+const pop = (el, k) => { el.style.opacity = clamp(k * 3); el.style.transform = `scale(${lerp(.7, 1, E.outBack(clamp(k)))})`; };
+
+/* ---- mensajes del chat (llegan con el tiempo; los viejos suben y se hunden) ---- */
+const FOTO = `<svg viewBox="0 0 100 70" width="100%" height="100%"><rect width="100" height="70" fill="#131A3A"/><circle cx="72" cy="22" r="9" fill="#94A3B8"/><path d="M0,70 L30,34 L52,56 L68,40 L100,70 Z" fill="#2A3460"/></svg>`;
+const AUDIO = (n) => `<div style="display:flex;align-items:center;gap:20px;height:100%;padding:0 28px"><svg viewBox="0 0 40 40" width="46" height="46"><path d="M10,6 L34,20 L10,34 Z" fill="#FACC15"/></svg>${Array.from({length:18},(_,i)=>`<i style="display:block;width:8px;border-radius:4px;background:#94A3B8;height:${10+((i*7+n)%5)*8}px"></i>`).join("")}</div>`;
+const CHECKP = `<svg viewBox="0 0 100 100" width="64" height="64"><circle cx="50" cy="50" r="44" fill="#FACC15"/><path d="M30,52 L45,67 L72,36" stroke="#0A0E27" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const MSG = [
+ {t:-.9, w:430, h:96, html:"Buenas tardes"},
+ {t:-.8, w:520, h:96, html:"¿Atienden hoy?"},
+ {t:-.4, w:600, h:104, c:"ped", html:"Hola, 2 combos para hoy"},
+ {t:1.7, w:470, h:96, html:"¿Tienen domicilio?"},
+ {t:2.15, w:300, h:190, html:FOTO, pad:0},
+ {t:2.6, w:560, h:96, html:"¿A nombre de quién?"},
+ {t:3.0, w:500, h:96, html:AUDIO(1), pad:0},
+ {t:3.3, w:430, h:96, html:"¿Me confirman?"},
+ {t:3.6, w:500, h:96, html:"Mismo de ayer"},
+ {t:6.14, w:620, h:96, html:"Ahí te paso la dirección"},
+ {t:6.98, w:300, h:190, html:FOTO, pad:0},
+ {t:7.82, w:500, h:96, html:AUDIO(3), pad:0},
+ {t:8.78, w:620, h:130, c:"comp", html:`<div style="display:flex;align-items:center;gap:22px;height:100%;padding:0 30px">${CHECKP}<span>Comprobante de pago</span></div>`, pad:0},
+ {t:9.25, w:430, h:96, html:"¡Gracias!"},
+ {t:9.5, w:300, h:190, html:FOTO, pad:0},
+ {t:9.75, w:500, h:96, html:AUDIO(2), pad:0},
+ {t:10.0, w:360, h:96, html:"¿Ya?"},
+ {t:10.45, w:430, h:96, html:"¿Hola? ¿Sí llegó?"},
+ {t:10.8, w:300, h:190, html:FOTO, pad:0},
+];
+const vp = $("vp");
+MSG.forEach((m, i) => {
+  const d = document.createElement("div"); d.className = "msg" + (m.c ? " " + m.c : ""); d.id = "m" + i;
+  d.style.width = m.w + "px"; d.style.height = m.h + "px";
+  d.style.left = (i % 3 === 1 ? 900 - 30 - m.w : 30) + "px";
+  if (m.pad !== 0) { d.style.lineHeight = (m.h - 6) + "px"; d.style.paddingLeft = "30px"; } 
+  d.innerHTML = m.html; vp.appendChild(d); m.el = d;
+});
+const GAP = 20, VH = 940;
+
+/* ---- caras ---- */
+const cara = (c, boca, ceja) => `<svg viewBox="0 0 100 100" width="100%" height="100%"><circle cx="50" cy="50" r="42" fill="#131A3A" stroke="${c}" stroke-width="4"/><circle cx="36" cy="44" r="5" fill="#fff"/><circle cx="64" cy="44" r="5" fill="#fff"/><path d="${ceja}" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><path d="${boca}" stroke="${c}" stroke-width="5" fill="none" stroke-linecap="round"/></svg>`;
+const NEUTRA = "M36,72 L64,72", TRISTE = "M34,76 Q50,62 66,76";
+const CEJA0 = "M28,33 L44,33 M56,33 L72,33", CEJA_ENO = "M28,28 L44,36 M56,36 L72,28";
+const ringSvg = (k, n) => `<svg viewBox="0 0 100 100" width="190" height="190"><circle cx="50" cy="50" r="44" fill="#0A0E27" stroke="#2A3460" stroke-width="7"/><circle cx="50" cy="50" r="44" fill="none" stroke="#FACC15" stroke-width="7" stroke-linecap="round" stroke-dasharray="${276 * k} 276" transform="rotate(-90 50 50)"/><text x="50" y="68" font-family="Montserrat" font-weight="900" font-size="52" fill="#fff" text-anchor="middle">${n}</text></svg>`;
+let ultimoTitulo = "";
+const titulo = (h) => { if (h !== ultimoTitulo) { $("tt").innerHTML = h; ultimoTitulo = h; } };
+
+window.render = (t) => {
+  ESC.forEach(([id, a, b]) => $(id).style.display = dentro(t, a, b) ? "block" : "none");
+  bg.clearRect(0, 0, JDT.W, JDT.H); fg.clearRect(0, 0, JDT.W, JDT.H);
+
+  // ---------- plano continuo del chat (0 a 11.5)
+  if (dentro(t, 0, 11.5)) {
+    // mensajes: el nuevo empuja al viejo hacia arriba
+    const P = MSG.map(m => seg(t, m.t, m.t + .35, "outQuart"));
+    let S = 0;
+    for (let i = MSG.length - 1; i >= 0; i--) {
+      const m = MSG[i], p = P[i];
+      if (p <= 0) { m.el.style.display = "none"; continue; }
+      const bottom = VH - 18 - S, top = bottom - m.h;
+      const sombra = clamp(S / 420);
+      m.el.style.display = "block";
+      m.el.style.top = (top + (1 - p) * 30) + "px";
+      m.el.style.opacity = clamp(p * 2) * lerp(1, m.c === "comp" ? .12 : .3, sombra);
+      m.el.style.filter = sombra > .05 ? `blur(${(sombra * 3.2).toFixed(1)}px)` : "none";
+      S += (m.h + GAP) * p;
+    }
+    // camara: empuja con perspectiva
+    const c1 = seg(t, 5.2, 6.4, "inOutCubic"), c2 = seg(t, 8.2, 9.2, "inOutCubic");
+    const esc = lerp(1, 1.04, seg(t, 0, 5.5, "lineal")) + .10 * c1 + .04 * c2;
+    JDT.camara($("cam"), {rx: 0, ry: lerp(-7, -3, seg(t, 0, 5.5, "lineal")) + 5 * c1 + 3 * c2, s: esc, y: -40 * c1 - 30 * c2});
+    // cuenta regresiva: 3, 2, 1
+    const rt = t - .1, n = rt < 1.2 ? 3 : rt < 2.4 ? 2 : 1, k = 1 - ((rt % 1.2) / 1.2);
+    $("ring").style.opacity = dentro(t, 0, 3.5) ? 1 : 0;
+    if (dentro(t, 0, 3.5)) $("ring").innerHTML = ringSvg(clamp(k), n);
+    $("ring").style.transform = `scale(${1 + .06 * Math.max(0, 1 - ((rt % 1.2) / .25))})`;
+    // titulos
+    if (t < 3.5) titulo('Llega un <span class="clave">pedido</span><br>por WhatsApp');
+    else if (t < 5.55) titulo('<span class="clave">Enterrado.</span>');
+    else if (t < 8.35) titulo('Mensajes,<br>fotos, <span class="clave">audios</span>');
+    else titulo('¿Y el <span class="clave">comprobante</span>?');
+    const tt = $("tt");
+    tt.style.opacity = 1;
+    tt.style.transform = `translateY(${(1 - seg(t, t < 3.5 ? 0 : t < 5.55 ? 3.5 : t < 8.35 ? 5.55 : 8.35, (t < 3.5 ? 0 : t < 5.55 ? 3.5 : t < 8.35 ? 5.55 : 8.35) + .35)) * 36}px)`;
+    // el comprobante: respiro y pregunta final
+    $("pregunta").style.opacity = seg(t, 10.14, 10.45, "lineal");
+    $("pregunta").style.transform = `rotate(-4deg) scale(${lerp(.7, 1, E.outBack(seg(t, 10.14, 10.6, "lineal")))})`;
+    // golpe de glitch UNICO en "enterrado"
+    JDT.glitch($("chat"), (t > 3.55 && t < 3.8) ? 1 - (t - 3.55) / .25 : 0, 3);
+    if (!(t > 3.55 && t < 3.8)) $("chat").style.filter = "none";
+  }
+  // ---------- E3 (11.5 a 14.12)
+  if (dentro(t, 11.5, 14.12)) {
+    $("h3").style.opacity = seg(t, 11.5, 11.8, "lineal");
+    const ang = t > 13.3 ? 1 : 0;
+    $("face3").innerHTML = cara("#FACC15", ang ? TRISTE : NEUTRA, ang ? CEJA_ENO : CEJA0);
+    pop($("face3"), seg(t, 11.5, 12.0));
+    // escribiendo… 11.9 a 12.86
+    const esc = dentro(t, 11.95, 12.86);
+    $("n0").style.opacity = esc ? 1 : 0;
+    ["d1","d2","d3"].forEach((id, i) => $(id).style.transform = `translateY(${-10 * Math.max(0, Math.sin(t * 9 - i * .9))}px)`);
+    pop($("n1"), seg(t, 12.86, 13.2)); pop($("n2"), seg(t, 13.25, 13.55)); pop($("n3"), seg(t, 13.6, 13.9));
+    $("face3").style.transform += ` translateX(${t > 13.3 ? Math.sin(t * 40) * 4 : 0}px)`;
+  }
+  // ---------- E4 (14.12 a 19.26)
+  if (dentro(t, 14.12, 19.26)) {
+    $("h4").style.opacity = seg(t, 14.3, 14.6, "lineal"); $("h4").style.transform = `translateY(${(1 - seg(t, 14.3, 14.9)) * 40}px)`;
+    pop($("bd"), seg(t, 14.6, 15.2)); $("bd").style.transform += ` scale(${1 + .03 * seg(t, 15.2, 19.2, "lineal")})`;
+    document.querySelectorAll("#bd .col").forEach((e, i) => { e.style.opacity = seg(t, 14.9 + i * .45, 15.2 + i * .45, "lineal"); });
+    const cel = (id, a) => { const e = $(id); e.style.opacity = seg(t, a, a + .12, "lineal"); e.style.transform = `scale(${lerp(.8, 1, E.outBack(seg(t, a, a + .4, "lineal")))})`; };
+    cel("c11", 16.25); cel("c21", 16.55); cel("c31", 16.85);
+    cel("c12", 17.95); cel("c22", 18.15); cel("c32", 18.35);
+    cel("c13", 18.6); cel("c23", 18.78); cel("c33", 18.95);
+    $("u4").style.opacity = seg(t, 18.5, 18.9, "lineal");
+  }
+  // ---------- E5 (19.26 a 23.5)
+  if (dentro(t, 19.26, 23.5)) {
+    $("c1").style.opacity = seg(t, 19.33, 19.65, "lineal"); $("c1").style.transform = `translateY(${lerp(50, 0, seg(t, 19.33, 20.0))}px)`;
+    $("lg").style.opacity = seg(t, 20.9, 21.3, "lineal"); $("lg").style.transform = `scale(${lerp(.85, 1, seg(t, 20.9, 21.7, "outBack"))})`;
+    $("c2").style.opacity = seg(t, 21.0, 21.4, "lineal"); $("c3").style.opacity = seg(t, 22.2, 22.6, "lineal");
+    $("c1").style.top = lerp(260, 200, seg(t, 20.9, 21.5, "inOutCubic")) + "px";
+  }
+  $("vig").style.opacity = dentro(t, 14.12, 19.26) ? 0 : 1;
+  $("luz").style.opacity = dentro(t, 14.12, 19.26) ? 0 : 1;
+  JDT.fondo(bg, t);
+  // UN destello: el giro hacia la solucion
+  JDT.flash($("fl"), t > 14.12 && t < 14.34 ? 1 - (t - 14.12) / .22 : 0);
+  JDT.grano(fg, t, .035);
+};
+</script></body></html>
