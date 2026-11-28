@@ -1,0 +1,255 @@
+{
+ "salida": "videos/2026-11-28-0606-el-no-del-cafe.mp4",
+ "formato": "Reel vertical 1080x1920, ~22 s, 5 escenas: pregunta incómoda con interfaz de tienda, pantalla dividida de dos cafés llenos (mal no vs buen no), giro con checkout que se queda pensando vs mensaje claro, JDT como desarrollo web a medida, cierre. Voz en off es-CO.",
+ "concepto": "Dos cafés igual de llenos: en uno nadie te dice nada y te vas bravo; en el otro te avisan «vuelve en diez minutos» y vuelves. Tu tienda online, en Black Friday, hace lo mismo: o se queda pensando o le dice al cliente qué hacer. JDT hace web a medida que sabe decir «espera» bien.",
+ "produccion": "Estilo principal interfaz-en-movimiento: ventana de tienda genérica con cursor, botón Pagar que se hace clic, spinner, aviso que se escribe; apoyo pantalla-dividida-dinamica en la escena 2 (café mudo vs café que avisa con fachada y taza dibujadas, divisor «vs»). Gancho pregunta incómoda con titular desde t=0. Ritmo rápido: cortes cada 2–4 s. Fondos: navy, split navy/azul, azul, amarillo pleno en la solución, navy en el cierre. Un solo destello en el giro.",
+ "fuente": "https://dev.to/thethirdcup/the-best-cafe-in-town-turns-people-away-your-system-should-too-5ehh",
+ "url": "https://dev.to/thethirdcup/the-best-cafe-in-town-turns-people-away-your-system-should-too-5ehh",
+ "titulo": "The Best Café in Town Turns People Away. Your System Should Too",
+ "tema": "Analogía del café lleno: un sistema saturado debe decir «no» (espera) de forma clara; aplicado a tiendas online en temporada alta, sin cifras",
+ "tendencias": {
+  "video": "interfaz-en-movimiento",
+  "apoyo": "pantalla-dividida-dinamica",
+  "gancho": "pregunta-incomoda",
+  "ritmo": "rapido",
+  "banner": "tipografia-gigante",
+  "pulso": "2026-11-28: Metricool/ReasonWhy 2026 reportan caída de alcance de Reels (títulos de búsqueda); motion B2B 2026 (advids.co) muestra proceso/producto real en lugar de video corporativo. Aplicación: interfaz de tienda en acción + pantalla dividida.",
+  "fuentes": [
+   "https://www.reasonwhy.es/actualidad/estudio-tendencias-redes-sociales-metricool-2026",
+   "https://advids.co/blog/images/motion-design-video"
+  ]
+ },
+ "escenas": [
+  {
+   "tipo": "libre",
+   "look": "oscuro",
+   "texto": "¿Tu tienda online *se cuelga* cuando más vende?",
+   "voz": "¿Qué hace tu tienda online cuando se llena de gente?",
+   "duracion": 3.5,
+   "elementos": [
+    {
+     "el": "tarjeta",
+     "texto": "Ventana de tienda",
+     "x": 50,
+     "y": 62
+    },
+    {
+     "el": "tarjeta",
+     "texto": "BLACK FRIDAY",
+     "x": 50,
+     "y": 48
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Pagar",
+     "x": 50,
+     "y": 78
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "azul",
+   "texto": "Dos cafés. *Igual de llenos.*",
+   "voz": "Dos cafés llenos. En uno nadie te dice nada y te vas bravo. En el otro te avisan y vuelves.",
+   "duracion": 6.0,
+   "elementos": [
+    {
+     "el": "tarjeta",
+     "texto": "CAFÉ MUDO",
+     "x": 28,
+     "y": 50
+    },
+    {
+     "el": "tarjeta",
+     "texto": "CAFÉ QUE AVISA",
+     "x": 72,
+     "y": 50
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Nadie dice nada",
+     "x": 28,
+     "y": 80
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Te avisan y vuelves",
+     "x": 72,
+     "y": 80
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "oscuro",
+   "texto": "Tu web, *igual*",
+   "voz": "Tu web igual: o se queda pensando... o le dice al cliente qué hacer.",
+   "duracion": 4.5,
+   "elementos": [
+    {
+     "el": "tarjeta",
+     "texto": "Pensando...",
+     "x": 30,
+     "y": 55
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Estamos llenos",
+     "x": 70,
+     "y": 55
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Avísame",
+     "x": 70,
+     "y": 72
+    },
+    {
+     "el": "texto",
+     "texto": "¿Cuál prefiere tu cliente?",
+     "x": 50,
+     "y": 86,
+     "tam": "m",
+     "color": "amarillo"
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "amarillo",
+   "texto": "Web *a medida*",
+   "voz": "En JDT hacemos desarrollo web a medida que sabe decir «espera» bien.",
+   "duracion": 5.0,
+   "elementos": [
+    {
+     "el": "tarjeta",
+     "texto": "Mucha gente: espera",
+     "x": 50,
+     "y": 62
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Volver a pagar",
+     "x": 50,
+     "y": 80
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de tu proyecto.",
+   "subtexto": "@technologicsjdt",
+   "voz": "Que tu cliente vuelva. ¡Hablemos de tu proyecto!",
+   "duracion": 3.5
+  }
+ ],
+ "audio": "videos/2026-11-28-0606-el-no-del-cafe.mp3",
+ "tiempos": {
+  "inicios": [
+   0.0,
+   3.51,
+   11.51,
+   16.23,
+   21.02
+  ],
+  "retardo": 0.3,
+  "duracion": 24.0
+ },
+ "direccion": {
+  "hook": "Titular «¿Tu tienda online se cuelga cuando más vende?», cinta BLACK FRIDAY y ventana de tienda con botón Pagar visibles desde el cuadro 0",
+  "payoff": "JDT hace desarrollo web a medida que avisa claro cuando hay mucha gente, para que el cliente vuelva; cierre con CTA y @technologicsjdt",
+  "familias": [
+   "motion-graphics",
+   "vfx-tracking"
+  ],
+  "hipotesis": "Una pregunta directa sobre Black Friday más la comparación de dos cafés en pantalla dividida deberían dar un gancho legible sin sonido y una recompensa clara (el aviso que salva al cliente). Contrastar con retencionMediaSeg y pasoInicioPct en metricas.json.",
+  "beats": [
+   {
+    "inicio": 0,
+    "fin": 1.8,
+    "funcion": "hook",
+    "familia": "motion-graphics",
+    "visual": "Titular «¿Tu tienda online se cuelga cuando más vende?» con cinta BLACK FRIDAY; caritas de clientes que se acumulan"
+   },
+   {
+    "inicio": 1.8,
+    "fin": 3.51,
+    "funcion": "tension",
+    "familia": "vfx-tracking",
+    "visual": "Cursor anclado al botón Pagar hace clic y aparece el spinner"
+   },
+   {
+    "inicio": 3.51,
+    "fin": 5.7,
+    "funcion": "giro",
+    "familia": "motion-graphics",
+    "visual": "Pantalla dividida: Café A y Café B aparecen con divisor «vs»"
+   },
+   {
+    "inicio": 5.7,
+    "fin": 8.5,
+    "funcion": "tension",
+    "familia": "vfx-tracking",
+    "visual": "Café A: reloj que corre, puntos suspensivos y la cara pasa a triste: «Nadie dice nada»"
+   },
+   {
+    "inicio": 8.5,
+    "fin": 10.5,
+    "funcion": "recompensa",
+    "familia": "motion-graphics",
+    "visual": "Café A se apaga con una X; Café B muestra el cartel «Lleno. Vuelve en 10 min»"
+   },
+   {
+    "inicio": 10.5,
+    "fin": 11.51,
+    "funcion": "respiro",
+    "familia": "motion-graphics",
+    "visual": "Café B sonríe con check: «Te avisan y vuelves»"
+   },
+   {
+    "inicio": 11.51,
+    "fin": 14.1,
+    "funcion": "tension",
+    "familia": "motion-graphics",
+    "visual": "Ventana de web con spinner y «Pensando...» y barra atascada"
+   },
+   {
+    "inicio": 14.1,
+    "fin": 16.23,
+    "funcion": "giro",
+    "familia": "motion-graphics",
+    "visual": "Barrido y cambio a «Estamos llenos. Vuelve en unos minutos» con botón Avísame"
+   },
+   {
+    "inicio": 16.23,
+    "fin": 18.7,
+    "funcion": "recompensa",
+    "familia": "motion-graphics",
+    "visual": "Pantalla amarilla plena: logo JDT, «Desarrollo web a medida» y ventana de tienda"
+   },
+   {
+    "inicio": 18.7,
+    "fin": 20.9,
+    "funcion": "demostracion",
+    "familia": "vfx-tracking",
+    "visual": "Aviso «Mucha gente: espera», barra que se llena, cursor que hace clic en Volver a pagar y check"
+   },
+   {
+    "inicio": 20.9,
+    "fin": 23.0,
+    "funcion": "payoff",
+    "familia": "motion-graphics",
+    "visual": "«Que tu cliente vuelva.» y logo JDT"
+   },
+   {
+    "inicio": 23.0,
+    "fin": 24.0,
+    "funcion": "cierre",
+    "familia": "motion-graphics",
+    "visual": "«Hablemos de tu proyecto.» y pastilla @technologicsjdt"
+   }
+  ]
+ },
+ "validacion": "corregido: etiquetas CAFÉ MUDO/QUE AVISA, fachada y taza dibujadas, gancho «se cuelga cuando más vende», cinta Black Friday, caritas más grandes, escena 4 llena desde el inicio, JSON sincronizado con el HTML (nota 7.0 del revisor antes de corregir)"
+}

@@ -207,6 +207,14 @@
       "gancho": "pov",
       "ritmo": "contemplativo",
       "banner": "amarillo-total"
+    },
+    {
+      "fecha": "2026-11-28T06:06:44",
+      "video": "interfaz-en-movimiento",
+      "apoyo": "pantalla-dividida-dinamica",
+      "gancho": "pregunta-incomoda",
+      "ritmo": "rapido",
+      "banner": "tipografia-gigante"
     }
   ]
 }

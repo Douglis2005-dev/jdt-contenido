@@ -1,0 +1,188 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+.abs{position:absolute}
+.centrado{position:absolute;left:0;right:0;text-align:center;padding:0 60px;box-sizing:border-box}
+.fn{background:#0A0E27}.fn2{background:#131A3A}.fa{background:#FACC15}
+.ven{position:absolute;border-radius:40px;background:#131A3A;border:4px solid #94A3B8;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.ven .bar{height:78px;background:#0A0E27;border-bottom:3px solid #2A3460}
+.pto{position:absolute;top:28px;width:22px;height:22px;border-radius:50%;background:#94A3B8}
+.tile{position:absolute;width:250px;height:230px;border-radius:26px;background:#0A0E27;border:3px solid #2A3460}
+.btn{position:absolute;border-radius:36px;background:#FACC15;color:#0A0E27;font-weight:900;text-align:center;box-shadow:8px 10px 0 rgba(0,0,0,.35)}
+.lado{position:absolute;top:330px;height:1180px;border-radius:44px;box-sizing:border-box;overflow:hidden}
+.cartel{position:absolute;border-radius:28px;background:#FFFFFF;color:#0A0E27;font-weight:900;text-align:center;box-shadow:8px 10px 0 rgba(0,0,0,.35)}
+.rot{position:absolute;font-weight:800;font-size:40px;color:#94A3B8;text-align:center}
+</style></head><body>
+<div id="bgw" class="capa"></div>
+
+<!-- E1 · gancho: pregunta + tienda que se llena -->
+<div id="e1" class="capa fn">
+  <div id="q1" class="centrado titulo" style="top:170px;font-size:100px;line-height:1.05;color:#fff">¿Tu tienda online<br><span class="clave">se cuelga</span> cuando<br>más vende?</div>
+  <div id="v1" class="ven" style="left:90px;top:640px;width:900px;height:920px">
+    <div class="bar"><span class="pto" style="left:34px"></span><span class="pto" style="left:72px"></span><span class="pto" style="left:110px"></span></div>
+    <div class="tile" style="left:50px;top:130px"></div><div class="tile" style="left:325px;top:130px"></div><div class="tile" style="left:600px;top:130px"></div>
+    <div id="cart" class="abs" style="left:0;right:0;top:92px;height:64px;background:#FACC15;color:#0A0E27;font-weight:900;font-size:44px;line-height:64px;text-align:center;letter-spacing:.06em">BLACK FRIDAY</div>
+    <div id="b1" class="btn" style="left:230px;top:470px;width:440px;height:130px;font-size:62px;line-height:130px">Pagar</div>
+    <div id="sp1" class="abs" style="left:380px;top:660px;width:140px;height:140px;opacity:0"><svg viewBox="0 0 100 100" width="140" height="140"><circle cx="50" cy="50" r="38" fill="none" stroke="#2A3460" stroke-width="10"/><path d="M50,12 A38,38 0 0 1 88,50" fill="none" stroke="#FACC15" stroke-width="10" stroke-linecap="round"/></svg></div>
+    <div id="cur1" class="abs" style="left:0;top:0;width:120px;height:120px;z-index:4"><svg viewBox="0 0 100 100" width="120" height="120"><path d="M20,10 L20,78 L38,62 L50,90 L62,84 L50,58 L76,58 Z" fill="#fff" stroke="#0A0E27" stroke-width="5" stroke-linejoin="round"/></svg></div>
+  </div>
+  <div id="gente" class="abs" style="left:90px;top:1590px;width:900px;height:100px"></div>
+</div>
+
+<!-- E2 · pantalla dividida: dos cafés -->
+<div id="e2" class="capa fn2">
+  <div id="h2" class="centrado titulo" style="top:130px;font-size:80px;line-height:1.05;color:#fff">Dos cafés.<br><span class="clave">Igual de llenos.</span></div>
+  <div id="ladoA" class="lado fn" style="left:50px;width:470px;border:4px solid #94A3B8">
+    <div class="rot" style="top:30px;left:0;right:0;font-size:42px">CAFÉ MUDO</div><svg viewBox="0 0 200 120" width="330" height="198" class="abs" style="left:70px;top:86px"><path d="M10,50 L30,8 L170,8 L190,50 Z" fill="#fff" opacity=".12"/><path d="M10,50 L30,8 L60,8 L50,50 Z M80,50 L90,8 L120,8 L110,50 Z M140,50 L150,8 L170,8 L190,50 Z" fill="#94A3B8"/><rect x="25" y="56" width="150" height="58" rx="8" fill="none" stroke="#94A3B8" stroke-width="5"/><path d="M80,70 h40 v22 a14,14 0 0 1 -14,14 h-12 a14,14 0 0 1 -14,-14 Z M120,76 h10 a8,8 0 0 1 0,16 h-10" fill="none" stroke="#fff" stroke-width="5"/><path id="vap" d="M92,62 q-6,-10 0,-20 M106,62 q-6,-10 0,-20" stroke="#94A3B8" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+    <div id="faceA" class="abs" style="left:135px;top:300px;width:200px;height:200px"></div>
+    <div id="relA" class="abs" style="left:150px;top:560px;width:170px;height:170px"></div>
+    <div id="burA" class="abs" style="left:60px;top:760px;width:350px;font-weight:900;font-size:68px;color:#94A3B8;text-align:center;opacity:0">. . .</div>
+    <div id="txA" class="centrado titulo" style="top:880px;font-size:56px;color:#fff;opacity:0;padding:0 24px">Nadie<br>dice <span class="clave">nada</span></div>
+    <div id="xA" class="abs" style="left:185px;top:1040px;width:100px;height:100px;opacity:0"></div>
+  </div>
+  <div id="ladoB" class="lado fn" style="left:560px;width:470px;border:4px solid #FACC15">
+    <div class="rot" style="top:30px;left:0;right:0;color:#FACC15;font-size:42px">CAFÉ QUE AVISA</div><svg viewBox="0 0 200 120" width="330" height="198" class="abs" style="left:70px;top:86px"><path d="M10,50 L30,8 L170,8 L190,50 Z" fill="#fff" opacity=".12"/><path d="M10,50 L30,8 L60,8 L50,50 Z M80,50 L90,8 L120,8 L110,50 Z M140,50 L150,8 L170,8 L190,50 Z" fill="#FACC15"/><rect x="25" y="56" width="150" height="58" rx="8" fill="none" stroke="#FACC15" stroke-width="5"/><path d="M80,70 h40 v22 a14,14 0 0 1 -14,14 h-12 a14,14 0 0 1 -14,-14 Z M120,76 h10 a8,8 0 0 1 0,16 h-10" fill="none" stroke="#fff" stroke-width="5"/><path id="vap" d="M92,62 q-6,-10 0,-20 M106,62 q-6,-10 0,-20" stroke="#FACC15" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+    <div id="faceB" class="abs" style="left:135px;top:300px;width:200px;height:200px"></div>
+    <div id="cartB" class="cartel" style="left:50px;top:560px;width:370px;height:260px;font-size:46px;line-height:1.12;padding-top:26px;box-sizing:border-box;opacity:0">Lleno.<br>Vuelve en<br><span style="background:#FACC15;padding:0 10px;border-radius:12px;white-space:nowrap">10 min</span></div>
+    <div id="txB" class="centrado titulo" style="top:880px;font-size:56px;color:#fff;opacity:0;padding:0 24px">Te <span class="clave">avisan</span><br>y vuelves</div>
+    <div id="okB" class="abs" style="left:185px;top:1040px;width:100px;height:100px;opacity:0"></div>
+  </div>
+  <div id="vs" class="abs" style="left:490px;top:830px;width:100px;height:100px;border-radius:50%;background:#FACC15;color:#0A0E27;font-weight:900;font-size:44px;line-height:100px;text-align:center;opacity:0">vs</div>
+</div>
+
+<!-- E3 · tu web igual: pensando vs dice qué hacer -->
+<div id="e3" class="capa fn">
+  <div id="h3" class="centrado titulo" style="top:200px;font-size:104px;line-height:1.05;color:#fff">Tu web,<br><span class="clave">igual.</span></div>
+  <div id="v3" class="ven" style="left:90px;top:640px;width:900px;height:860px">
+    <div class="bar"><span class="pto" style="left:34px"></span><span class="pto" style="left:72px"></span><span class="pto" style="left:110px"></span></div>
+    <div id="f3a" class="abs" style="inset:78px 0 0 0">
+      <div id="sp3" class="abs" style="left:370px;top:170px;width:160px;height:160px"><svg viewBox="0 0 100 100" width="160" height="160"><circle cx="50" cy="50" r="38" fill="none" stroke="#2A3460" stroke-width="10"/><path d="M50,12 A38,38 0 0 1 88,50" fill="none" stroke="#FACC15" stroke-width="10" stroke-linecap="round"/></svg></div>
+      <div id="pe3" class="centrado titulo" style="top:420px;font-size:70px;color:#fff">Pensando<span id="pt3">...</span></div>
+      <div class="abs" style="left:120px;top:600px;width:660px;height:26px;border-radius:13px;background:#2A3460"><div id="pb3" class="abs" style="left:0;top:0;height:26px;border-radius:13px;background:#94A3B8;width:60%"></div></div>
+    </div>
+    <div id="f3b" class="abs" style="inset:78px 0 0 0;opacity:0">
+      <div class="centrado titulo" style="top:100px;font-size:78px;line-height:1.08;color:#fff">Estamos <span class="clave">llenos</span></div>
+      <div class="centrado" style="top:290px;font-weight:700;font-size:50px;color:#94A3B8;line-height:1.2">Vuelve en unos minutos.<br>Tu carrito sigue aquí.</div>
+      <div id="bb3" class="btn" style="left:200px;top:540px;width:500px;height:120px;font-size:54px;line-height:120px">Avísame</div>
+    </div>
+  </div>
+  <div id="r3" class="abs" style="left:90px;top:1550px;width:900px;font-weight:900;font-size:56px;color:#94A3B8;text-align:center">¿Cuál prefiere tu cliente?</div>
+</div>
+
+<!-- E4 · JDT: web a medida que sabe decir espera -->
+<div id="e4" class="capa fa">
+  <img src="../recursos/logo.jpeg" style="position:absolute;left:465px;top:130px;width:150px;height:150px;border-radius:32px">
+  <div class="centrado" style="top:296px;font-weight:800;font-size:34px;letter-spacing:.12em;color:#0A0E27">JDT TECHNOLOGICS</div>
+  <div class="centrado titulo" style="top:380px;font-size:96px;line-height:1.15;color:#0A0E27">Desarrollo web<br><span style="background:#0A0E27;color:#FACC15;padding:0 34px 6px;border-radius:70px;display:inline-block;margin-top:8px">a medida</span></div>
+  <div id="p4" class="ven" style="left:90px;top:860px;width:900px;height:700px;background:#0A0E27;border-color:#0A0E27">
+    <div class="bar"><span class="pto" style="left:34px"></span><span class="pto" style="left:72px"></span><span class="pto" style="left:110px"></span></div>
+    <div id="t4" class="abs" style="left:0;top:110px;width:900px;height:200px"><div class="tile" style="left:60px;top:0;width:230px;height:190px"></div><div class="tile" style="left:335px;top:0;width:230px;height:190px"></div><div class="tile" style="left:610px;top:0;width:230px;height:190px"></div></div>
+    <div id="m4" class="abs" style="left:60px;top:130px;width:780px;height:150px;border-radius:30px;background:#fff;color:#0A0E27;font-weight:900;font-size:52px;line-height:150px;text-align:center;opacity:0">Mucha gente: <span style="background:#FACC15;padding:0 12px;border-radius:12px">espera</span></div>
+    <div class="abs" style="left:60px;top:340px;width:780px;height:26px;border-radius:13px;background:#2A3460"><div id="pb4" class="abs" style="left:0;top:0;height:26px;border-radius:13px;background:#FACC15;width:0"></div></div>
+    <div id="bt4" class="btn" style="left:200px;top:440px;width:500px;height:120px;font-size:54px;line-height:120px;opacity:0">Volver a pagar</div>
+    <div id="ok4" class="abs" style="left:735px;top:450px;width:100px;height:100px;opacity:0"></div>
+    <div id="cur4" class="abs" style="left:0;top:0;width:110px;height:110px;z-index:4;opacity:0"><svg viewBox="0 0 100 100" width="110" height="110"><path d="M20,10 L20,78 L38,62 L50,90 L62,84 L50,58 L76,58 Z" fill="#fff" stroke="#0A0E27" stroke-width="5" stroke-linejoin="round"/></svg></div>
+  </div>
+</div>
+
+<!-- E5 · cierre -->
+<div id="e5" class="capa fn">
+  <div id="c1" class="centrado titulo" style="top:260px;font-size:112px;line-height:1.05;color:#fff;opacity:0">Que tu cliente<br><span class="clave">vuelva.</span></div>
+  <img id="lg" src="../recursos/logo.jpeg" style="position:absolute;left:350px;top:760px;width:380px;height:380px;border-radius:76px;opacity:0">
+  <div id="c2" class="centrado titulo" style="top:1240px;font-size:104px;line-height:1.05;color:#fff;opacity:0">Hablemos de tu <span class="oro">proyecto.</span></div>
+  <div id="c3" class="abs" style="left:0;right:0;top:1520px;text-align:center;opacity:0"><span class="pildora">@technologicsjdt</span></div>
+</div>
+<div id="fl" class="capa" style="background:#fff;opacity:0;z-index:8"></div>
+
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+window.DURACION = 24.0;
+const D = .3;
+const ESC = [["e1", 0, 3.51], ["e2", 3.51, 11.51], ["e3", 11.51, 16.23], ["e4", 16.23, 21.02], ["e5", 21.02, 24.0]];
+const dentro = (t, a, b) => t >= a && t < b;
+const bg = JDT.lienzo(0), fg = JDT.lienzo(5);
+// caras simples SVG
+const cara = (c, boca, ceja) => `<svg viewBox="0 0 100 100" width="100%" height="100%"><circle cx="50" cy="50" r="42" fill="#131A3A" stroke="${c}" stroke-width="5"/><circle cx="36" cy="44" r="5" fill="#fff"/><circle cx="64" cy="44" r="5" fill="#fff"/><path d="${ceja}" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><path d="${boca}" stroke="${c}" stroke-width="6" fill="none" stroke-linecap="round"/></svg>`;
+const NEUTRA = "M34,70 L66,70", TRISTE = "M34,76 Q50,60 66,76", FELIZ = "M32,64 Q50,84 68,64";
+const CEJA0 = "M28,33 L44,33 M56,33 L72,33", CEJA_ENO = "M28,28 L44,36 M56,36 L72,28", CEJA_F = "M28,34 Q36,28 44,34 M56,34 Q64,28 72,34";
+const reloj = (a) => `<svg viewBox="0 0 100 100" width="100%" height="100%"><circle cx="50" cy="50" r="42" fill="none" stroke="#94A3B8" stroke-width="7"/><line x1="50" y1="50" x2="${50 + 28 * Math.sin(a)}" y2="${50 - 28 * Math.cos(a)}" stroke="#FACC15" stroke-width="7" stroke-linecap="round"/><line x1="50" y1="50" x2="50" y2="30" stroke="#fff" stroke-width="7" stroke-linecap="round"/></svg>`;
+const EQUIS = `<svg viewBox="0 0 100 100" width="100%" height="100%"><circle cx="50" cy="50" r="44" fill="#94A3B8"/><path d="M32,32 L68,68 M68,32 L32,68" stroke="#0A0E27" stroke-width="10" stroke-linecap="round"/></svg>`;
+const CHECK = `<svg viewBox="0 0 100 100" width="100%" height="100%"><circle cx="50" cy="50" r="44" fill="#FACC15"/><path d="M30,52 L45,67 L72,36" stroke="#0A0E27" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+// gente que se acumula (E1)
+$("gente").innerHTML = Array.from({length: 9}, (_, i) => `<div id="g${i}" class="abs" style="left:${i * 100}px;top:0;width:96px;height:96px;opacity:0">${cara("#FACC15", NEUTRA, CEJA0)}</div>`).join("");
+const pop = (el, k) => { el.style.opacity = clamp(k * 3); el.style.transform = `scale(${lerp(.6, 1, E.outBack(clamp(k)))})`; };
+
+window.render = (t) => {
+  ESC.forEach(([id, a, b]) => $(id).style.display = dentro(t, a, b) ? "block" : "none");
+  bg.clearRect(0, 0, JDT.W, JDT.H); fg.clearRect(0, 0, JDT.W, JDT.H);
+  // ---- E1 (0 a 3.51)
+  if (dentro(t, 0, 3.51)) {
+    const c = seg(t, .3, 2.5, "inOutCubic");
+    for (let i = 0; i < 9; i++) pop($("g" + i), seg(t, .2 + i * .22, .6 + i * .22));
+    $("cart").style.opacity = 1;
+    const x = lerp(760, 380, c), y = lerp(360, 520, c);
+    const click = t > 2.55 && t < 2.75;
+    $("cur1").style.transform = `translate(${x}px,${y}px) scale(${click ? .85 : 1})`;
+    $("b1").style.transform = click ? "scale(.95)" : "scale(1)";
+    $("sp1").style.opacity = seg(t, 2.7, 2.9, "lineal"); $("sp1").style.transform = `rotate(${t * 300}deg)`;
+    $("q1").style.transform = `scale(${lerp(1.04, 1, seg(t, 0, .6))})`;
+  }
+  // ---- E2 (3.51 a 11.51)
+  if (dentro(t, 3.51, 11.51)) {
+    const u = t - 3.51;
+    const hd = 1 - seg(t, 5.4 + D * 0, 5.9);  // titular se va
+    $("h2").style.opacity = hd; $("h2").style.transform = `translateY(${-40 * (1 - hd)}px)`;
+    pop($("ladoA"), seg(t, 3.55, 4.1)); pop($("ladoB"), seg(t, 3.75, 4.3));
+    pop($("vs"), seg(t, 4.4, 4.9));
+    // A: tras "nadie te dice nada" (5.9 a 8.7)
+    const trA = seg(t, 5.9, 8.7, "lineal");
+    $("faceA").innerHTML = cara("#94A3B8", trA > .5 ? TRISTE : NEUTRA, trA > .5 ? CEJA_ENO : CEJA0);
+    $("relA").innerHTML = reloj(t * 2.2); $("relA").style.opacity = seg(t, 5.7, 6.1, "lineal");
+    $("burA").style.opacity = seg(t, 6.3, 6.6, "lineal") * (1 - seg(t, 8.6, 8.9, "lineal"));
+    $("txA").style.opacity = seg(t, 6.6, 7.0, "lineal");
+    $("xA").innerHTML = EQUIS; pop($("xA"), seg(t, 8.5, 9.0)); 
+    // B: desde "En el otro te avisan" (9.0 a 11.3)
+    $("faceB").innerHTML = cara("#FACC15", t > 10.6 ? FELIZ : NEUTRA, t > 10.6 ? CEJA_F : CEJA0);
+    pop($("cartB"), seg(t, 9.1, 9.6)); pop($("txB"), seg(t, 9.8, 10.3));
+    $("okB").innerHTML = CHECK; pop($("okB"), seg(t, 10.7, 11.2));
+    const dim = seg(t, 9.0, 9.5, "lineal"); $("ladoA").style.opacity = lerp(1, .45, dim);
+    if (t > 8.7 && t < 9.0) { $("ladoB").style.transform = `scale(${1 + .02 * Math.sin((t - 8.7) / .3 * Math.PI)})`; }
+  }
+  document.querySelectorAll("#vap").forEach(v=>{v.setAttribute("stroke-dasharray","30 20");v.setAttribute("stroke-dashoffset",String(-t*40));});
+  // ---- E3 (11.51 a 16.23)
+  if (dentro(t, 11.51, 16.23)) {
+    pop($("v3"), seg(t, 11.6, 12.1)); $("h3").style.opacity = seg(t, 11.6, 11.9, "lineal");
+    $("sp3").style.transform = `rotate(${t * 260}deg)`;
+    $("pt3").textContent = ".".repeat(1 + Math.floor(t * 3) % 3);
+    $("pb3").style.width = (55 + 4 * Math.sin(t * 2)) + "%";
+    const sw = seg(t, 14.1, 14.5, "inOutCubic");  // cambio al aviso claro (con "le dice al cliente")
+    $("f3a").style.opacity = 1 - sw; $("f3b").style.opacity = sw;
+    $("f3b").style.transform = `translateY(${(1 - sw) * 40}px)`;
+    $("r3").style.opacity = seg(t, 15.0, 15.4, "lineal");
+    $("bb3").style.transform = (t > 15.5 && t < 15.7) ? "scale(.94)" : "scale(1)";
+  }
+  // ---- E4 (16.23 a 21.02)
+  if (dentro(t, 16.23, 21.02)) {
+    pop($("p4"), seg(t, 16.5, 17.0));
+    $("m4").style.opacity = seg(t, 16.7, 17.0, "lineal"); $("t4").style.opacity = 1 - seg(t, 16.25, 16.55, "lineal"); $("pb4").parentElement.style.opacity = 1; $("m4").style.transform = `scale(${1 + .04 * Math.sin(clamp((t - 18.7) / .4) * Math.PI)})`;   // "espera"
+    $("pb4").style.width = (15 + 85 * seg(t, 17.2, 20.1, "inOutCubic")) + "%";
+    const b = seg(t, 19.9, 20.2, "lineal");
+    $("bt4").style.opacity = b;
+    const cx = lerp(780, 560, seg(t, 19.9, 20.4, "inOutCubic")), cy = lerp(600, 545, seg(t, 19.9, 20.4));
+    $("cur4").style.opacity = b * (1 - seg(t, 20.7, 20.9, "lineal")); $("cur4").style.transform = `translate(${cx}px,${cy}px)`;
+    $("ok4").innerHTML = CHECK; pop($("ok4"), seg(t, 20.5, 20.9));
+  }
+  // ---- E5 (21.02 a 25)
+  if (dentro(t, 21.02, 24.0)) {
+    $("c1").style.opacity = seg(t, 21.2, 21.6, "lineal"); $("c1").style.transform = `translateY(${lerp(50, 0, seg(t, 21.2, 21.9))}px)`;
+    $("lg").style.opacity = seg(t, 22.4, 22.8, "lineal"); $("lg").style.transform = `scale(${lerp(.85, 1, seg(t, 22.4, 23.2, "outBack"))})`;
+    $("c2").style.opacity = seg(t, 22.5, 22.9, "lineal"); $("c3").style.opacity = seg(t, 23.4, 23.8, "lineal");
+    $("c1").style.top = lerp(260, 200, seg(t, 22.4, 23, "inOutCubic")) + "px";
+  }
+  JDT.fondo(bg, t); 
+  // un barrido suave en el cambio al aviso claro (14.1) y un destello al llegar JDT (16.23)
+  const kb = (t > 14.0 && t < 14.8) ? (t - 14.0) / .4 : 0; JDT.barrido(fg, kb);
+  JDT.flash($("fl"), t > 16.23 && t < 16.45 ? 1 - (t - 16.23) / .22 : 0);
+  JDT.grano(fg, t, .04);
+};
+</script></body></html>
