@@ -1,0 +1,197 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+.abs{position:absolute}
+.centrado{position:absolute;left:0;right:0;text-align:center;padding:0 60px;box-sizing:border-box}
+.fondo-navy{background:#0A0E27}
+.fondo-navy2{background:#131A3A}
+.fondo-amar{background:#FACC15}
+.pastilla{background:#FACC15;color:#0A0E27;padding:0 36px 6px;border-radius:70px;display:inline-block}
+.pastilla-n{background:#0A0E27;color:#FACC15;padding:0 36px 6px;border-radius:70px;display:inline-block}
+/* título dorado con extrusión (dorado-3d) */
+.ext{color:#FDE047;text-shadow:1px 1px #EAB308,2px 2px #EAB308,3px 3px #EAB308,4px 4px #CA8A04,5px 5px #CA8A04,6px 6px #CA8A04,7px 7px #A16207,8px 8px #A16207,9px 9px #A16207,10px 10px #854D0E,11px 11px #854D0E,12px 12px #854D0E,14px 22px 28px rgba(0,0,0,.55)}
+/* cubo de vidrio 3D */
+.esc3d{position:absolute;perspective:1500px}
+.cubo{position:absolute;left:0;top:0;width:420px;height:420px;transform-style:preserve-3d}
+.cara{position:absolute;left:0;top:0;width:420px;height:420px;box-sizing:border-box;border:4px solid rgba(250,204,21,.8);background:linear-gradient(145deg,rgba(253,224,71,.26),rgba(250,204,21,.07));border-radius:22px}
+.ficha{position:absolute;left:60px;width:300px;height:66px;border-radius:18px;background:#0A0E27;border:3px solid #FACC15;color:#FFFFFF;font-weight:800;font-size:34px;line-height:60px;text-align:center}
+/* collage */
+.papel{position:absolute;background:#FFFFFF;color:#0A0E27;font-weight:900;box-sizing:border-box;box-shadow:8px 10px 0 rgba(0,0,0,.35);opacity:0}
+.cinta{position:absolute;width:150px;height:46px;background:rgba(250,204,21,.78);opacity:.95}
+.tarj{position:absolute;border-radius:28px;box-sizing:border-box;font-weight:800;text-align:center;opacity:0}
+.chip4{position:absolute;left:150px;width:780px;height:100px;border-radius:26px;background:#FFFFFF;color:#0A0E27;font-weight:900;font-size:48px;line-height:100px;padding-left:44px;box-sizing:border-box;opacity:0}
+</style></head><body>
+<canvas id="bgc" class="capa" style="z-index:0"></canvas>
+
+<!-- E1 · 0 a 5,11 · GANCHO POV: título dorado extruido y cubo de vidrio con candado, visibles desde t=0 -->
+<div id="e1" class="capa fondo-navy">
+  <div id="pov" class="centrado titulo ext" style="top:250px;font-size:250px;line-height:1">POV</div>
+  <div class="centrado titulo" style="top:560px;font-size:70px;color:#FFFFFF;line-height:1.12">todo tu negocio vive<br>en <span class="clave">cuenta ajena</span></div>
+  <div id="esc1" class="esc3d" style="left:330px;top:830px;width:420px;height:420px"><div id="cub1" class="cubo"></div></div>
+  <div id="tag1" class="abs" style="left:560px;top:1270px;width:440px;height:96px;white-space:nowrap;background:#FFFFFF;color:#0A0E27;font-weight:900;font-size:40px;line-height:96px;text-align:center;border-radius:18px;box-shadow:8px 10px 0 rgba(0,0,0,.35);opacity:0;transform-origin:20px 0">Cuenta de otro</div>
+  <div id="llav" class="centrado titulo" style="top:1450px;font-size:80px;color:#FACC15;opacity:0">¿Quién tiene <span style="color:#FFFFFF">la llave</span>?</div>
+</div>
+
+<!-- E2 · 5,11 a 10,14 · COLLAGE (apoyo): exportar clientes y no pasa nada -->
+<div id="e2" class="capa fondo-navy2">
+  <div class="centrado titulo" style="top:260px;font-size:92px;color:#FFFFFF;line-height:1.08">Exportar<br><span class="clave">tus clientes</span></div>
+  <div id="pa1" class="papel" style="left:130px;top:700px;width:560px;height:150px;font-size:56px;line-height:150px;text-align:center;transform:rotate(-4deg)">Tus clientes<div class="cinta" style="left:200px;top:-26px;transform:rotate(3deg)"></div></div>
+  <div id="pa2" class="papel" style="left:560px;top:880px;width:400px;height:170px;font-size:44px;line-height:1.1;padding:46px 20px;text-align:center;transform:rotate(5deg);background:#94A3B8">clientes.csv<div class="cinta" style="left:120px;top:-26px;transform:rotate(-4deg)"></div></div>
+  <div id="bot" class="abs" style="left:230px;top:1130px;width:620px;height:170px;border-radius:44px;background:#FACC15;color:#0A0E27;font-weight:900;font-size:76px;line-height:170px;text-align:center;box-shadow:10px 12px 0 rgba(0,0,0,.4);opacity:0">Exportar</div>
+  <div id="anim" class="abs" style="left:0;top:0;width:150px;height:150px;opacity:0;z-index:4"><svg viewBox="0 0 100 100" width="150" height="150"><path d="M20,10 L20,78 L38,62 L50,90 L62,84 L50,58 L76,58 Z" fill="#FFFFFF" stroke="#0A0E27" stroke-width="5" stroke-linejoin="round"/></svg></div>
+  <div id="spin" class="abs" style="left:455px;top:1330px;width:170px;height:170px;opacity:0"><svg viewBox="0 0 100 100" width="170" height="170"><circle cx="50" cy="50" r="38" fill="none" stroke="#2A3460" stroke-width="10"/><path d="M50,12 A38,38 0 0 1 88,50" fill="none" stroke="#FACC15" stroke-width="10" stroke-linecap="round"/></svg></div>
+  <div id="pa3" class="papel" style="left:160px;top:1560px;width:760px;height:130px;font-size:56px;line-height:130px;text-align:center;transform:rotate(-2deg);background:#FACC15">Sin respuesta…<div class="cinta" style="left:300px;top:-26px;transform:rotate(-2deg);background:rgba(255,255,255,.7)"></div></div>
+</div>
+
+<!-- E3 · 10,14 a 13,75 · GIRO QUIETO: rejilla en perspectiva con camino dorado y la caja que se aleja -->
+<div id="e3" class="capa" style="background:transparent">
+  <div class="centrado titulo" style="top:260px;font-size:96px;color:#FFFFFF;line-height:1.08">¿Y si cambian<br><span class="clave">las reglas</span>?</div>
+  <div id="esc3" class="esc3d" style="left:330px;top:860px;width:420px;height:420px"><div id="cub3" class="cubo"></div></div>
+  <div id="d2" class="centrado titulo" style="top:500px;font-size:72px;color:#FFFFFF;opacity:0">¿Dónde queda <span class="clave">tu negocio</span>?</div>
+</div>
+
+<!-- E4 · 13,75 a 20,30 · JDT: pleno amarillo, tus datos viven en tu sistema y la llave la tienes tú -->
+<div id="e4" class="capa fondo-amar"><div id="e4in" class="abs" style="inset:0">
+  <img src="../recursos/logo.jpeg" style="position:absolute;left:465px;top:90px;width:150px;height:150px;border-radius:32px">
+  <div class="centrado" style="top:252px;font-weight:800;font-size:34px;letter-spacing:.12em;color:#0A0E27">JDT TECHNOLOGICS</div>
+  <div class="centrado titulo" style="top:340px;font-size:100px;color:#0A0E27;line-height:1.2">Software<br><span class="pastilla-n" style="margin-top:10px">a medida</span></div>
+  <div id="panel" class="abs" style="left:90px;top:760px;width:900px;height:760px;border-radius:54px;overflow:hidden;background:#0A0E27;box-shadow:14px 18px 0 rgba(10,14,39,.28)">
+    <div class="abs" style="left:60px;top:44px;font-weight:900;font-size:44px;color:#FACC15">● Tus datos, en tu sistema</div>
+    <div id="c1" class="chip4" style="top:150px;left:60px;width:780px">Clientes</div>
+    <div id="c2" class="chip4" style="top:290px;left:60px;width:780px">Ventas</div>
+    <div id="c3" class="chip4" style="top:430px;left:60px;width:780px">Facturas</div>
+    <div id="lt" class="abs" style="left:400px;top:600px;width:440px;font-weight:900;font-size:52px;line-height:1.1;color:#FFFFFF;opacity:0">La llave la tienes <span style="color:#FACC15">tú</span></div>
+    <div id="llave" class="abs" style="left:150px;top:560px;width:230px;height:170px;opacity:0"></div>
+  </div>
+</div></div>
+
+<!-- E5 · 20,30 a 24 · CIERRE -->
+<div id="e5" class="capa fondo-navy">
+  <div id="l1" class="centrado titulo" style="top:280px;font-size:100px;color:#FFFFFF;opacity:0">Tu información,</div>
+  <div id="l2" class="centrado titulo ext" style="top:430px;font-size:128px;opacity:0">tu llave.</div>
+  <img id="logo" src="../recursos/logo.jpeg" style="position:absolute;left:350px;top:720px;width:380px;height:380px;border-radius:76px;opacity:0">
+  <div id="cierre" class="centrado titulo" style="top:1190px;font-size:104px;color:#FFFFFF;opacity:0;line-height:1.05">Hablemos de tu <span class="oro">proyecto.</span></div>
+  <div id="pill" class="abs" style="left:0;right:0;top:1470px;text-align:center;opacity:0"><span class="pildora">@technologicsjdt</span></div>
+</div>
+
+<div id="fl" class="capa" style="background:#FFFFFF;opacity:0;z-index:8"></div>
+
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+window.DURACION = 24.0;
+const ESC = [["e1", 0, 5.11], ["e2", 5.11, 10.14], ["e3", 10.14, 13.75], ["e4", 13.75, 20.3], ["e5", 20.3, 24.0]];
+const dentro = (t, a, b) => t >= a && t < b;
+const cv = $("bgc"); cv.width = JDT.W; cv.height = JDT.H; const bg = cv.getContext("2d");
+
+// Rejilla propia en perspectiva (suelo en navy, sin lavanda) con camino dorado
+function rejilla(ctx, t, o) {
+  const W = JDT.W, H = JDT.H, hor = H * .46, a = o.alfa, vel = o.vel;
+  const g = ctx.createLinearGradient(0, hor, 0, H); g.addColorStop(0, "rgba(19,26,58,0)"); g.addColorStop(1, `rgba(19,26,58,${.9 * a})`);
+  ctx.fillStyle = g; ctx.fillRect(0, hor, W, H - hor); ctx.lineWidth = 2;
+  for (let i = -14; i <= 14; i++) { ctx.strokeStyle = `rgba(148,163,184,${.4 * a})`; ctx.beginPath(); ctx.moveTo(W / 2 + i * 26, hor); ctx.lineTo(W / 2 + i * 210, H); ctx.stroke(); }
+  for (let j = 0; j < 22; j++) { const q = ((j + (t * vel) % 1) / 22), y = hor + Math.pow(q, 2.2) * (H - hor); ctx.strokeStyle = `rgba(250,204,21,${(.10 + .5 * q) * a})`; ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+  const gl = ctx.createLinearGradient(0, hor - 90, 0, hor + 40); gl.addColorStop(0, "rgba(250,204,21,0)"); gl.addColorStop(.7, `rgba(250,204,21,${.25 * a})`); gl.addColorStop(1, "rgba(250,204,21,0)");
+  ctx.fillStyle = gl; ctx.fillRect(0, hor - 90, W, 130);
+  if (o.camino > 0) { const pts = [[.5, 1.0], [.42, .86], [.6, .74], [.45, .64], [.55, .56], [.5, .47]];
+    ctx.save(); ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.shadowColor = "#FACC15"; ctx.shadowBlur = 36; ctx.strokeStyle = "#FACC15"; ctx.lineWidth = 12; ctx.beginPath();
+    const n = Math.max(1, Math.floor(o.camino * (pts.length - 1))), f = o.camino * (pts.length - 1) - n;
+    pts.slice(0, n + 1).forEach(([x, y], k) => k ? ctx.lineTo(W * x, H * y) : ctx.moveTo(W * x, H * y));
+    if (n < pts.length - 1) ctx.lineTo(W * lerp(pts[n][0], pts[n + 1][0], f), H * lerp(pts[n][1], pts[n + 1][1], f));
+    ctx.stroke(); ctx.restore(); }
+}
+
+// Candado dorado (SVG con degradados)
+const CANDADO = (abierto) => `<svg viewBox="0 0 200 240" width="100%" height="100%"><defs><linearGradient id="gd${abierto ? 'a' : 'c'}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FDE047"/><stop offset=".55" stop-color="#FACC15"/><stop offset="1" stop-color="#A16207"/></linearGradient></defs>
+  <path d="${abierto ? 'M52,100 L52,64 A48,48 0 0 1 148,50' : 'M52,100 L52,64 A48,48 0 0 1 148,64 L148,100'}" fill="none" stroke="url(#gd${abierto ? 'a' : 'c'})" stroke-width="22" stroke-linecap="round"/>
+  <rect x="24" y="96" width="152" height="124" rx="26" fill="url(#gd${abierto ? 'a' : 'c'})" stroke="#854D0E" stroke-width="5"/>
+  <circle cx="100" cy="148" r="15" fill="#0A0E27"/><rect x="93" y="150" width="14" height="40" rx="6" fill="#0A0E27"/></svg>`;
+
+// Cubo de vidrio con fichas dentro
+function cubo(el) {
+  const S = 210, caras = [["", `translateZ(${S}px)`], ["", `rotateY(180deg) translateZ(${S}px)`], ["", `rotateY(90deg) translateZ(${S}px)`], ["", `rotateY(-90deg) translateZ(${S}px)`], ["", `rotateX(90deg) translateZ(${S}px)`], ["", `rotateX(-90deg) translateZ(${S}px)`]];
+  el.innerHTML = caras.map(([_, tr], i) => `<div class="cara" style="transform:${tr}">${i === 0 ? `<div style="position:absolute;left:160px;top:296px;width:100px;height:110px">${CANDADO(false)}</div>` : ""}</div>`).join("") +
+    ["Clientes", "Ventas", "Facturas"].map((n, i) => `<div class="ficha" style="top:${40 + i * 88}px;transform:translateZ(${(i - 1) * 55}px)">${n}</div>`).join("");
+}
+cubo($("cub1")); cubo($("cub3"));
+
+// Llave dorada (SVG con volumen)
+$("llave").innerHTML = `<svg viewBox="0 0 260 260" width="100%" height="100%"><defs><linearGradient id="gk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FDE047"/><stop offset=".55" stop-color="#FACC15"/><stop offset="1" stop-color="#A16207"/></linearGradient></defs>
+  <g transform="rotate(-35 130 130)"><circle cx="70" cy="130" r="52" fill="none" stroke="url(#gk)" stroke-width="26"/><rect x="108" y="118" width="130" height="24" rx="10" fill="url(#gk)"/><rect x="190" y="138" width="20" height="40" rx="6" fill="url(#gk)"/><rect x="220" y="138" width="18" height="30" rx="6" fill="url(#gk)"/></g></svg>`;
+
+window.render = (t) => {
+  // visibilidad de escenas (con solape de 0,25 s para el fundido)
+  ESC.forEach(([id, a, b], i) => {
+    const e = $(id), vis = t >= a && t < b + (i < 4 ? .25 : 0);
+    e.style.display = vis ? "block" : "none";
+    if (i > 0) e.style.opacity = id === "e3" ? 1 : seg(t, a, a + .25, "lineal");
+  });
+  bg.fillStyle = "#0A0E27"; bg.fillRect(0, 0, JDT.W, JDT.H);
+  $("fl").style.opacity = 0;
+
+  // ---- E1 · gancho POV (todo visible desde t=0)
+  if (dentro(t, 0, 5.36)) {
+    const k = seg(t, 0, 1.2, "outBack");
+    $("pov").style.transform = `scale(${lerp(.92, 1, k)}) rotate(${lerp(-1.5, 0, k)}deg)`;
+    const giro = lerp(-32, 38, seg(t, 0, 5.1, "inOutCubic"));
+    const z = lerp(1.02, 0.84, seg(t, 3.1, 5.1, "inOutCubic"));
+    $("cub1").style.transform = `rotateX(-14deg) rotateY(${giro}deg)`;
+    $("esc1").style.transform = `scale(${z})`;
+    // etiqueta que cuelga: «Cuenta de otro» (beat 2)
+    const g = seg(t, 2.1, 2.6, "outBack");
+    $("tag1").style.opacity = seg(t, 2.1, 2.3, "lineal");
+    $("tag1").style.transform = `rotate(${lerp(-28, 6, g) + Math.sin(t * 3) * 2 * g}deg) scale(${lerp(.7, 1, g)})`;
+    // pregunta (beat 3)
+    const q = seg(t, 3.4, 3.8, "outQuart"); $("llav").style.opacity = q; $("llav").style.transform = `translateY(${lerp(40, 0, q)}px)`;
+  }
+
+  // ---- E2 · collage con ritmo de stop motion
+  if (dentro(t, 5.11, 10.39)) {
+    const u = Math.floor((t - 5.11) * 10) / 10;  // cuantizado
+    const pega = (id, a, rot, dy) => { const k = seg(u, a, a + .3, "outBack"); $(id).style.opacity = seg(u, a, a + .1, "lineal"); $(id).style.transform = `rotate(${rot}deg) translateY(${lerp(dy, 0, k)}px) scale(${lerp(1.2, 1, k)})`; };
+    pega("pa1", .15, -4, -80); pega("pa2", 1.0, 5, -80);
+    // botón + cursor (beat 5): el cursor llega a «exportar» (8,14 s) y hace clic
+    const kb = seg(t, 7.0, 7.4, "outBack"); $("bot").style.opacity = seg(t, 7.0, 7.2, "lineal"); $("bot").style.transform = `scale(${lerp(.8, 1, kb)})`;
+    const cx = lerp(900, 740, seg(t, 7.4, 8.3, "inOutCubic")), cy = lerp(1500, 1225, seg(t, 7.4, 8.3, "inOutCubic"));
+    const clic = seg(t, 8.45, 8.6, "lineal") * (1 - seg(t, 8.6, 8.8, "lineal"));
+    $("anim").style.opacity = seg(t, 7.4, 7.6, "lineal");
+    $("anim").style.transform = `translate(${cx}px,${cy}px) scale(${1 - .15 * clic})`;
+    $("bot").style.boxShadow = `${10 - 8 * clic}px ${12 - 9 * clic}px 0 rgba(0,0,0,.4)`;
+    // rueda que no avanza + «sin respuesta» (beat 6)
+    const s6 = seg(t, 8.9, 9.1, "lineal"); $("spin").style.opacity = s6; $("spin").style.transform = `rotate(${(t - 8.9) * 90}deg)`;
+    const kp = seg(u, 4.0, 4.3, "outBack"); $("pa3").style.opacity = seg(u, 4.0, 4.1, "lineal"); $("pa3").style.transform = `rotate(-2deg) translateY(${lerp(-70, 0, kp)}px) scale(${lerp(1.15, 1, kp)})`;
+  }
+
+  // ---- E3 · rejilla en perspectiva con camino dorado; la caja se aleja
+  if (dentro(t, 10.14, 13.75)) {
+    const u = t - 10.14;
+    rejilla(bg, t, {camino: seg(u, .3, 2.6, "inOutCubic"), alfa: seg(u, 0, .4, "lineal"), vel: .35});
+    const m = seg(u, .4, 3.5, "inOutCubic");
+    $("cub3").style.transform = `rotateX(-14deg) rotateY(${lerp(30, 95, m)}deg)`;
+    $("esc3").style.transform = `translateY(${lerp(200, -230, m)}px) scale(${lerp(.9, .28, m)})`;
+    $("esc3").style.opacity = lerp(1, .85, m);
+    const d = seg(u, 1.85, 2.3, "outQuart"); $("d2").style.opacity = d; $("d2").style.transform = `translateY(${lerp(30, 0, d)}px)`;
+  }
+
+  // ---- E4 · JDT: datos que vuelven a tu sistema y la llave
+  if (dentro(t, 13.75, 20.55)) {
+    const u = t - 13.75;
+    $("e4in").style.transform = `scale(${lerp(1, 1.03, seg(u, 0, 6.5, "lineal"))})`;
+    const pk = seg(u, 0, .4, "outBack"); $("panel").style.transform = `translateY(${lerp(60, 0, pk)}px)`; $("panel").style.opacity = seg(u, 0, .25, "lineal");
+    [["c1", .9], ["c2", 1.2], ["c3", 1.5]].forEach(([id, a]) => { const k = seg(u, a, a + .5, "outQuart"); $(id).style.opacity = seg(u, a, a + .15, "lineal"); $(id).style.transform = `translateX(${lerp(-700, 0, k)}px)`; });
+    // llave (beat 11): entra y gira cuando dice «tienes tú»
+    const kl = seg(u, 4.4, 4.9, "outBack"); $("llave").style.opacity = seg(u, 4.4, 4.55, "lineal"); $("lt").style.opacity = seg(u, 4.9, 5.2, "lineal");
+    $("llave").style.transform = `scale(${lerp(.4, 1, kl)}) rotate(${lerp(-40, 0, kl) + 70 * seg(u, 5.0, 5.7, "inOutCubic")}deg)`;
+    // un único destello suave al girar la llave
+    $("fl").style.opacity = .35 * seg(u, 5.0, 5.12, "lineal") * (1 - seg(u, 5.12, 5.5, "lineal"));
+  }
+
+  // ---- E5 · cierre
+  if (dentro(t, 20.3, 24.0)) {
+    const u = t - 20.3;
+    const f = (id, a, y) => { const k = seg(u, a, a + .4, "outQuart"); $(id).style.opacity = k; $(id).style.transform = `translateY(${lerp(y, 0, k)}px)`; };
+    f("l1", .12, 40); f("l2", 1.2, 40); f("cierre", 1.8, 50);
+    $("logo").style.opacity = seg(u, 1.4, 1.7, "lineal");
+    $("pill").style.opacity = seg(u, 2.2, 2.6, "lineal");
+  }
+};
+</script></body></html>

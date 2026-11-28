@@ -1,0 +1,242 @@
+{
+ "salida": "videos/2026-11-28-0506-datos-en-nube-ajena.mp4",
+ "formato": "Reel vertical 1080x1920, ~22 s, 5 escenas: POV con caja de vidrio 3D dorada y candado, collage de notas pegadas (exportar sin respuesta), giro quieto con rejilla en perspectiva, JDT como software a medida (llave y datos que vuelven), cierre. Voz en off es-CO.",
+ "concepto": "POV: todo tu negocio vive en una caja de cristal dorada con candado que es de otro; el botón «Exportar» no responde. JDT hace software a medida donde la llave de tus datos la tienes tú.",
+ "produccion": "Estilo principal dorado-3d: título con extrusión dorada, caja y llave con volumen y degradados, rejilla en perspectiva con camino dorado en el giro; apoyo collage-recorte solo en la escena 2 (notas y cinta que se pegan con ritmo de stop motion). Gancho POV con titular desde t=0. Ritmo contemplativo: planos de 4-6 s y una pausa antes del remate. Un solo destello en la apertura de la caja. Fondos: navy, azul, navy, amarillo pleno en la solución, navy en el cierre.",
+ "fuente": "marca.md",
+ "url": "jdt:datos-que-no-son-tuyos",
+ "titulo": "Tu información vive en la nube de otro y no puedes exportarla fácil",
+ "tema": "Plan B de JDT: datos atrapados en la herramienta de otro; software a medida con datos bajo tu control (marca.md)",
+ "tendencias": {
+  "video": "dorado-3d",
+  "apoyo": "collage-recorte",
+  "gancho": "pov",
+  "ritmo": "contemplativo",
+  "banner": "amarillo-total",
+  "pulso": "2026-11-28: dos búsquedas devolvieron solo listados de títulos, sin texto verificable; señal débil: producto/interfaz en acción, texto legible sin sonido, menos hashtags",
+  "fuentes": [
+   "https://metricool.com/es/tendencias-instagram/",
+   "https://advids.co/blog/ui-animation-motion-design-trends"
+  ]
+ },
+ "escenas": [
+  {
+   "tipo": "libre",
+   "look": "oscuro",
+   "texto": "POV: tu negocio vive en *cuenta ajena*",
+   "voz": "POV: todo tu negocio vive en la cuenta de otro.",
+   "duracion": 4.0,
+   "elementos": [
+    {
+     "el": "texto",
+     "texto": "POV",
+     "x": 50,
+     "y": 24,
+     "tam": "xl",
+     "color": "amarillo"
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Cubo de vidrio con candado y fichas Clientes, Ventas, Facturas",
+     "x": 50,
+     "y": 62
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Cuenta de otro",
+     "x": 70,
+     "y": 80
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "azul",
+   "texto": "Exportar: *sin respuesta*",
+   "voz": "Quieres tus clientes en un archivo... y el botón de exportar no hace nada.",
+   "duracion": 5.0,
+   "elementos": [
+    {
+     "el": "tarjeta",
+     "texto": "Tus clientes",
+     "x": 40,
+     "y": 40
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Exportar (cursor hace clic)",
+     "x": 50,
+     "y": 68
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Sin respuesta…",
+     "x": 50,
+     "y": 86
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "oscuro",
+   "texto": "¿Y si *cambian las reglas*?",
+   "voz": "Y si mañana cambian las reglas, ¿dónde queda tu negocio?",
+   "duracion": 3.5,
+   "elementos": [
+    {
+     "el": "linea",
+     "x": 50,
+     "y": 95,
+     "a": [
+      50,
+      48
+     ],
+     "estilo": "solida",
+     "pulso": true
+    },
+    {
+     "el": "tarjeta",
+     "texto": "Cubo que se aleja por el camino",
+     "x": 50,
+     "y": 60
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "amarillo",
+   "texto": "Software *a medida*",
+   "voz": "En JDT hacemos software a medida: tus datos viven donde tú decides, y la llave la tienes tú.",
+   "duracion": 6.0,
+   "elementos": [
+    {
+     "el": "tarjeta",
+     "texto": "Tus datos, en tu sistema: Clientes, Ventas, Facturas",
+     "x": 50,
+     "y": 62
+    },
+    {
+     "el": "tarjeta",
+     "texto": "La llave la tienes tú",
+     "x": 50,
+     "y": 80
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de tu proyecto.",
+   "subtexto": "@technologicsjdt",
+   "voz": "Tu información, tu llave. ¡Hablemos de tu proyecto!",
+   "duracion": 3.6
+  }
+ ],
+ "tiempos": {
+  "inicios": [
+   0.0,
+   5.11,
+   10.14,
+   13.75,
+   20.3
+  ],
+  "retardo": 0.3,
+  "duracion": 24.0
+ },
+ "direccion": {
+  "hook": "Título dorado extruido «POV» y cubo de vidrio con candado y fichas (Clientes, Ventas, Facturas) visibles desde el cuadro 0",
+  "payoff": "JDT resuelve con software a medida: los datos vuelven a tu sistema y la llave gira en tu mano; cierre con «Hablemos de tu proyecto.» y @technologicsjdt",
+  "familias": [
+   "motion-graphics",
+   "mixed-media",
+   "vfx-tracking"
+  ],
+  "hipotesis": "Un objeto 3D dorado con candado (tus datos presos) y un POV directo deberían dar un gancho legible sin sonido; el cursor que no logra exportar y la llave que gira dan dos recompensas visuales claras. Contrastar con retencionMediaSeg y pasoInicioPct en metricas.json.",
+  "beats": [
+   {
+    "inicio": 0,
+    "fin": 2.0,
+    "funcion": "hook",
+    "familia": "motion-graphics",
+    "visual": "Título «POV» extruido en dorado y cubo de vidrio girando con candado desde el cuadro 0"
+   },
+   {
+    "inicio": 2.0,
+    "fin": 5.11,
+    "funcion": "contexto",
+    "familia": "vfx-tracking",
+    "visual": "El cubo gira con paralaje de fichas, cuelga la etiqueta «Cuenta de otro» y aparece «¿Quién tiene la llave?»"
+   },
+   {
+    "inicio": 5.11,
+    "fin": 7.0,
+    "funcion": "tension",
+    "familia": "mixed-media",
+    "visual": "Notas de papel con cinta se pegan a ritmo de stop motion: «Tus clientes» y «clientes.csv»"
+   },
+   {
+    "inicio": 7.0,
+    "fin": 8.9,
+    "funcion": "demostracion",
+    "familia": "mixed-media",
+    "visual": "Entra el botón «Exportar» y un cursor se acerca y hace clic"
+   },
+   {
+    "inicio": 8.9,
+    "fin": 10.14,
+    "funcion": "giro",
+    "familia": "mixed-media",
+    "visual": "Rueda que no avanza y nota «Sin respuesta…» pegada con cinta"
+   },
+   {
+    "inicio": 10.14,
+    "fin": 12.0,
+    "funcion": "respiro",
+    "familia": "vfx-tracking",
+    "visual": "Rejilla en perspectiva y camino dorado que se dibuja; el cubo flota: «¿Y si cambian las reglas?»"
+   },
+   {
+    "inicio": 12.0,
+    "fin": 13.75,
+    "funcion": "tension",
+    "familia": "vfx-tracking",
+    "visual": "El cubo se aleja hacia el horizonte por el camino y aparece «¿Dónde queda tu negocio?»"
+   },
+   {
+    "inicio": 13.75,
+    "fin": 15.3,
+    "funcion": "recompensa",
+    "familia": "motion-graphics",
+    "visual": "Pantalla amarilla plena: logo JDT, «Software a medida» y panel «Tu sistema» que sube"
+   },
+   {
+    "inicio": 15.3,
+    "fin": 17.7,
+    "funcion": "demostracion",
+    "familia": "motion-graphics",
+    "visual": "Las fichas Clientes, Ventas y Facturas entran deslizándose al panel"
+   },
+   {
+    "inicio": 17.7,
+    "fin": 20.3,
+    "funcion": "recompensa",
+    "familia": "motion-graphics",
+    "visual": "Llave dorada entra al panel y gira con un destello suave"
+   },
+   {
+    "inicio": 20.3,
+    "fin": 22.1,
+    "funcion": "payoff",
+    "familia": "motion-graphics",
+    "visual": "«Tu información, tu llave.» con extrusión dorada"
+   },
+   {
+    "inicio": 22.1,
+    "fin": 24.0,
+    "funcion": "cierre",
+    "familia": "mixed-media",
+    "visual": "Logo, «Hablemos de tu proyecto.» y pastilla @technologicsjdt"
+   }
+  ]
+ },
+ "validacion": "corregido: Opus (Fable sin créditos) dio 7/10 y luego 8/10; aplicado: fichas y candado sin superposición, etiqueta «Cuenta de otro» completa, rejilla propia sin lavanda, cursor fuera del texto, rueda separada, escena 4 con «Tus datos, en tu sistema» y «La llave la tienes tú», panel con overflow oculto"
+}
