@@ -1,0 +1,183 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="jdt.css"><script src="jdt.js"></script>
+<style>
+.abs{position:absolute}
+.centrado{position:absolute;left:0;right:0;text-align:center;padding:0 60px;box-sizing:border-box}
+.pastilla{background:#FACC15;color:#0A0E27;padding:0 36px 6px;border-radius:70px;display:inline-block}
+.pastilla-n{background:#0A0E27;color:#FACC15;padding:0 36px 6px;border-radius:70px;display:inline-block}
+.fondo-navy{background:#0A0E27}
+.fondo-navy2{background:#131A3A}
+.fondo-amar{background:#FACC15}
+.dia{position:absolute;left:190px;width:700px;height:108px;border-radius:26px;box-sizing:border-box;font-weight:800;font-size:46px;line-height:102px;padding-left:44px;background:#0A0E27;border:3px solid #2A3460;color:#94A3B8;opacity:0}
+.tarj{position:absolute;border-radius:28px;box-sizing:border-box;font-weight:800;text-align:center;opacity:0}
+.navy{background:#0A0E27;color:#FFFFFF;border:3px solid #2A3460}
+.blanca{background:#FFFFFF;color:#0A0E27}
+.amar{background:#FACC15;color:#0A0E27}
+</style></head><body>
+
+<!-- E1 · 0 a 6,95 s · GANCHO (confesión): titular desde t=0, personaje sonríe y se resigna, botón a cambiar, nota y burbuja -->
+<div id="e1" class="capa fondo-navy">
+  <div class="centrado titulo" style="top:250px;font-size:104px;color:#FFFFFF;line-height:1.1">Pedí cambiar<br><span class="pastilla" style="margin-top:14px">un botón</span></div>
+  <div id="p1" class="abs" style="left:170px;top:930px;width:430px;height:430px"></div>
+  <div id="boton" class="abs" style="left:180px;top:1440px;width:560px;height:200px;border-radius:30px;background:#FFFFFF;border:3px solid #2A3460">
+    <div id="btn-in" class="abs" style="left:110px;top:62px;width:340px;height:80px;border-radius:40px;background:#94A3B8;color:#0A0E27;font-weight:800;font-size:40px;line-height:80px;text-align:center">Comprar</div>
+    <div id="anillo" class="abs" style="left:92px;top:42px;width:376px;height:120px;border-radius:60px;border:8px solid #FACC15;opacity:0"></div>
+  </div>
+  <div id="nota" class="tarj amar" style="left:640px;top:1020px;width:340px;font-size:40px;padding:26px 24px;line-height:1.15">Cambiar el color del botón</div>
+  <div id="dots" class="tarj" style="left:640px;top:820px;width:150px;font-size:54px;padding:6px 0 18px;background:#94A3B8;color:#0A0E27;line-height:1">…</div>
+  <div id="burb" class="tarj blanca" style="left:560px;top:760px;width:440px;font-size:44px;padding:28px 30px;line-height:1.15">«Para la próxima semana»</div>
+</div>
+
+<!-- E2 · 6,95 a 12,93 s · APOYO (motion modular): la semana como lista; el cambio chiquito salta de día en día -->
+<div id="e2" class="capa fondo-navy2">
+  <div class="centrado titulo" style="top:210px;font-size:84px;color:#FFFFFF;line-height:1.1">Un cambio chiquito,<br><span class="clave">una semana</span></div>
+  <div id="d0" class="dia" style="top:520px">Lunes</div>
+  <div id="d1" class="dia" style="top:648px">Martes</div>
+  <div id="d2" class="dia" style="top:776px">Miércoles</div>
+  <div id="d3" class="dia" style="top:904px">Jueves</div>
+  <div id="d4" class="dia" style="top:1032px">Viernes</div>
+  <div id="d5" class="dia" style="top:1160px">Sábado</div>
+  <div id="d6" class="dia" style="top:1288px">Domingo</div>
+  <div id="chico" class="tarj navy" style="left:500px;top:524px;width:370px;font-size:34px;padding:12px 10px;border-radius:20px;z-index:3;color:#FACC15;border-color:#FACC15">Cambiar un botón</div>
+  <div id="espera" class="abs" style="left:190px;top:1440px;width:700px;text-align:center;font-weight:800;font-size:44px;color:#FACC15;opacity:0">Aún en espera…</div>
+  <div id="p2" class="abs" style="left:420px;top:1540px;width:240px;height:240px"></div>
+</div>
+
+<!-- E3 · 12,93 a 15,67 s · GIRO quieto: la pieza genérica no encaja en el hueco de tu proceso -->
+<div id="e3" class="capa fondo-navy">
+  <div class="centrado titulo" style="top:300px;font-size:98px;color:#FFFFFF;line-height:1.1">Nunca fue<br><span class="clave">a tu medida</span></div>
+  <div class="abs" style="left:330px;top:820px;width:420px;height:420px;border:6px dashed #FACC15;border-radius:36px"></div>
+  <div class="abs" style="left:330px;top:1270px;width:420px;text-align:center;font-weight:800;font-size:38px;color:#94A3B8">Tu proceso</div>
+  <div id="pieza" class="abs" style="left:230px;top:930px;width:620px;height:300px;border-radius:36px;background:#94A3B8;color:#0A0E27;font-weight:900;font-size:50px;line-height:300px;text-align:center;opacity:0">Software genérico</div>
+</div>
+
+<!-- E4 · 15,67 a 20,55 s · JDT como solución: la pieza ahora sí encaja, dos tarjetas -->
+<div id="e4" class="capa fondo-amar"><div id="e4in" class="abs" style="inset:0">
+  <img src="../recursos/logo.jpeg" style="position:absolute;left:465px;top:80px;width:150px;height:150px;border-radius:32px">
+  <div class="centrado" style="top:242px;font-weight:800;font-size:34px;letter-spacing:.12em;color:#0A0E27">JDT TECHNOLOGICS</div>
+  <div class="centrado titulo" style="top:330px;font-size:100px;color:#0A0E27;line-height:1.2">Software<br><span class="pastilla-n" style="margin-top:10px">a medida</span></div>
+  <div class="abs" style="left:330px;top:790px;width:420px;height:420px;border:6px dashed #0A0E27;border-radius:36px"></div>
+  <div id="encaja" class="abs" style="left:330px;top:790px;width:420px;height:420px;border-radius:36px;background:#0A0E27;color:#FACC15;font-weight:900;font-size:46px;line-height:1.2;text-align:center;padding-top:150px;opacity:0">Tu<br>proceso</div>
+  <div id="p3" class="abs" style="left:775px;top:880px;width:230px;height:230px;opacity:0"></div>
+  <div id="k1" class="tarj navy" style="left:140px;top:1290px;width:800px;font-size:52px;padding:26px 20px">Se adapta a tu proceso</div>
+  <div id="k2" class="tarj navy" style="left:140px;top:1430px;width:800px;font-size:52px;padding:26px 20px">Evoluciona contigo</div>
+</div></div>
+
+<!-- E5 · 20,55 a 25,18 s · CIERRE -->
+<div id="e5" class="capa fondo-navy">
+  <div id="l1" class="centrado titulo" style="top:290px;font-size:104px;color:#FFFFFF;opacity:0">Cambias tú,</div>
+  <div id="l2" class="centrado titulo" style="top:430px;font-size:90px;white-space:nowrap;color:#FFFFFF;opacity:0">cambia <span class="oro">tu sistema.</span></div>
+  <img id="logo" src="../recursos/logo.jpeg" style="position:absolute;left:340px;top:680px;width:400px;height:400px;border-radius:80px;opacity:0">
+  <div id="cierre" class="centrado titulo" style="top:1190px;font-size:104px;color:#FFFFFF;opacity:0;line-height:1.05">Hablemos de tu <span class="oro">proyecto.</span></div>
+  <div id="pill" class="abs" style="left:0;right:0;top:1470px;text-align:center;opacity:0"><span class="pildora">@technologicsjdt</span></div>
+</div>
+
+<div id="fl" class="capa" style="background:#FFFFFF;opacity:0;z-index:8"></div>
+
+<script>
+const {seg, E, clamp, lerp} = JDT; const $ = id => document.getElementById(id);
+window.DURACION = 24.0;
+const ESC = [["e1", 0, 6.95], ["e2", 6.95, 12.93], ["e3", 12.93, 15.67], ["e4", 15.67, 20.55], ["e5", 20.55, 24.0]];
+const dentro = (t, a, b) => t >= a && t < b;
+
+// Personaje: cara amarilla con ojos navy; sonrisa (-1 a 1), párpados (0 a 1), cejas
+function cara(id) {
+  $(id).innerHTML = `<svg viewBox="-200 -200 400 400" width="100%" height="100%" style="overflow:visible">
+    <rect x="-130" y="120" width="260" height="90" rx="40" fill="#94A3B8"/>
+    <circle r="170" fill="#FACC15"/>
+    <ellipse cx="-65" cy="-20" rx="22" ry="30" fill="#0A0E27"/><ellipse cx="65" cy="-20" rx="22" ry="30" fill="#0A0E27"/>
+    <rect id="${id}lL" x="-95" y="-58" width="60" height="0" fill="#FACC15"/><rect id="${id}lR" x="35" y="-58" width="60" height="0" fill="#FACC15"/>
+    <path id="${id}bL" d="" stroke="#0A0E27" stroke-width="12" stroke-linecap="round" fill="none"/><path id="${id}bR" d="" stroke="#0A0E27" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path id="${id}bagL" d="M-95,25 Q-65,45 -35,25" stroke="#0A0E27" stroke-width="8" fill="none" stroke-linecap="round" opacity="0"/><path id="${id}bagR" d="M35,25 Q65,45 95,25" stroke="#0A0E27" stroke-width="8" fill="none" stroke-linecap="round" opacity="0"/>
+    <path id="${id}m" d="" stroke="#0A0E27" stroke-width="14" stroke-linecap="round" fill="none"/>
+  </svg>`;
+}
+function emocion(id, sonrisa, parpado, ceja, bolsas) {
+  const m = 70 + sonrisa * 45;
+  $(id + "m").setAttribute("d", `M-65,80 Q0,${m + 10} 65,80`);
+  $(id + "lL").setAttribute("height", parpado * 62); $(id + "lR").setAttribute("height", parpado * 62);
+  const c = ceja * 22; // positivo: cejas tristes (extremos exteriores abajo)
+  $(id + "bL").setAttribute("d", `M-100,${-80 + c} L-35,${-80 - c}`);
+  $(id + "bR").setAttribute("d", `M35,${-80 - c} L100,${-80 + c}`);
+  $(id + "bagL").setAttribute("opacity", bolsas); $(id + "bagR").setAttribute("opacity", bolsas);
+}
+cara("p1"); cara("p2"); cara("p3"); emocion("p3", 1, 0, 0, 0);
+
+window.render = (t) => {
+  ESC.forEach(([id, a, b]) => $(id).style.display = dentro(t, a, b) ? "block" : "none");
+
+  // E1 · el personaje sonríe, pide el cambio (nota), el botón se resalta en «botón», y se resigna con «próxima semana»
+  if (dentro(t, 0, 6.95)) {
+    const k = seg(t, 4.66, 5.4, "inOutCubic");
+    emocion("p1", lerp(.55, -0.9, k), lerp(0, .5, k), lerp(0, 1, k), 0);
+    const pop = seg(t, 0, .5, "outBack");
+    $("p1").style.transform = `translateY(${(1 - seg(t, 0, .5, "outExpo")) * 40}px) scale(${lerp(.9, 1, pop)})`;
+    const n = seg(t, 1.9, 2.4, "outBack");
+    $("nota").style.opacity = seg(t, 1.9, 2.1, "lineal"); $("nota").style.transform = `rotate(4deg) scale(${lerp(.6, 1, n)})`;
+    const an = t >= 3.22 && t < 4.7 ? 1 : 0;
+    $("anillo").style.opacity = an * (0.6 + 0.4 * Math.sin((t - 3.22) * 9));
+    $("btn-in").style.background = t >= 3.22 ? "#FACC15" : "#94A3B8";
+    const dp = seg(t, 1.0, 1.3, "outBack");
+    $("dots").style.opacity = t < 4.66 ? seg(t, 1.0, 1.2, "lineal") : 0; $("dots").style.transform = `scale(${lerp(.6, 1, dp)})`;
+    const b = seg(t, 4.66, 5.1, "outBack");
+    $("burb").style.opacity = seg(t, 4.66, 4.85, "lineal"); $("burb").style.transform = `scale(${lerp(.6, 1, b)})`;
+  }
+
+  // E2 · los días se encienden con la voz; el cambio chiquito salta de día en día
+  if (dentro(t, 6.95, 12.93)) {
+    const marcas = [7.1, 8.02, 8.7, 11.3, 11.6, 11.95, 12.3];
+    marcas.forEach((m, i) => {
+      const el = $("d" + i);
+      el.style.opacity = seg(t, 6.95 + i * .04, 7.15 + i * .04, "lineal");
+    });
+    let dia = 0; marcas.forEach((m, i) => { if (t >= m) dia = i; });
+    // estado visual de cada día: ocupado = amarillo opaco
+    marcas.forEach((m, i) => {
+      const on = t >= m && i < dia;
+      const act = i === dia && t >= m;
+      const el = $("d" + i);
+      el.style.background = act ? "#FACC15" : (on ? "#1B2550" : "#0A0E27");
+      el.style.color = act ? "#0A0E27" : (on ? "#FFFFFF" : "#94A3B8");
+    });
+    const ty = 528 + dia * 128, prev = 528 + Math.max(0, dia - 1) * 128, m0 = marcas[dia];
+    const hop = seg(t, m0, m0 + .3, "outBack");
+    $("chico").style.opacity = seg(t, 6.95, 7.15, "lineal");
+    $("chico").style.top = `${lerp(prev, ty, hop)}px`;
+    const e = seg(t, 12.3, 12.62, "outBack");
+    $("espera").style.opacity = seg(t, 12.3, 12.5, "lineal"); $("espera").style.transform = `translateY(${lerp(20, 0, e)}px)`;
+    emocion("p2", lerp(-.2, -1, seg(t, 7, 12, "lineal")), lerp(.4, .8, seg(t, 7, 12, "lineal")), 1, seg(t, 9, 11, "lineal"));
+    $("p2").style.transform = `translateY(${3 * Math.sin(t * 1.5)}px)`;
+  }
+
+  // E3 · giro: un único destello al entrar; la pieza genérica intenta encajar y no cabe (quietud, solo un leve intento)
+  $("fl").style.opacity = t >= 12.93 && t < 13.2 ? 1 - (t - 12.93) / .27 : 0;
+  if (dentro(t, 12.93, 15.67)) {
+    const u = t - 12.93, p = seg(u, .3, .9, "outBack");
+    $("pieza").style.opacity = seg(u, .3, .5, "lineal");
+    const intento = seg(u, 1.2, 1.6, "inOutCubic") - seg(u, 1.8, 2.2, "inOutCubic");
+    $("pieza").style.transform = `translate(${lerp(240, 40, p) - 30 * intento}px, ${lerp(-120, 0, p)}px) rotate(${lerp(-18, -10, p) + 5 * intento}deg)`;
+  }
+
+  // E4 · JDT: la pieza a la medida encaja en «a medida»; tarjetas con la voz
+  if (dentro(t, 15.67, 20.55)) {
+    const u = t - 15.67;
+    $("e4in").style.transform = `scale(${lerp(1, 1.03, seg(u, 0, 4.8, "lineal"))})`;
+    const c = seg(u, 1.3, 1.9, "outBack");
+    $("encaja").style.opacity = seg(u, 1.3, 1.5, "lineal"); $("encaja").style.transform = `translateY(${lerp(-200, 0, c)}px) scale(${lerp(.8, 1, c)})`;
+    const g = seg(u, 1.9, 2.4, "outBack");
+    $("p3").style.opacity = seg(u, 1.9, 2.1, "lineal"); $("p3").style.transform = `scale(${lerp(.5, 1, g)}) rotate(${lerp(-10, 0, g)}deg)`;
+    const t1 = seg(u, 2.35, 2.7, "outExpo"), t2 = seg(u, 3.63, 3.98, "outExpo");
+    $("k1").style.opacity = t1; $("k1").style.transform = `translateX(${lerp(-160, 0, t1)}px)`;
+    $("k2").style.opacity = t2; $("k2").style.transform = `translateX(${lerp(160, 0, t2)}px)`;
+  }
+
+  // E5 · cierre
+  if (dentro(t, 20.55, 24.0)) {
+    const u = t - 20.55;
+    const f = (id, a, y) => { const k = seg(u, a, a + .4, "outQuart"); $(id).style.opacity = k; $(id).style.transform = `translateY(${lerp(y, 0, k)}px)`; };
+    f("l1", .15, 40); f("l2", .9, 40); f("cierre", 1.5, 50);
+    $("logo").style.opacity = seg(u, 1.3, 1.6, "lineal");
+    $("pill").style.opacity = seg(u, 1.9, 2.3, "lineal");
+  }
+};
+</script></body></html>

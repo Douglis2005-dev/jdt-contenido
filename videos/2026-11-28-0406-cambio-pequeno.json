@@ -1,0 +1,213 @@
+{
+ "salida": "videos/2026-11-28-0406-cambio-pequeno.mp4",
+ "formato": "Reel vertical 1080x1920, unos 23 s, 5 escenas: confesión en primera persona con personaje dibujado, calendario que se come la semana, pieza que no encaja (software genérico), JDT como software a medida y cierre con @technologicsjdt. Voz en off es-CO con humor amable.",
+ "concepto": "«Pedí cambiar UN botón y me dijeron: para la próxima semana»: un personaje con cara de resignación ve cómo un cambio chiquito se come un calendario entero, porque el software nunca se hizo a su medida; JDT hace software a medida que evoluciona con el negocio.",
+ "produccion": "Estilo principal mascota-con-actitud: personaje SVG propio (círculo amarillo con cara que cambia de expresión: sonríe, se resigna, se cansa, se alegra), burbujas de diálogo cortas; apoyo motion-modular en las escenas 2 y 4 (etiqueta de sección, tarjeta de dato y subtítulo recombinados). Gancho confesión con titular visible desde t=0. Una pausa quieta en el giro (pieza que no encaja). Un solo destello en el giro. Fondos: navy, azul, amarillo a pantalla completa en la solución y navy en el cierre.",
+ "fuente": "marca.md",
+ "url": "jdt:cuando-el-cliente-pide-cambios",
+ "titulo": "Cada cambio pequeño se vuelve una semana de espera",
+ "tema": "Plan B de JDT: el cambio chiquito que tarda una semana en un software genérico; software a medida que evoluciona contigo (marca.md)",
+ "tendencias": {
+  "video": "mascota-con-actitud",
+  "apoyo": "motion-modular",
+  "gancho": "confesion",
+  "ritmo": "mixto",
+  "banner": "terminal-ui",
+  "pulso": "2026-11-28: dos búsquedas (Reels de marcas nov 2026; motion B2B/UI 2026) devolvieron solo listados de títulos sin texto verificable; señal débil: personajes expresivos y texto legible sin sonido",
+  "fuentes": [
+   "https://metricool.com/instagram-reels-guide/",
+   "https://advids.co/blog/ui-animation-motion-design-trends"
+  ]
+ },
+ "escenas": [
+  {
+   "tipo": "libre",
+   "look": "oscuro",
+   "texto": "Pedí cambiar *un botón*",
+   "voz": "Confieso: pedí cambiar UN botón... y me dijeron: «para la próxima semana».",
+   "duracion": 4.0,
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "persona-triste",
+     "x": 50,
+     "y": 62,
+     "tam": 30,
+     "color": "amarillo",
+     "t": 0.0,
+     "entra": "pop"
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "azul",
+   "texto": "Un cambio chiquito, *una semana*",
+   "voz": "Lunes, martes, miércoles... un cambio chiquito, una semana entera de espera.",
+   "duracion": 5.0,
+   "elementos": [
+    {
+     "el": "tarjeta",
+     "texto": "Cambiar un botón",
+     "x": 50,
+     "y": 60,
+     "ancho": 60,
+     "t": 0.0,
+     "entra": "pop"
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "oscuro",
+   "texto": "Nunca fue *a tu medida*",
+   "voz": "Porque ese software nunca se hizo a tu medida.",
+   "duracion": 3.0,
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "engranaje",
+     "x": 50,
+     "y": 60,
+     "tam": 28,
+     "color": "amarillo",
+     "t": 0.0,
+     "entra": "pop"
+    }
+   ]
+  },
+  {
+   "tipo": "libre",
+   "look": "amarillo",
+   "texto": "Software *a medida*",
+   "voz": "En JDT hacemos software a medida: se adapta a tu proceso y evoluciona contigo.",
+   "duracion": 5.0,
+   "elementos": [
+    {
+     "el": "icono",
+     "nombre": "engranaje",
+     "x": 50,
+     "y": 60,
+     "tam": 28,
+     "color": "fondo",
+     "t": 0.0,
+     "entra": "pop"
+    }
+   ]
+  },
+  {
+   "tipo": "cierre",
+   "texto": "Hablemos de tu proyecto.",
+   "subtexto": "@technologicsjdt",
+   "voz": "Cambias tú, cambia tu sistema. ¡Hablemos de tu proyecto!",
+   "duracion": 3.6
+  }
+ ],
+ "tiempos": {
+  "inicios": [
+   0.0,
+   6.95,
+   12.93,
+   15.67,
+   20.55
+  ],
+  "retardo": 0.3,
+  "duracion": 24.0
+ },
+ "direccion": {
+  "hook": "Titular «Pedí cambiar un botón» con personaje sonriente y botón visibles desde el cuadro 0",
+  "payoff": "JDT resuelve con software a medida que se adapta y evoluciona; cierre con «Hablemos de tu proyecto.» y @technologicsjdt",
+  "familias": [
+   "motion-graphics",
+   "mixed-media"
+  ],
+  "beats": [
+   {
+    "inicio": 0,
+    "fin": 1.9,
+    "funcion": "hook",
+    "familia": "motion-graphics",
+    "visual": "Titular «Pedí cambiar un botón» y personaje sonriente visibles desde el cuadro 0, botón Comprar abajo"
+   },
+   {
+    "inicio": 1.9,
+    "fin": 3.22,
+    "funcion": "contexto",
+    "familia": "mixed-media",
+    "visual": "Nota amarilla «Cambiar el color del botón» entra con pop junto al personaje"
+   },
+   {
+    "inicio": 3.22,
+    "fin": 4.66,
+    "funcion": "tension",
+    "familia": "motion-graphics",
+    "visual": "Al decir botón el botón Comprar pasa a amarillo con anillo pulsante"
+   },
+   {
+    "inicio": 4.66,
+    "fin": 6.95,
+    "funcion": "giro",
+    "familia": "mixed-media",
+    "visual": "Burbuja «Para la próxima semana» y la cara pasa de sonrisa a resignación"
+   },
+   {
+    "inicio": 6.95,
+    "fin": 8.7,
+    "funcion": "demostracion",
+    "familia": "motion-graphics",
+    "visual": "La semana aparece como lista; Lunes y Martes se encienden con la voz y la nota chiquita salta de día en día"
+   },
+   {
+    "inicio": 8.7,
+    "fin": 11.3,
+    "funcion": "tension",
+    "familia": "motion-graphics",
+    "visual": "Miércoles encendido; el personaje pequeño se cansa con párpados y bolsas"
+   },
+   {
+    "inicio": 11.3,
+    "fin": 12.93,
+    "funcion": "recompensa",
+    "familia": "motion-graphics",
+    "visual": "Jueves a Domingo se encienden en cascada y aparece «Aún en espera…»"
+   },
+   {
+    "inicio": 12.93,
+    "fin": 15.67,
+    "funcion": "respiro",
+    "familia": "motion-graphics",
+    "visual": "Destello único y quietud: la pieza gris «Software genérico» no cabe en el hueco «Tu proceso»"
+   },
+   {
+    "inicio": 15.67,
+    "fin": 18.0,
+    "funcion": "demostracion",
+    "familia": "mixed-media",
+    "visual": "Fondo amarillo, logo y «Software a medida»; la pieza navy «Tu proceso» encaja en el hueco"
+   },
+   {
+    "inicio": 18.0,
+    "fin": 20.55,
+    "funcion": "recompensa",
+    "familia": "motion-graphics",
+    "visual": "Tarjetas «Se adapta a tu proceso» y «Evoluciona contigo» entran desde lados opuestos"
+   },
+   {
+    "inicio": 20.55,
+    "fin": 23.2,
+    "funcion": "payoff",
+    "familia": "motion-graphics",
+    "visual": "«Cambias tú, cambia tu sistema.» y logo JDT"
+   },
+   {
+    "inicio": 23.2,
+    "fin": 24.0,
+    "funcion": "cierre",
+    "familia": "mixed-media",
+    "visual": "«Hablemos de tu proyecto.» y pastilla @technologicsjdt"
+   }
+  ],
+  "hipotesis": "Una confesión en primera persona con personaje que cambia de expresión y un calendario que se enciende con la voz debería sostener la atención más allá de los primeros 3 s; se contrastará con retención media y pasoInicioPct en metricas.json."
+ },
+ "validacion": "corregido: Opus (Fable sin créditos) dio 7/10; aplicado: CTA y @technologicsjdt entran antes (22,05 y 22,45 s), mascota feliz vuelve en la solución, etiqueta JDT TECHNOLOGICS bajo el logo, ficha navy/amarilla legible en E2, puntos «…» en el gancho"
+}

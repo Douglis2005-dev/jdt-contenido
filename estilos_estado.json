@@ -191,6 +191,14 @@
       "gancho": "afirmacion-absurda",
       "ritmo": "rapido",
       "banner": "neobrutal"
+    },
+    {
+      "fecha": "2026-11-28T04:06:46",
+      "video": "mascota-con-actitud",
+      "apoyo": "motion-modular",
+      "gancho": "confesion",
+      "ritmo": "mixto",
+      "banner": "terminal-ui"
     }
   ]
 }

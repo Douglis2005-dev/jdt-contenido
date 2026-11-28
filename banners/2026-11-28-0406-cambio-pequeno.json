@@ -1,0 +1,10 @@
+{
+  "salida": "banners/2026-11-28-0406-cambio-pequeno.png",
+  "estilo": "terminal-ui",
+  "titulo": "¿Un cambio *chiquito* y te toca esperar una *semana*?",
+  "subtitulo": "Tu software debería cambiar cuando tú cambias.",
+  "puntos": ["Software a medida", "Se adapta a tu proceso", "Evoluciona contigo"],
+  "cta": "Hablemos de tu proyecto.",
+  "icono": "calendario",
+  "etiqueta": "EVOLUCIONA CONTIGO"
+}
